@@ -1,0 +1,38 @@
+# Gondor theme
+# Willian Molinari (a.k.a PotHix)
+# pothix@pothix.com
+# http://pothix.com
+
+# messages
+msg_color               #FFFFFF
+msg_font                Sans:size=10:bold:dpi=96
+msg_x                   50%
+msg_y                   70%
+
+# valid values: stretch, tile
+background_style        tile
+background_color        #000000
+
+# input box font and colors
+input_font          	Sans:size=10:bold:dpi=96
+input_fgcolor           #000000
+
+# panel location
+input_panel_x           50%
+input_panel_y           50%
+input_name_x            110
+input_name_y            532
+
+# single input box
+input_pass_x            -1
+input_pass_y            -1
+
+# username / password request (actual text)
+username_font          	Sans:size=10:bold:dpi=96
+username_color        	#ffffff
+username_x              102
+username_y              510
+password_x              102
+password_y              510
+username_msg            Username:
+password_msg            Password:
