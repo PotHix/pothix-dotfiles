@@ -1,0 +1,34 @@
+#!/bin/sh
+#
+# ~/.xinitrc
+#
+# Executed by startx (run your window manager from here)
+
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+  for f in /etc/X11/xinit/xinitrc.d/*; do
+    [ -x "$f" ] && . "$f"
+  done
+  unset f
+fi
+
+# Black terminal
+xrdb -merge .Xresources &
+
+# 2 screens
+xrandr --output DisplayPort-1 --right-of DisplayPort-0
+
+# ABNT2 keyboard
+setxkbmap us intl
+
+# No capslock
+xmodmap ~/.Xmodmap
+
+# Removing tap
+synclient TapButton1=0
+
+# GPG
+test -x /usr/bin/gpg-agent && test -z "${GPG_AGENT_INFO}" && eval $(/usr/bin/gpg-agent --daemon --max-cache-ttl 28800 --default-cache-ttl 28800 --quiet)
+
+# exec gnome-session
+exec ssh-agent awesome
+# exec startxfce4

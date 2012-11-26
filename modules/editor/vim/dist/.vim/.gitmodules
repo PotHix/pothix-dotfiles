@@ -1,0 +1,45 @@
+[submodule "bundles/endwise"]
+	path = bundles/endwise
+	url = git://github.com/tpope/vim-endwise.git
+[submodule "bundles/fugitive"]
+	path = bundles/fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "bundles/markdown"]
+	path = bundles/markdown
+	url = git://github.com/tpope/vim-markdown.git
+[submodule "bundles/matchit"]
+	path = bundles/matchit
+	url = git://github.com/tsaleh/vim-matchit.git
+[submodule "bundles/pathogem"]
+	path = bundles/pathogem
+	url = git://github.com/tpope/vim-pathogen.git
+[submodule "bundles/rails"]
+	path = bundles/rails
+	url = git://github.com/tpope/vim-rails.git
+[submodule "bundles/repeat"]
+	path = bundles/repeat
+	url = git://github.com/tpope/vim-repeat.git
+[submodule "bundles/surround"]
+	path = bundles/surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "bundles/vimpress"]
+	path = bundles/vimpress
+	url = git://github.com/PotHix/Vimpress.git
+[submodule "bundles/vim-rake"]
+	path = bundles/vim-rake
+	url = git://github.com/tpope/vim-rake.git
+[submodule "bundles/vim-ragtag"]
+	path = bundles/vim-ragtag
+	url = git://github.com/tpope/vim-ragtag.git
+[submodule "bundles/syntastic"]
+	path = bundles/syntastic
+	url = git://github.com/scrooloose/syntastic.git
+[submodule "bundles/vim-wiki"]
+	path = bundles/vim-wiki
+	url = git://github.com/vim-scripts/vimwiki.git
+[submodule "bundles/ctrlp"]
+	path = bundles/ctrlp
+	url = git://github.com/kien/ctrlp.vim.git
+[submodule "bundles/vim-html5"]
+	path = bundles/vim-html5
+	url = git://github.com/othree/html5.vim.git

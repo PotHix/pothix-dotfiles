@@ -1,0 +1,245 @@
+snippet aft
+	after(${1::each}) do
+	  ${2}
+	end
+
+snippet annot
+	any_number_of_times
+
+snippet anra
+	and_raise(${1:exception})
+
+snippet anrb
+	and_return { ${1} }
+
+snippet anr
+	and_return(${1:value})
+
+snippet ant
+	and_throw(${1:sym})
+
+snippet any
+	and_yield(${1:values})
+
+snippet atl
+	at_least(${1:n}).times
+
+snippet atm
+	at_most(${1:n}).times
+
+snippet bef
+	before do
+	  ${1}
+	end
+
+snippet cont
+	context "when ${1}" do
+	  ${2}
+	end
+
+snippet desc
+	require "spec_helper"
+
+	describe ${1:controller} do
+	  ${2}
+	end
+
+snippet des
+	describe "${1:subject}" do
+	  ${2}
+	end
+
+snippet ex
+	exactly(${1:n}).times
+
+snippet exp
+	expect {
+	  ${1}
+	}.to ${2}
+
+snippet expra
+	expect {
+	  ${1}
+	}.to raise_error(${2})
+
+snippet it
+	it "${1}" do
+	  ${2}
+	end
+
+snippet its
+	it "should ${1:do something}" do
+	  ${2}
+	end
+
+snippet let
+	let(:${1:varname}){ ${2} }
+
+snippet letf
+	let(:${1:factory_name}){ Factory(:$1) }
+
+snippet mm
+	mock_model(${1:model})${2}
+
+snippet moc
+	${1:var} = mock("${2:mock_name}"${3:, :null_object => true})
+	${4}
+
+snippet mocw
+	Spec::Runner.configure do |config|
+	  config.mock_with :${1:mocha|flexmock|rr}
+	end
+
+snippet resh
+	require File.dirname(__FILE__) + "/../spec_helper"
+
+snippet sc
+	scenario "${1}" do
+	  ${2}
+	end
+
+snippet shbc
+	${1:target}.should be_close(${2:result}, ${3:tolerance})
+	${4}
+
+snippet shbio
+	${1:target}.should be_instance_of(${2:class})
+	${3}
+
+snippet shbko
+	${1:target}.should be_a_kind_of(${2:class})
+	${3}
+
+snippet shdm
+	${1:target}.should match(/${2:regexp}/)
+	${3}
+
+snippet sheq
+	${1:target}.should equal(${2:value})
+	${3}
+
+snippet she
+	${1:target}.should eql(${2:value})
+	${3}
+
+snippet shhal
+	${1:target}.should have_at_least(${2:num}).${3:things}
+	${4}
+
+snippet shham
+	${1:target}.should have_at_most(${2:num}).${3:things}
+	${4}
+
+snippet shhr
+	${1:target}.should have(${2:n}).records
+	${3}
+
+snippet shh
+	${1:target}.should have(${2:num}).${3:things}
+	${4}
+
+snippet shnbc
+	${1:target}.should_not be_close(${2:result}, ${3:tolerance})
+	${4}
+
+snippet shnbio
+	${1:target}.should_not be_instance_of(${2:klass})
+	${3}
+
+snippet shnbko
+	${1:target}.should_not be_a_kind_of(${2:klass})
+	${3}
+
+snippet shnbr
+	response.should_not be_redirect
+	${1}
+
+snippet shnb
+	${1:target}.should_not be(${2:result})
+	${3}
+
+snippet shnbs
+	response.should_not be_success
+	${1}
+
+snippet shneq
+	${1:target}.should_not equal(${2:value})
+	${3}
+
+snippet shne
+	${1:target}.should_not eql(${2:value})
+	${3}
+
+snippet shnm
+	${1:target}.should_not match(/${2:regexp}/)
+	${3}
+
+snippet shnp
+	${1:target}.should_not be_${2:predicate}
+
+snippet shnredt
+	response.should_not redirect_to(${1:url})
+	${2}
+
+snippet shnre
+	${1:target}.should_not raise_error(${2:error})
+	${3}
+
+snippet shnr
+	${1:mock}.should_not_receive(:${2:message})${3}
+	${4}
+
+snippet shnrt
+	${1:target}.should_not respond_to(:${2:sym})
+	${3}
+
+snippet shn
+	${1:target}.should_not == ${2:value}
+	${3}
+
+snippet shns
+	${1:target}.should_not satisfy { |${2:obj}| ${3} }
+	${4}
+
+snippet shnt
+	lambda { ${1} }.should_not throw_symbol(:${2:symbol})
+	${3}
+
+snippet shp
+	${1:target}.should be_${2:predicate}
+
+snippet shredt
+	response.should redirect_to(${1:url})
+	${2}
+
+snippet shre
+	${1:target}.should raise_error(${2:error})
+	${3}
+
+snippet shr
+	${1:mock}.should_receive(:${2:message})${3}
+	${4}
+
+snippet shrt
+	${1:target}.should respond_to(:${2:sym})
+	${3}
+
+snippet sh
+	${1:target}.should == ${2:value}
+	${3}
+
+snippet shs
+	${1:target}.should satisfy { |${2:obj}| ${3} }
+	${4}
+
+snippet shtemp
+	response.should render_template(:${1:template})
+	${2}
+
+snippet sht
+	${1:target}.should throw_symble(:${2:symbol})
+	${3}
+
+snippet wia
+	with(${1:args})
+	${2}

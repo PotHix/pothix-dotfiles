@@ -1,0 +1,118 @@
+snippet conf
+	-content_for :${1:yield_label_in_layout} do
+	${2}
+
+snippet cs
+	=collection_select :${1:object}, :${2:method}, :${3:collection}, :${4:value_method}, :${5:text_method} ${6:, [options]} ${7:, [html_options]}
+
+snippet ffcb
+	=f.check_box :${1:attribute}
+
+snippet ffe
+	=error_messages_for :${1:model}
+	 
+	-form_for @${2:model} do |f|
+	${3}
+
+snippet ffff
+	=f.file_field :${1:attribute}
+
+snippet ffhf
+	=f.hidden_field :${1:attribute}
+
+snippet ffl
+	=f.label :${1:attribute}
+
+snippet ffpf
+	=f.password_field :${1:attribute}
+
+snippet ffrb
+	=f.radio_button :${1:attribute}, :${2:tag_value}
+
+snippet ff
+	-form_for @${1:model} do |f|
+	${2}
+
+snippet ffs
+	=f.submit '${1:Submit}', :disable_with => '${2:Submitting}'
+
+snippet ffta
+	=f.text_area :${1:attribute}
+
+snippet fftf
+	=f.text_field :${1:attribute}
+
+snippet fields
+	-fields_for :${1:model}, @$1 do |${2:f}|
+	${3}
+
+snippet for
+	-if !${1:list}.blank?
+	-for ${2:item} in $1
+	  ${3}
+	-else
+	  ${4}
+
+snippet ft
+	-form_tag(:action => '${1:update}', ${2}) do
+	  ${3}
+
+snippet haml
+	-if ${1}
+	  ${2}
+	-else
+	 
+
+snippet if
+	-if ${1}
+	${2}
+
+snippet it
+	=image_tag '${1}'
+
+snippet jit
+	=javascript_include_tag ${1:all}
+
+snippet jsit
+	=javascript_include_tag '${1}'
+
+snippet liai
+	=link_to '${1:link text}', :action => '${2:edit}', :id => '${3:link_id}'
+
+snippet lia
+	=link_to '${1:link text}', :action => '${2:index}'
+
+snippet lica
+	=link_to '${1:link text}', :controller => '${2:items}', :action => '${3:index}'
+
+snippet lic
+	=link_to '${1:link text}', :controller => '${2:items}'
+
+snippet ltp
+	=link_to '${1:link_text}', ${2:model}_path(@${3:instance})
+
+snippet lt
+	=link_to '${1}', ${2:dest}
+
+snippet rf
+	=render :file => '${1:file}'${2}
+
+snippet rp
+	=render :partial => '${1:file}'${2}
+
+snippet rt
+	=render :template => '${1:file}'${2}
+
+snippet sslt
+	=stylesheet_link_tag '${1}'
+
+snippet st
+	=submit_tag '${1:Save changes}', :id => '${2:submit}'
+
+snippet unlesse
+	-if ${1}
+	  ${2}
+	-else
+
+snippet unless
+	-unless ${1}
