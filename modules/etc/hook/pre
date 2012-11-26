@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo cp rc.conf /etc/rc.conf
