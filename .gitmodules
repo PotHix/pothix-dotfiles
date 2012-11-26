@@ -33,7 +33,7 @@
 	url = git://github.com/tpope/vim-ragtag.git
 [submodule "modules/editor/vim/plugins/syntastic/dist/.vim/bundles/syntastic"]
 	path = modules/editor/vim/plugins/syntastic/dist/.vim/bundles/syntastic
-	url = git://github.com/tpope/vim-ragtag.git
+	url = git://github.com/scrooloose/syntastic.git
 [submodule "modules/editor/vim/plugins/vimwiki/dist/.vim/bundles/vimwiki"]
 	path = modules/editor/vim/plugins/vimwiki/dist/.vim/bundles/vimwiki
 	url = git://github.com/vim-scripts/vimwiki.git
