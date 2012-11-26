@@ -1,0 +1,9 @@
+!! No Caps Lock
+clear lock
+
+!! Make Caps_lock an control key.
+keycode 0x42 = Control_L
+add Control = Control_L
+
+!! Left handed mouse
+!! pointer = 3 2 1
