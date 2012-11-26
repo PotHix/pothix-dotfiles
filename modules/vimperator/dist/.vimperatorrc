@@ -1,0 +1,12 @@
+"2.0 (created: 2009/03/28 23:48:07)
+set gui=tabs
+set runtimepath=/home/wmolinari/.vimperator
+
+source! ~/.vimperatorrc.local
+
+" vim: set ft=vimperator:
+
+map <F2> thttp://0.0.0.0:3000<CR>
+map <F3> thttp://0.0.0.0:3000/admin<CR>
+map <F4> thttp://0.0.0.0:3000/admin/resque/overview<CR>
+map <C-m> :set go+=m<CR>
