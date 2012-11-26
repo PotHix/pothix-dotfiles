@@ -1,0 +1,2 @@
+sed -i "s/\(# revision\) \([0-9a-z]*\)/\1 `git log --pretty=format:'%h' | head -n 1`/g" cache.manifest
+git add cache.manifest
