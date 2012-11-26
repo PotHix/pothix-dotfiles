@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# /etc/rc.local: Local multi-user startup script.
+#
+
+rfkill unblock 1 # phy0: Wireless LAN
+rfkill unblock 2 # acer-wireless: Wireless LAN
+rfkill block 3   # bluetooth

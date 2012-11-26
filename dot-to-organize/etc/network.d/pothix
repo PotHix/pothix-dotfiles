@@ -1,0 +1,12 @@
+CONNECTION='wireless'
+DESCRIPTION='PotHix home'
+INTERFACE='wlan0'
+SECURITY='wpa'
+
+# Generate with wpa-passphrase $ESSID $KEY
+ESSID=''
+KEY=''
+
+IP='dhcp'
+
+HIDDEN=yes
