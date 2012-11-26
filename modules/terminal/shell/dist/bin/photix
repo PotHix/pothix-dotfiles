@@ -1,0 +1,53 @@
+DIR=converted
+CURRENT_DIR=`pwd`
+
+resize (){
+    DESTINATION_FOLDER=$1/$DIR
+
+    if [ ! -d $DESTINATION_FOLDER ]; then
+        mkdir $DESTINATION_FOLDER
+    fi
+
+    for i in `ls $1`
+    do
+        if [ $i != $DIR ]; then
+            convert $1/$i -resize 1024x768 $DESTINATION_FOLDER/$i
+            echo "File $i converted"
+
+            if [ "$2" == "--mark" ]; then
+                mark $DESTINATION_FOLDER/$i
+            fi
+        fi
+    done
+}
+
+mark (){
+    IMAGEWIDTH=$(( $(identify -format "%w" $1) ))
+
+    if [ $IMAGEWIDTH -lt 1024 ]; then
+        STAMPBASESIZE=8
+    elif [ $IMAGEWIDTH -eq 1024 ]; then
+        STAMPBASESIZE=10
+    elif [ $IMAGEWIDTH -gt 1024 ]; then
+        STAMPBASESIZE=60
+    fi
+
+    let "ABOVEFONTSIZE=$STAMPBASESIZE"
+    let "BELOWFONTSIZE=$STAMPBASESIZE*2"
+
+    FONT=WenQuanYi-Micro-Hei-Regular
+
+    convert $1 -gravity SouthEast -fill gray -font $FONT -pointsize $ABOVEFONTSIZE -annotate +$(($STAMPBASESIZE*3))+$(($STAMPBASESIZE*4-$STAMPBASESIZE/2)) 'Photo by' $1
+    convert $1 -gravity SouthEast -fill gray -font $FONT -pointsize $BELOWFONTSIZE -annotate +$(($STAMPBASESIZE*3))+$(($STAMPBASESIZE)) 'PotHix' $1
+}
+
+case $# in
+    0)
+        echo "Wrong number of arguments";
+        echo "Use:";
+        echo "photix relative/path/to/pictures [--mark]";
+        ;;
+    *)
+        resize $1 $2
+        ;;
+esac

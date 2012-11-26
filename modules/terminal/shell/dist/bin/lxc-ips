@@ -1,0 +1,1 @@
+cat /var/lib/libvirt/dnsmasq/default.leases | awk '{print "pothix@" ($3) " -> " ($4)}'

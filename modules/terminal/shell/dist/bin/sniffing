@@ -1,0 +1,9 @@
+sudo ifconfig wlan1 down
+sudo iwconfig wlan1 mode monitoring
+sudo ifconfig wlan1 up
+
+sudo tcpdump -nnvvvS -s 0 -U -i wlan1 tcp
+
+sudo ifconfig wlan1 down
+sudo iwconfig wlan1 mode managed
+sudo ifconfig wlan1 up

@@ -1,0 +1,19 @@
+if [[ $1 != "" ]]; then
+  PRESET=$1
+else
+  PRESET=git
+fi
+
+KLOGDIR=$HOME/kernel-compiling
+KLOGPATH=$KLOGDIR/$(date +%Y%m%d-%H%m)
+
+mkdir -p $KLOGDIR
+
+make oldconfig
+make -j4 > $KLOGPATH-make 2>&1
+echo "make       [OK]"
+sudo make modules_install > $KLOGPATH-modules 2>&1
+echo "modules    [OK]"
+sudo cp arch/x86_64/boot/bzImage /boot/vmlinuz-$PRESET
+echo "vmlinuz    [OK]"
+sudo mkinitcpio -p $PRESET
