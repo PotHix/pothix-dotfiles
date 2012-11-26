@@ -43,3 +43,6 @@
 [submodule "modules/editor/vim/plugins/syntastic/dist/.vim/bundles/syntastic"]
 	path = modules/editor/vim/plugins/syntastic/dist/.vim/bundles/syntastic
 	url = git://github.com/scrooloose/syntastic.git
+[submodule "modules/editor/vim/plugins/easymotion/dist/.vim/bundles/easymotion"]
+	path = modules/editor/vim/plugins/easymotion/dist/.vim/bundles/easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
