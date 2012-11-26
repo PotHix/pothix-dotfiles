@@ -1,3 +1,0 @@
-#!/bin/bash
-
-sudo cp wpa.conf /etc/network.d/wpa.conf
