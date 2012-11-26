@@ -1,0 +1,41 @@
+# Updating and preparing
+sudo pacman -Syu
+
+# Basic
+sudo pacman -S xorg-server xf86-video-intel xorg-server-xephyr slim systemd systemd-arch-units
+
+# Wireless
+sudo pacman -S wpa-actiond netcfg
+
+# Fonts
+sudo pacman -S ttf-dejavu terminus-font
+
+# Basic tools
+sudo pacman -S yaourt rsync curl xsel imagemagick slock bash-completion
+
+# Intel specific
+sudo pacman -S intel-ucode
+yaourt -S intel-gpu-tools
+
+# Window managers and dependencies
+sudo pacman -S awesome feh vicious
+sudo pacman -S gnome-shell
+
+# Browsers stable
+sudo pacman -S firefox opera
+
+# Development
+sudo pacman -S gvim ruby python git nodejs
+
+# Common softwares
+sudo pacman -S gimp inkscape aurvote chromium texlive-bin vlc dos2unix
+
+# Virt
+sudo pacman -S virt-manager
+yaourt -S lxc debootstrap dpkg
+
+# Community
+yaourt -S google-chrome-dev jdk dropbox submarine dzen2-xft-xpm-xinerama-svn
+
+# lxc vms
+# sudo lxc-create -t ubuntu -n minastirith -f /home/pothix/lxc/debian/config -- -r oneiric
