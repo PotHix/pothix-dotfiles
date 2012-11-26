@@ -1,0 +1,63 @@
+[user]
+	name  = PotHix
+	email = pothix@pothix.com
+
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	pom = push origin master
+	rank = shortlog -sn --no-merges
+	st = status
+	list-stable = !git tags | grep stable | sort -t . -k 1.8,1 -k 2,2 -k 3,3 -n
+	list-testing = !git tags | grep testing | sort -t . -k 1.9,1 -k 2,2 -k 3,3 -n
+	tags = !git for-each-ref refs/tags/* --format='%(refname)' --sort='authordate' | sed 's/refs\\/tags\\///g'
+	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	unadd = reset HEAD --
+
+[apply]
+	whitespace=fix
+
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = true
+
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+	pager = less -FRSX
+
+[help]
+	autocorrect = 1
+
+[push]
+	default = matching
+
+
+# http://www.kernel.org/pub/software/scm/git/docs/git-rerere.html
+# http://progit.org/2010/03/08/rerere.html
+[rerere]
+	enabled = true
+
+
+# ########################
+# GitHub and Gitorious
+# ########################
+
+[github]
+	user = PotHix
+
+[url "git://gitorious.org/"]
+	insteadOf = gitorious:
+
+[url "git@gitorious.org:"]
+	pushInsteadOf = gitorious:
+
+[url "git://github.com/"]
+	insteadOf = github:
+
+[url "git@github.com:"]
+	pushInsteadOf = github:

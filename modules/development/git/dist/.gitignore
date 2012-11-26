@@ -1,0 +1,10 @@
+tags
+*~
+*.swp
+*.swo
+.tdldb*
+.rvmrc
+*.sqlite3
+.gembin
+.bundle/config
+.venv
