@@ -31,9 +31,6 @@
 [submodule "modules/editor/vim/plugins/ragtag/dist/.vim/bundles/ragtag"]
 	path = modules/editor/vim/plugins/ragtag/dist/.vim/bundles/ragtag
 	url = git://github.com/tpope/vim-ragtag.git
-[submodule "modules/editor/vim/plugins/syntastic/dist/.vim/bundles/syntastic"]
-	path = modules/editor/vim/plugins/syntastic/dist/.vim/bundles/syntastic
-	url = git://github.com/scrooloose/syntastic.git
 [submodule "modules/editor/vim/plugins/vimwiki/dist/.vim/bundles/vimwiki"]
 	path = modules/editor/vim/plugins/vimwiki/dist/.vim/bundles/vimwiki
 	url = git://github.com/vim-scripts/vimwiki.git
@@ -43,3 +40,6 @@
 [submodule "modules/editor/vim/plugins/html5/dist/.vim/bundles/html5"]
 	path = modules/editor/vim/plugins/html5/dist/.vim/bundles/html5
 	url = git://github.com/othree/html5.vim.git
+[submodule "modules/editor/vim/plugins/syntastic/dist/.vim/bundles/syntastic"]
+	path = modules/editor/vim/plugins/syntastic/dist/.vim/bundles/syntastic
+	url = git://github.com/scrooloose/syntastic.git
