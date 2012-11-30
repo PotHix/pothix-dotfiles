@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat ~/Dropbox/environment/.ssh/pothix@mordor/config >> $dot_root/.ssh/config
