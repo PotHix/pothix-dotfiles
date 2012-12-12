@@ -23,11 +23,6 @@ fi
 #    Ruby / Rails
 ##############################################
 alias r='rails'
-
-alias ss='script/server'
-alias sc='script/console'
-alias sg='script/generate'
-
 alias bi='bundle install --binstubs .gembin'
 
 
