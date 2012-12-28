@@ -407,4 +407,4 @@ client.add_signal("manage", function(c, startup)
 end)
 
 awful.util.spawn("wmname \"LG3D\"")
-awful.util.spawn_with_shell("/home/pothix/dot/tools/dzen-tools/bin/systat2dzen | env dzen2_height=20 /home/pothix/dot/tools/dzen-tools/bin/run_dzen2_bottom -xs 2 -fn \"terminus-9\"")
+awful.util.spawn_with_shell("/home/pothix/.dotbin/dzen-tools/bin/systat2dzen | env dzen2_height=20 /home/pothix/.dotbin/dzen-tools/bin/run_dzen2_bottom -xs 2 -fn \"terminus-9\"")
