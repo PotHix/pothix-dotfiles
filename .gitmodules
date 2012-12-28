@@ -46,3 +46,9 @@
 [submodule "modules/editor/vim/plugins/easymotion/dist/.vim/bundles/easymotion"]
 	path = modules/editor/vim/plugins/easymotion/dist/.vim/bundles/easymotion
 	url = git://github.com/Lokaltog/vim-easymotion.git
+[submodule "modules/shssword/dist/.dotbin/shssword"]
+	path = modules/shssword/dist/.dotbin/shssword
+	url = git://github.com/dgvncsz0f/shssword.git
+[submodule "modules/shssword/dist/.dotbin/dzen-tools"]
+	path = modules/shssword/dist/.dotbin/dzen-tools
+	url = git://github.com/dgvncsz0f/dzen-tools.git
