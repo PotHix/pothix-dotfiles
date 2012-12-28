@@ -4,7 +4,7 @@ set -o vi    # The real bash must use Vi
 # EXPORTING ENVIRONMENT VARIABLES
 ###############################################################################################
 
-export PATH="$HOME/dot/bin:$HOME/.dotbin/shssword:$PATH"
+export PATH="$HOME/bin:$HOME/.dotbin/shssword:$PATH"
 export CDPATH=.:~:$HOME/repos
 
 export HISTCONTROL=ignoredups  # don't put duplicate lines in the history. See bash(1) for more options
