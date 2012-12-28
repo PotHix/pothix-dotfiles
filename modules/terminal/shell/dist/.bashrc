@@ -14,7 +14,7 @@ export EDITOR=vim
 export GEM_EDITOR=vim
 
 export GITHUB_USER=PotHix
-export CODES=/files/codes
+export CODES=$HOME/repos
 
 export GREP_OPTIONS="--color=auto"
 export GREP_COLOR="4;33"
