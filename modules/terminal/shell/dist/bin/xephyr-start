@@ -2,7 +2,7 @@
 
 firstxserver=:0
 secondxserver=:50
-xinitrc_file=$HOME/dot/etc/xephyr/.xinitrc
+xinitrc_file=pothix_is_missing_the_file_on_xephyr_start
 
 exec xinit $xinitrc_file -- /usr/bin/Xephyr $secondxserver \
      -keybd ephyr,,,xkbmodel=us,xkblayout=us,xkbrules=evdev \
