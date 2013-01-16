@@ -5,7 +5,7 @@ alias t='tail -f'
 
 alias make="make -j2"
 alias reload='source $HOME/.bashrc 1>/dev/null'
-alias clipboard='xsel --clipboard --input'
+alias clipboard='xsel'
 alias psgrep="ps aux | grep"
 alias sshadd="ssh-add ~/.ssh/id_rsa"
 alias sshr="ssh -l root"
