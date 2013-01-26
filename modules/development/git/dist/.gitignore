@@ -8,3 +8,4 @@ tags
 .gembin
 .bundle/config
 .venv
+*.pyc
