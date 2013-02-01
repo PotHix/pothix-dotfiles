@@ -150,8 +150,11 @@ git-push (){
 }
 
 git-push-all (){
-	git push origin `git branch 2> /dev/null | grep \* | sed 's/* //'`
-	git push gitlab `git branch 2> /dev/null | grep \* | sed 's/* //'`
+	local remotes=`git remote`
+	local branch=`git branch 2> /dev/null | grep \* | sed 's/* //'`
+	for remote in $remotes; do
+		git push $remote $branch
+	done
 }
 
 git-update-testing (){
