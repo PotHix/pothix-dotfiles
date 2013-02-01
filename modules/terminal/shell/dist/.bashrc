@@ -145,9 +145,13 @@ git-pair (){
 		`git config --add user.email "$default_email"`
 	fi
 }
-
 git-push (){
 	git push origin `git branch 2> /dev/null | grep \* | sed 's/* //'`
+}
+
+git-push-all (){
+	git push origin `git branch 2> /dev/null | grep \* | sed 's/* //'`
+	git push gitlab `git branch 2> /dev/null | grep \* | sed 's/* //'`
 }
 
 git-update-testing (){
