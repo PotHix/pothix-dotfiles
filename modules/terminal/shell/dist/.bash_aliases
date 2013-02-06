@@ -4,6 +4,7 @@
 alias t='tail -f'
 
 alias make="make -j2"
+alias maked="make -f dev.makefile"
 alias reload='source $HOME/.bashrc 1>/dev/null'
 alias clipboard='xsel'
 alias psgrep="ps aux | grep"
