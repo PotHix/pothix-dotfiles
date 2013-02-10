@@ -42,6 +42,8 @@ autocmd FileType python     set expandtab sw=4 ts=4 sts=4
 autocmd FileType javascript set expandtab sw=4 ts=4 sts=4
 autocmd FileType tex        set expandtab tw=80
 autocmd FileType plaintex   set expandtab tw=80
+autocmd FileType vimwiki    set expandtab tw=80
+autocmd FileType markdown   set expandtab tw=80
 
 
 " ****************************************************************
