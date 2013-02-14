@@ -78,3 +78,4 @@ autocmd User Rails Rnavcommand seeds db/ -default=seeds
 " Enabling spelling to Brazillian Portuguese
 nmap <F8> :setlocal spell spelllang=pt<CR>
 nmap <F9> :setlocal spell spelllang=en<CR>
+nmap <F10> :setlocal nospell<CR>
