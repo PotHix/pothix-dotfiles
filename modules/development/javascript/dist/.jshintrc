@@ -1,11 +1,7 @@
 {
     "predef": [
-        "jasmine",
-        "spyOn",
-        "it",
-        "describe",
-        "expect",
-        "console"
+        "jasmine", "spyOn", "it", "describe", "expect", "console"
+        "Backbone", "_", "App"
     ],
 
     // Browser, Frameworks and Globals
