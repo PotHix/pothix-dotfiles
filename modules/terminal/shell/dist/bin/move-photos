@@ -1,0 +1,31 @@
+#!/bin/bash
+
+MOUNTPOINT=/mnt/camera
+PHOTOS_DIR=$MOUNTPOINT/DCIM
+CURRENT_DATE=`date +'%Y-%m-%d'`
+
+DESTINATION="$HOME/Pictures/photos/$CURRENT_DATE-$@"
+
+sudo modprobe rts5139
+sudo mkdir -p $MOUNTPOINT
+
+mkdir $DESTINATION
+
+sudo mount /dev/sdb1 $MOUNTPOINT
+
+pushd $PHOTOS_DIR
+
+for i in `ls`; do
+	echo "Moving files from $PHOTOS_DIR/$i to $DESTINATION"
+	sudo mv $i/* $DESTINATION
+	echo "DONE"
+	echo "Fixing permissions"
+	sudo chown -R $USER. $DESTINATION
+	echo "DONE"
+done
+
+popd
+sudo umount $MOUNTPOINT
+sudo rmmod rts5139
+
+shotwell &
