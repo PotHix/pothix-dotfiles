@@ -28,7 +28,7 @@ sudo pacman -S firefox opera
 sudo pacman -S gvim ruby python git nodejs
 
 # Common softwares
-sudo pacman -S gimp inkscape aurvote chromium texlive-bin vlc dos2unix
+sudo pacman -S gimp inkscape aurvote chromium texlive-bin vlc dos2unix steam
 
 # Virt
 sudo pacman -S virt-manager
