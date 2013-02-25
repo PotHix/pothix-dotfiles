@@ -157,6 +157,14 @@ git-push-all (){
 	done
 }
 
+git-pull-all (){
+	local remotes=`git remote`
+	local branch=`git branch 2> /dev/null | grep \* | sed 's/* //'`
+	for remote in $remotes; do
+		git pull --rebase $remote $branch
+	done
+}
+
 git-update-testing (){
 	local lasttagprefix=$(git tag -l testing* | tail -n1 | sed 's/\(testing_[0-9]\+\.[0-9]\+\.\)[0-9]\+/\1/g')
 	local nextnumber=$(expr $(git tags | grep testing | tail -n1 | sed 's/testing_[0-9]\+\.[0-9]\+\.\([0-9]\+\)/\1/g') + 1)
