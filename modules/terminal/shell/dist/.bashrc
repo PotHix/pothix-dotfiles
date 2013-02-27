@@ -166,9 +166,9 @@ git-pull-all (){
 }
 
 git-update-testing (){
-	local lasttagprefix=$(git tag -l testing* | tail -n1 | sed 's/\(testing_[0-9]\+\.[0-9]\+\.\)[0-9]\+/\1/g')
-	local nextnumber=$(expr $(git tags | grep testing | tail -n1 | sed 's/testing_[0-9]\+\.[0-9]\+\.\([0-9]\+\)/\1/g') + 1)
-	echo $lasttagprefix$nextnumber
+	local lasttagprefix=$(git tag -l testing* | tail -n1 | cut -d. -f1-2)
+	local nextnumber=$(expr $(git tags | grep testing | tail -n1 | cut -d. -f3) + 1)
+	echo $lasttagprefix.$nextnumber
 }
 
 
