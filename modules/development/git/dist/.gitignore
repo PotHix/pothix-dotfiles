@@ -9,3 +9,4 @@ tags
 .bundle/config
 .venv
 *.pyc
+.ruby-version
