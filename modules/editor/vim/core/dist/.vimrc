@@ -106,6 +106,12 @@ endfunction
 map <F7> :call RunCurrentSpec(bufname("%"))<cr>
 
 
+function! Writing()
+  set expandtab tw=80
+  setlocal spell spelllang=pt
+endfunction
+
+
 function! UseTabs()
   set noexpandtab softtabstop=4 shiftwidth=4 tabstop=4
   autocmd User Rails set softtabstop=4 shiftwidth=4 tabstop=4 noexpandtab
