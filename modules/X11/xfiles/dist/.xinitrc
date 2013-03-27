@@ -30,5 +30,5 @@ synclient TapButton1=0
 test -x /usr/bin/gpg-agent && test -z "${GPG_AGENT_INFO}" && eval $(/usr/bin/gpg-agent --daemon --max-cache-ttl 28800 --default-cache-ttl 28800 --quiet)
 
 # exec gnome-session
-exec ssh-agent awesome
-# exec startxfce4
+# exec ssh-agent awesome
+exec ssh-agent enlightenment_start
