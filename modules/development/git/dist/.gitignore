@@ -8,5 +8,6 @@ tags
 .gembin
 .bundle/config
 .venv
+.pyenv
 *.pyc
 .ruby-version
