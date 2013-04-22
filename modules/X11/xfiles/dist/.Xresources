@@ -3,4 +3,5 @@ urxvt*foreground: grey
 !urxvt*font: xft:DejaVu\ Sans\ Mono:pixelsize=14
 !urxvt*font: terminus-*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*
 urxvt*font: xft:terminus:pixelsize=14
+urxvt*boldFont: xft:terminus:pixelsize=14
 urxvt.scrollBar: false
