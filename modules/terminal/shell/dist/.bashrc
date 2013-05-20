@@ -31,11 +31,6 @@ fi
 ###############################################################################################
 # USING COMPLETION AND ALIAS
 ###############################################################################################
-if [ -f /etc/bash_completion ]; then
-	source /etc/bash_completion
-else
-	source ~/.bash_completion.sh
-fi
 source $HOME/.git_completion.sh
 source $HOME/.gem_completion.sh
 source $HOME/.bash_aliases
