@@ -25,7 +25,7 @@ sudo pacman -S gnome-shell
 sudo pacman -S firefox opera
 
 # Development
-sudo pacman -S gvim ruby python git nodejs
+sudo pacman -S base-devel gvim ruby python git nodejs
 
 # Common softwares
 sudo pacman -S gimp inkscape aurvote chromium texlive-bin vlc dos2unix steam
