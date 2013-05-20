@@ -27,6 +27,8 @@ if [ -f /bin/urxvt ]; then
 	export TERM=rxvt
 fi
 
+export LANG=en_US.utf8
+
 
 ###############################################################################################
 # USING COMPLETION AND ALIAS
