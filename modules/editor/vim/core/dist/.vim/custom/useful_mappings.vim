@@ -72,6 +72,13 @@ autocmd User Rails Rnavcommand consumer app/consumers -default=model()
 autocmd User Rails Rnavcommand factory db/factories -default=factories
 autocmd User Rails Rnavcommand seeds db/ -default=seeds
 
+nnoremap <space>/ :Unite grep:.<cr>
+
+let g:unite_source_history_yank_enable = 1
+nnoremap <space>y :Unite history/yank<cr>
+
+noremap <space>s :Unite -quick-match buffer<cr>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Other shortcuts using F1-F12 keys
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
