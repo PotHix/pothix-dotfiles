@@ -68,6 +68,7 @@ alias gs='git status --untracked-files'
 alias gst='git stash'
 alias gstp='git stash pop'
 alias gstc='git stash clear'
+alias gpt='git push --tags'
 alias gt='git tag'
 alias gut='git-update-testing | xargs git tag'
 
