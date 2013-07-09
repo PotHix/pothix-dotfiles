@@ -13,6 +13,7 @@
 	list-testing = !git tags | grep testing | sort -t . -k 1.9,1 -k 2,2 -k 3,3 -n
 	tags = !git for-each-ref refs/tags/* --format='%(refname)' --sort='authordate' | sed 's/refs\\/tags\\///g'
 	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	today = !git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --since=$(date --rfc-3339=date --date=yesterday)
 	unadd = reset HEAD --
 
 [apply]
