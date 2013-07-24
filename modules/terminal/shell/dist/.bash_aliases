@@ -13,13 +13,6 @@ alias sshr="ssh -l root"
 alias emc="emacs -nw"
 alias open="xdg-open"
 
-if [ -d /Applications ]; then
-    alias vim="/Applications/Vim.app/Contents/MacOS/Vim"
-    alias ls="ls -G"
-else
-    alias ls="ls --color"
-fi
-
 
 ##############################################
 #    Ruby / Rails
@@ -34,17 +27,6 @@ alias bi='bundle install --binstubs .gembin'
 
 alias removepyc='find * -name "*.pyc" -delete'
 alias removelog='find * -name "*.log" -delete'
-
-
-##############################################
-#    Special Alias for particular projects
-##############################################
-
-alias update-conf="cat config/nephelae.yml.example | sed 's/hosts.conf/pothix.conf/g' | sed 's/prefix_name: \"cloud\"/prefix_name: \"pothix\"/g' > config/nephelae.yml"
-
-# Openstack Quantum
-alias quantum-pep8="find * -name '*.py' | xargs pep8 --repeat --show-source"
-alias quantum-tests="export PYTHONPATH=../python-quantumclient; echo n | ./run_tests.sh && python ./quantum/plugins/blanka/run_tests.py"
 
 
 ##############################################
