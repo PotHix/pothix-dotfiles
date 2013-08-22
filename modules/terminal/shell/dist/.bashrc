@@ -106,9 +106,9 @@ git-prompt () {
 			STATE="${STATE}${YELLOW}*${NO_COLOR}"
 		fi
 
-		PS1="$WHITE[$(HOSTNAME) \W]${NO_COLOR}(${PROMPT_COLOR}${BRANCH}${NO_COLOR}${STATE}) " # (${YELLOW}$(rvm_version)${NO_COLOR})\n$ "
+		PS1="$WHITE[${HOSTNAME} \W]${NO_COLOR}(${PROMPT_COLOR}${BRANCH}${NO_COLOR}${STATE}) " # (${YELLOW}$(rvm_version)${NO_COLOR})\n$ "
 	else
-		PS1="$WHITE[$(HOSTNAME) \W]${NO_COLOR} " # (${YELLOW}$(rvm_version)${NO_COLOR})\n\$ "
+		PS1="$WHITE[${HOSTNAME} \W]${NO_COLOR} " # (${YELLOW}$(rvm_version)${NO_COLOR})\n\$ "
 	fi
 }
 
