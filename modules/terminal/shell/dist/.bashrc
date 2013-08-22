@@ -71,6 +71,7 @@ git-prompt () {
 
 	local BRANCH=`git branch 2> /dev/null | grep \* | sed 's/* //'`
 	local STATUS=`git status 2>/dev/null`
+	local HOSTNAME=`hostname | sed 's/^./\U&/g'`
 	local PROMPT_COLOR=$GREEN
 	local STATE=" "
 	local BEHIND="# Your branch is behind"
@@ -105,9 +106,9 @@ git-prompt () {
 			STATE="${STATE}${YELLOW}*${NO_COLOR}"
 		fi
 
-		PS1="$WHITE[PotHix \W]${NO_COLOR}(${PROMPT_COLOR}${BRANCH}${NO_COLOR}${STATE}) " # (${YELLOW}$(rvm_version)${NO_COLOR})\n$ "
+		PS1="$WHITE[$(HOSTNAME) \W]${NO_COLOR}(${PROMPT_COLOR}${BRANCH}${NO_COLOR}${STATE}) " # (${YELLOW}$(rvm_version)${NO_COLOR})\n$ "
 	else
-		PS1="$WHITE[PotHix \W]${NO_COLOR} " # (${YELLOW}$(rvm_version)${NO_COLOR})\n\$ "
+		PS1="$WHITE[$(HOSTNAME) \W]${NO_COLOR} " # (${YELLOW}$(rvm_version)${NO_COLOR})\n\$ "
 	fi
 }
 
