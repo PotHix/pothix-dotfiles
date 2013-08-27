@@ -55,3 +55,6 @@
 [submodule "modules/editor/vim/plugins/unite/dist/.vim/bundles/unite"]
 	path = modules/editor/vim/plugins/unite/dist/.vim/bundles/unite
 	url = https://github.com/Shougo/unite.vim
+[submodule "modules/editor/vim/plugins/YouCompleteMe/dist/.vim/bundles/YouCompleteMe"]
+	path = modules/editor/vim/plugins/YouCompleteMe/dist/.vim/bundles/YouCompleteMe
+	url = git@github.com:Valloric/YouCompleteMe.git
