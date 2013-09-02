@@ -31,11 +31,11 @@ hi IncSearch ctermbg=black ctermfg=green
 " ****************************************************************
 autocmd FileType make       set noexpandtab
 
-autocmd FileType eruby      call UseTabs()
-autocmd FileType html       call UseTabs()
-autocmd FileType xhtml      call UseTabs()
-autocmd FileType sh         call UseTabs()
-autocmd FileType xml        call UseTabs()
+autocmd FileType eruby      call HTMLFormatting()
+autocmd FileType html       call HTMLFormatting()
+autocmd FileType xhtml      call HTMLFormatting()
+autocmd FileType sh         call HTMLFormatting()
+autocmd FileType xml        call HTMLFormatting()
 
 autocmd FileType ruby       set expandtab sw=2 ts=2 sts=2
 autocmd FileType python     set expandtab sw=4 ts=4 sts=4
@@ -112,7 +112,8 @@ function! Writing()
 endfunction
 
 
-function! UseTabs()
-  set noexpandtab softtabstop=4 shiftwidth=4 tabstop=4
-  autocmd User Rails set softtabstop=4 shiftwidth=4 tabstop=4 noexpandtab
+function! HTMLFormatting()
+  "set noexpandtab " Removing tabs
+  set softtabstop=4 shiftwidth=4 tabstop=4
+  autocmd User Rails set softtabstop=4 shiftwidth=4 tabstop=4
 endfunction
