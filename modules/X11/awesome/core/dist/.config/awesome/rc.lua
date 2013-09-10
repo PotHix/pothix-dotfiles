@@ -691,10 +691,12 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1)          end),
     awful.key({ modkey,           }, "space", function () awful.layout.inc(layouts,  1)  end),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1)  end),
-    awful.key({ modkey, "Control" }, "n", awful.client.restore),
+    awful.key({ modkey, "Control" }, "n",                 awful.client.restore),
+    awful.key({ modkey            }, "F1",    function () awful.util.spawn("slock") end),
 
     -- Dropdown terminal
     -- awful.key({ modkey,	          }, "z",     function () scratch.drop(terminal) end),
+
 
     -- Widgets popups
     awful.key({ altkey,           }, "c",     function () add_calendar(7) end),
