@@ -49,9 +49,6 @@
 [submodule "modules/shssword/dist/.dotbin/shssword"]
 	path = modules/shssword/dist/.dotbin/shssword
 	url = git://github.com/dgvncsz0f/shssword.git
-[submodule "modules/dzen-tools/dist/.dotbin/dzen-tools"]
-	path = modules/dzen-tools/dist/.dotbin/dzen-tools
-	url = git://github.com/dgvncsz0f/dzen-tools.git
 [submodule "modules/editor/vim/plugins/unite/dist/.vim/bundles/unite"]
 	path = modules/editor/vim/plugins/unite/dist/.vim/bundles/unite
 	url = https://github.com/Shougo/unite.vim
