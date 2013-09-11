@@ -1,2 +1,2 @@
 #!/bin/bash
-sh <(curl -s https://raw.github.com/dgvncsz0f/dot-install/master/dot-install) repo=git://github.com/PotHix/pothix-dotfiles.git $@
+sh <(curl -s https://raw.github.com/dgvncsz0f/dot-install/master/dot-install) repo=git://github.com/PotHix/pothix-dotfiles.git $@ purge=true
