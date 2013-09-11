@@ -1,12 +1,10 @@
 ---[[                                          ]]--
 --                                               -
---    Powearrow Darker Awesome WM 3.5.+ config   --
---           github.com/copycat-killer           --
+--    Based on Powearrow Darker                  --
+--       by  github.com/copycat-killer           --
 --                                               -
 --[[                                           ]]--
 
-
--- {{{ Required Libraries
 
 local gears     = require("gears")
 local awful     = require("awful")
@@ -16,9 +14,6 @@ local wibox     = require("wibox")
 local beautiful = require("beautiful")
 local naughty   = require("naughty")
 local vicious   = require("vicious")
--- local scratch   = require("scratch")
-
--- }}}
 
 -- {{{ Autostart applications
 
@@ -85,7 +80,7 @@ terminal = "urxvtc"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 gui_editor = "geany -ps"
-browser = "dwb"
+browser = "google-chrome"
 browser2 = "midori"
 mail = terminal .. " -e mutt "
 chat = terminal .. " -e irssi "
@@ -266,8 +261,8 @@ end
 
 mytextclock:connect_signal("mouse::enter", function() show(0) end)
 mytextclock:connect_signal("mouse::leave", hide)
-mytextclock:buttons(util.table.join( awful.button({ }, 1, function() show(-1) end),
-                                     awful.button({ }, 3, function() show(1) end)))
+mytextclock:buttons(util.table.join( awful.button({ }, 1, function() show(1) end),
+                                     awful.button({ }, 3, function() show(-1) end)))
 
 -- Mail widget
 mygmail = wibox.widget.textbox()
