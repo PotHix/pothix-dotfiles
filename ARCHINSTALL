@@ -18,7 +18,7 @@ sudo pacman -S intel-ucode
 yaourt -S intel-gpu-tools
 
 # Window managers and dependencies
-sudo pacman -S awesome feh vicious
+sudo pacman -S awesome feh vicious iptraf-ng
 sudo pacman -S gnome-shell
 
 # Browsers stable
@@ -32,10 +32,8 @@ sudo pacman -S gimp inkscape aurvote chromium texlive-bin vlc dos2unix steam
 
 # Virt
 sudo pacman -S virt-manager
-yaourt -S lxc debootstrap dpkg
+yaourt -S docker-lxc --noconfirm
+yaourt -S lxc debootstrap dpkg --noconfirm
 
 # Community
 yaourt -S google-chrome-dev jdk dropbox submarine dzen2-xft-xpm-xinerama-svn
-
-# lxc vms
-# sudo lxc-create -t ubuntu -n minastirith -f /home/pothix/lxc/debian/config -- -r oneiric
