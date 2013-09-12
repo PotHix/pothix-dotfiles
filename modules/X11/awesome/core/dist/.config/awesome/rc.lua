@@ -83,7 +83,6 @@ browser = "google-chrome"
 mail = terminal .. " -e mutt "
 tasks = terminal .. " -e htop "
 iptraf = terminal .. " -g 180x54-20+34 -e sudo iptraf-ng -i all "
-musicplr = terminal .. " -g 130x34-320+16 -e ncmpcpp "
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
