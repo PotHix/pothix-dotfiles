@@ -373,7 +373,6 @@ baticon = wibox.widget.imagebox()
 baticon:set_image(beautiful.widget_battery)
 
 function batstate()
-
   local file = io.open("/sys/class/power_supply/BAT0/status", "r")
 
   if (file == nil) then
@@ -546,8 +545,6 @@ for s = 1, screen.count() do
   if s == 1 then right_layout:add(wibox.widget.systray()) end
   right_layout:add(spr)
   right_layout:add(arrl)
-  right_layout:add(arrl_ld)
-  right_layout:add(arrl_dl)
   right_layout:add(volicon)
   right_layout:add(volumewidget)
   right_layout:add(arrl_ld)
