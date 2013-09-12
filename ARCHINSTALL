@@ -22,13 +22,13 @@ sudo pacman -S awesome feh vicious iptraf-ng
 sudo pacman -S gnome-shell
 
 # Browsers stable
-sudo pacman -S firefox opera
+sudo pacman -S firefox opera google-chrome
 
 # Development
 sudo pacman -S base-devel gvim ruby python git nodejs
 
 # Common softwares
-sudo pacman -S gimp inkscape aurvote chromium texlive-bin vlc dos2unix steam
+sudo pacman -S gimp inkscape aurvote chromium texlive-bin vlc dos2unix steam dropbox
 
 # Virt
 sudo pacman -S virt-manager
@@ -36,4 +36,4 @@ yaourt -S docker-lxc --noconfirm
 yaourt -S lxc debootstrap dpkg --noconfirm
 
 # Community
-yaourt -S google-chrome-dev jdk dropbox submarine dzen2-xft-xpm-xinerama-svn
+yaourt -S google-chrome-dev jdk submarine dzen2-xft-xpm-xinerama-svn
