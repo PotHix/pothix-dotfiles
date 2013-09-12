@@ -79,11 +79,8 @@ beautiful.init(active_theme .. "/theme.lua")
 terminal = "urxvtc"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
-gui_editor = "geany -ps"
 browser = "google-chrome"
-browser2 = "midori"
 mail = terminal .. " -e mutt "
-chat = terminal .. " -e irssi "
 tasks = terminal .. " -e htop "
 iptraf = terminal .. " -g 180x54-20+34 -e sudo iptraf-ng -i all "
 musicplr = terminal .. " -g 130x34-320+16 -e ncmpcpp "
@@ -735,11 +732,7 @@ end ),
 awful.key({ modkey,        }, "c",      function () os.execute("xsel -p -o | xsel -i -b") end),
 
 -- User programs
-awful.key({ modkey,        }, "q",      function () awful.util.spawn( "dwb", false ) end),
-awful.key({ modkey,        }, "a",      function () awful.util.spawn( "midori", false ) end),
-awful.key({ modkey,        }, "s",      function () awful.util.spawn(gui_editor) end),
-awful.key({ modkey, 	     }, "t", 	    function () awful.util.spawn( "thunderbird", false ) end),
-awful.key({ modkey,        }, "d", 	    function () awful.util.spawn( "spacefm", false ) end),
+awful.key({ modkey,        }, "g",      function () awful.util.spawn( browser, false ) end),
 
 -- Prompt
 awful.key({ modkey }, "r", function () mypromptbox[mouse.screen]:run() end),
