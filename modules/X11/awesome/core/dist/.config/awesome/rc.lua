@@ -267,17 +267,17 @@ gmail_t = awful.tooltip({ objects = { mygmail },})
 mygmailimg = wibox.widget.imagebox(beautiful.widget_mail)
 vicious.register(mygmail, vicious.widgets.gmail,
 function (widget, args)
-  notify_title = "Hai un nuovo messaggio"
+  notify_title = "New message"
   notify_text = '"' .. args["{subject}"] .. '"'
   gmail_t:set_text(args["{subject}"])
   gmail_t:add_to_object(mygmailimg)
   if (args["{count}"] > 0) then
     if (notify_shown == false) then
       if (args["{count}"] > 1) then
-        notify_title = "Hai " .. args["{count}"] .. " nuovi messaggi"
+        notify_title = "Hai " .. args["{count}"] .. " new messages"
         notify_text = 'Ultimo: "' .. args["{subject}"] .. '"'
       else
-        notify_title = "Hai un nuovo messaggio"
+        notify_title = "Hey bro! You have a new message"
         notify_text = args["{subject}"]
       end
       naughty.notify({ title = notify_title, text = notify_text,
