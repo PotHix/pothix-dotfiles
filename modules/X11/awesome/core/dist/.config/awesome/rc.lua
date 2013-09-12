@@ -196,7 +196,7 @@ local function create_calendar()
   local first_day = os.time({ day = 1, month = cal_month, year = cal_year})
   local first_day_in_week =
   os.date("%w", first_day)
-  local result = "do lu ma me gi ve sa\n"
+  local result = "su mo tu we th fr sa\n"
   for i = 1, first_day_in_week do
     result = result .. "   "
   end
