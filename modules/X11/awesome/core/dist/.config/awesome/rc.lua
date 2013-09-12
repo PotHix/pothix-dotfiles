@@ -297,28 +297,6 @@ function (widget, args)
 end, 60)
 mygmail:buttons(awful.util.table.join(awful.button({ }, 1, function () awful.util.spawn(mail, false) end)))
 
--- Music widget
-mpdwidget = wibox.widget.textbox()
-mpdicon = wibox.widget.imagebox()
-mpdicon:set_image(beautiful.widget_music)
-mpdicon:buttons(awful.util.table.join(awful.button({ }, 1, function () awful.util.spawn_with_shell(musicplr) end)))
-
-vicious.register(mpdwidget, vicious.widgets.mpd,
-function(widget, args)
-  -- play
-  if (args["{state}"] == "Play") then
-    mpdicon:set_image(beautiful.widget_music_on)
-    return "<span background='#313131' font='Terminus 13' rise='2000'> <span font='Terminus 9'>" .. red .. args["{Title}"] .. coldef .. colwhi .. " - " .. coldef .. colwhi  .. args["{Artist}"] .. coldef .. " </span></span>"
-    -- pause
-  elseif (args["{state}"] == "Pause") then
-    mpdicon:set_image(beautiful.widget_music)
-    return "<span background='#313131' font='Terminus 13' rise='2000'> <span font='Terminus 9'>" .. colwhi .. "mpd paused" .. coldef .. " </span></span>"
-  else
-    mpdicon:set_image(beautiful.widget_music)
-    return ""
-  end
-end, 1)
-
 -- MEM widget
 memicon = wibox.widget.imagebox()
 memicon:set_image(beautiful.widget_mem)
@@ -570,8 +548,6 @@ for s = 1, screen.count() do
   right_layout:add(spr)
   right_layout:add(arrl)
   right_layout:add(arrl_ld)
-  right_layout:add(mpdicon)
-  right_layout:add(mpdwidget)
   right_layout:add(arrl_dl)
   right_layout:add(volicon)
   right_layout:add(volumewidget)
@@ -701,32 +677,6 @@ awful.key({ "Control" }, "Down", function ()
   awful.util.spawn("amixer set Master playback 1%-", false )
   vicious.force({ volumewidget })
 end),
---    awful.key({ "Control" }, "m", function ()
---                                       awful.util.spawn("amixer set Master playback toggle", false )
---                                       vicious.force({ volumewidget })
---                                     end),
---    awful.key({ altkey, "Control" }, "m", function ()
---                                              awful.util.spawn("amixer set Master playback 100%", false )
---                                              vicious.force({ volumewidget })
---                                          end),
-
--- Music control
-awful.key({ altkey, "Control" }, "Up", function ()
-  awful.util.spawn_with_shell( "mpc toggle || ncmpcpp toggle || ncmpc toggle || pms toggle", false )
-  vicious.force({ mpdwidget } )
-end),
-awful.key({ altkey, "Control" }, "Down", function ()
-  awful.util.spawn_with_shell( "mpc stop || ncmpcpp stop || ncmpc stop || pms stop", false )
-  vicious.force({ mpdwidget } )
-end ),
-awful.key({ altkey, "Control" }, "Left", function ()
-  awful.util.spawn_with_shell( "mpc prev || ncmpcpp prev || ncmpc prev || pms prev", false )
-  vicious.force({ mpdwidget } )
-end ),
-awful.key({ altkey, "Control" }, "Right", function ()
-  awful.util.spawn_with_shell( "mpc next || ncmpcpp next || ncmpc next || pms next", false )
-  vicious.force({ mpdwidget } )
-end ),
 
 -- Copy to clipboard
 awful.key({ modkey,        }, "c",      function () os.execute("xsel -p -o | xsel -i -b") end),
