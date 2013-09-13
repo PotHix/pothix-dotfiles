@@ -15,11 +15,12 @@ sudo pacman -S yaourt rsync curl xsel imagemagick slock bash-completion
 
 # Intel specific
 sudo pacman -S intel-ucode
-yaourt -S intel-gpu-tools
+yaourt -S intel-gpu-tools --noconfirm
 
 # Window managers and dependencies
 sudo pacman -S awesome feh vicious iptraf-ng
 sudo pacman -S gnome-shell
+yaourt -S f-dark-icon-theme --noconfirm
 
 # Browsers stable
 sudo pacman -S firefox opera google-chrome
@@ -36,4 +37,4 @@ yaourt -S docker-lxc --noconfirm
 yaourt -S lxc debootstrap dpkg --noconfirm
 
 # Community
-yaourt -S google-chrome-dev jdk submarine dzen2-xft-xpm-xinerama-svn
+yaourt -S google-chrome-dev jdk submarine dzen2-xft-xpm-xinerama-svn --noconfirm
