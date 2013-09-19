@@ -47,6 +47,12 @@ autocmd FileType markdown   call Writing()
 
 
 " ****************************************************************
+" LANGUAGE SPECIFIC
+" ****************************************************************
+autocmd BufWritePre *.go Fmt  " Always running gofmt for Go lang.
+
+
+" ****************************************************************
 " TRAILING SPACE REMOVER
 " ****************************************************************
 autocmd BufWritePre * :%s/\s\+$//e
