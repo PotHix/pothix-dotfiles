@@ -52,3 +52,6 @@
 [submodule "modules/editor/vim/plugins/unite/dist/.vim/bundles/unite"]
 	path = modules/editor/vim/plugins/unite/dist/.vim/bundles/unite
 	url = https://github.com/Shougo/unite.vim
+[submodule "modules/editor/vim/plugins/golang/dist/.vim/bundles/golang"]
+	path = modules/editor/vim/plugins/golang/dist/.vim/bundles/golang
+	url = git@github.com:jnwhiteh/vim-golang.git
