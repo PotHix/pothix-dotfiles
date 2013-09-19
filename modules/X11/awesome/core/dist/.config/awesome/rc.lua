@@ -15,6 +15,8 @@ local beautiful = require("beautiful")
 local naughty   = require("naughty")
 local vicious   = require("vicious")
 
+os.setlocale(os.getenv("LANG"))
+
 -- {{{ Autostart applications
 
 function run_once(cmd)
@@ -28,12 +30,6 @@ end
 
 run_once("urxvtd")
 run_once("unclutter -idle 10")
-
--- }}}
-
--- {{{ Localization
-
-os.setlocale(os.getenv("LANG"))
 
 -- }}}
 
@@ -132,12 +128,6 @@ for s = 1, screen.count() do
   -- Each screen has its own tag table.
   tags[s] = awful.tag(tags.names, s, tags.layout)
 end
-
--- }}}
-
--- {{{ Freedesktop menu
-
--- require("freedesktop/freedesktop")
 
 -- }}}
 
