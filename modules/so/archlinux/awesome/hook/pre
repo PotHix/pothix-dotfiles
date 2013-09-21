@@ -1,0 +1,7 @@
+#!/bin/sh
+
+echo "Updating and preparing"
+sudo pacman -Syu
+
+echo "Installing awesome dependencies"
+sudo pacman -S awesome feh vicious iptraf-ng
