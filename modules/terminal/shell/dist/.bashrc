@@ -162,13 +162,13 @@ git-pull-all (){
 }
 
 git-update-testing (){
-	local lasttagprefix=$(git tag -l testing* | tail -n1 | cut -d. -f1-2)
+	local lasttagprefix=$(git tags | grep testing | tail -n1 | cut -d. -f1-2)
 	local nextnumber=$(expr $(git tags | grep testing | tail -n1 | cut -d. -f3) + 1)
 	echo $lasttagprefix.$nextnumber
 }
 
 git-update-stable (){
-	local lasttagprefix=$(git tag -l stable* | tail -n1 | cut -d. -f1-2)
+	local lasttagprefix=$(git tags | grep stable | tail -n1 | cut -d. -f1-2)
 	local nextnumber=$(expr $(git tags | grep -v unstable | grep stable | tail -n1 | cut -d. -f3) + 1)
 	echo $lasttagprefix.$nextnumber
 }
