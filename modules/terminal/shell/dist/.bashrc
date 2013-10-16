@@ -167,6 +167,12 @@ git-update-testing (){
 	echo $lasttagprefix.$nextnumber
 }
 
+git-update-stable (){
+	local lasttagprefix=$(git tag -l stable* | tail -n1 | cut -d. -f1-2)
+	local nextnumber=$(expr $(git tags | grep -v unstable | grep stable | tail -n1 | cut -d. -f3) + 1)
+	echo $lasttagprefix.$nextnumber
+}
+
 
 ###############################################################################################
 # Random helpers
