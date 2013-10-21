@@ -4,28 +4,28 @@ echo "Updating and preparing"
 sudo pacman -Syu
 
 echo "Installing basic packages"
-sudo pacman -S xorg-server slim systemd systemd-arch-units openssh
+sudo pacman -S --noconfirm xorg-server slim systemd systemd-arch-units openssh
 
 echo "Installing wireless packages"
-sudo pacman -S wpa_supplicant wpa-actiond netcfg
+sudo pacman -S --noconfirm wpa_supplicant wpa-actiond netcfg
 
 echo "Installing fonts"
-sudo pacman -S ttf-dejavu terminus-font
+sudo pacman -S --noconfirm ttf-dejavu terminus-font
 
 echo "Installing basic tools"
-sudo pacman -S yaourt rsync curl xsel imagemagick slock bash-completion flashplugin pulseaudio-alsa icedtea-web-java7
+sudo pacman -S --noconfirm yaourt rsync curl xsel imagemagick slock bash-completion flashplugin pulseaudio-alsa icedtea-web-java7
 
 echo "Installing stable browsers"
-sudo pacman -S firefox opera google-chrome
+sudo pacman -S --noconfirm firefox opera google-chrome
 
 echo "Installing development tools"
-sudo pacman -S base-devel gvim ruby python git nodejs
+sudo pacman -S --noconfirm base-devel gvim ruby python git nodejs
 
 echo "Installing common softwares"
-sudo pacman -S gimp inkscape aurvote chromium texlive-bin vlc dos2unix steam dropbox shotwell
+sudo pacman -S --noconfirm gimp inkscape aurvote chromium texlive-bin vlc dos2unix steam dropbox shotwell
 
 echo "Installing virt tools"
-sudo pacman -S virt-manager
+sudo pacman -S --noconfirm virt-manager
 yaourt -S docker-lxc --noconfirm
 yaourt -S lxc debootstrap dpkg --noconfirm
 
