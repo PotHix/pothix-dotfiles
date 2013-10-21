@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "installing specific packages for osgiliath"
+sudo pacman -S kernel-eee
