@@ -10,4 +10,4 @@ RUN echo "deb http://pacotes.linux.locaweb.com.br/ct_linux_wheezy/debian stable 
 RUN echo "deb http://pacotes.linux.locaweb.com.br/ruby_wheezy/debian ruby20 main non-free contrib"       > /etc/apt/sources.list.d/ruby_wheezy.list
 
 RUN apt-get update
-RUN apt-get install -y --force-yes vim libruby1.9.1 libruby2.0 ruby-sqlite3 libsqlite0 libsqlite3-0 libsqlite3-ruby1.9.1 libsqlite0-dev libsqlite3-dev dpkg-dev ruby2.0-dev ruby1.9.1-dev libmysqlclient-dev libmysqlclient18 libxml2 python-lxml sphinx-doc python-sphinx debhelper rsync
+RUN apt-get install -y --force-yes vim libruby1.9.1 libruby2.0 ruby-sqlite3 libsqlite0 libsqlite3-0 libsqlite3-ruby1.9.1 libsqlite0-dev libsqlite3-dev dpkg-dev ruby2.0-dev ruby1.9.1-dev libmysqlclient-dev libmysqlclient18 libxml2 python-lxml sphinx-doc python-sphinx debhelper rsync devscripts
