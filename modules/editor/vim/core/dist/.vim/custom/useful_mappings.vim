@@ -24,6 +24,9 @@ nmap <tab> :tabnext<CR>
 nmap <up> <C-a>
 nmap <down> <C-x>
 
+" Fixing 80 chars.
+imap <C-g> <ESC>gqipA
+
 " Make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
