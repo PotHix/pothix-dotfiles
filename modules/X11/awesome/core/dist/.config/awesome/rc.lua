@@ -74,7 +74,7 @@ beautiful.init(active_theme .. "/theme.lua")
 terminal = "urxvt"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
-browser = "google-chrome"
+browser = "google-chrome-stable"
 mail = terminal .. " -e mutt "
 tasks = terminal .. " -e htop "
 iptraf = terminal .. " -g 180x54-20+34 -e sudo iptraf-ng -i all "
@@ -601,7 +601,7 @@ function ()
   awful.client.focus.byidx( 1)
   if client.focus then client.focus:raise() end
 end),
-awful.key({ modkey,           }, "j",
+awful.key({ modkey,           }, "n",
 function ()
   awful.client.focus.byidx(-1)
   if client.focus then client.focus:raise() end
@@ -614,10 +614,10 @@ awful.key({ modkey }, "b", function ()
 end),
 
 -- Layout manipulation
-awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end),
-awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end),
-awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end),
-awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end),
+awful.key({ modkey, "Shift"   }, "n", function () awful.client.swap.byidx(  1)    end),
+awful.key({ modkey, "Shift"   }, "e", function () awful.client.swap.byidx( -1)    end),
+awful.key({ modkey, "Control" }, "n", function () awful.screen.focus_relative( 1) end),
+awful.key({ modkey, "Control" }, "e", function () awful.screen.focus_relative(-1) end),
 awful.key({ modkey,           }, "u", awful.client.urgent.jumpto),
 awful.key({ modkey,           }, "Tab",
 function ()
@@ -763,40 +763,6 @@ awful.rules.rules = {
       size_hints_honor = false
     }
   },
-
-  { rule = { class = "MPlayer" },
-  properties = { floating = true } },
-
-  { rule = { class = "Dwb" },
-  properties = { tag = tags[1][1],
-  maximized_vertical=true,
-  maximized_horizontal=true } },
-
-  { rule = { class = "Midori" },
-  properties = { tag = tags[1][1],
-  maximized_vertical=true,
-  maximized_horizontal=true } },
-
-  { rule = { class = "Geany" },
-  properties = { tag = tags[1][2] } },
-
-  { rule = { class = "Zathura" },
-  properties = { tag = tags[1][3] } },
-
-  { rule = { class = "Thunderbird" },
-  properties = { tag = tags[1][3] } },
-
-  { rule = { class = "Dia" },
-  properties = { tag = tags[1][4],
-  floating = true } },
-
-  { rule = { class = "Gimp" },
-  properties = { tag = tags[1][4],
-  floating = true } },
-
-  { rule = { class = "Inkscape" },
-  properties = { tag = tags[1][4],
-  floating = true } },
 
   { rule = { class = "Transmission-gtk" },
   properties = { tag = tags[1][5] } },
