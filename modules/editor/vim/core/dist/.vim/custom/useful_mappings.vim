@@ -54,6 +54,23 @@ nnoremap Y y$
 inoremap jj <ESC>
 inoremap kj <ESC>
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Colemak
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" home row
+noremap n j
+noremap e k
+noremap i l
+
+" l is the new i
+noremap l i
+
+" and k became n
+noremap k n
+noremap K N
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Filetype changings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
