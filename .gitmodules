@@ -22,9 +22,6 @@
 [submodule "modules/editor/vim/plugins/surround/dist/.vim/bundles/surround"]
 	path = modules/editor/vim/plugins/surround/dist/.vim/bundles/surround
 	url = git://github.com/tpope/vim-surround.git
-[submodule "modules/editor/vim/plugins/vimpress/dist/.vim/bundles/vimpress"]
-	path = modules/editor/vim/plugins/vimpress/dist/.vim/bundles/vimpress
-	url = git://github.com/PotHix/Vimpress.git
 [submodule "modules/editor/vim/plugins/rake/dist/.vim/bundles/rake"]
 	path = modules/editor/vim/plugins/rake/dist/.vim/bundles/rake
 	url = git://github.com/tpope/vim-rake.git
