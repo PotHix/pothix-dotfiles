@@ -17,8 +17,8 @@ xrdb -merge .Xresources &
 # 2 screens
 xrandr --output DisplayPort-1 --right-of DisplayPort-0
 
-# ABNT2 keyboard
-setxkbmap us intl
+# colemak keyboard
+setxkbmap us -variant colemak
 
 # No capslock
 xmodmap ~/.Xmodmap
