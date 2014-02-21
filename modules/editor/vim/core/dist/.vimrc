@@ -90,21 +90,6 @@ command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
 
 let g:browser = 'firefox -new-tab '
 
-" Open the Ruby ApiDock page for the word under cursor, in a new Firefox tab
-function! OpenRubyDoc(keyword)
-  let url = 'http://apidock.com/ruby/'.a:keyword
-  exec '!'.g:browser.' '.url.' &'
-endfunction
-noremap RB :call OpenRubyDoc(expand('<cword>'))<CR>
-
-
-" Open the Rails ApiDock page for the word under cursos, in a new Firefox tab
-function! OpenRailsDoc(keyword)
-  let url = 'http://apidock.com/rails/'.a:keyword
-  exec '!'.g:browser.' '.url.' &'
-endfunction
-noremap RR :call OpenRailsDoc(expand('<cword>'))<CR>
-
 
 " Run the current spec file with spec command
 function! RunCurrentSpec(spec)
