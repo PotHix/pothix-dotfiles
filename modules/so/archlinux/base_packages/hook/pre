@@ -4,29 +4,60 @@ echo "Updating and preparing"
 sudo pacman -Syu
 
 echo "Installing basic packages"
-sudo pacman -S --noconfirm xorg-server slim systemd systemd-arch-units openssh
+sudo pacman -S --noconfirm xorg-server
+sudo pacman -S --noconfirm slim
+sudo pacman -S --noconfirm systemd
+sudo pacman -S --noconfirm systemd-arch-units
+sudo pacman -S --noconfirm openssh
 
 echo "Installing wireless packages"
-sudo pacman -S --noconfirm wpa_supplicant wpa-actiond netcfg
+sudo pacman -S --noconfirm wpa_supplicant
+sudo pacman -S --noconfirm netctl
 
 echo "Installing fonts"
-sudo pacman -S --noconfirm ttf-dejavu terminus-font
+sudo pacman -S --noconfirm ttf-dejavu
+sudo pacman -S --noconfirm terminus-font
 
 echo "Installing basic tools"
-sudo pacman -S --noconfirm yaourt rsync curl xsel imagemagick slock bash-completion flashplugin pulseaudio-alsa icedtea-web-java7
+sudo pacman -S --noconfirm rsync
+sudo pacman -S --noconfirm curl
+sudo pacman -S --noconfirm xsel
+sudo pacman -S --noconfirm imagemagick
+sudo pacman -S --noconfirm slock
+sudo pacman -S --noconfirm bash-completion
+sudo pacman -S --noconfirm flashplugin
+sudo pacman -S --noconfirm pulseaudio-alsa
+sudo pacman -S --noconfirm icedtea-web-java7
 
 echo "Installing stable browsers"
-sudo pacman -S --noconfirm firefox opera google-chrome
+sudo pacman -S --noconfirm firefox
+sudo pacman -S --noconfirm opera
 
 echo "Installing development tools"
-sudo pacman -S --noconfirm base-devel gvim ruby python git nodejs
+sudo pacman -S --noconfirm base-devel
+sudo pacman -S --noconfirm gvim
+sudo pacman -S --noconfirm ruby
+sudo pacman -S --noconfirm python
+sudo pacman -S --noconfirm git
+sudo pacman -S --noconfirm nodejs
 
 echo "Installing common softwares"
-sudo pacman -S --noconfirm gimp inkscape aurvote chromium texlive-bin vlc dos2unix steam dropbox shotwell
+sudo pacman -S --noconfirm gimp
+sudo pacman -S --noconfirm inkscape
+sudo pacman -S --noconfirm aurvote
+sudo pacman -S --noconfirm chromium
+sudo pacman -S --noconfirm texlive-bin
+sudo pacman -S --noconfirm vlc
+sudo pacman -S --noconfirm dos2unix
+sudo pacman -S --noconfirm steam
+sudo pacman -S --noconfirm dropbox
+sudo pacman -S --noconfirm shotwell
 
 echo "Installing virt tools"
 sudo pacman -S --noconfirm virt-manager
-yaourt -S docker-lxc --noconfirm
-yaourt -S lxc debootstrap dpkg --noconfirm
+yaourt -S docker --noconfirm
+yaourt -S lxc --noconfirm
+yaourt -S debootstrap --noconfirm
+yaourt -S dpkg --noconfirm
 
 exit 0
