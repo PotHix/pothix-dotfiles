@@ -1,4 +1,11 @@
 #!/bin/sh
 
 echo "installing specific packages for mordor"
-sudo pacman -S xf86-video-ati rxvt-unicode
+sudo pacman -S xf86-video-ati rxvt-unicode alsa-oss alsa-tools xorg-xmodmap xorg-rdb xorg-xrandr xf86-input-synaptics
+sudo pacman -S gcc make openssl
+
+sudo pacman -S python2 ruby
+
+sudo pacman -S redis-server mysql
+
+sudo pacman -S pidgin firefox chromium
