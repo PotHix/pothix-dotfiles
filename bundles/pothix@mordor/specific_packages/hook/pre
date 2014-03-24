@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "installing specific packages for mordor"
+sudo pacman -S xf86-video-ati rxvt-unicode
