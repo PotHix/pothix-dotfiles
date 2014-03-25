@@ -15,7 +15,7 @@ fi
 xrdb -merge .Xresources &
 
 # 2 screens
-xrandr --output DisplayPort-1 --right-of DisplayPort-0
+xrandr --output DVI-1 --right-of DVI-0
 
 # colemak keyboard
 setxkbmap us -variant colemak
