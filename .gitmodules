@@ -7,9 +7,6 @@
 [submodule "modules/editor/vim/plugins/markdown/dist/.vim/bundles/markdown"]
 	path = modules/editor/vim/plugins/markdown/dist/.vim/bundles/markdown
 	url = git://github.com/tpope/vim-markdown.git
-[submodule "modules/editor/vim/plugins/matchit/dist/.vim/bundles/matchit"]
-	path = modules/editor/vim/plugins/matchit/dist/.vim/bundles/matchit
-	url = git://github.com/tsaleh/vim-matchit.git
 [submodule "modules/editor/vim/plugins/pathogem/dist/.vim/bundles/pathogem"]
 	path = modules/editor/vim/plugins/pathogem/dist/.vim/bundles/pathogem
 	url = git://github.com/tpope/vim-pathogen.git
