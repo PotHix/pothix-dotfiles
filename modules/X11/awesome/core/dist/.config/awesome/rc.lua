@@ -309,21 +309,21 @@ vicious.register(tempwidget, vicious.widgets.thermal, '<span font="Terminus 12">
 fshicon = wibox.widget.imagebox()
 fshicon:set_image(beautiful.widget_hdd)
 fshwidget = wibox.widget.textbox()
-vicious.register(fshwidget, vicious.widgets.fs,
-function (widget, args)
-  if args["{/home used_p}"] >= 95 and args["{/home used_p}"] < 99 then
-    return '<span background="#313131" font="Terminus 13" rise="2000"> <span font="Terminus 9">' .. args["{/home used_p}"] .. '% </span></span>'
-  elseif args["{/home used_p}"] >= 99 and args["{/home used_p}"] <= 100 then
-    naughty.notify({ title = "warning", text = "/home partition ran out!\nmake some room",
-    timeout = 10,
-    position = "top_right",
-    fg = beautiful.fg_urgent,
-    bg = beautiful.bg_urgent })
-    return '<span background="#313131" font="Terminus 13" rise="2000"> <span font="Terminus 9">' .. args["{/home used_p}"] .. '% </span></span>'
-  else
-    return '<span background="#313131" font="Terminus 13" rise="2000"> <span font="Terminus 9">' .. args["{/home used_p}"] .. '% </span></span>'
-  end
-end, 600)
+--vicious.register(fshwidget, vicious.widgets.fs,
+--function (widget, args)
+--  if args["{/home used_p}"] >= 95 and args["{/home used_p}"] < 99 then
+--    return '<span background="#313131" font="Terminus 13" rise="2000"> <span font="Terminus 9">' .. args["{/home used_p}"] .. '% </span></span>'
+--  elseif args["{/home used_p}"] >= 99 and args["{/home used_p}"] <= 100 then
+--    naughty.notify({ title = "warning", text = "/home partition ran out!\nmake some room",
+--    timeout = 10,
+--    position = "top_right",
+--    fg = beautiful.fg_urgent,
+--    bg = beautiful.bg_urgent })
+--    return '<span background="#313131" font="Terminus 13" rise="2000"> <span font="Terminus 9">' .. args["{/home used_p}"] .. '% </span></span>'
+--  else
+--    return '<span background="#313131" font="Terminus 13" rise="2000"> <span font="Terminus 9">' .. args["{/home used_p}"] .. '% </span></span>'
+--  end
+--end, 600)
 
 
 local infos = nil
@@ -434,7 +434,7 @@ end, 1, "Master")
 
 -- Net widget
 netwidget = wibox.widget.textbox()
-vicious.register(netwidget, vicious.widgets.net, '<span background="#313131" font="Terminus 13" rise="2000"> <span font="Terminus 9" color="#7AC82E">${eth0 down_kb}</span> <span font="Terminus 7" color="#EEDDDD">↓↑</span> <span font="Terminus 9" color="#46A8C3">${eth0 up_kb} </span></span>', 3)
+vicious.register(netwidget, vicious.widgets.net, '<span background="#313131" font="Terminus 13" rise="2000"> <span font="Terminus 9" color="#7AC82E">${enp4s0 down_kb}</span> <span font="Terminus 7" color="#EEDDDD">↓↑</span> <span font="Terminus 9" color="#46A8C3">${enp4s0 up_kb} </span></span>', 3)
 neticon = wibox.widget.imagebox()
 neticon:set_image(beautiful.widget_net)
 netwidget:buttons(awful.util.table.join(awful.button({ }, 1, function () awful.util.spawn_with_shell(iptraf) end)))
