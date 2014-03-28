@@ -1,10 +1,27 @@
 #!/bin/sh
 
 echo "installing specific packages for mordor"
-sudo pacman -S xf86-video-ati rxvt-unicode alsa-oss alsa-tools xorg-xmodmap xorg-rdb xorg-xrandr xf86-input-synaptics
-sudo pacman -S openssl readline
+sudo pacman -S xf86-video-ati
+sudo pacman -S rxvt-unicode
+sudo pacman -S alsa-oss
+sudo pacman -S alsa-tools
+sudo pacman -S xorg-xmodmap
+sudo pacman -S xorg-rdb
+sudo pacman -S xorg-xrandr
+sudo pacman -S xf86-input-synaptics
 
-sudo pacman -S python2 ruby ghc
+echo "specific main libs"
+sudo pacman -S openssl
+sudo pacman -S readline
+
+echo "specific development libs"
+sudo pacman -S python2
+sudo pacman -S python2-pip
 sudo pacman -S bpython2
+sudo pacman -S ruby
+sudo pacman -S ghc
 
-sudo pacman -S redis-server mysql sqlite
+echo "specific development tools"
+sudo pacman -S redis-server
+sudo pacman -S mysql
+sudo pacman -S sqlite
