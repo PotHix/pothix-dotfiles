@@ -27,6 +27,9 @@ imap <C-g> <ESC>gqipA
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
 
+" Pasting made easy
+set pastetoggle=<F11>
+
 " Adding lines on normal mode easily
 " nnoremap <C-k> O<ESC>  " *** not needed because of colemak
 " nnoremap <C-j> o<ESC>  " *** not needed because of colemak
