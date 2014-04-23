@@ -650,11 +650,11 @@ awful.key({ modkey            }, "F1",    function () awful.util.spawn("slock") 
 awful.key({ altkey,           }, "c",     function () add_calendar(7) end),
 
 -- Volume control
-awful.key({ "Control" }, "Up", function ()
+awful.key({ "Control", "Shift" }, "Up", function ()
   awful.util.spawn("amixer set Master playback 1%+", false )
   vicious.force({ volumewidget })
 end),
-awful.key({ "Control" }, "Down", function ()
+awful.key({ "Control", "Shift" }, "Down", function ()
   awful.util.spawn("amixer set Master playback 1%-", false )
   vicious.force({ volumewidget })
 end),
