@@ -10,8 +10,10 @@ export pwshome="$HOME/.dotbin/shssword/bin"
 export PATH="$HOME/bin:$HOME/$pwdhome:$PATH"
 export CDPATH=.:~:$HOME/repos
 
-export HISTCONTROL=ignoredups  # don't put duplicate lines in the history. See bash(1) for more options
-export HISTCONTROL=ignoreboth  # ... and ignore same sucessive entries.
+export HISTCONTROL=ignoredups:ignoreboth:erasedups
+export HISTFILE=$HOME/.bash_history
+export HISTFILESIZE=10000
+export HISTSIZE=7500
 
 export EDITOR=vim
 export GEM_EDITOR=vim
