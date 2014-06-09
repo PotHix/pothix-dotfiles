@@ -10,10 +10,8 @@ export pwshome="$HOME/.dotbin/shssword/bin"
 export PATH="$HOME/bin:$HOME/$pwdhome:$PATH"
 export CDPATH=.:~:$HOME/repos
 
-export HISTCONTROL=ignoredups:ignoreboth:erasedups
-export HISTFILE=$HOME/.bash_history
-export HISTFILESIZE=10000
-export HISTSIZE=7500
+export HISTCONTROL=ignoredups  # don't put duplicate lines in the history. See bash(1) for more options
+export HISTCONTROL=ignoreboth  # ... and ignore same sucessive entries.
 
 export EDITOR=vim
 export GEM_EDITOR=vim
@@ -26,6 +24,8 @@ export GREP_COLOR="4;33"
 
 export GPG_TTY=$(/usr/bin/tty)
 
+export LANG=en_US.UTF-8
+
 if [ -f /bin/urxvt ]; then
 	export TERM=rxvt
 fi
@@ -34,8 +34,8 @@ fi
 ###############################################################################################
 # USING COMPLETION AND ALIAS
 ###############################################################################################
-source $HOME/.git_completion.sh
-source $HOME/.gem_completion.sh
+#source $HOME/.git_completion.sh
+#source $HOME/.gem_completion.sh
 source $HOME/.bash_aliases
 
 
@@ -215,7 +215,10 @@ iconver (){
 ###############################################################################################
 # Using RVM
 ###############################################################################################
-[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
-PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+source /home/pothix/.rvm/scripts/rvm
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
