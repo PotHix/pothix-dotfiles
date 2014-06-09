@@ -18,7 +18,8 @@ xrdb -merge .Xresources &
 xrandr --output DVI-1 --right-of DVI-0
 
 # colemak keyboard
-setxkbmap us -variant colemak
+# setxkbmap us -variant colemak
+setxkbmap -geometry kinesis -layout us -variant colemak
 
 # No capslock
 xmodmap ~/.Xmodmap
