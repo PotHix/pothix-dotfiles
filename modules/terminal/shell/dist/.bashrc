@@ -1,6 +1,3 @@
-set -o vi    # The real bash must use Vi
-bind -m vi-insert "\C-l":clear-screen # clear with ctrl+l for vi mode
-
 ###############################################################################################
 # EXPORTING ENVIRONMENT VARIABLES
 ###############################################################################################
