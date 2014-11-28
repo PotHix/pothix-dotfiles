@@ -16,9 +16,6 @@ export GEM_EDITOR=vim
 export GITHUB_USER=PotHix
 export CODES=$HOME/repos
 
-export GREP_OPTIONS="--color=auto"
-export GREP_COLOR="4;33"
-
 export GPG_TTY=$(/usr/bin/tty)
 
 export LANG=en_US.UTF-8
