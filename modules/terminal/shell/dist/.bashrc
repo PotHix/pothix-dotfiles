@@ -2,9 +2,7 @@
 # EXPORTING ENVIRONMENT VARIABLES
 ###############################################################################################
 
-export pwshome="$HOME/.dotbin/shssword/bin"
-
-export PATH="$HOME/bin:$HOME/$pwdhome:$PATH"
+export PATH="$HOME/bin:$PATH"
 export CDPATH=.:~:$HOME/repos
 
 export HISTCONTROL=ignoredups  # don't put duplicate lines in the history. See bash(1) for more options
@@ -181,10 +179,6 @@ v (){
 	vim $file
 }
 
-rgrep (){
-	grep $1 {app,spec,lib,db,config}/* -Rin
-}
-
 goodpractices (){
 	local extensions_regex=".*\.\(py\|j\|c\|rb\|js\|php\)$"
 
@@ -209,10 +203,5 @@ iconver (){
 ###############################################################################################
 # Using RVM
 ###############################################################################################
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-source /home/pothix/.rvm/scripts/rvm
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
