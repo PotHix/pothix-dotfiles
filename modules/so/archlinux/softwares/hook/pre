@@ -1,0 +1,19 @@
+#!/bin/sh
+
+command -v sudo || echo "'sudo' command not found, please install it" && exit 1
+
+echo "Installing common softwares"
+sudo pacman -S --noconfirm gimp
+sudo pacman -S --noconfirm inkscape
+sudo pacman -S --noconfirm pidgin
+sudo pacman -S --noconfirm evince
+sudo pacman -S --noconfirm aurvote
+sudo pacman -S --noconfirm chromium
+sudo pacman -S --noconfirm texlive-bin
+sudo pacman -S --noconfirm vlc
+sudo pacman -S --noconfirm dos2unix
+sudo pacman -S --noconfirm steam
+sudo pacman -S --noconfirm dropbox
+sudo pacman -S --noconfirm shotwell
+
+exit 0
