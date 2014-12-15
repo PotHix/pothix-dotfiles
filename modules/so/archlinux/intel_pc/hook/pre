@@ -3,4 +3,3 @@
 # Intel for X11
 sudo pacman -S xf86-video-intel
 sudo pacman -S intel-ucode
-yaourt -S intel-gpu-tools --noconfirm
