@@ -9,7 +9,6 @@ alias clipboard='xsel'
 alias psgrep="ps aux | grep"
 alias sshadd="ssh-add ~/.ssh/id_rsa"
 alias sshr="ssh -l root"
-alias emc="emacs -nw"
 alias open="xdg-open"
 
 
