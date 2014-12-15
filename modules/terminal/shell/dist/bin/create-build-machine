@@ -1,8 +1,0 @@
-if [ $1 ]; then
-        if [ ! -d /virt/$1 ]; then
-                sudo debootstrap wheezy /virt/$1 http://ftp.us.debian.org/debian
-                sudo schroot -c $1 --directory / apt-get install devscripts python-setuptools
-        else
-                echo "$1 machine already exists!"
-        fi
-fi
