@@ -32,4 +32,3 @@ test -x /usr/bin/gpg-agent && test -z "${GPG_AGENT_INFO}" && eval $(/usr/bin/gpg
 
 # exec gnome-session
 exec ssh-agent awesome
-# exec ssh-agent enlightenment_start
