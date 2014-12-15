@@ -1,5 +1,7 @@
 #!/bin/sh
 
+command -v sudo || echo "'sudo' command not found, please install it" && exit 1
+
 echo "Updating and preparing"
 sudo pacman -Syu
 
@@ -27,13 +29,10 @@ sudo pacman -S --noconfirm unzip
 sudo pacman -S --noconfirm imagemagick
 sudo pacman -S --noconfirm slock
 sudo pacman -S --noconfirm bash-completion
-sudo pacman -S --noconfirm flashplugin
 sudo pacman -S --noconfirm pulseaudio-alsa
-sudo pacman -S --noconfirm icedtea-web-java7
 
 echo "Installing stable browsers"
 sudo pacman -S --noconfirm firefox
-sudo pacman -S --noconfirm opera
 
 echo "Installing development tools"
 sudo pacman -S --noconfirm base-devel
@@ -42,26 +41,5 @@ sudo pacman -S --noconfirm ruby
 sudo pacman -S --noconfirm python
 sudo pacman -S --noconfirm git
 sudo pacman -S --noconfirm nodejs
-
-echo "Installing common softwares"
-sudo pacman -S --noconfirm gimp
-sudo pacman -S --noconfirm inkscape
-sudo pacman -S --noconfirm pidgin
-sudo pacman -S --noconfirm evince
-sudo pacman -S --noconfirm aurvote
-sudo pacman -S --noconfirm chromium
-sudo pacman -S --noconfirm texlive-bin
-sudo pacman -S --noconfirm vlc
-sudo pacman -S --noconfirm dos2unix
-sudo pacman -S --noconfirm steam
-sudo pacman -S --noconfirm dropbox
-sudo pacman -S --noconfirm shotwell
-
-echo "Installing virt tools"
-sudo pacman -S --noconfirm virt-manager
-yaourt -S docker --noconfirm
-yaourt -S lxc --noconfirm
-yaourt -S debootstrap --noconfirm
-yaourt -S dpkg --noconfirm
 
 exit 0
