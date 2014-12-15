@@ -1,8 +1,0 @@
-# mkinitcpio preset file for the 'linux' package
-
-ALL_config="/etc/mkinitcpio.conf"
-ALL_kver="/boot/vmlinuz-git"
-
-PRESETS=('default')
-
-default_image="/boot/initramfs-git.img"
