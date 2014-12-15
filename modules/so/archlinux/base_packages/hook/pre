@@ -1,7 +1,5 @@
 #!/bin/sh
 
-command -v sudo || echo "'sudo' command not found, please install it" && exit 1
-
 echo "Updating and preparing"
 sudo pacman -Syu
 
