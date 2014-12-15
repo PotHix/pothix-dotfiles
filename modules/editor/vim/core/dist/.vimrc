@@ -1,18 +1,28 @@
 " ****************************************************************
-" USING PATHOGEM TO ORGANIZE MY VIM PLUGINS
+" USING VUNDLE FOR VIM PLUGINS
 " ****************************************************************
-runtime! autoload/pathogen.vim
-if exists('g:loaded_pathogen')
-  call pathogen#runtime_prepend_subdirectories(expand('~/.vim/bundles'))
-endif
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" ****************************************************************
-" INCLUDES
-" ****************************************************************
-source ~/.vim/custom/settings.vim
-source ~/.vim/custom/useful_mappings.vim
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-ragtag'
+Plugin 'vim-scripts/vimwiki'
+Plugin 'kien/ctrlp.vim'
+Plugin 'othree/html5.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'vim-scripts/VimRepress'
 
+call vundle#end()
 
 " ****************************************************************
 " COLORS AND SYNTAX
@@ -24,6 +34,13 @@ filetype plugin indent on
 " Search Options
 hi    Search ctermbg=green ctermfg=black
 hi IncSearch ctermbg=black ctermfg=green
+
+
+" ****************************************************************
+" INCLUDES
+" ****************************************************************
+source ~/.vim/custom/settings.vim
+source ~/.vim/custom/useful_mappings.vim
 
 
 " ****************************************************************
