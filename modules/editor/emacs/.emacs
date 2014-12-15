@@ -55,7 +55,26 @@
 (global-set-key (kbd "<C-return>") 'rectangle-mark-mode)
 (global-set-key (kbd "C-c ro") 'open-rectangle)
 
+; Magit
+;
 (unless (package-installed-p 'magit)
     (package-install 'magit))
 
+; Helm
+;
+(unless (package-installed-p 'helm)
+  (package-install 'helm))
+
+(global-set-key (kbd "M-x") 'helm-M-x)
+
+(require 'helm-config)
+
+; Projectile
+;
+(unless (package-installed-p 'projectile)
+    (package-install 'projectile))
+
+
+; Emacs server
+;
 (unless (server-running-p) (server-start))
