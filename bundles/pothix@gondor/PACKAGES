@@ -29,9 +29,6 @@ sudo pacman -S --noconfirm slock
 sudo pacman -S --noconfirm bash-completion
 sudo pacman -S --noconfirm alsa-utils
 
-echo "Installing stable browsers"
-sudo pacman -S --noconfirm firefox
-
 echo "Installing development tools"
 sudo pacman -S --noconfirm base-devel
 sudo pacman -S --noconfirm gvim
