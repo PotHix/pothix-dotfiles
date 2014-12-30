@@ -38,7 +38,7 @@ sudo pacman -S --noconfirm git
 sudo pacman -S --noconfirm nodejs
 
 echo "Installing awesome dependencies"
-sudo pacman -S awesome feh vicious iptraf-ng
+sudo pacman -S --noconfirm awesome feh vicious iptraf-ng
 
 echo "Installing common softwares"
 sudo pacman -S --noconfirm gimp
