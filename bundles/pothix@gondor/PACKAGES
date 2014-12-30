@@ -55,7 +55,9 @@ sudo pacman -S --noconfirm dropbox
 sudo pacman -S --noconfirm shotwell
 
 echo "Installing Aura"
-bash <(curl aur.sh) -si aura-bin
+cd /tmp
+curl aur.sh | bash -si aura-bin
+cd -
 
 echo "Installing packages from AUR"
 sudo aura -A --noconfirm firefox-developer
