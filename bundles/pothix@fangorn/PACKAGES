@@ -40,9 +40,6 @@ sudo pacman -S --noconfirm python
 sudo pacman -S --noconfirm git
 sudo pacman -S --noconfirm nodejs
 
-echo "Installing awesome dependencies"
-sudo pacman -S awesome feh vicious iptraf-ng
-
 echo "installing specific packages for fangorn"
 sudo pacman -S nvidia gnome extra-amd-ucode system-config-printer
 
