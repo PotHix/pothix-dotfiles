@@ -1,4 +1,0 @@
-#!/bin/sh
-
-echo "installing specific packages for fangorn"
-sudo pacman -S nvidia gnome extra-amd-ucode system-config-printer

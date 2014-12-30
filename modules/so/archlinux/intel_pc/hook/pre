@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# Intel for X11
-sudo pacman -S xf86-video-intel
-sudo pacman -S intel-ucode

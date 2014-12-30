@@ -1,0 +1,49 @@
+#!/bin/sh
+
+echo "Updating and preparing"
+sudo pacman -Syu
+
+echo "Installing basic packages"
+sudo pacman -S --noconfirm xorg-server xorg-xinit
+sudo pacman -S --noconfirm slim
+sudo pacman -S --noconfirm systemd
+sudo pacman -S --noconfirm systemd-arch-units
+sudo pacman -S --noconfirm openssh
+
+echo "Installing wireless packages"
+sudo pacman -S --noconfirm wpa_supplicant
+sudo pacman -S --noconfirm netctl
+
+echo "Installing fonts"
+sudo pacman -S --noconfirm ttf-dejavu
+sudo pacman -S --noconfirm terminus-font
+
+echo "Installing basic tools"
+sudo pacman -S --noconfirm rsync
+sudo pacman -S --noconfirm ntp
+sudo pacman -S --noconfirm curl
+sudo pacman -S --noconfirm xsel
+sudo pacman -S --noconfirm unzip
+sudo pacman -S --noconfirm imagemagick
+sudo pacman -S --noconfirm slock
+sudo pacman -S --noconfirm bash-completion
+sudo pacman -S --noconfirm alsa-utils
+
+echo "Installing stable browsers"
+sudo pacman -S --noconfirm firefox
+
+echo "Installing development tools"
+sudo pacman -S --noconfirm base-devel
+sudo pacman -S --noconfirm gvim
+sudo pacman -S --noconfirm ruby
+sudo pacman -S --noconfirm python
+sudo pacman -S --noconfirm git
+sudo pacman -S --noconfirm nodejs
+
+echo "Installing awesome dependencies"
+sudo pacman -S awesome feh vicious iptraf-ng
+
+echo "installing specific packages for fangorn"
+sudo pacman -S nvidia gnome extra-amd-ucode system-config-printer
+
+exit 0
