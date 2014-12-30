@@ -40,6 +40,9 @@ sudo pacman -S --noconfirm nodejs
 echo "Installing awesome dependencies"
 sudo pacman -S --noconfirm awesome feh vicious iptraf-ng
 
+echo "Installing gnome as well"
+sudo pacman -S --noconfirm gnome
+
 echo "Installing common softwares"
 sudo pacman -S --noconfirm gimp
 sudo pacman -S --noconfirm inkscape
