@@ -389,8 +389,8 @@ function (widget, args)
   elseif (args[2] <= 5 and batstate() == 'Discharging') then
     baticon:set_image(beautiful.widget_battery_empty)
     naughty.notify({
-      text = "sto per spegnermi...",
-      title = "Carica quasi esaurita!",
+      text = "Almost extinguising battery...",
+      title = "Battery almost dying!",
       position = "top_right",
       timeout = 1,
       fg="#000000",
