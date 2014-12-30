@@ -606,7 +606,7 @@ function ()
   awful.client.focus.byidx(-1)
   if client.focus then client.focus:raise() end
 end),
-awful.key({ modkey,           }, "w", function () mymainmenu:show({keygrabber=true}) end),
+--awful.key({ modkey,           }, "w", function () mymainmenu:show({keygrabber=true}) end),
 
 -- Show/Hide Wibox
 awful.key({ modkey }, "b", function ()
@@ -647,7 +647,7 @@ awful.key({ modkey            }, "F1",    function () awful.util.spawn("slock") 
 
 
 -- Widgets popups
-awful.key({ altkey,           }, "c",     function () add_calendar(7) end),
+-- awful.key({ altkey,           }, "c",     function () add_calendar(7) end),
 
 -- Volume control
 awful.key({ "Control", "Shift" }, "Up", function ()
