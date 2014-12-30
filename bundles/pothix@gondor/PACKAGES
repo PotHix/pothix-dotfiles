@@ -55,11 +55,11 @@ sudo pacman -S --noconfirm dropbox
 sudo pacman -S --noconfirm shotwell
 
 echo "Installing Aura"
-$(sh <(curl aur.sh) -si aura-bin)
+bash <(curl aur.sh) -si aura-bin
 
 echo "Installing packages from AUR"
-aura -A --noconfirm firefox-developer
-aura -A --noconfirm google-chrome-stable
-aura -A --noconfirm android-sdk-platform-tools
+sudo aura -A --noconfirm firefox-developer
+sudo aura -A --noconfirm google-chrome-stable
+sudo aura -A --noconfirm android-sdk-platform-tools
 
 exit 0
