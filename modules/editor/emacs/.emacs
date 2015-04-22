@@ -30,12 +30,22 @@
 (setq uniquify-strip-common-suffix nil)
 (setq custom-file "~/.emacs.d/custom-file")
 
+
+; Color Theme
 (unless (package-installed-p 'color-theme-solarized)
     (package-install 'color-theme-solarized))
 
-(condition-case nil
-    (load-theme 'solarized-dark t)
-  (error (message "error loading theme solarized-dark")))
+(defun use-solarized-bgmode (frame mode)
+    (set-frame-parameter frame 'background-mode mode)
+      (when (not (display-graphic-p frame))
+            (set-terminal-parameter (frame-terminal frame) 'background-mode mode))
+        (enable-theme 'solarized))
+
+(load-theme 'solarized t)
+    (use-solarized-bgmode nil 'dark)
+    (add-hook 'after-make-frame-functions
+        (lambda (frame) (use-solarized-bgmode frame 'dark)))
+
 
 (set-scroll-bar-mode nil)
 (menu-bar-mode 0)
@@ -68,6 +78,12 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 
 (require 'helm-config)
+
+
+; Weblogger
+(unless (package-installed-p 'weblogger)
+  (package-install 'weblogger))
+
 
 ; Projectile
 ;
