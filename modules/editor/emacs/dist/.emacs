@@ -30,8 +30,6 @@
 (setq uniquify-strip-common-suffix nil)
 (setq custom-file "~/.emacs.d/custom-file")
 
-
-; Color Theme
 (unless (package-installed-p 'color-theme-solarized)
     (package-install 'color-theme-solarized))
 
@@ -45,7 +43,6 @@
     (use-solarized-bgmode nil 'dark)
     (add-hook 'after-make-frame-functions
         (lambda (frame) (use-solarized-bgmode frame 'dark)))
-
 
 (set-scroll-bar-mode nil)
 (menu-bar-mode 0)
@@ -69,6 +66,7 @@
 ;
 (unless (package-installed-p 'magit)
     (package-install 'magit))
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 ; Helm
 ;
