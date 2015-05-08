@@ -62,16 +62,21 @@
 (global-set-key (kbd "<C-return>") 'rectangle-mark-mode)
 (global-set-key (kbd "C-c ro") 'open-rectangle)
 
+
 ; Magit
 ;
 (unless (package-installed-p 'magit)
     (package-install 'magit))
 (setq magit-last-seen-setup-instructions "1.4.0")
 
+
 ; Helm
 ;
 (unless (package-installed-p 'helm)
   (package-install 'helm))
+
+(require 'helm-config)
+(helm-mode t)
 
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
@@ -81,8 +86,6 @@
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
 
 (define-key helm-find-files-map (kbd "<tab>") 'helm-execute-persistent-action)
-
-(require 'helm-config)
 
 
 ; Weblogger
