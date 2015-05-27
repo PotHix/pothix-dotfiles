@@ -67,7 +67,9 @@
 ;
 (unless (package-installed-p 'magit)
     (package-install 'magit))
+
 (setq magit-last-seen-setup-instructions "1.4.0")
+(global-set-key (kbd "<f9>") 'magit-status)
 
 
 ; Helm
@@ -86,10 +88,17 @@
 (define-key helm-find-files-map (kbd "<tab>") 'helm-execute-persistent-action)
 
 
-; Weblogger
-(unless (package-installed-p 'weblogger)
-  (package-install 'weblogger))
+; Projectile
+;
+(unless (package-installed-p 'projectile)
+    (package-install 'projectile))
 
+
+; Helm - projectile
+(unless (package-installed-p 'helm-projectile)
+    (package-install 'helm-projectile))
+
+(global-set-key (kbd "C-c C-f") 'helm-projectile-find-file)
 
 ; Ace jump
 (unless (package-installed-p 'ace-jump-mode)
@@ -107,12 +116,6 @@
 
 (unless (package-installed-p 'ace-jump-zap)
     (package-install 'ace-jump-zap))
-
-
-; Projectile
-;
-(unless (package-installed-p 'projectile)
-    (package-install 'projectile))
 
 
 ; Emacs server
