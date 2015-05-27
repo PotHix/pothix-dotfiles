@@ -72,6 +72,12 @@
 (global-set-key (kbd "<f9>") 'magit-status)
 
 
+; git-timemachine
+;
+(unless (package-installed-p 'git-timemachine)
+    (package-install 'git-timemachine))
+
+
 ; Helm
 ;
 (unless (package-installed-p 'helm)
