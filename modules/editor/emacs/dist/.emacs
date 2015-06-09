@@ -30,6 +30,15 @@
 (setq uniquify-strip-common-suffix nil)
 (setq custom-file "~/.emacs.d/custom-file")
 
+(setq-default indent-tabs-mode nil)
+
+; Using bsd indent style
+(c-add-style "pothixindent" '("bsd" (c-basic-offset . 2) (substatement-open . 0)))
+(defun pothix-mode-hook ()
+  (c-set-style "pothixindent"))
+(add-hook 'c-mode-hook 'pothix-mode-hook)
+(add-hook 'c++-mode-hook 'pothix-mode-hook)
+
 (unless (package-installed-p 'color-theme-solarized)
     (package-install 'color-theme-solarized))
 
@@ -104,6 +113,7 @@
 (unless (package-installed-p 'helm-projectile)
     (package-install 'helm-projectile))
 
+(require 'helm-projectile)
 (global-set-key (kbd "C-c C-f") 'helm-projectile-find-file)
 
 ; Ace jump
