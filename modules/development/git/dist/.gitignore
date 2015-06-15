@@ -10,3 +10,4 @@
 .pyenv
 *.pyc
 .ruby-version
+.#*
