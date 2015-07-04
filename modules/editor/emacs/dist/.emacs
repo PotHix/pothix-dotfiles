@@ -81,12 +81,6 @@
 (global-set-key (kbd "<f9>") 'magit-status)
 
 
-; git-timemachine
-;
-(unless (package-installed-p 'git-timemachine)
-    (package-install 'git-timemachine))
-
-
 ; Helm
 ;
 (unless (package-installed-p 'helm)
@@ -103,6 +97,23 @@
 (define-key helm-find-files-map (kbd "<tab>") 'helm-execute-persistent-action)
 
 
+; full-ack
+;
+(unless (package-installed-p 'full-ack)
+    (package-install 'full-ack))
+(require 'full-ack)
+(global-set-key (kbd "M-n") 'next-error)
+(global-set-key (kbd "M-p") 'previous-error)
+
+
+; dired+
+;
+(unless (package-installed-p 'dired+)
+    (package-install 'dired+))
+(require 'dired+)
+(add-hook 'dired-mode-hook (lambda () (define-key dired-mode-map (kbd "M-g") 'ack)))
+
+
 ; Projectile
 ;
 (unless (package-installed-p 'projectile)
@@ -110,16 +121,18 @@
 
 
 ; Helm - projectile
+;
 (unless (package-installed-p 'helm-projectile)
     (package-install 'helm-projectile))
 
 (require 'helm-projectile)
 (global-set-key (kbd "C-c C-f") 'helm-projectile-find-file)
 
+
 ; Ace jump
+;
 (unless (package-installed-p 'ace-jump-mode)
   (package-install 'ace-jump-mode))
-
 (require 'ace-jump-mode)
 
 (autoload 'ace-jump-mode "ace-jump-mode" "Emacs quick move minor mode" t)
@@ -130,8 +143,28 @@
 (eval-after-load "ace-jump-mode" '(ace-jump-mode-enable-mark-sync))
 (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
 
+
+; Ace jump Zap
+;
 (unless (package-installed-p 'ace-jump-zap)
     (package-install 'ace-jump-zap))
+
+
+; Ace window
+;
+(unless (package-installed-p 'ace-window)
+    (package-install 'ace-window))
+(global-set-key (kbd "C-x o") 'ace-window)
+(setq aw-keys '(?a ?r ?s ?t ?h ?n ?i ?o)) ; colemak home row
+
+; Dot mode
+;
+(unless (package-installed-p 'dot-mode)
+    (package-install 'dot-mode))
+(require 'dot-mode)
+(add-hook 'find-file-hooks 'dot-mode-on)
+(autoload 'dot-mode "dot-mode" nil t) ; vi `.' command emulation
+(global-set-key [(control ?.)] (lambda () (interactive) (dot-mode 1)(message "Dot mode activated.")))
 
 
 ; Emacs server
