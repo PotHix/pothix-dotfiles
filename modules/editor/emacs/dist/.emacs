@@ -32,6 +32,16 @@
 
 (setq-default indent-tabs-mode nil)
 
+
+; ---------------------------------
+; global bindings
+; ---------------------------------
+
+(setq kill-whole-line t)
+(global-set-key (kbd "C-k") 'kill-whole-line)
+(global-set-key (kbd "C-M-k") 'kill-line)
+
+
 ; Using bsd indent style
 (c-add-style "pothixindent" '("bsd" (c-basic-offset . 2) (substatement-open . 0)))
 (defun pothix-mode-hook ()
