@@ -169,6 +169,7 @@
 (global-set-key (kbd "C-x o") 'ace-window)
 (setq aw-keys '(?a ?r ?s ?t ?h ?n ?i ?o)) ; colemak home row
 
+
 ; Dot mode
 ;
 (unless (package-installed-p 'dot-mode)
@@ -177,6 +178,13 @@
 (add-hook 'find-file-hooks 'dot-mode-on)
 (autoload 'dot-mode "dot-mode" nil t) ; vi `.' command emulation
 (global-set-key [(control ?.)] (lambda () (interactive) (dot-mode 1)(message "Dot mode activated.")))
+
+
+; Discover my major
+;
+(unless (package-installed-p 'discover-my-major)
+    (package-install 'discover-my-major))
+(global-set-key (kbd "C-h C-m") 'discover-my-major)
 
 
 ; Emacs server
