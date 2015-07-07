@@ -49,9 +49,6 @@
 (transient-mark-mode t)
 
 
-
-
-
 ; ---------------------------------
 ; functions
 ; ---------------------------------
@@ -81,15 +78,26 @@
 
 
 ; Using bsd indent style
-(c-add-style "pothixindent" '("bsd" (c-basic-offset . 2) (substatement-open . 0)))
-(defun pothix-mode-hook ()
-  (c-set-style "pothixindent"))
-(add-hook 'c-mode-hook 'pothix-mode-hook)
-(add-hook 'c++-mode-hook 'pothix-mode-hook)
+;
+(c-add-style "pothix" '("bsd" (c-basic-offset . 2) (substatement-open . 0)))
+(add-hook 'c-mode-hook (lambda () (c-set-style "pothix")))
+(add-hook 'c++-mode-hook (lambda () (c-set-style "pothix")))
+(add-hook 'c-mode-common-hook (lambda () (setq c-basic-offset 2) (setq c-set-style "bsd")))
+(add-hook 'js-mode-hook (lambda () (setq js-indent-level 2)))
+(add-hook 'sh-mode-hook (lambda () (setq sh-basic-offset 2)))
+(add-hook 'python-mode-hook (lambda () (setq py-indent-offset 2) (modify-syntax-entry ?_ "_")))
+
+
+; No trailing whitespaces
+;
+(add-hook 'before-save-hook
+          (lambda ()
+            (when (not (derived-mode-p 'markdown-mode))
+              (delete-trailing-whitespace))))
 
 
 ; Solarized
-; 
+;
 (unless (package-installed-p 'color-theme-solarized)
     (package-install 'color-theme-solarized))
 
@@ -219,7 +227,7 @@
 
 
 ; flycheck
-; 
+;
 (unless (package-installed-p 'flycheck)
     (package-install 'flycheck))
 (add-hook 'after-init-hook #'global-flycheck-mode)
