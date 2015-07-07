@@ -233,6 +233,15 @@
     (package-install 'flycheck))
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
+(with-eval-after-load 'flycheck
+  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
+
+
+; expand-region
+;
+(unless (package-installed-p 'expand-region)
+    (package-install 'expand-region))
+(global-set-key (kbd "C-=") 'er/expand-region)
 
 
 ; Emacs server
