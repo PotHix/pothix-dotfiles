@@ -28,9 +28,44 @@
 (setq kill-whole-line t)
 (setq uniquify-buffer-name-style 'post-forward)
 (setq uniquify-strip-common-suffix nil)
-(setq custom-file "~/.emacs.d/custom-file")
-
 (setq-default indent-tabs-mode nil)
+
+(setq custom-file "~/.emacs.d/custom-file")
+(when (file-exists-p custom-file) (load custom-file))
+
+; visual
+(set-scroll-bar-mode nil)
+(menu-bar-mode 0)
+(tool-bar-mode 0)
+
+(show-paren-mode t)
+(size-indication-mode t)
+(column-number-mode t)
+(global-font-lock-mode t)
+(global-linum-mode t)
+(global-hl-line-mode t)
+(global-visual-line-mode t)
+(global-subword-mode t)
+(transient-mark-mode t)
+
+
+
+
+
+; ---------------------------------
+; functions
+; ---------------------------------
+
+(defun dgvncsz0f-prepend-line (&optional arg)
+  (interactive "P")
+  (move-beginning-of-line arg)
+  (open-line 1))
+
+(defun dgvncsz0f-append-line (&optional arg)
+  (interactive "P")
+  (move-end-of-line arg)
+  (open-line 1)
+  (forward-line 1))
 
 
 ; ---------------------------------
@@ -40,6 +75,9 @@
 (setq kill-whole-line t)
 (global-set-key (kbd "C-k") 'kill-whole-line)
 (global-set-key (kbd "C-M-k") 'kill-line)
+(global-set-key (kbd "C-o") 'dgvncsz0f-append-line)
+(global-set-key (kbd "C-S-o") 'dgvncsz0f-prepend-line)
+(global-set-key (kbd "<C-return>") 'rectangle-mark-mode)
 
 
 ; Using bsd indent style
@@ -49,6 +87,9 @@
 (add-hook 'c-mode-hook 'pothix-mode-hook)
 (add-hook 'c++-mode-hook 'pothix-mode-hook)
 
+
+; Solarized
+; 
 (unless (package-installed-p 'color-theme-solarized)
     (package-install 'color-theme-solarized))
 
@@ -63,23 +104,6 @@
     (add-hook 'after-make-frame-functions
         (lambda (frame) (use-solarized-bgmode frame 'dark)))
 
-(set-scroll-bar-mode nil)
-(menu-bar-mode 0)
-(tool-bar-mode 0)
-
-(when (file-exists-p custom-file) (load custom-file))
-
-(show-paren-mode t)
-(size-indication-mode t)
-(column-number-mode t)
-(global-font-lock-mode t)
-(global-linum-mode t)
-(global-hl-line-mode t)
-(global-visual-line-mode t)
-(global-subword-mode t)
-(transient-mark-mode t)
-(global-set-key (kbd "<C-return>") 'rectangle-mark-mode)
-(global-set-key (kbd "C-c ro") 'open-rectangle)
 
 
 ; Magit
@@ -185,6 +209,21 @@
 (unless (package-installed-p 'discover-my-major)
     (package-install 'discover-my-major))
 (global-set-key (kbd "C-h C-m") 'discover-my-major)
+
+
+; Bookmark+
+;
+(unless (package-installed-p 'bookmark+)
+    (package-install 'bookmark+))
+(require 'bookmark+)
+
+
+; flycheck
+; 
+(unless (package-installed-p 'flycheck)
+    (package-install 'flycheck))
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 
 
 ; Emacs server
