@@ -47,6 +47,7 @@
 (global-visual-line-mode t)
 (global-subword-mode t)
 (transient-mark-mode t)
+(delete-selection-mode t)
 
 
 ; ---------------------------------
