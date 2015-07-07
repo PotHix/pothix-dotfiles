@@ -53,12 +53,12 @@
 ; functions
 ; ---------------------------------
 
-(defun dgvncsz0f-prepend-line (&optional arg)
+(defun pothix-prepend-line (&optional arg)
   (interactive "P")
   (move-beginning-of-line arg)
   (open-line 1))
 
-(defun dgvncsz0f-append-line (&optional arg)
+(defun pothix-append-line (&optional arg)
   (interactive "P")
   (move-end-of-line arg)
   (open-line 1)
@@ -72,8 +72,8 @@
 (setq kill-whole-line t)
 (global-set-key (kbd "C-k") 'kill-whole-line)
 (global-set-key (kbd "C-M-k") 'kill-line)
-(global-set-key (kbd "C-o") 'dgvncsz0f-append-line)
-(global-set-key (kbd "C-S-o") 'dgvncsz0f-prepend-line)
+(global-set-key (kbd "C-o") 'pothix-append-line)
+(global-set-key (kbd "C-S-o") 'pothix-prepend-line)
 (global-set-key (kbd "<C-return>") 'rectangle-mark-mode)
 
 
