@@ -120,7 +120,6 @@
 (unless (package-installed-p 'magit)
     (package-install 'magit))
 
-(setq magit-last-seen-setup-instructions "1.4.0")
 (global-set-key (kbd "<f9>") 'magit-status)
 
 
@@ -234,7 +233,7 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 (with-eval-after-load 'flycheck
-  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
+    (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))) ; emacs-lisp)))
 
 
 ; expand-region
