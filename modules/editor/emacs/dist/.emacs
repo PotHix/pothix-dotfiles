@@ -236,6 +236,18 @@
     (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))) ; emacs-lisp)))
 
 
+; flycheck rust
+;
+(unless (package-installed-p 'flycheck-rust)
+    (package-install 'flycheck-rust))
+
+
+; rust-mode
+;
+(unless (package-installed-p 'rust-mode)
+    (package-install 'rust-mode))
+
+
 ; expand-region
 ;
 (unless (package-installed-p 'expand-region)
