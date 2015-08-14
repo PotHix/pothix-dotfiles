@@ -7,6 +7,7 @@ alias maked="make -f dev.makefile"
 alias reload='source $HOME/.bashrc 1>/dev/null'
 alias clipboard='xsel'
 alias psgrep="ps aux | grep"
+alias lstree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/ /" -e "s/-/|/"'
 alias sshadd="ssh-add ~/.ssh/id_rsa"
 alias sshr="ssh -l root"
 alias open="xdg-open"
