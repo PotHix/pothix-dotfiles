@@ -248,6 +248,12 @@
     (package-install 'rust-mode))
 
 
+; markdown-mode
+;
+(unless (package-installed-p 'markdown-mode)
+    (package-install 'markdown-mode))
+
+
 ; expand-region
 ;
 (unless (package-installed-p 'expand-region)
