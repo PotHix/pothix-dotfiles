@@ -261,6 +261,13 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 
 
+; highlight-symbol
+;
+(unless (package-installed-p 'highlight-symbol)
+    (package-install 'highlight-symbol))
+(global-set-key (kbd "C-#" 'highlight-symbol-next)
+
+
 ; Emacs server
 ;
 (unless (server-running-p) (server-start))
