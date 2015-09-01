@@ -1,0 +1,108 @@
+AllCops:
+  Exclude:
+    - '**/vendor/**'
+    - '**/db/**/*'
+    - '**/script/**'
+
+AlignArray:
+  Enabled: false
+
+ClassAndModuleChildren:
+  Enabled: false
+
+ClassLength:
+  Enabled: false
+
+DeprecatedClassMethods:
+  Enabled: true
+
+Documentation:
+  Enabled: false
+
+EmptyLines:
+  Enabled: false
+
+EmptyLinesAroundAccessModifier:
+  Enabled: true
+
+EmptyLinesAroundBody:
+  Enabled: true
+
+NegatedIf:
+  Enabled: true
+
+DeprecatedHashMethods:
+  Enabled: true
+
+HashSyntax:
+  Enabled: true
+
+LeadingCommentSpace:
+  Enabled: false
+
+LineLength:
+  Max: 120
+
+MethodDefParentheses:
+  Enabled: false
+
+MethodLength:
+  Max: 10
+
+ModuleFunction:
+  Enabled: false
+
+NumericLiterals:
+  MinDigits: 15
+
+PredicateName:
+  Enabled: true
+
+RescueModifier:
+  Enabled: false
+
+RescueException:
+  Enabled: false
+
+RedundantSelf:
+  Enabled: true
+
+SpaceAfterComma:
+  Enabled: true
+
+SpaceAroundEqualsInParameterDefault:
+  Enabled: false
+
+SpaceAroundOperators:
+  Enabled: false
+
+SpaceBeforeBlockBraces:
+  Enabled: false
+
+SpaceInsideBlockBraces:
+  Enabled: false
+
+SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+SignalException:
+  Enabled: false
+
+SingleLineBlockParams:
+  Enabled: false
+
+# Single Quotes
+StringLiterals:
+  Enabled: false
+
+TrailingBlankLines:
+  Enabled: true
+
+TrailingWhitespace:
+  Enabled: true
+
+GlobalVars:
+  Enabled: false
+
+CyclomaticComplexity:
+  Enabled: false
