@@ -265,7 +265,7 @@
 ;
 (unless (package-installed-p 'highlight-symbol)
     (package-install 'highlight-symbol))
-(global-set-key (kbd "C-#" 'highlight-symbol-next)
+(global-set-key (kbd "C-#") 'highlight-symbol-next)
 
 
 ; Emacs server
