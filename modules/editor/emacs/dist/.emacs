@@ -268,6 +268,12 @@
 (global-set-key (kbd "C-#") 'highlight-symbol-next)
 
 
+; inf-ruby
+;
+(unless (package-installed-p 'inf-ruby)
+    (package-install 'inf-ruby))
+
+
 ; Emacs server
 ;
 (unless (server-running-p) (server-start))
