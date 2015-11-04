@@ -115,6 +115,13 @@
 
 
 
+; APEL (A Portable Emacs Library) is a library to support to write portable Emacs Lisp programs.
+;
+(unless (package-installed-p 'apel)
+    (package-install 'apel))
+
+
+
 ; Magit
 ;
 (unless (package-installed-p 'magit)
@@ -247,6 +254,30 @@
 (unless (package-installed-p 'rust-mode)
     (package-install 'rust-mode))
 
+
+; haskell-mode
+;
+(unless (package-installed-p 'haskell-mode)
+    (package-install 'haskell-mode))
+
+(defvar pthx/haskell-font-lock-extra-symbols
+  '(("<alpha>" . #X03B1)
+    ("<beta>" . #X03B2)
+    ("<gamma>" . #X03B3)
+    ("<delta>" . #X03B4)
+    (".." . #X2026)
+    ("`elem`" . #X2208)
+    ("elem" . #X2208)
+    ("^" . #X2191)))
+
+(eval-after-load 'haskell-font-lock
+  '(progn
+     (remove-alist 'haskell-font-lock-symbols-alist "()")
+     (mapcar
+      (lambda (entry) (add-to-list 'haskell-font-lock-symbols-alist entry))
+      pthx/haskell-font-lock-extra-symbols)
+     (setq haskell-font-lock-keywords
+	   (haskell-font-lock-keywords-create nil))))
 
 ; markdown-mode
 ;
