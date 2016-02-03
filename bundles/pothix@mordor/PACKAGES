@@ -70,4 +70,8 @@ sudo pacman -S redis-server
 sudo pacman -S mysql
 sudo pacman -S sqlite
 
+echo "Installing emacs and its dependencies"
+sudo pacman -S --noconfirm emacs
+sudo pacman -S --noconfirm aspell-pt
+
 exit 0
