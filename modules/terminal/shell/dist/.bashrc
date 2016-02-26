@@ -22,14 +22,12 @@ if [ -f /bin/urxvt ]; then
 	export TERM=rxvt
 fi
 
-
 ###############################################################################################
 # USING COMPLETION AND ALIAS
 ###############################################################################################
 #source $HOME/.git_completion.sh
 #source $HOME/.gem_completion.sh
 source $HOME/.bash_aliases
-
 
 ###############################################################################################
 # GIT THINGS
@@ -156,18 +154,11 @@ git-pull-all (){
 	done
 }
 
-git-update-testing (){
-	local lasttagprefix=$(git tags | grep testing | tail -n1 | cut -d. -f1-2)
-	local nextnumber=$(expr $(git tags | grep testing | tail -n1 | cut -d. -f3) + 1)
+git-update-tag (){
+	local lasttagprefix=$(git tags | tail -n1 | cut -d. -f1-2)
+	local nextnumber=$(expr $(git tags | tail -n1 | cut -d. -f3) + 1)
 	echo $lasttagprefix.$nextnumber
 }
-
-git-update-stable (){
-	local lasttagprefix=$(git tags | grep stable | tail -n1 | cut -d. -f1-2)
-	local nextnumber=$(expr $(git tags | grep -v unstable | grep stable | tail -n1 | cut -d. -f3) + 1)
-	echo $lasttagprefix.$nextnumber
-}
-
 
 ###############################################################################################
 # Random helpers
@@ -204,4 +195,5 @@ iconver (){
 # Using RVM
 ###############################################################################################
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
+export PATH=~/.npm-global/bin:$PATH

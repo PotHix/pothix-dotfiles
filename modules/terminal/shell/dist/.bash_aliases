@@ -52,7 +52,7 @@ alias gst='git stash'
 alias gstc='git stash clear'
 alias gstp='git stash pop'
 alias gt='git tag'
-alias gut='git-update-testing | xargs git tag'
+alias gut='git-update-tag | xargs git tag'
 
 
 ##############################################
