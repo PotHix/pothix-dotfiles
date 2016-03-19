@@ -14,6 +14,16 @@ echo "Installing wireless packages"
 sudo pacman -S --noconfirm wpa_supplicant
 sudo pacman -S --noconfirm netctl
 
+echo "installing specific packages for mordor"
+sudo pacman -S --noconfirm rxvt-unicode
+sudo pacman -S --noconfirm alsa-oss
+sudo pacman -S --noconfirm alsa-tools
+sudo pacman -S --noconfirm xorg-xmodmap
+sudo pacman -S --noconfirm xorg-rdb
+sudo pacman -S --noconfirm xorg-xrandr
+sudo pacman -S --noconfirm xf86-input-synaptics
+sudo pacman -S --noconfirm linux-headers
+
 echo "Installing fonts"
 sudo pacman -S --noconfirm ttf-dejavu     # just a good font
 sudo pacman -S --noconfirm terminus-font  # just a good font
@@ -42,36 +52,35 @@ sudo pacman -S --noconfirm git
 sudo pacman -S --noconfirm nodejs
 
 echo "Installing awesome dependencies"
-sudo pacman -S awesome feh vicious iptraf-ng
-
-echo "installing specific packages for mordor"
-sudo pacman -S xf86-video-ati
-sudo pacman -S rxvt-unicode
-sudo pacman -S alsa-oss
-sudo pacman -S alsa-tools
-sudo pacman -S xorg-xmodmap
-sudo pacman -S xorg-rdb
-sudo pacman -S xorg-xrandr
-sudo pacman -S xf86-input-synaptics
+sudo pacman -S --noconfirm awesome feh vicious iptraf-ng
 
 echo "specific main libs"
-sudo pacman -S openssl
-sudo pacman -S readline
+sudo pacman -S --noconfirm openssl
+sudo pacman -S --noconfirm readline
 
 echo "specific development libs"
-sudo pacman -S python2
-sudo pacman -S python2-pip
-sudo pacman -S bpython2
-sudo pacman -S ruby
-sudo pacman -S ghc
+sudo pacman -S --noconfirm python2
+sudo pacman -S --noconfirm python2-pip
+sudo pacman -S --noconfirm bpython2
+sudo pacman -S --noconfirm ruby
+sudo pacman -S --noconfirm ghc
 
 echo "specific development tools"
-sudo pacman -S redis-server
-sudo pacman -S mysql
-sudo pacman -S sqlite
+sudo pacman -S --noconfirm redis-server
+sudo pacman -S --noconfirm mysql
+sudo pacman -S --noconfirm sqlite
 
 echo "Installing emacs and its dependencies"
 sudo pacman -S --noconfirm emacs
 sudo pacman -S --noconfirm aspell-pt
+
+echo "Installing Aura"
+cd /tmp
+curl aur.sh | bash -si aura-bin
+cd -
+
+echo "Installing packages from AUR"
+sudo aura -A --noconfirm google-chrome-stable
+sudo aura -A --noconfirm broadcom-wl-dkms
 
 exit 0
