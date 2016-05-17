@@ -58,10 +58,6 @@ autocmd FileType go         set noexpandtab sw=8 ts=8 sts=8
 autocmd FileType ruby       set expandtab sw=2 ts=2 sts=2
 autocmd FileType python     set expandtab sw=4 ts=4 sts=4
 autocmd FileType javascript set expandtab sw=4 ts=4 sts=4
-autocmd FileType tex        call Writing()
-autocmd FileType plaintex   call Writing()
-autocmd FileType vimwiki    call Writing()
-autocmd FileType markdown   call Writing()
 
 
 " ****************************************************************
@@ -113,12 +109,6 @@ function! RunCurrentSpec(spec)
    exec '!rspec '.a:spec
 endfunction
 map <F7> :call RunCurrentSpec(bufname("%"))<cr>
-
-
-function! Writing()
-  set expandtab tw=80
-  setlocal spell spelllang=pt
-endfunction
 
 
 function! HTMLFormatting()
