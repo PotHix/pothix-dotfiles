@@ -255,6 +255,32 @@
     (package-install 'rust-mode))
 
 
+; markdown-mode+
+;
+(unless (package-installed-p 'markdown-mode+)
+    (package-install 'markdown-mode+))
+
+
+; expand-region
+;
+(unless (package-installed-p 'expand-region)
+    (package-install 'expand-region))
+(global-set-key (kbd "C-=") 'er/expand-region)
+
+
+; highlight-symbol
+;
+(unless (package-installed-p 'highlight-symbol)
+    (package-install 'highlight-symbol))
+(global-set-key (kbd "C-#") 'highlight-symbol-next)
+
+
+; inf-ruby
+;
+(unless (package-installed-p 'inf-ruby)
+    (package-install 'inf-ruby))
+
+
 ; haskell-mode
 ;
 (unless (package-installed-p 'haskell-mode)
@@ -278,31 +304,6 @@
       pthx/haskell-font-lock-extra-symbols)
      (setq haskell-font-lock-keywords
 	   (haskell-font-lock-keywords-create nil))))
-
-; markdown-mode
-;
-(unless (package-installed-p 'markdown-mode)
-    (package-install 'markdown-mode))
-
-
-; expand-region
-;
-(unless (package-installed-p 'expand-region)
-    (package-install 'expand-region))
-(global-set-key (kbd "C-=") 'er/expand-region)
-
-
-; highlight-symbol
-;
-(unless (package-installed-p 'highlight-symbol)
-    (package-install 'highlight-symbol))
-(global-set-key (kbd "C-#") 'highlight-symbol-next)
-
-
-; inf-ruby
-;
-(unless (package-installed-p 'inf-ruby)
-    (package-install 'inf-ruby))
 
 
 ; Emacs server
