@@ -255,6 +255,12 @@
     (package-install 'rust-mode))
 
 
+; yaml-mode
+;
+(unless (package-installed-p 'yaml-mode)
+    (package-install 'yaml-mode))
+
+
 ; markdown-mode+
 ;
 (unless (package-installed-p 'markdown-mode+)
