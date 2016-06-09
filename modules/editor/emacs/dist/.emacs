@@ -255,6 +255,12 @@
     (package-install 'rust-mode))
 
 
+; elixir-mode
+;
+(unless (package-installed-p 'elixir-mode)
+    (package-install 'elixir-mode))
+
+
 ; yaml-mode
 ;
 (unless (package-installed-p 'yaml-mode)
