@@ -89,6 +89,14 @@
 (add-hook 'python-mode-hook (lambda () (setq py-indent-offset 2) (modify-syntax-entry ?_ "_")))
 
 
+; Improve transpose-chars to change chars behind it
+; so, after typing `teh` it may become `the` instead of `te h`
+(global-set-key (kbd "C-t")
+                (lambda () (interactive)
+                  (backward-char)
+                  (transpose-chars 1)))
+
+
 ; No trailing whitespaces
 ;
 (add-hook 'before-save-hook
