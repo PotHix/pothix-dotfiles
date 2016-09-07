@@ -9,6 +9,7 @@ sudo pacman -S --noconfirm slim
 sudo pacman -S --noconfirm systemd
 sudo pacman -S --noconfirm systemd-arch-units
 sudo pacman -S --noconfirm openssh
+sudo pacman -S --noconfirm sysstat
 
 echo "Installing wireless packages"
 sudo pacman -S --noconfirm wpa_supplicant
