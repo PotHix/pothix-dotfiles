@@ -28,6 +28,7 @@
 (setq kill-whole-line t)
 (setq uniquify-buffer-name-style 'post-forward)
 (setq uniquify-strip-common-suffix nil)
+(setq mouse-drag-copy-region t)
 (setq-default indent-tabs-mode nil)
 
 (setq custom-file "~/.emacs.d/custom-file")
