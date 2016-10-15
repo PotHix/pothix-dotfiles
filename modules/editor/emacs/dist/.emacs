@@ -323,16 +323,6 @@
     ("elem" . #X2208)
     ("^" . #X2191)))
 
-(eval-after-load 'haskell-font-lock
-  '(progn
-     (remove-alist 'haskell-font-lock-symbols-alist "()")
-     (mapcar
-      (lambda (entry) (add-to-list 'haskell-font-lock-symbols-alist entry))
-      pthx/haskell-font-lock-extra-symbols)
-     (setq haskell-font-lock-keywords
-	   (haskell-font-lock-keywords-create nil))))
-
-
 ; Emacs server
 ;
 (unless (server-running-p) (server-start))
