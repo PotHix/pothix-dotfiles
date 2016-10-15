@@ -88,6 +88,7 @@
 (add-hook 'js-mode-hook (lambda () (setq js-indent-level 2)))
 (add-hook 'sh-mode-hook (lambda () (setq sh-basic-offset 2)))
 (add-hook 'python-mode-hook (lambda () (setq py-indent-offset 2) (modify-syntax-entry ?_ "_")))
+(add-hook 'text-mode-hook 'flyspell-mode)
 
 
 ; Improve transpose-chars to change chars behind it
@@ -129,6 +130,9 @@
 (unless (package-installed-p 'apel)
     (package-install 'apel))
 
+
+; which-key
+(which-key-mode)
 
 
 ; Magit
