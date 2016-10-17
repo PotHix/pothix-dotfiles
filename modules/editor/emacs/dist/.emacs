@@ -145,6 +145,12 @@
 (global-set-key (kbd "<f9>") 'magit-status)
 
 
+; scratch
+;
+(unless (package-installed-p 'scratch)
+    (package-install 'scratch))
+
+
 ; Helm
 ;
 (unless (package-installed-p 'helm)
