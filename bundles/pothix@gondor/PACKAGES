@@ -72,5 +72,5 @@ sudo aura -A --noconfirm android-sdk-platform-tools
 echo "Installing emacs and its dependencies"
 sudo pacman -S --noconfirm emacs
 sudo pacman -S --noconfirm aspell-pt
-
+sudo pacman -S --noconfirm aspell-en
 exit 0
