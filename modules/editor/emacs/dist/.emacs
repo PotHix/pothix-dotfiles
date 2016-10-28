@@ -288,6 +288,13 @@
     (package-install 'yaml-mode))
 
 
+; multiple-cursors
+;
+(unless (package-installed-p 'multiple-cursors)
+    (package-install 'multiple-cursors))
+(global-set-key (kbd "C-c m c") 'mc/edit-lines)
+
+
 ; markdown-mode+
 ;
 (unless (package-installed-p 'markdown-mode+)
