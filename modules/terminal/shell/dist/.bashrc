@@ -192,6 +192,7 @@ iconver (){
 }
 
 export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin
 
 ###############################################################################################
 # Using RVM
