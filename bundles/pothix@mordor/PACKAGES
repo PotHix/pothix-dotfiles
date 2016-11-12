@@ -52,6 +52,9 @@ sudo pacman -S --noconfirm nodejs
 echo "Installing awesome dependencies"
 sudo pacman -S --noconfirm awesome feh vicious iptraf-ng
 
+echo "Installing xfce4"
+sudo pacman -S --noconfirm xfce4 xfce4-goodies
+
 echo "specific main libs"
 sudo pacman -S --noconfirm openssl
 sudo pacman -S --noconfirm readline
