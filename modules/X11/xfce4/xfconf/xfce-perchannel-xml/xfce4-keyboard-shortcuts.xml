@@ -154,8 +154,8 @@
       <property name="&lt;Super&gt;Down" type="string" value="tile_down_key"/>
       <property name="&lt;Super&gt;Left" type="string" value="tile_left_key"/>
       <property name="&lt;Super&gt;Right" type="string" value="tile_right_key"/>
-      <property name="&lt;Alt&gt;Tab" type="string" value="cycle_windows_key"/>
-      <property name="&lt;Super&gt;Tab" type="string" value="switch_window_key"/>
+      <property name="&lt;Super&gt;Tab" type="string" value="cycle_windows_key"/>
+      <property name="&lt;Super&gt;grave" type="string" value="switch_window_key"/>
     </property>
   </property>
   <property name="providers" type="array">
