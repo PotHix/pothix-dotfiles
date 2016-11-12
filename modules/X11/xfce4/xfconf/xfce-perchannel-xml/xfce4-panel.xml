@@ -11,6 +11,8 @@
       <property name="size" type="uint" value="22"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="2"/>
+        <value type="int" value="7"/>
+        <value type="int" value="4"/>
         <value type="int" value="6"/>
         <value type="int" value="5"/>
       </property>
@@ -37,8 +39,11 @@
         <value type="string" value="chromium"/>
         <value type="string" value="redshift-gtk"/>
         <value type="string" value="kupfer.py"/>
+        <value type="string" value="task manager"/>
         <value type="string" value="pidgin"/>
       </property>
     </property>
+    <property name="plugin-4" type="string" value="systemload"/>
+    <property name="plugin-7" type="string" value="diskperf"/>
   </property>
 </channel>
