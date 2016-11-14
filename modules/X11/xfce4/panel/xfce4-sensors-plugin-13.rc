@@ -20,10 +20,14 @@ Preferred_Width=381
 Preferred_Height=374
 
 [Chip0]
-Name=thinkpad-0
+Name=acpitz-0
 Number=0
 
-[Chip0_Feature0]
+[Chip1]
+Name=thinkpad-0
+Number=1
+
+[Chip1_Feature0]
 Id=0
 Address=0
 Name=fan
@@ -31,10 +35,6 @@ Color=#00B000
 Show=true
 Min=3000.00
 Max=6000.00
-
-[Chip1]
-Name=acpitz-0
-Number=1
 
 [Chip2]
 Name=coretemp-0

@@ -5,7 +5,7 @@
   <property name="panels" type="array">
     <value type="int" value="1"/>
     <property name="panel-1" type="empty">
-      <property name="position" type="string" value="p=4;x=1251;y=755"/>
+      <property name="position" type="string" value="p=4;x=1144;y=756"/>
       <property name="length" type="uint" value="1"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="size" type="uint" value="22"/>
@@ -36,6 +36,7 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="names-visible" type="array">
         <value type="string" value="thunar"/>
+        <value type="string" value="vlc"/>
         <value type="string" value="redshift-gtk"/>
         <value type="string" value="kupfer.py"/>
         <value type="string" value="networkmanager applet"/>
