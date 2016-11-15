@@ -1,0 +1,172 @@
+# spaces between terminals
+for_window [class="^.*"] border pixel 1
+hide_edge_borders both
+gaps inner 10
+gaps outer 0
+new_window pixel 1
+new_float pixel 1
+
+set $mod Mod4
+
+# Font for window titles.
+font pango:DejaVu Sans Mono 8
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec urxvt
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+
+bindsym $mod+x move workspace to output up
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+
+# volume control
+bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '-10%'
+bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '+10%'
+
+#set $volumeMode "Volume [j] Down [k] Up [.] 1/2 Mute [/] Mute [r] Reset"
+bindsym $mod+m mode $volumeMode
+
+mode $volumeMode {
+  bindsym j exec --no-startup-id volume down
+  bindsym k exec --no-startup-id volume up
+  bindsym period exec --no-startup-id volume halfmute
+  bindsym slash exec --no-startup-id volume mute
+  bindsym r exec --no-startup-id volume reset
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+# brightness control
+bindsym XF86MonBrightnessDown exec xbacklight -steps 10 -time 0 -dec 5
+bindsym XF86MonBrightnessUp exec xbacklight -steps 10 -time 0 -inc 5
+
+# lock screen
+bindsym $mod+f1 exec swaylock
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart inplace (preserves your layout/session, can be used to upgrade)
+bindsym $mod+Shift+r restart
+
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        bindsym Left resize shrink width 1 px or 1 ppt
+        bindsym Down resize grow height 1 px or 1 ppt
+        bindsym Up resize shrink height 1 px or 1 ppt
+        bindsym Right resize grow width 1 px or 1 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# Colors
+set $bg-color			#2f343f
+set $inactive-bg-color		#2f343f
+set $text-color			#f3f4f5
+set $inactive-text-color	#676E7D
+set $urgent-bg-color		#5294e2
+set $indicator                  #000000
+set $border                     #000000
+set $transparent                #00000066
+#E53935
+
+# Widow Colours
+#				border			background			text
+client.focused			$bg-color		$urgent-bg-color		$text-color             $indicator              $border
+client.focused_inactive		$inactive-bg-color	$inactive-bg-color		$inactive-text-color    $indicator              $border
+client.unfocused		$inactive-bg-color	$inactive-bg-color		$inactive-text-color    $indicator              $border
+client.urgent			$urgent-bg-color	$urgent-bg-color		$text-color             $indicator              $border
+
+bar {
+        status_command i3blocks -c ~/.config/sway/i3blocks.conf
+	position top
+	colors {
+		#background $bg-color
+		background $transparent
+		separator #757575
+
+                #        		border  		background 		text
+      		focused_workspace  	$bg-color 		$bg-color		$text-color
+      		inactive_workspace 	$inactive-bg-color 	$inactive-bg-color    	$inactive-text-color
+      		urgent_workspace   	$urgent-bg-color 	$urgent-bg-color    	$text-color
+    }
+
+}
+output "*" bg /home/pothix/Pictures/wallpaper.jpg fill
+
+for_window [class="^google-chrome|^Firefox"] border 1pixel
+for_window [class="^Emacs"] border 1pixel
+for_window [class="^Terminator"] border 1pixel
+for_window [title="Preferences$"] floating 1pixel
+
+exec --no-startup-id xrdb ~/.Xresources
+#exec --no-startup-id dropbox
