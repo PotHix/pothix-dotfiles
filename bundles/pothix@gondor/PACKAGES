@@ -16,9 +16,10 @@ sudo pacman -S --noconfirm wpa_supplicant
 sudo pacman -S --noconfirm netctl
 
 echo "Installing fonts"
-sudo pacman -S --noconfirm ttf-dejavu     # just a good font
-sudo pacman -S --noconfirm terminus-font  # just a good font
-sudo pacman -S --noconfirm ttf-symbola    # allow emoji
+sudo pacman -S --noconfirm ttf-dejavu        # just a good font
+sudo pacman -S --noconfirm terminus-font     # just a good font
+sudo pacman -S --noconfirm ttf-symbola       # allow emoji
+sudo pacman -S --noconfirm ttf-font-awesome  # icons for status bars
 
 echo "Installing basic tools"
 sudo pacman -S --noconfirm rsync
