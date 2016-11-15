@@ -1,7 +1,11 @@
 !urxvt*font: xft:DejaVu\ Sans\ Mono:pixelsize=14
 !urxvt*font: terminus-*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*
-urxvt*font: xft:terminus:pixelsize=14
-urxvt*boldFont: xft:terminus:pixelsize=14
+!
+!urxvt*font: xft:terminus:pixelsize=14
+!urxvt*boldFont: xft:terminus:pixelsize=14
+urxvt*font: xft:DejaVu Sans Mono:pixelsize=13
+urxvt*boldfont: xft:DejaVu Sans Mono:pixelsize=13
+
 urxvt.scrollBar: false
 urxvt*depth: 32
 
