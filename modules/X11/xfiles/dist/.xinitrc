@@ -30,5 +30,8 @@ synclient TapButton1=0
 # GPG
 test -x /usr/bin/gpg-agent && test -z "${GPG_AGENT_INFO}" && eval $(/usr/bin/gpg-agent --daemon --max-cache-ttl 28800 --default-cache-ttl 28800 --quiet)
 
-# exec gnome-session
-exec ssh-agent awesome
+exec ssh-agent startxfce4
+#exec ssh-agent i3
+#exec ssh-agent /home/pothix/.config/i3/sway-colemak
+#exec ssh-agent gnome-session
+#exec ssh-agent awesome
