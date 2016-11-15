@@ -3,6 +3,7 @@
 urxvt*font: xft:terminus:pixelsize=14
 urxvt*boldFont: xft:terminus:pixelsize=14
 urxvt.scrollBar: false
+urxvt*depth: 32
 
 ! Solarized color scheme for the X Window System
 !
@@ -28,7 +29,6 @@ urxvt.scrollBar: false
 #define S_base2         #eee8d5
 #define S_base3         #fdf6e3
 
-
 ! Light
 ! #define S_base03        #fdf6e3
 ! #define S_base02        #eee8d5
@@ -39,13 +39,8 @@ urxvt.scrollBar: false
 ! #define S_base2         #073642
 ! #define S_base3         #002b36
 
-
-! To only apply colors to your terminal, for example, prefix
-! the color assignment statement with its name. Example:
-!
-! URxvt*background:            S_base03
-
-urxvt*background:              S_base03
+!urxvt*background:              S_base03
+urxvt*background: rgba:0000/1b00/2600/c800
 urxvt*foreground:              S_base0
 urxvt*fading:                  40
 urxvt*fadeColor:               S_base03
