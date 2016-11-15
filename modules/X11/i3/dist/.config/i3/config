@@ -89,6 +89,10 @@ bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '-10%'
 bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '+10%'
 
+# brightness control
+bindsym XF86MonBrightnessDown exec light -U 10
+bindsym XF86MonBrightnessUp exec light -A 10
+
 #set $volumeMode "Volume [j] Down [k] Up [.] 1/2 Mute [/] Mute [r] Reset"
 bindsym $mod+m mode $volumeMode
 
@@ -102,12 +106,8 @@ mode $volumeMode {
   bindsym Escape mode "default"
 }
 
-# brightness control
-bindsym XF86MonBrightnessDown exec xbacklight -steps 10 -time 0 -dec 5
-bindsym XF86MonBrightnessUp exec xbacklight -steps 10 -time 0 -inc 5
-
 # lock screen
-bindsym $mod+f1 exec swaylock
+bindsym $mod+f1 exec i3lock
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -147,7 +147,7 @@ client.unfocused		$inactive-bg-color	$inactive-bg-color		$inactive-text-color   
 client.urgent			$urgent-bg-color	$urgent-bg-color		$text-color             $indicator              $border
 
 bar {
-        status_command i3blocks -c ~/.config/sway/i3blocks.conf
+        status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	position top
 	colors {
 		#background $bg-color
