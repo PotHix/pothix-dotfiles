@@ -105,6 +105,17 @@
             (when (not (derived-mode-p 'markdown-mode))
               (delete-trailing-whitespace))))
 
+; use-package
+;
+(unless (package-installed-p 'use-package)
+    (package-install 'use-package))
+
+
+(use-package bm
+  :bind (("<C-f2>" . bm-toggle)
+         ("<f2>"   . bm-next)
+         ("<S-f2>" . bm-previous)))
+
 
 ; Solarized
 ;
