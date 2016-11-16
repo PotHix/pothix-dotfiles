@@ -7,6 +7,7 @@ export CDPATH=.:~:$HOME/repos
 
 export HISTCONTROL=ignoredups  # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoreboth  # ... and ignore same sucessive entries.
+export HISTFILESIZE=5000
 
 export EDITOR=emacs
 export GEM_EDITOR=emacs
