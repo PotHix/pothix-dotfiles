@@ -1,1 +1,2 @@
-sudo pacman -S i3 sway
+sudo pacman -S --noconfirm --needed i3 sway
+sudo aura -A --noconfirm --needed i3blocks
