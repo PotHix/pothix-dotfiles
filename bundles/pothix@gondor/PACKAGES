@@ -4,71 +4,74 @@ echo "Updating and preparing"
 sudo pacman -Syu
 
 echo "Installing basic packages"
-echo 1 | sudo pacman -S --noconfirm xorg-server xorg-xinit xorg-rdb xorg-xmodmap
-sudo pacman -S --noconfirm slim
-sudo pacman -S --noconfirm systemd
-sudo pacman -S --noconfirm systemd-arch-units
-sudo pacman -S --noconfirm openssh
-sudo pacman -S --noconfirm sysstat
+echo 1 | sudo pacman -S --noconfirm --needed xorg-server xorg-xinit xorg-rdb xorg-xmodmap
+sudo pacman -S --noconfirm --needed slim
+sudo pacman -S --noconfirm --needed systemd
+sudo pacman -S --noconfirm --needed systemd-arch-units
+sudo pacman -S --noconfirm --needed openssh
+sudo pacman -S --noconfirm --needed sysstat
 
 echo "Installing wireless packages"
-sudo pacman -S --noconfirm wpa_supplicant
-sudo pacman -S --noconfirm netctl
+sudo pacman -S --noconfirm --needed wpa_supplicant
+sudo pacman -S --noconfirm --needed netctl
+sudo pacman -S --noconfirm --needed networkmanager
 
 echo "Installing fonts"
-sudo pacman -S --noconfirm ttf-dejavu        # just a good font
-sudo pacman -S --noconfirm terminus-font     # just a good font
-sudo pacman -S --noconfirm ttf-symbola       # allow emoji
-sudo pacman -S --noconfirm ttf-font-awesome  # icons for status bars
+sudo pacman -S --noconfirm --needed ttf-dejavu        # just a good font
+sudo pacman -S --noconfirm --needed terminus-font     # just a good font
+sudo pacman -S --noconfirm --needed ttf-symbola       # allow emoji
+sudo pacman -S --noconfirm --needed ttf-font-awesome  # icons for status bars
 
 echo "Installing basic tools"
-sudo pacman -S --noconfirm rsync
-sudo pacman -S --noconfirm ntp
-sudo pacman -S --noconfirm curl
-sudo pacman -S --noconfirm xsel
-sudo pacman -S --noconfirm unzip
-sudo pacman -S --noconfirm imagemagick
-sudo pacman -S --noconfirm bash-completion
-sudo pacman -S --noconfirm alsa-utils
+sudo pacman -S --noconfirm --needed rsync
+sudo pacman -S --noconfirm --needed ntp
+sudo pacman -S --noconfirm --needed curl
+sudo pacman -S --noconfirm --needed xsel
+sudo pacman -S --noconfirm --needed unzip
+sudo pacman -S --noconfirm --needed imagemagick
+sudo pacman -S --noconfirm --needed bash-completion
+sudo pacman -S --noconfirm --needed alsa-utils
 
 echo "Installing development tools"
-sudo pacman -S --noconfirm base-devel
-sudo pacman -S --noconfirm gvim
-sudo pacman -S --noconfirm ruby
-sudo pacman -S --noconfirm python
-sudo pacman -S --noconfirm git
-sudo pacman -S --noconfirm nodejs
+sudo pacman -S --noconfirm --needed base-devel
+sudo pacman -S --noconfirm --needed gvim
+sudo pacman -S --noconfirm --needed ruby
+sudo pacman -S --noconfirm --needed python
+sudo pacman -S --noconfirm --needed git
+sudo pacman -S --noconfirm --needed nodejs
+
+echo "Docker"
+sudo pacman -S --noconfirm --needed docker
 
 echo "Installing xfce4"
-sudo pacman -S --noconfirm xfce4 xfce4-goodies faenza-icon-theme
+sudo pacman -S --noconfirm --needed xfce4 xfce4-goodies faenza-icon-theme
 
 echo "Installing common softwares"
-sudo pacman -S --noconfirm gimp
-sudo pacman -S --noconfirm inkscape
-sudo pacman -S --noconfirm pidgin
-sudo pacman -S --noconfirm chromium
-sudo pacman -S --noconfirm texlive-bin
-sudo pacman -S --noconfirm vlc
-sudo pacman -S --noconfirm dos2unix
-sudo pacman -S --noconfirm shotwell
-sudo pacman -S --noconfirm tmux
+sudo pacman -S --noconfirm --needed gimp
+sudo pacman -S --noconfirm --needed inkscape
+sudo pacman -S --noconfirm --needed pidgin
+sudo pacman -S --noconfirm --needed chromium
+sudo pacman -S --noconfirm --needed texlive-bin
+sudo pacman -S --noconfirm --needed vlc
+sudo pacman -S --noconfirm --needed dos2unix
+sudo pacman -S --noconfirm --needed shotwell
+sudo pacman -S --noconfirm --needed tmux
 
 # aura-bin dependency
-sudo pacman -S --noconfirm abs
+sudo pacman -S --noconfirm --needed abs
 echo "Installing Aura"
 cd /tmp
 curl aur.sh | bash -si aura-bin
-sudo pacman -U aura-bin/aura-bin*.tar.xz
+echo Y | sudo pacman -U aura-bin/aura-bin*.tar.xz
 cd -
 
 echo "Installing packages from AUR"
-sudo aura -A --noconfirm steam
-sudo aura -A --noconfirm dropbox
-sudo aura -A --noconfirm firefox-developer
-sudo aura -A --noconfirm android-sdk-platform-tools
+sudo aura -A --noconfirm --needed dropbox
+sudo aura -A --noconfirm --needed firefox-developer
+sudo aura -A --noconfirm --needed android-sdk-platform-tools
 
 echo "Installing emacs and its dependencies"
-sudo pacman -S --noconfirm emacs
-sudo pacman -S --noconfirm aspell-pt
-sudo pacman -S --noconfirm aspell-en
+sudo pacman -S --noconfirm --needed emacs
+sudo pacman -S --noconfirm --needed aspell-pt
+sudo pacman -S --noconfirm --needed aspell-en
 exit 0
