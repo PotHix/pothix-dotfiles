@@ -41,6 +41,7 @@
       <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r -s /home/pothix/Pictures"/>
       <property name="Print" type="string" value="xfce4-screenshooter -f -s /home/pothix/Pictures"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r -c"/>
+      <property name="&lt;Super&gt;Return" type="string" value="/usr/bin/xfce4-terminal"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -156,6 +157,10 @@
       <property name="&lt;Super&gt;Right" type="string" value="tile_right_key"/>
       <property name="&lt;Super&gt;Tab" type="string" value="cycle_windows_key"/>
       <property name="&lt;Super&gt;grave" type="string" value="switch_window_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;Up" type="string" value="tile_up_left_key"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;Up" type="string" value="tile_up_right_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;Down" type="string" value="tile_down_left_key"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;Down" type="string" value="tile_down_right_key"/>
     </property>
   </property>
   <property name="providers" type="array">
