@@ -10,6 +10,10 @@
   (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
   (when (not package-archive-contents) (package-refresh-contents)))
 
+; use-package (used to control the other plugins)
+(unless (package-installed-p 'use-package)
+    (package-install 'use-package))
+
 (set-face-attribute 'default nil :height 100)
 
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -105,10 +109,6 @@
             (when (not (derived-mode-p 'markdown-mode))
               (delete-trailing-whitespace))))
 
-; use-package
-;
-(unless (package-installed-p 'use-package)
-    (package-install 'use-package))
 
 
 (use-package bm
