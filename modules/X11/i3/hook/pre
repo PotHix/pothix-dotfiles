@@ -1,1 +1,1 @@
-sudo pacman -S i3 i3blocks sway
+sudo pacman -S i3 sway
