@@ -60,7 +60,7 @@ sudo pacman -S --noconfirm --needed aspell-pt
 sudo pacman -S --noconfirm --needed aspell-en
 
 echo "Installing xfce4"
-sudo pacman -S --noconfirm --needed xfce4 xfce4-goodies faenza-icon-theme
+sudo pacman -S --noconfirm --needed xfce4 xfce4-goodies faenza-icon-theme mupdf
 
 echo "Installing common softwares"
 sudo pacman -S --noconfirm --needed gimp
