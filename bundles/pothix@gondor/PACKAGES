@@ -12,7 +12,7 @@ echo Y | sudo pacman -U aura-bin/aura-bin*.tar.xz
 cd -
 
 echo "Installing basic packages"
-echo 1 | sudo pacman -S --noconfirm --needed xorg-server xorg-xinit xorg-rdb xorg-xmodmap
+echo 1 | sudo pacman -S --noconfirm --needed xorg-server xorg-xinit xorg-rdb xorg-xmodmap xf86-input-libinput
 sudo pacman -S --noconfirm --needed slim
 sudo pacman -S --noconfirm --needed systemd
 sudo pacman -S --noconfirm --needed systemd-arch-units
@@ -23,6 +23,7 @@ echo "Installing wireless packages"
 sudo pacman -S --noconfirm --needed wpa_supplicant
 sudo pacman -S --noconfirm --needed netctl
 sudo pacman -S --noconfirm --needed networkmanager
+sudo pacman -S --noconfirm --needed network-manager-applet
 
 echo "Installing fonts"
 sudo pacman -S --noconfirm --needed ttf-dejavu        # just a good font
@@ -36,7 +37,8 @@ sudo pacman -S --noconfirm --needed ntp
 sudo pacman -S --noconfirm --needed curl
 sudo pacman -S --noconfirm --needed xsel
 sudo pacman -S --noconfirm --needed unzip
-sudo aura   -A --noconfirm --needed imagemagick-no-hdri # needed for rmagick
+sudo pacman -S --noconfirm --needed imagemagick
+# sudo aura   -A --noconfirm --needed imagemagick-no-hdri # needed for rmagick
 sudo pacman -S --noconfirm --needed bash-completion
 sudo pacman -S --noconfirm --needed alsa-utils
 
