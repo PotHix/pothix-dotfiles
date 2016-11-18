@@ -1,7 +1,11 @@
 [xfdesktop-version-4.10.3+-rcfile_format]
 4.10.3+=true
 
-[Trash]
+[d21ab8f6-3c4a-4653-a383-be5f727c192e]
+row=3
+col=0
+
+[0786-927C]
 row=0
 col=0
 
