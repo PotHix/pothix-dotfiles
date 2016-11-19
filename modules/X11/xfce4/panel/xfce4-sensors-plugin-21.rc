@@ -7,7 +7,7 @@ Scale=0
 Font_Size=medium
 Font_Size_Numerical=2
 Font=Sans 12
-Lines_Size=1
+Lines_Size=3
 Update_Interval=2
 Exec_Command=true
 Show_Units=true
@@ -26,7 +26,7 @@ Number=0
 [Chip0_Feature0]
 Id=0
 Address=0
-Name=cpu°
+Name=cpu
 Color=#FF0000
 Show=true
 Min=40.00
