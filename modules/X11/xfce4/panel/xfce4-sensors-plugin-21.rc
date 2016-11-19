@@ -8,7 +8,7 @@ Font_Size=medium
 Font_Size_Numerical=2
 Font=Sans 12
 Lines_Size=3
-Update_Interval=2
+Update_Interval=60
 Exec_Command=true
 Show_Units=true
 Small_Spacings=false
@@ -27,10 +27,10 @@ Number=0
 Id=0
 Address=0
 Name=cpu
-Color=#FF0000
+Color=#00B000
 Show=true
-Min=40.00
-Max=90.00
+Min=0.00
+Max=52.00
 
 [Chip1]
 Name=acpitz-0
@@ -46,8 +46,8 @@ Address=0
 Name=fan
 Color=#00B000
 Show=true
-Min=3000.00
-Max=6000.00
+Min=1000.00
+Max=3500.00
 
 [Chip3]
 Name=ACPI
