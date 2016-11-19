@@ -34,14 +34,14 @@
       <property name="&lt;Super&gt;p" type="string" value="xfce4-display-settings --minimal"/>
       <property name="&lt;Primary&gt;Escape" type="string" value="xfdesktop --menu"/>
       <property name="override" type="bool" value="true"/>
-      <property name="XF86AudioRaiseVolume" type="string" value="amixer set Master 5%+"/>
-      <property name="XF86AudioLowerVolume" type="string" value="amixer set Master 5%-"/>
-      <property name="XF86AudioMute" type="string" value="amixer set Master toggle"/>
       <property name="&lt;Super&gt;r" type="string" value="xfce4-appfinder"/>
       <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r -s /home/pothix/Pictures"/>
       <property name="Print" type="string" value="xfce4-screenshooter -f -s /home/pothix/Pictures"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r -c"/>
       <property name="&lt;Super&gt;Return" type="string" value="/usr/bin/xfce4-terminal"/>
+      <property name="XF86AudioMute" type="string" value="pactl set-sink-mute @DEFAULT_SINK@ toggle"/>
+      <property name="XF86AudioLowerVolume" type="string" value="pactl set-sink-volume @DEFAULT_SINK@ &apos;-10%&apos;"/>
+      <property name="XF86AudioRaiseVolume" type="string" value="pactl set-sink-volume @DEFAULT_SINK@ &apos;+10%&apos;"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
