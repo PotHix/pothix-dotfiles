@@ -1,0 +1,27 @@
+next_color=3
+viewer_size=64
+viewer_text_overlay_position=1
+use_background_color=false
+network_type_0_interface_name=eth0
+network_type_1_interface_name=eth1
+network_type_2_interface_name=eth2
+network_type_3_interface_name=ppp
+network_type_4_interface_name=slip
+network_type_5_interface_name=wlan0
+network_type_6_interface_name=wlan1
+network_type_7_interface_name=wlan2
+viewer_type=curve
+viewer_font=Sans 8
+viewer_text_overlay_enabled=true
+viewer_text_overlay_font=Sans 6
+viewer_text_overlay_color=-1347440641
+viewer_text_overlay_format_string=I/O
+
+[1]
+type=disk_statistics
+disk_stats_device=sda2
+disk_stats_stat=8
+max=13
+tag=
+color=-1050256720
+

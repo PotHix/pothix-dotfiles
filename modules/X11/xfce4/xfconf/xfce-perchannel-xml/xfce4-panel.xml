@@ -10,9 +10,18 @@
       <property name="position-locked" type="bool" value="true"/>
       <property name="size" type="uint" value="22"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="21"/>
+        <value type="int" value="24"/>
+        <value type="int" value="28"/>
+        <value type="int" value="38"/>
+        <value type="int" value="30"/>
+        <value type="int" value="39"/>
+        <value type="int" value="31"/>
+        <value type="int" value="25"/>
+        <value type="int" value="36"/>
+        <value type="int" value="26"/>
         <value type="int" value="9"/>
         <value type="int" value="22"/>
+        <value type="int" value="1"/>
         <value type="int" value="6"/>
         <value type="int" value="16"/>
         <value type="int" value="10"/>
@@ -61,11 +70,31 @@
     <property name="plugin-16" type="string" value="clock">
       <property name="mode" type="uint" value="0"/>
     </property>
-    <property name="plugin-21" type="string" value="xfce4-sensors-plugin"/>
     <property name="plugin-22" type="string" value="pager">
       <property name="rows" type="uint" value="4"/>
       <property name="miniature-view" type="bool" value="true"/>
       <property name="workspace-scrolling" type="bool" value="false"/>
+    </property>
+    <property name="plugin-24" type="string" value="xfce4-hardware-monitor-plugin"/>
+    <property name="plugin-25" type="string" value="xfce4-hardware-monitor-plugin"/>
+    <property name="plugin-26" type="string" value="xfce4-hardware-monitor-plugin"/>
+    <property name="plugin-28" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="false"/>
+    </property>
+    <property name="plugin-30" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-31" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-36" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-38" type="string" value="xfce4-hardware-monitor-plugin"/>
+    <property name="plugin-39" type="string" value="xfce4-hardware-monitor-plugin"/>
+    <property name="plugin-1" type="string" value="separator">
+      <property name="style" type="uint" value="3"/>
     </property>
   </property>
 </channel>
