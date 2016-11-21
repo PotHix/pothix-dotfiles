@@ -30,3 +30,5 @@ BackgroundDarkness=0.920000
 ScrollingUnlimited=TRUE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ScrollingOnOutput=FALSE
+FontName=Monospace 11
+
