@@ -5,11 +5,15 @@ sudo pacman -Syu
 
 # aura-bin dependency
 sudo pacman -S --noconfirm --needed abs
-echo "Installing Aura"
-cd /tmp
-curl aur.sh | bash -si aura-bin
-echo Y | sudo pacman -U aura-bin/aura-bin*.tar.xz
-cd -
+
+if [[ ! $(command -v aura) ]]
+then
+    echo "Installing Aura"
+    cd /tmp
+    curl aur.sh | bash -si aura-bin
+    echo Y | sudo pacman -U aura-bin/aura-bin*.tar.xz
+    cd -
+fi
 
 echo "Installing basic packages"
 echo 1 | sudo pacman -S --noconfirm --needed xorg-server xorg-xinit xorg-rdb xorg-xmodmap xf86-input-libinput
