@@ -77,5 +77,6 @@ sudo pacman -S --noconfirm --needed dos2unix
 sudo pacman -S --noconfirm --needed shotwell
 sudo pacman -S --noconfirm --needed tmux
 sudo aura   -A --noconfirm --needed dropbox
+sudo aura   -A --noconfirm --needed franz-bin
 
 exit 0
