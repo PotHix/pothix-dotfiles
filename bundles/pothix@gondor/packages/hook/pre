@@ -69,6 +69,10 @@ echo "Installing xfce4"
 sudo pacman -S --noconfirm --needed xfce4 xfce4-goodies mupdf
 sudo aura   -A --noconfirm --needed sardi-icons
 
+echo "Installing i3/sway"
+sudo pacman -S --noconfirm --needed i3-wm i3lock i3status sway
+sudo aura   -A --noconfirm --needed i3blocks
+
 echo "Installing common softwares"
 sudo pacman -S --noconfirm --needed gimp
 sudo pacman -S --noconfirm --needed inkscape
