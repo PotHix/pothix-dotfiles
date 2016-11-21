@@ -12,8 +12,6 @@
       <property name="plugin-ids" type="array">
         <value type="int" value="24"/>
         <value type="int" value="28"/>
-        <value type="int" value="38"/>
-        <value type="int" value="30"/>
         <value type="int" value="39"/>
         <value type="int" value="31"/>
         <value type="int" value="25"/>
@@ -82,16 +80,12 @@
       <property name="style" type="uint" value="0"/>
       <property name="expand" type="bool" value="false"/>
     </property>
-    <property name="plugin-30" type="string" value="separator">
-      <property name="style" type="uint" value="0"/>
-    </property>
     <property name="plugin-31" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-36" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
     </property>
-    <property name="plugin-38" type="string" value="xfce4-hardware-monitor-plugin"/>
     <property name="plugin-39" type="string" value="xfce4-hardware-monitor-plugin"/>
     <property name="plugin-1" type="string" value="separator">
       <property name="style" type="uint" value="3"/>
