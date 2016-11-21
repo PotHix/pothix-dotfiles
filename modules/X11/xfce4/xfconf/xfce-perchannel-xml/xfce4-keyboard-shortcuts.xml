@@ -143,7 +143,6 @@
       <property name="&lt;Super&gt;Left" type="string" value="tile_left_key"/>
       <property name="&lt;Super&gt;Right" type="string" value="tile_right_key"/>
       <property name="&lt;Super&gt;Tab" type="string" value="cycle_windows_key"/>
-      <property name="&lt;Super&gt;grave" type="string" value="switch_window_key"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;Up" type="string" value="tile_up_left_key"/>
       <property name="&lt;Alt&gt;&lt;Super&gt;Up" type="string" value="tile_up_right_key"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;Down" type="string" value="tile_down_left_key"/>
@@ -162,6 +161,7 @@
       <property name="&lt;Shift&gt;&lt;Super&gt;r" type="string" value="resize_window_key"/>
       <property name="&lt;Super&gt;f" type="string" value="maximize_window_key"/>
       <property name="&lt;Alt&gt;F10" type="string" value="shade_window_key"/>
+      <property name="&lt;Super&gt;n" type="string" value="switch_window_key"/>
     </property>
   </property>
   <property name="providers" type="array">
