@@ -78,10 +78,10 @@
     <property name="wrap_workspaces" type="bool" value="false"/>
     <property name="zoom_desktop" type="bool" value="true"/>
     <property name="workspace_names" type="array">
-      <value type="string" value="Workspace 1"/>
-      <value type="string" value="Workspace 2"/>
-      <value type="string" value="Workspace 3"/>
-      <value type="string" value="Workspace 4"/>
+      <value type="string" value=""/>
+      <value type="string" value=""/>
+      <value type="string" value=""/>
+      <value type="string" value=""/>
     </property>
     <property name="margin_top" type="int" value="0"/>
     <property name="margin_left" type="int" value="0"/>

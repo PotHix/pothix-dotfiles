@@ -1,4 +1,4 @@
-next_color=2
+next_color=1
 viewer_size=64
 viewer_text_overlay_position=5
 use_background_color=false
@@ -7,6 +7,7 @@ viewer_text_overlay_enabled=true
 viewer_text_overlay_format_string=mem
 viewer_text_overlay_font=Sans 6
 viewer_text_overlay_color=-1347440641
+viewer_font=Sans 6
 
 [1]
 type=memory_usage

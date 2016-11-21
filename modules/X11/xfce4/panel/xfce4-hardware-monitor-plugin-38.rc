@@ -1,4 +1,4 @@
-next_color=1
+next_color=2
 viewer_size=64
 viewer_text_overlay_position=0
 use_background_color=false
@@ -17,6 +17,6 @@ type=fan_speed
 fan_no=0
 tag=
 max=65,535
-color=-1050256720
+color=9439920
 fill_color=1972416176
 
