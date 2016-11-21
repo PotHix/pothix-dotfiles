@@ -67,7 +67,7 @@ sudo pacman -S --noconfirm --needed aspell-en
 
 echo "Installing xfce4"
 sudo pacman -S --noconfirm --needed xfce4 xfce4-goodies mupdf
-sudo aura   -A --noconfirm --needed sardi-icons
+sudo aura   -A --noconfirm --needed sardi-icons xfwm-axiom-theme xfce4-hardware-monitor-plugin
 
 echo "Installing i3/sway"
 sudo pacman -S --noconfirm --needed i3-wm i3lock i3status sway
