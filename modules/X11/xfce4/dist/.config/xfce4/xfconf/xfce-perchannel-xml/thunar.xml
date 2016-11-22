@@ -8,4 +8,5 @@
   <property name="last-separator-position" type="int" value="170"/>
   <property name="last-window-width" type="int" value="661"/>
   <property name="last-window-height" type="int" value="739"/>
+  <property name="last-side-pane" type="string" value="void"/>
 </channel>
