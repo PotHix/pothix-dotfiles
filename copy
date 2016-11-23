@@ -1,0 +1,21 @@
+#!/bin/bash
+
+log_starting () {
+    printf "copying $1 files... "
+}
+
+log_done () {
+    echo "done"
+}
+
+if [[ "$1" == "" ]]
+then
+    exit 0
+fi
+
+if [[ "$1" == "xfce4" ]]
+then
+    log_starting $1
+    cp -R ~/.config/xfce4/* modules/X11/xfce4/dist/.config/xfce4/
+    log_done
+fi
