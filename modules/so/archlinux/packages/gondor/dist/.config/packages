@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Updating and preparing"
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm
 
 # aura-bin dependency
 sudo pacman -S --noconfirm --needed abs
@@ -14,6 +14,8 @@ then
     echo Y | sudo pacman -U aura-bin/aura-bin*.tar.xz
     cd -
 fi
+
+sudo aura -Ayu --noconfirm
 
 echo "Installing basic packages"
 echo 1 | sudo pacman -S --noconfirm --needed xorg-server xorg-xinit xorg-rdb xorg-xmodmap xf86-input-libinput
