@@ -1,7 +1,0 @@
-[1]
-type=disk_statistics
-disk_stats_device=sda2
-disk_stats_stat=8
-max=137
-tag=
-
