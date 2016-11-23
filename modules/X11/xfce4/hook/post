@@ -1,0 +1,7 @@
+eth=$(ip l | grep "enp" | awk '{ print $2 }' | tr -d :)
+wif=$(ip l | grep "wlp" | awk '{ print $2 }' | tr -d :)
+sda=$(mount | grep "sda. on / " | sed -r 's/.*(sda[0-9]).*/\1/g')
+
+sed -i "s/disk_stats_device=.*/disk_stats_device=$sda/g" $HOME/.config/xfce4/panel/*
+sed -i "s/network_type_0_interface_name=.*/network_type_0_interface_name=$eth/g" $HOME/.config/xfce4/panel/*
+sed -i "s/network_type_5_interface_name=.*/network_type_5_interface_name=$wif/g" $HOME/.config/xfce4/panel/*
