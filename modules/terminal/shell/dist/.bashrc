@@ -190,12 +190,19 @@ iconver (){
 	for i in `find . | grep utf`; do cp $i ${i%%.utf}; rm $i; done
 }
 
+
+###############################################################################################
+# Language specific paths
+###############################################################################################
+
+# Golang
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 
-###############################################################################################
-# Using RVM
-###############################################################################################
+# Ruby (rvm and rbenv)
+export PATH="$HOME/.rvm/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
-export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
+# Javascript / npm
 export PATH=~/.npm-global/bin:$PATH
