@@ -1,7 +1,8 @@
+sh <(curl -s https://raw.githubusercontent.com/dgvncsz0f/dot-install/master/dot-install) repo=git://github.com/PotHix/pothix-dotfiles.git bundle=$USER@$HOSTNAME force=true verbosity=99
+
 if [[ -f $HOME/.config/packages ]]
 then
     $HOME/.config/packages
 fi
 
-sh <(curl -s https://raw.githubusercontent.com/dgvncsz0f/dot-install/master/dot-install) repo=git://github.com/PotHix/pothix-dotfiles.git bundle=$USER@$HOSTNAME force=true verbosity=99
 sudo systemctl $@
