@@ -1,89 +1,104 @@
 #!/bin/sh
 
 echo "Updating and preparing"
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm
+
+# aura-bin dependency
+sudo pacman -S --noconfirm --needed abs
+
+if [[ ! $(command -v aura) ]]
+then
+    echo "Installing Aura"
+    cd /tmp
+    curl aur.sh | bash -si aura-bin
+    echo Y | sudo pacman -U aura-bin/aura-bin*.tar.xz
+    cd -
+fi
+
+sudo aura -Ayu --noconfirm
 
 echo "Installing basic packages"
-sudo pacman -S --noconfirm xorg-server xorg-xinit xorg-rdb xorg-xmodmap xorg-xrandr
-sudo pacman -S --noconfirm slim
-sudo pacman -S --noconfirm systemd
-sudo pacman -S --noconfirm systemd-arch-units
-sudo pacman -S --noconfirm openssh
-sudo pacman -S --noconfirm sysstat
+echo 1 | sudo pacman -S --noconfirm --needed xorg-server xorg-xinit xorg-rdb xorg-xmodmap xf86-input-libinput
+sudo pacman -S --noconfirm --needed slim
+sudo pacman -S --noconfirm --needed systemd
+sudo pacman -S --noconfirm --needed systemd-arch-units
+sudo pacman -S --noconfirm --needed openssh
+sudo pacman -S --noconfirm --needed sysstat
+
+echo "Installing hardware specific libs"
+sudo aura   -A --noconfirm --needed broadcom-wl-dkms
 
 echo "Installing wireless packages"
-sudo pacman -S --noconfirm wpa_supplicant
-sudo pacman -S --noconfirm netctl
-
-echo "installing specific packages for mordor"
-sudo pacman -S --noconfirm rxvt-unicode
-sudo pacman -S --noconfirm alsa-oss
-sudo pacman -S --noconfirm alsa-tools
-sudo pacman -S --noconfirm xf86-input-synaptics
-sudo pacman -S --noconfirm linux-headers
+sudo pacman -S --noconfirm --needed wpa_supplicant
+sudo pacman -S --noconfirm --needed netctl
+sudo pacman -S --noconfirm --needed networkmanager
+sudo pacman -S --noconfirm --needed network-manager-applet
 
 echo "Installing fonts"
-sudo pacman -S --noconfirm ttf-dejavu        # just a good font
-sudo pacman -S --noconfirm terminus-font     # just a good font
-sudo pacman -S --noconfirm ttf-symbola       # allow emoji
-sudo pacman -S --noconfirm ttf-font-awesome  # icons for status bars
+sudo pacman -S --noconfirm --needed ttf-dejavu        # just a good font
+sudo pacman -S --noconfirm --needed terminus-font     # just a good font
+sudo pacman -S --noconfirm --needed ttf-symbola       # allow emoji
+sudo aura   -A --noconfirm --needed ttf-font-awesome  # icons for status bars
 
 echo "Installing basic tools"
-sudo pacman -S --noconfirm rsync
-sudo pacman -S --noconfirm ntp
-sudo pacman -S --noconfirm curl
-sudo pacman -S --noconfirm xsel
-sudo pacman -S --noconfirm unzip
-sudo pacman -S --noconfirm imagemagick
-sudo pacman -S --noconfirm slock
-sudo pacman -S --noconfirm bash-completion
-sudo pacman -S --noconfirm alsa-utils
-
-echo "Installing stable browsers"
-sudo pacman -S --noconfirm firefox
-
-echo "Installing development tools"
-sudo pacman -S --noconfirm base-devel
-sudo pacman -S --noconfirm gvim
-sudo pacman -S --noconfirm ruby
-sudo pacman -S --noconfirm python
-sudo pacman -S --noconfirm git
-sudo pacman -S --noconfirm nodejs
-
-echo "Installing awesome dependencies"
-sudo pacman -S --noconfirm awesome feh vicious iptraf-ng
-
-echo "Installing xfce4"
-sudo pacman -S --noconfirm xfce4 xfce4-goodies
+sudo pacman -S --noconfirm --needed rsync
+sudo pacman -S --noconfirm --needed ntp
+sudo pacman -S --noconfirm --needed curl
+sudo pacman -S --noconfirm --needed xsel
+sudo pacman -S --noconfirm --needed unzip
+sudo pacman -S --noconfirm --needed imagemagick
+# sudo aura   -A --noconfirm --needed imagemagick-no-hdri # needed for rmagick
+sudo pacman -S --noconfirm --needed bash-completion
+sudo pacman -S --noconfirm --needed alsa-utils
 
 echo "specific main libs"
-sudo pacman -S --noconfirm openssl
-sudo pacman -S --noconfirm readline
+sudo pacman -S --noconfirm --needed openssl
+sudo pacman -S --noconfirm --needed readline
 
-echo "specific development libs"
-sudo pacman -S --noconfirm python2
-sudo pacman -S --noconfirm python2-pip
-sudo pacman -S --noconfirm bpython2
-sudo pacman -S --noconfirm ruby
-sudo pacman -S --noconfirm ghc
+echo "Installing development tools"
+sudo pacman -S --noconfirm --needed base-devel
+sudo pacman -S --noconfirm --needed gvim
+sudo pacman -S --noconfirm --needed ruby
+sudo pacman -S --noconfirm --needed python
+sudo pacman -S --noconfirm --needed git
+sudo pacman -S --noconfirm --needed nodejs
+sudo aura   -A --noconfirm --needed rbenv ruby-build
+sudo aura   -A --noconfirm --needed android-sdk-platform-tools
 
-echo "specific development tools"
-sudo pacman -S --noconfirm redis-server
-sudo pacman -S --noconfirm mysql
-sudo pacman -S --noconfirm sqlite
+echo "Docker"
+sudo pacman -S --noconfirm --needed docker
+sudo pacman -S --noconfirm --needed docker-compose
 
 echo "Installing emacs and its dependencies"
-sudo pacman -S --noconfirm emacs
-sudo pacman -S --noconfirm aspell-pt
-sudo pacman -S --noconfirm aspell-en
+sudo pacman -S --noconfirm --needed emacs
+sudo pacman -S --noconfirm --needed aspell-pt
+sudo pacman -S --noconfirm --needed aspell-en
 
-echo "Installing Aura"
-cd /tmp
-curl aur.sh | bash -si aura-bin
-cd -
+echo "Installing xfce4"
+sudo pacman -S --noconfirm --needed xfce4
+sudo pacman -S --noconfirm --needed xfce4-goodies
+sudo pacman -S --noconfirm --needed mupdf
+sudo aura   -A --noconfirm --needed sardi-icons
+sudo aura   -A --noconfirm --needed xfwm-axiom-theme
+sudo aura   -A --noconfirm --needed xfce4-hardware-monitor-plugin
 
-echo "Installing packages from AUR"
-sudo aura -A --noconfirm google-chrome-stable
-sudo aura -A --noconfirm broadcom-wl-dkms
+echo "Installing i3/sway"
+sudo pacman -S --noconfirm --needed i3-wm i3lock i3status sway
+sudo aura   -A --noconfirm --needed i3blocks
+sudo pacman -S --noconfirm --needed rxvt-unicode
+
+echo "Installing common softwares"
+sudo pacman -S --noconfirm --needed gimp
+sudo pacman -S --noconfirm --needed inkscape
+sudo pacman -S --noconfirm --needed pidgin
+sudo pacman -S --noconfirm --needed chromium
+sudo aura   -A --noconfirm --needed firefox-developer
+sudo pacman -S --noconfirm --needed texlive-bin
+sudo pacman -S --noconfirm --needed vlc
+sudo pacman -S --noconfirm --needed dos2unix
+sudo pacman -S --noconfirm --needed shotwell
+sudo pacman -S --noconfirm --needed tmux
+sudo aura   -A --noconfirm --needed dropbox
+sudo aura   -A --noconfirm --needed rambox-bin
 
 exit 0
