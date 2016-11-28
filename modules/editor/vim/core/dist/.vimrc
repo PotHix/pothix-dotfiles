@@ -21,6 +21,7 @@ Plugin 'othree/html5.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'vim-scripts/VimRepress'
+Plugin 'elixir-lang/vim-elixir'
 
 call vundle#end()
 
