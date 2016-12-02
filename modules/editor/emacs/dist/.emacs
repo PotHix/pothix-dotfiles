@@ -349,3 +349,8 @@
 ; Emacs server
 ;
 (unless (server-running-p) (server-start))
+
+(setq inhibit-splash-screen t)
+(require 'bookmark)
+(bookmark-bmenu-list)
+(switch-to-buffer "*Bookmark List*")
