@@ -28,7 +28,7 @@ sudo pacman -S --noconfirm --needed openssh
 sudo pacman -S --noconfirm --needed sysstat
 
 echo "Installing hardware specific libs"
-sudo aura   -A --noconfirm --needed broadcom-wl-dkms
+sudo aura   -A --noconfirm --needed broadcom-wl
 
 echo "Installing wireless packages"
 sudo pacman -S --noconfirm --needed wpa_supplicant
@@ -107,5 +107,8 @@ echo "Activate needed services"
 sudo systemctl enable ntpd.service
 sudo systemctl enable slim.service
 sudo systemctl enable NetworkManager.service
+
+echo "Activate modules"
+sudo modprobe wl
 
 exit 0
