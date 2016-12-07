@@ -3,8 +3,9 @@
 echo "Updating and preparing"
 sudo pacman -Syu --noconfirm
 
-# aura-bin dependency
+# dependencies to install aura-bin
 sudo pacman -S --noconfirm --needed abs
+sudo pacman -S --noconfirm --needed curl
 
 if [[ ! $(command -v aura) ]]
 then
@@ -43,7 +44,6 @@ sudo aura   -A --noconfirm --needed ttf-font-awesome  # icons for status bars
 echo "Installing basic tools"
 sudo pacman -S --noconfirm --needed rsync
 sudo pacman -S --noconfirm --needed ntp
-sudo pacman -S --noconfirm --needed curl
 sudo pacman -S --noconfirm --needed xsel
 sudo pacman -S --noconfirm --needed unzip
 sudo pacman -S --noconfirm --needed imagemagick
@@ -100,5 +100,8 @@ sudo pacman -S --noconfirm --needed shotwell
 sudo pacman -S --noconfirm --needed tmux
 sudo aura   -A --noconfirm --needed tmate
 sudo aura   -A --noconfirm --needed dropbox
+
+echo "Activate needed services"
+sudo systemctl enable ntpd.service
 
 exit 0
