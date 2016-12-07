@@ -19,7 +19,8 @@ fi
 sudo aura -Ayu --noconfirm
 
 echo "Installing basic packages"
-echo 1 | sudo pacman -S --noconfirm --needed xorg-server xorg-xinit xorg-rdb xorg-xmodmap xf86-input-libinput
+sudo pacman -S --noconfirm --needed xorg-server
+sudo pacman -S --noconfirm --needed xorg-xinit xorg-xrdb xorg-xmodmap xf86-input-libinput
 sudo pacman -S --noconfirm --needed slim
 sudo pacman -S --noconfirm --needed systemd
 sudo pacman -S --noconfirm --needed systemd-arch-units
@@ -100,8 +101,11 @@ sudo pacman -S --noconfirm --needed shotwell
 sudo pacman -S --noconfirm --needed tmux
 sudo aura   -A --noconfirm --needed tmate
 sudo aura   -A --noconfirm --needed dropbox
+sudo aura   -A --noconfirm --needed forticlientsslvpn
 
 echo "Activate needed services"
 sudo systemctl enable ntpd.service
+sudo systemctl enable slim.service
+sudo systemctl enable NetworkManager.service
 
 exit 0
