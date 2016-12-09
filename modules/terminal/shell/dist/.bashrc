@@ -11,6 +11,7 @@ export HISTFILESIZE=5000
 
 export EDITOR=emacs
 export GEM_EDITOR=emacs
+export GIT_EDITOR=nvim
 
 export GITHUB_USER=PotHix
 export CODES=$HOME/repos
@@ -164,9 +165,21 @@ git-update-tag (){
 ###############################################################################################
 
 v (){
+    local editor="vi"
+
+    if [[ "$(command -v vim)" != "" ]]
+    then
+        editor="vim"
+    fi
+
+    if [[ "$(command -v nvim)" != "" ]]
+    then
+        editor="nvim"
+    fi
+
 	# Removing : from a file name and adding + to go to the especified line
 	local file=$(echo $1 | sed -r 's/:([0-9]+).*/ +\1/')
-	vim $file
+    eval "$editor $file"
 }
 
 goodpractices (){
