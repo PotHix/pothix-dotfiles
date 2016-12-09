@@ -9,8 +9,8 @@ export HISTCONTROL=ignoredups  # don't put duplicate lines in the history. See b
 export HISTCONTROL=ignoreboth  # ... and ignore same sucessive entries.
 export HISTFILESIZE=5000
 
-export EDITOR=emacs
-export GEM_EDITOR=emacs
+export EDITOR=nvim
+export GEM_EDITOR=nvim
 export GIT_EDITOR=nvim
 
 export GITHUB_USER=PotHix
