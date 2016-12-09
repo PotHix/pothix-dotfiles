@@ -36,6 +36,10 @@ sudo pacman -S --noconfirm --needed netctl
 sudo pacman -S --noconfirm --needed networkmanager
 sudo pacman -S --noconfirm --needed network-manager-applet
 
+echo "Installing sound packages"
+sudo pacman -S --noconfirm --needed pulseaudio
+sudo pacman -S --noconfirm --needed pavucontrol
+
 echo "Installing fonts"
 sudo pacman -S --noconfirm --needed ttf-dejavu        # just a good font
 sudo pacman -S --noconfirm --needed terminus-font     # just a good font
