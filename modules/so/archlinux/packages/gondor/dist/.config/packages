@@ -55,7 +55,7 @@ sudo pacman -S --noconfirm --needed alsa-utils
 
 echo "Installing development tools"
 sudo pacman -S --noconfirm --needed base-devel
-sudo pacman -S --noconfirm --needed vim
+sudo pacman -S --noconfirm --needed neovim
 sudo pacman -S --noconfirm --needed ruby
 sudo pacman -S --noconfirm --needed python
 sudo pacman -S --noconfirm --needed python2
