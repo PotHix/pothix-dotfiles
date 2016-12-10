@@ -14,11 +14,7 @@ fi
 # Black terminal
 xrdb -merge .Xresources &
 
-# 2 screens
-xrandr --output DVI-1 --right-of DVI-0
-
 # colemak keyboard
-# setxkbmap us -variant colemak
 setxkbmap -geometry kinesis -layout us -variant colemak
 
 # No capslock
