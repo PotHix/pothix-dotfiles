@@ -110,12 +110,13 @@
               (delete-trailing-whitespace))))
 
 
-
 (use-package bm
   :bind (("<C-f2>" . bm-toggle)
          ("<f2>"   . bm-next)
          ("<S-f2>" . bm-previous)))
 
+(use-package writegood-mode)
+(use-package artbollocks-mode)
 
 ; Solarized
 ;
