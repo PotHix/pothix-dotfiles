@@ -12,13 +12,14 @@ execute_action () {
 
 update_packages () {
     chmod +x $packages
-    exec $packages
+    eval "$packages"
 }
 
 if [[ -f $packages ]]
+then
     update_packages
     update_conf
-then
+else
     update_conf
     update_packages
 fi
