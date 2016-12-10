@@ -55,15 +55,21 @@ sudo pacman -S --noconfirm --needed alsa-utils
 
 echo "Installing development tools"
 sudo pacman -S --noconfirm --needed base-devel
+sudo pacman -S --noconfirm --needed vim
 sudo pacman -S --noconfirm --needed neovim
+sudo pacman -S --noconfirm --needed git
+sudo pacman -S --noconfirm --needed bpython2
+sudo aura   -A --noconfirm --needed rbenv ruby-build
+sudo aura   -A --noconfirm --needed android-sdk-platform-tools
+
+echo "Installing languages"
 sudo pacman -S --noconfirm --needed ruby
 sudo pacman -S --noconfirm --needed python
 sudo pacman -S --noconfirm --needed python2
-sudo pacman -S --noconfirm --needed bpython2
-sudo pacman -S --noconfirm --needed git
 sudo pacman -S --noconfirm --needed nodejs
-sudo aura   -A --noconfirm --needed rbenv ruby-build
-sudo aura   -A --noconfirm --needed android-sdk-platform-tools
+sudo pacman -S --noconfirm --needed rust
+sudo pacman -S --noconfirm --needed go
+sudo pacman -S --noconfirm --needed elixir
 
 echo "Docker"
 sudo pacman -S --noconfirm --needed docker
