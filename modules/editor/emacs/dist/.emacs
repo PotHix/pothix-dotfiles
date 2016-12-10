@@ -111,17 +111,19 @@
 
 
 (use-package bm
-  :bind (("<C-f2>" . bm-toggle)
-         ("<f2>"   . bm-next)
-         ("<S-f2>" . bm-previous)))
+             :ensure t
+             :bind (("<C-f2>" . bm-toggle)
+                    ("<f2>"   . bm-next)
+                    ("<S-f2>" . bm-previous)))
 
-(use-package writegood-mode)
-(use-package artbollocks-mode)
+(use-package writegood-mode
+             :ensure t)
 
-; Solarized
-;
-(unless (package-installed-p 'color-theme-solarized)
-    (package-install 'color-theme-solarized))
+(use-package artbollocks-mode
+             :ensure t)
+
+(use-package color-theme-solarized
+             :ensure t)
 
 (defun use-solarized-bgmode (frame mode)
     (set-frame-parameter frame 'background-mode mode)
@@ -136,17 +138,15 @@
 
 
 
-; APEL (A Portable Emacs Library) is a library to support to write portable Emacs Lisp programs.
-;
-(unless (package-installed-p 'apel)
-    (package-install 'apel))
+; APEL (A Portable Emacs Library) is a library to support to write portable
+; Emacs Lisp programs.
+(use-package apel
+             :ensure t)
 
-
-; which-key
-(unless (package-installed-p 'which-key)
-    (package-install 'which-key))
-(which-key-mode)
-
+(use-package which-key
+             :ensure t
+             :config
+             (which-key-mode))
 
 ; Magit
 ;
