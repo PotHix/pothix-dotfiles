@@ -7,7 +7,7 @@ update_conf () {
 }
 
 execute_action () {
-    sudo systemctl $@
+    sudo systemctl $1
 }
 
 update_packages () {
@@ -17,10 +17,10 @@ update_packages () {
 
 if [[ -f $packages ]]
     update_packages
-    uptade_conf
+    update_conf
 then
     update_conf
-    execute_action
+    update_packages
 fi
 
-execute_action
+execute_action $@
