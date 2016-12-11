@@ -15,13 +15,6 @@ update_packages () {
     eval "$packages"
 }
 
-if [[ -f $packages ]]
-then
-    update_packages
-    update_conf
-else
-    update_conf
-    update_packages
-fi
-
+update_conf
+update_packages
 execute_action $@
