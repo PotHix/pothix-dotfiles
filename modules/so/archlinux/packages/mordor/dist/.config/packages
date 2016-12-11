@@ -126,10 +126,16 @@ sudo pacman -S --noconfirm --needed chromium
 sudo aura   -A --noconfirm --needed google-chrome-dev
 sudo aura   -A --noconfirm --needed firefox-developer
 
+echo "Laptop improvements"
+sudo pacman -S --noconfirm --needed acpid
+sudo aura   -A --noconfirm --needed laptop-mode-tools
+
 echo "Activate needed services"
 sudo systemctl enable ntpd.service
 sudo systemctl enable slim.service
 sudo systemctl enable NetworkManager.service
+sudo systemctl enable laptop-mode.service
+sudo systemctl enable acpid.service
 
 echo "Activate modules"
 sudo modprobe wl

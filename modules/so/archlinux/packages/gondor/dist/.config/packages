@@ -126,10 +126,16 @@ gpg --recv-keys 79BE3E4300411886 38DBBDC86092693E                      # gpg key
 sudo aura -A --noconfirm --needed --build=$kernel_build linux-mainline # last releas candidate
 sudo aura -A --noconfirm --needed --build=$kernel_build linux-ck       # better scheduler
 
+echo "Laptop improvements"
+sudo pacman -S --noconfirm --needed acpid
+sudo aura   -A --noconfirm --needed laptop-mode-tools
+
 echo "Activate needed services"
 sudo systemctl enable ntpd.service
 sudo systemctl enable slim.service
 sudo systemctl enable NetworkManager.service
+sudo systemctl enable laptop-mode.service
+sudo systemctl enable acpid.service
 
 echo "Updating all packages"
 sudo pacman -Syu --noconfirm
