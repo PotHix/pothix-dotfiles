@@ -116,6 +116,11 @@ sudo aura   -A --noconfirm --needed chromium-widevine # netflix enabled
 sudo aura   -A --noconfirm --needed google-chrome-dev
 sudo aura   -A --noconfirm --needed firefox-developer
 
+echo "Installing kernel flavors"
+sudo pacman -S --noconfirm --needed linux-zen      # improved for desktop
+sudo aura   -A --noconfirm --needed linux-mainline # last releas candidate
+sudo aura   -A --noconfirm --needed linux-ck       # better scheduler
+
 echo "Activate needed services"
 sudo systemctl enable ntpd.service
 sudo systemctl enable slim.service
