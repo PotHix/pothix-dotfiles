@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Updating and preparing"
-sudo pacman -Syu --noconfirm
+sudo pacman -Su --noconfirm
 
 # dependencies to install aura-bin
 sudo pacman -S --noconfirm --needed abs
@@ -133,5 +133,8 @@ sudo systemctl enable NetworkManager.service
 
 echo "Activate modules"
 sudo modprobe wl
+
+echo "Updating all packages"
+sudo pacman -Syu --noconfirm
 
 exit 0
