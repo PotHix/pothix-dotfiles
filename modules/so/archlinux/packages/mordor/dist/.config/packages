@@ -128,7 +128,7 @@ sudo aura   -A --noconfirm --needed firefox-developer
 
 echo "Laptop improvements"
 sudo pacman -S --noconfirm --needed acpid
-sudo aura   -A --noconfirm --needed laptop-mode-tools
+sudo pacman -S --noconfirm --needed tlp
 
 echo "Activate needed services"
 sudo systemctl enable ntpd.service
