@@ -50,8 +50,8 @@
         <value type="string" value="redshift-gtk"/>
         <value type="string" value="kupfer.py"/>
         <value type="string" value="networkmanager applet"/>
-        <value type="string" value="telegramdesktop"/>
         <value type="string" value="task manager"/>
+        <value type="string" value="telegramdesktop"/>
         <value type="string" value="orage"/>
         <value type="string" value="pidgin"/>
         <value type="string" value="chromium"/>
