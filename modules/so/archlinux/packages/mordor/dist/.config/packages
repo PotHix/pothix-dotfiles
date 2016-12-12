@@ -87,7 +87,6 @@ sudo pacman -S --noconfirm --needed emacs
 sudo pacman -S --noconfirm --needed aspell-pt
 sudo pacman -S --noconfirm --needed aspell-en
 sudo pacman -S --noconfirm --needed vim
-sudo pacman -S --noconfirm --needed neovim
 
 echo "Installing emacs and its dependencies"
 sudo pacman -S --noconfirm --needed emacs
