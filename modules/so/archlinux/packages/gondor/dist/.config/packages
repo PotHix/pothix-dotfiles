@@ -52,6 +52,7 @@ sudo pacman -S --noconfirm --needed rsync
 sudo pacman -S --noconfirm --needed ntp
 sudo pacman -S --noconfirm --needed xsel
 sudo pacman -S --noconfirm --needed unzip
+sudo pacman -S --noconfirm --needed unrar
 sudo pacman -S --noconfirm --needed imagemagick
 # sudo aura   -A --noconfirm --needed imagemagick-no-hdri # needed for rmagick
 sudo pacman -S --noconfirm --needed bash-completion
