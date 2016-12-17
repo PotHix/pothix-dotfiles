@@ -1,1 +1,1 @@
-vim -o $(find * -name $1 -print0)
+vim -o $(find * -type f -name $1 -print0)
