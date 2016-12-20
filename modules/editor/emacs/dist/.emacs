@@ -109,21 +109,10 @@
             (when (not (derived-mode-p 'markdown-mode))
               (delete-trailing-whitespace))))
 
-
-(use-package bm
-             :ensure t
-             :bind (("<C-f2>" . bm-toggle)
-                    ("<f2>"   . bm-next)
-                    ("<S-f2>" . bm-previous)))
-
-(use-package writegood-mode
-             :ensure t)
-
-(use-package artbollocks-mode
-             :ensure t)
-
-(use-package color-theme-solarized
-             :ensure t)
+; Install solarized theme without use-package for now
+; it is not working good with use-package
+(unless (package-installed-p 'color-theme-solarized)
+  (package-install 'color-theme-solarized))
 
 (defun use-solarized-bgmode (frame mode)
     (set-frame-parameter frame 'background-mode mode)
@@ -136,6 +125,18 @@
     (add-hook 'after-make-frame-functions
         (lambda (frame) (use-solarized-bgmode frame 'dark)))
 
+
+(use-package bm
+             :ensure t
+             :bind (("<C-f2>" . bm-toggle)
+                    ("<f2>"   . bm-next)
+                    ("<S-f2>" . bm-previous)))
+
+(use-package writegood-mode
+             :ensure t)
+
+(use-package artbollocks-mode
+             :ensure t)
 
 
 ; APEL (A Portable Emacs Library) is a library to support to write portable
