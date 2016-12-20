@@ -120,9 +120,9 @@ sudo aura   -A --noconfirm --needed google-chrome-dev
 sudo aura   -A --noconfirm --needed firefox-developer
 
 echo "Installing kernel flavors"
-sudo pacman -S --noconfirm --needed linux-zen                          # improved for desktop
-sudo aura -A --noconfirm --needed linux-mainline # last releas candidate
-sudo aura -A --noconfirm --needed linux-ck       # better scheduler
+sudo pacman -A --noconfirm --needed linux-ck       # better scheduler
+sudo pacman -S --noconfirm --needed linux-zen      # improved for desktop
+sudo aura   -A --noconfirm --needed linux-mainline # last releas candidate
 
 echo "Laptop improvements"
 sudo pacman -S --noconfirm --needed acpid
