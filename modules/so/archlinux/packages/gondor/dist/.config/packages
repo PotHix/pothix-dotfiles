@@ -1,8 +1,6 @@
 #!/bin/sh
 
 echo "Preparing cache directories"
-kernel_build=/home/pothix/kernel
-mkdir -p $kernel_build
 
 echo "Updating repos"
 sudo pacman -Su --noconfirm
@@ -123,8 +121,8 @@ sudo aura   -A --noconfirm --needed firefox-developer
 echo "Installing kernel flavors"
 sudo pacman -S --noconfirm --needed linux-zen                          # improved for desktop
 gpg --recv-keys 79BE3E4300411886 38DBBDC86092693E                      # gpg keys needed for linux-ck
-sudo aura -A --noconfirm --needed --build=$kernel_build linux-mainline # last releas candidate
-sudo aura -A --noconfirm --needed --build=$kernel_build linux-ck       # better scheduler
+sudo aura -A --noconfirm --needed linux-mainline # last releas candidate
+sudo aura -A --noconfirm --needed linux-ck       # better scheduler
 
 echo "Laptop improvements"
 sudo pacman -S --noconfirm --needed acpid
