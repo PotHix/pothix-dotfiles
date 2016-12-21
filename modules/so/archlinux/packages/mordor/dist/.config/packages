@@ -49,6 +49,7 @@ sudo aura   -A --noconfirm --needed ttf-font-awesome  # icons for status bars
 echo "Installing basic tools"
 sudo pacman -S --noconfirm --needed rsync
 sudo pacman -S --noconfirm --needed ntp
+sudo pacman -S --noconfirm --needed ripgrep
 sudo pacman -S --noconfirm --needed xsel
 sudo pacman -S --noconfirm --needed unzip
 sudo pacman -S --noconfirm --needed unrar
