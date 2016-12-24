@@ -114,6 +114,9 @@ echo "Installing video software"
 sudo pacman -S --noconfirm --needed vlc
 sudo pacman -S --noconfirm --needed stremio-bin
 
+echo "Installing entretainment software"
+sudo pacman -S --noconfirm --needed steam
+
 echo "Installing browsers"
 sudo pacman -S --noconfirm --needed chromium
 sudo aura   -A --noconfirm --needed chromium-widevine # netflix enabled
