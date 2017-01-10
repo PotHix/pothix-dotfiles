@@ -22,6 +22,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'vim-scripts/VimRepress'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'wakatime/vim-wakatime'
 
 call vundle#end()
 
