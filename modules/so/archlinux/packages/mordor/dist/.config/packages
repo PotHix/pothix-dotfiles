@@ -127,6 +127,10 @@ sudo pacman -S --noconfirm --needed chromium
 sudo aura   -A --noconfirm --needed google-chrome-dev
 sudo aura   -A --noconfirm --needed firefox-developer
 
+echo "Installing productivity related software"
+sudo aura   -A --noconfirm --needed rescuetime
+sudo aura   -A --noconfirm --needed toggl-bin
+
 echo "Laptop improvements"
 sudo pacman -S --noconfirm --needed acpid
 sudo pacman -S --noconfirm --needed tlp
