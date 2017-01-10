@@ -20,6 +20,9 @@ export GPG_TTY=$(/usr/bin/tty)
 
 export LANG=en_US.UTF-8
 
+# when building kernels from AUR
+export MAKEFLAGS=-j4
+
 if [ -f /bin/urxvt ]; then
 	export TERM=rxvt
 fi
