@@ -149,6 +149,12 @@
              :config
              (which-key-mode))
 
+(unless (package-installed-p 'wakatime-mode)
+    (package-install 'wakatime-mode))
+(setq wakatime-cli-path "/usr/bin/wakatime")
+(setq wakatime-python-bin "/usr/bin/python2.7")
+(global-wakatime-mode)
+
 ; Magit
 ;
 (unless (package-installed-p 'magit)
