@@ -135,6 +135,9 @@ echo "Laptop improvements"
 sudo pacman -S --noconfirm --needed acpid
 sudo pacman -S --noconfirm --needed tlp
 
+echo "Install virtualization software"
+sudo pacman -S --noconfirm --needed virtualbox
+
 echo "Activate needed services"
 sudo systemctl enable ntpd.service
 sudo systemctl enable slim.service
