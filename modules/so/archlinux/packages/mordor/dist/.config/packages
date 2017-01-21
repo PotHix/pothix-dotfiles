@@ -98,6 +98,7 @@ echo "Installing xfce4"
 sudo pacman -S --noconfirm --needed xfce4
 sudo pacman -S --noconfirm --needed xfce4-goodies
 sudo pacman -S --noconfirm --needed mupdf
+sudo pacman -S --noconfirm --needed gvfs
 sudo aura   -A --noconfirm --needed sardi-icons
 sudo aura   -A --noconfirm --needed xfwm-axiom-theme
 sudo aura   -A --noconfirm --needed xfce4-hardware-monitor-plugin
