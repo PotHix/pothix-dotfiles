@@ -50,14 +50,16 @@
         <value type="string" value="redshift-gtk"/>
         <value type="string" value="kupfer.py"/>
         <value type="string" value="networkmanager applet"/>
-        <value type="string" value="task manager"/>
         <value type="string" value="telegramdesktop"/>
+        <value type="string" value="task manager"/>
         <value type="string" value="orage"/>
         <value type="string" value="pidgin"/>
         <value type="string" value="chromium"/>
+        <value type="string" value="rescuetime"/>
         <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="rambox"/>
         <value type="string" value="franz"/>
+        <value type="string" value="toggl desktop"/>
       </property>
       <property name="names-hidden" type="array">
       </property>
