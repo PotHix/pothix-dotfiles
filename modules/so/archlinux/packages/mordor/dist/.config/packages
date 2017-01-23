@@ -143,8 +143,8 @@ echo "Activate needed services"
 sudo systemctl enable ntpd.service
 sudo systemctl enable slim.service
 sudo systemctl enable NetworkManager.service
-sudo systemctl enable laptop-mode.service
 sudo systemctl enable acpid.service
+sudo systemctl enable nscd.service
 
 echo "Activate modules"
 sudo modprobe wl
