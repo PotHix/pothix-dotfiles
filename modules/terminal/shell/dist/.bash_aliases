@@ -11,6 +11,20 @@ alias lstree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s
 alias sshr="ssh -l root"
 alias open="xdg-open"
 alias xmod="xmodmap ~/.Xmodmap"
+alias tz="\
+    printf 'Berlin: ';\
+    TZ='Europe/Berlin' date;\
+    printf 'London: ';\
+    TZ='Europe/London' date;\
+    printf 'Sao Paulo: ';\
+    TZ='America/Sao_Paulo' date;\
+    printf 'Santiago: ';\
+    TZ='America/Santiago' date;\
+    printf 'New York: ';\
+    TZ='America/New_York' date;\
+    printf 'San Francisco: ';\
+    TZ='America/Los_Angeles' date;\
+"
 
 
 ##############################################
