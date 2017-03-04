@@ -127,7 +127,7 @@ sudo aura   -A --noconfirm --needed firefox-developer
 
 echo "Installing productivity related software"
 sudo aura   -A --noconfirm --needed rescuetime
-sudo aura   -A --noconfirm --needed toggl-bin
+sudo aura   -A --noconfirm --needed toggldesktop
 
 echo "Installing kernel flavors"
 sudo pacman -S --noconfirm --needed linux-ck       # better scheduler
