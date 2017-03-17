@@ -211,10 +211,6 @@ iconver (){
 # Language specific paths
 ###############################################################################################
 
-# Golang
-export GOPATH=$HOME/.go
-export PATH=$PATH:$GOPATH/bin
-
 # Ruby (rvm and rbenv)
 export PATH="$HOME/.rvm/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
