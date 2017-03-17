@@ -299,6 +299,11 @@
 (unless (package-installed-p 'elixir-mode)
     (package-install 'elixir-mode))
 
+; go-mode
+;
+(unless (package-installed-p 'go-mode)
+    (package-install 'go-mode))
+
 
 ; yaml-mode
 ;
