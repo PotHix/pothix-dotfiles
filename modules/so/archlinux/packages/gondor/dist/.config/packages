@@ -111,6 +111,7 @@ sudo aura   -A --noconfirm --needed tmate
 sudo aura   -A --noconfirm --needed dropbox
 sudo aura   -A --noconfirm --needed forticlientsslvpn
 sudo aura   -A --noconfirm --needed keybase-bin
+sudo aura   -A --noconfirm --needed gdrive
 
 echo "Installing video software"
 sudo pacman -S --noconfirm --needed vlc
