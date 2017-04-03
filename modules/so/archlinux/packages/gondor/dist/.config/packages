@@ -131,8 +131,7 @@ sudo aura   -A --noconfirm --needed rescuetime
 sudo aura   -A --noconfirm --needed toggldesktop
 
 echo "Installing kernel flavors"
-sudo pacman -S --noconfirm --needed linux-ck       # better scheduler
-sudo aura   -A --noconfirm --needed linux-mainline # last releas candidate
+sudo pacman -S --noconfirm --needed linux-ck
 
 echo "Laptop improvements"
 sudo pacman -S --noconfirm --needed acpid
