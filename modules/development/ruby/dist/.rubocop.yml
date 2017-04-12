@@ -25,13 +25,7 @@ EmptyLines:
 EmptyLinesAroundAccessModifier:
   Enabled: true
 
-EmptyLinesAroundBody:
-  Enabled: true
-
 NegatedIf:
-  Enabled: true
-
-DeprecatedHashMethods:
   Enabled: true
 
 HashSyntax:
