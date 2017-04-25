@@ -1,10 +1,11 @@
 #!/bin/sh
 
-echo "add additional keys for pacman"
-sudo pacman-key -r 5EE46C4C && sudo pacman-key --lsign-key 5EE46C4C
-
 echo "Updating repos"
-sudo pacman -Su --noconfirm
+sudo pacman -Syu --noconfirm
+
+echo "add additional keys to install linux-ck"
+sudo pacman-key -r 5EE46C4C && \
+sudo pacman-key --lsign-key 5EE46C4C
 
 # aura-bin dependency
 sudo pacman -S --noconfirm --needed abs
