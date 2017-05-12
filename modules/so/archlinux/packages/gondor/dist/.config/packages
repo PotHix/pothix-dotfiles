@@ -122,9 +122,9 @@ sudo pacman -S --noconfirm --needed steam
 
 echo "Installing browsers"
 sudo pacman -S --noconfirm --needed chromium
+sudo pacman -S --noconfirm --needed firefox
 sudo aura   -A --noconfirm --needed chromium-widevine # netflix enabled
 sudo aura   -A --noconfirm --needed google-chrome-dev
-sudo aura   -A --noconfirm --needed firefox-developer
 
 echo "Installing productivity related software"
 sudo aura   -A --noconfirm --needed rescuetime
