@@ -230,5 +230,8 @@ export PATH="$HOME/.rvm/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# Golang
+export PATH=$HOME/go/bin:$PATH
+
 # Javascript / npm
-export PATH=~/.npm-global/bin:$PATH
+export PATH=$HOME/.npm-global/bin:$PATH
