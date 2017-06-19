@@ -12,18 +12,16 @@ alias sshr="ssh -l root"
 alias open="xdg-open"
 alias xmod="xmodmap ~/.Xmodmap"
 alias tz="\
-    printf 'Berlin: ';\
-    TZ='Europe/Berlin' date;\
-    printf 'London: ';\
-    TZ='Europe/London' date;\
-    printf 'Sao Paulo: ';\
+    printf 'Sao Paulo:\t ';\
     TZ='America/Sao_Paulo' date;\
-    printf 'Santiago: ';\
-    TZ='America/Santiago' date;\
-    printf 'New York: ';\
-    TZ='America/New_York' date;\
-    printf 'San Francisco: ';\
+    printf 'San Francisco:\t ';\
     TZ='America/Los_Angeles' date;\
+    printf 'London:\t\t ';\
+    TZ='Europe/London' date;\
+    printf 'Porto:\t\t ';\
+    TZ='Europe/Lisbon' date;\
+    printf 'Copenhagen:\t ';\
+    TZ='Europe/Copenhagen' date;\
 "
 
 
