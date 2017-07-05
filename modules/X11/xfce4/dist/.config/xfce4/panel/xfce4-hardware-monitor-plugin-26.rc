@@ -20,7 +20,7 @@ viewer_text_overlay_color=-1347440641
 type=network_load
 interface_type=5
 interface_direction=0
-max=941
+max=508874
 tag=
 color=1566228912
 
@@ -28,7 +28,7 @@ color=1566228912
 type=network_load
 interface_type=0
 interface_direction=0
-max=983097
+max=20013
 tag=
 color=-2004900944
 
