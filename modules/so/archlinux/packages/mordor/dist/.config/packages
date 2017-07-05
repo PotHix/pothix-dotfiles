@@ -123,6 +123,7 @@ sudo aura   -A --noconfirm --needed gdrive
 
 echo "Installing video software"
 sudo pacman -S --noconfirm --needed vlc
+sudo pacman -S --noconfirm --needed obs-studio
 
 echo "Installing browsers"
 sudo pacman -S --noconfirm --needed chromium
