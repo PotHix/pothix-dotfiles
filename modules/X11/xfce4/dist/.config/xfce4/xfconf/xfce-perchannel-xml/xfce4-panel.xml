@@ -26,6 +26,7 @@
         <value type="int" value="16"/>
         <value type="int" value="10"/>
         <value type="int" value="11"/>
+        <value type="int" value="3"/>
       </property>
       <property name="disable-struts" type="bool" value="false"/>
       <property name="nrows" type="uint" value="1"/>
@@ -47,13 +48,14 @@
   <property name="plugins" type="empty">
     <property name="plugin-6" type="string" value="systray">
       <property name="names-visible" type="array">
-        <value type="string" value="thunar"/>
+        <value type="string" value="obs"/>
         <value type="string" value="vlc"/>
         <value type="string" value="redshift-gtk"/>
-        <value type="string" value="obs"/>
+        <value type="string" value="thunar"/>
         <value type="string" value="kupfer.py"/>
-        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="emojione-picker"/>
         <value type="string" value="task manager"/>
+        <value type="string" value="networkmanager applet"/>
         <value type="string" value="telegramdesktop"/>
         <value type="string" value="orage"/>
         <value type="string" value="pidgin"/>
@@ -101,5 +103,6 @@
     </property>
     <property name="plugin-2" type="string" value="xfce4-sensors-plugin"/>
     <property name="plugin-4" type="string" value="separator"/>
+    <property name="plugin-3" type="string" value="xkb-plugin"/>
   </property>
 </channel>
