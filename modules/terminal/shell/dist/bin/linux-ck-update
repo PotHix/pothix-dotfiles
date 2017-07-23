@@ -1,0 +1,11 @@
+#!/bin/sh
+SLEEP_TIME=1
+
+while true
+do
+    echo
+    echo
+    echo "--------> Installing linux-ck files in $SLEEP_TIME second(s)"
+    sleep $SLEEP_TIME
+    sudo pacman -S --noconfirm linux-ck-headers linux-ck
+done
