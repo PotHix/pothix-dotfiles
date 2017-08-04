@@ -26,7 +26,6 @@
         <value type="int" value="16"/>
         <value type="int" value="10"/>
         <value type="int" value="11"/>
-        <value type="int" value="3"/>
       </property>
       <property name="disable-struts" type="bool" value="false"/>
       <property name="nrows" type="uint" value="1"/>
