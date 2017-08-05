@@ -1,2 +1,0 @@
-# -dDt_ref=15082012
-curl -X POST http://www.anbima.com.br/ima/IMA-geral-down.asp -dsaida=csv -dIdioma=PT 2>/dev/null | grep "IMA-B;TOTAL" | sed 's/;/ /g' | awk '{print "variação diaria: " $5 " | variação mensal: " $6}'
