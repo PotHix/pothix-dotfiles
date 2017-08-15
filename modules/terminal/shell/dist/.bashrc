@@ -3,7 +3,7 @@
 ###############################################################################################
 
 export PATH="$HOME/bin:$PATH"
-export CDPATH=.:~:$HOME/repos
+export CDPATH=.:~:$HOME/repos:$HOME/go/src
 
 export HISTCONTROL=ignoredups  # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoreboth  # ... and ignore same sucessive entries.
