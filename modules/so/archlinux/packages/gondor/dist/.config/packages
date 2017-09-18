@@ -123,9 +123,7 @@ echo "Installing entretainment software"
 sudo pacman -S --noconfirm --needed steam
 
 echo "Installing browsers"
-sudo pacman -S --noconfirm --needed chromium
 sudo pacman -S --noconfirm --needed firefox
-sudo aura   -A --noconfirm --needed chromium-widevine # netflix enabled
 sudo aura   -A --noconfirm --needed google-chrome-dev
 
 echo "Installing productivity related software"
