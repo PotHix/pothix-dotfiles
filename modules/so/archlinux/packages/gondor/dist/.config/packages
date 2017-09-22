@@ -125,6 +125,7 @@ sudo pacman -S --noconfirm --needed steam
 echo "Installing browsers"
 sudo pacman -S --noconfirm --needed firefox
 sudo aura   -A --noconfirm --needed google-chrome-dev
+sudo aura   -A --noconfirm --needed google-chrome-stable
 
 echo "Installing productivity related software"
 sudo aura   -A --noconfirm --needed rescuetime
