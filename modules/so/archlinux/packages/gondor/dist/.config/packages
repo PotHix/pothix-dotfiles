@@ -3,10 +3,6 @@
 echo "Updating repos"
 sudo pacman -Syu --noconfirm
 
-echo "add additional keys to install linux-ck"
-sudo pacman-key -r 5EE46C4C && \
-sudo pacman-key --lsign-key 5EE46C4C
-
 # aura-bin dependency
 sudo pacman -S --noconfirm --needed abs
 sudo pacman -S --noconfirm --needed curl
@@ -132,7 +128,7 @@ sudo aura   -A --noconfirm --needed rescuetime
 sudo aura   -A --noconfirm --needed toggldesktop
 
 echo "Installing kernel flavors"
-sudo pacman -S --noconfirm --needed linux-ck
+sudo pacman -S --noconfirm --needed linux-zen
 
 echo "Laptop improvements"
 sudo pacman -S --noconfirm --needed acpid
