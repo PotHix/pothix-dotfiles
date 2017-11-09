@@ -60,6 +60,7 @@ echo "Installing development tools"
 sudo pacman -S --noconfirm --needed base-devel
 sudo pacman -S --noconfirm --needed git
 sudo pacman -S --noconfirm --needed bpython2
+sudo aura   -A --noconfirm --needed ngrok
 sudo aura   -A --noconfirm --needed rbenv ruby-build
 sudo aura   -A --noconfirm --needed android-sdk-platform-tools
 
