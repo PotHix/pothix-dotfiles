@@ -61,11 +61,6 @@ nmap <leader>fm :set filetype=markdown<CR>
 "Open Spec on a vertical Split using RailsVim
 nnoremap <F4> :AV<CR>
 
-" Different mappings for Rails.vim
-autocmd User Rails Rnavcommand consumer app/consumers -default=model()
-autocmd User Rails Rnavcommand factory db/factories -default=factories
-autocmd User Rails Rnavcommand seeds db/ -default=seeds
-
 nnoremap <space>/ :Unite grep:.<cr>
 
 let g:unite_source_history_yank_enable = 1
