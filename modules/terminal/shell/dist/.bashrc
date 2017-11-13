@@ -218,7 +218,7 @@ pre_prompt_command() {
     (wakatime --write --plugin "bash-wakatime/$version" --entity-type app --project "$project" --entity "$entity" 2>&1 > /dev/null &)
 }
 
-PROMPT_COMMAND="pre_prompt_command; $PROMPT_COMMAND"
+#PROMPT_COMMAND="pre_prompt_command; $PROMPT_COMMAND"
 
 
 ###############################################################################################
