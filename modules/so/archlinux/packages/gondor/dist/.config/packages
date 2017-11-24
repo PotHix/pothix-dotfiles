@@ -71,7 +71,8 @@ sudo pacman -S --noconfirm --needed python2
 sudo pacman -S --noconfirm --needed nodejs
 sudo pacman -S --noconfirm --needed go
 sudo pacman -S --noconfirm --needed elixir
-sudo pacman -S --noconfirm --needed rust cargo
+sudo pacman -S --noconfirm --needed rustup
+sudo aura   -A --noconfirm --needed swift
 
 echo "Docker"
 sudo pacman -S --noconfirm --needed docker
@@ -106,6 +107,7 @@ sudo pacman -S --noconfirm --needed texlive-bin
 sudo pacman -S --noconfirm --needed dos2unix
 sudo pacman -S --noconfirm --needed shotwell
 sudo pacman -S --noconfirm --needed tmux
+sudo pacman -S --noconfirm --needed keybase
 sudo aura   -A --noconfirm --needed tmate
 sudo aura   -A --noconfirm --needed dropbox
 sudo aura   -A --noconfirm --needed forticlientsslvpn
@@ -125,8 +127,8 @@ sudo aura   -A --noconfirm --needed google-chrome-dev
 sudo aura   -A --noconfirm --needed google-chrome-stable
 
 echo "Installing productivity related software"
-sudo aura   -A --noconfirm --needed rescuetime
-sudo aura   -A --noconfirm --needed toggldesktop
+sudo aura  -A  --noconfirm --needed rescuetime
+sudo aura  -Ax --noconfirm --needed toggldesktop
 
 echo "Installing kernel flavors"
 sudo pacman -S --noconfirm --needed linux-zen
