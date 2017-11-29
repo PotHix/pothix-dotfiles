@@ -230,6 +230,9 @@ export PATH="$HOME/.rvm/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# Rust
+export PATH=$HOME/.cargo/bin:$PATH
+
 # Golang
 export PATH=$HOME/go/bin:$PATH
 
