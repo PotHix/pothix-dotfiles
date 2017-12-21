@@ -56,6 +56,7 @@
         <value type="string" value="task manager"/>
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="telegramdesktop"/>
+        <value type="string" value="skype"/>
         <value type="string" value="orage"/>
         <value type="string" value="pidgin"/>
         <value type="string" value="chromium"/>
@@ -63,6 +64,7 @@
         <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="rambox"/>
         <value type="string" value="franz"/>
+        <value type="string" value="transmission"/>
         <value type="string" value="toggl desktop"/>
         <value type="string" value="keybase"/>
       </property>
@@ -101,7 +103,8 @@
       <property name="style" type="uint" value="3"/>
     </property>
     <property name="plugin-2" type="string" value="xfce4-sensors-plugin"/>
-    <property name="plugin-4" type="string" value="separator"/>
-    <property name="plugin-3" type="string" value="xkb-plugin"/>
+    <property name="plugin-4" type="string" value="separator">
+      <property name="style" type="uint" value="1"/>
+    </property>
   </property>
 </channel>
