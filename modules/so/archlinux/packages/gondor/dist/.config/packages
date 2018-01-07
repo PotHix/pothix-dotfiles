@@ -72,7 +72,6 @@ sudo pacman -S --noconfirm --needed nodejs
 sudo pacman -S --noconfirm --needed go
 sudo pacman -S --noconfirm --needed elixir
 sudo pacman -S --noconfirm --needed rustup
-sudo aura   -A --noconfirm --needed swift
 
 echo "Docker"
 sudo pacman -S --noconfirm --needed docker
