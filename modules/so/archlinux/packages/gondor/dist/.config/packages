@@ -127,7 +127,7 @@ sudo aura   -A --noconfirm --needed google-chrome-dev
 
 echo "Installing productivity related software"
 sudo aura  -A  --noconfirm --needed rescuetime
-sudo aura  -Ax --noconfirm --needed toggldesktop
+sudo aura  -Ax --noconfirm --needed toggldesktop-bin
 
 echo "Installing kernel flavors"
 sudo pacman -S --noconfirm --needed linux-zen
