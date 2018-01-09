@@ -3,6 +3,7 @@
 ##############################################
 alias t='tail -f'
 
+alias log='sudo journalctl -f'
 alias reload='source $HOME/.bashrc 1>/dev/null'
 alias clipboard='xsel'
 alias lstree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/ /" -e "s/-/|/"'
