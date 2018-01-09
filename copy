@@ -19,6 +19,12 @@ then
     cp -R ~/.config/xfce4/* modules/X11/xfce4/dist/.config/xfce4/
     cp -R ~/.config/autostart/* modules/X11/xfce4/dist/.config/autostart/
     log_done
+elif [[ "$1" == "bin" ]]
+then
+    log_starting $1
+    rm -rf modules/terminal/shell/dist/bin/
+    cp -R ~/bin/ modules/terminal/shell/dist/bin/
+    log_done
 elif [[ "$1" == "dotfiles" ]]
 then
     log_starting $1
