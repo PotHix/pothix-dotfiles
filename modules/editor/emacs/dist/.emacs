@@ -244,18 +244,12 @@
 
 ; flycheck
 ;
-(unless (package-installed-p 'flycheck)
-    (package-install 'flycheck))
-(add-hook 'after-init-hook #'global-flycheck-mode)
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
 
-(with-eval-after-load 'flycheck
-    (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))) ; emacs-lisp)))
-
-
-; flycheck rust
-;
-(unless (package-installed-p 'flycheck-rust)
-    (package-install 'flycheck-rust))
+;(with-eval-after-load 'flycheck
+;    (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))) ; emacs-lisp)))
 
 
 ; rust-mode
@@ -307,17 +301,12 @@
     (package-install 'highlight-symbol))
 (global-set-key (kbd "C-#") 'highlight-symbol-next)
 
+(use-package inf-ruby
+             :ensure t)
 
-; inf-ruby
-;
-(unless (package-installed-p 'inf-ruby)
-    (package-install 'inf-ruby))
+(use-package haskell-mode
+             :ensure t)
 
-
-; haskell-mode
-;
-(unless (package-installed-p 'haskell-mode)
-    (package-install 'haskell-mode))
 
 (defvar pthx/haskell-font-lock-extra-symbols
   '(("<alpha>" . #X03B1)
