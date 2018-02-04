@@ -1,4 +1,4 @@
-next_color=4
+next_color=0
 viewer_size=64
 viewer_text_overlay_position=1
 use_background_color=false
@@ -21,7 +21,7 @@ viewer_text_overlay_format_string=I/O
 type=disk_statistics
 disk_stats_device=sda2
 disk_stats_stat=8
-max=6
+max=172
 tag=
 color=-1050256720
 

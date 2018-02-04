@@ -43,6 +43,8 @@
       <property name="XF86AudioLowerVolume" type="string" value="pactl set-sink-volume @DEFAULT_SINK@ &apos;-10%&apos;"/>
       <property name="XF86AudioRaiseVolume" type="string" value="pactl set-sink-volume @DEFAULT_SINK@ &apos;+10%&apos;"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;e" type="string" value="/usr/bin/thunar"/>
+      <property name="&lt;Super&gt;c" type="string" value="/bin/gnome-calculator"/>
+      <property name="&lt;Super&gt;s" type="string" value="/bin/pavucontrol"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
