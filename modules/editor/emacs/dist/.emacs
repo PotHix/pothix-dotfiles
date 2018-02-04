@@ -138,12 +138,6 @@
 (use-package artbollocks-mode
              :ensure t)
 
-
-; APEL (A Portable Emacs Library) is a library to support to write portable
-; Emacs Lisp programs.
-(use-package apel
-             :ensure t)
-
 (use-package which-key
              :ensure t
              :config
@@ -183,23 +177,6 @@
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
 
 (define-key helm-find-files-map (kbd "<tab>") 'helm-execute-persistent-action)
-
-
-; full-ack
-;
-(unless (package-installed-p 'full-ack)
-    (package-install 'full-ack))
-(require 'full-ack)
-(global-set-key (kbd "M-n") 'next-error)
-(global-set-key (kbd "M-p") 'previous-error)
-
-
-; dired+
-;
-(unless (package-installed-p 'dired+)
-    (package-install 'dired+))
-(require 'dired+)
-(add-hook 'dired-mode-hook (lambda () (define-key dired-mode-map (kbd "M-g") 'ack)))
 
 
 ; Projectile
@@ -263,13 +240,6 @@
 (unless (package-installed-p 'discover-my-major)
     (package-install 'discover-my-major))
 (global-set-key (kbd "C-h C-m") 'discover-my-major)
-
-
-; Bookmark+
-;
-(unless (package-installed-p 'bookmark+)
-    (package-install 'bookmark+))
-(require 'bookmark+)
 
 
 ; flycheck
@@ -364,6 +334,3 @@
 (unless (server-running-p) (server-start))
 
 (setq inhibit-splash-screen t)
-(require 'bookmark)
-(bookmark-bmenu-list)
-(switch-to-buffer "*Bookmark List*")
