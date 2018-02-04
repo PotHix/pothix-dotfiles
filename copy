@@ -32,4 +32,10 @@ then
     cp -R ~/.bash_aliases modules/terminal/shell/dist/
     cp -R ~/.gitconfig modules/development/git/dist/.gitconfig
     log_done
+elif [[ "$1" == "editors" ]]
+then
+    log_starting $1
+    cp -R ~/.vimrc modules/editor/vim/core/dist/.vimrc
+    cp -R ~/.emacs modules/editor/emacs/dist/
+    log_done
 fi
