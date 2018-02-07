@@ -252,27 +252,23 @@
 ;    (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))) ; emacs-lisp)))
 
 
-; rust-mode
-;
-(unless (package-installed-p 'rust-mode)
-    (package-install 'rust-mode))
+(use-package rust-mode
+             :ensure t)
 
+(use-package elixir-mode
+             :ensure t)
 
-; elixir-mode
-;
-(unless (package-installed-p 'elixir-mode)
-    (package-install 'elixir-mode))
+(use-package go-mode
+             :ensure t)
 
-; go-mode
-;
-(unless (package-installed-p 'go-mode)
-    (package-install 'go-mode))
+(use-package markdown-mode+
+             :ensure t)
 
+(use-package inf-ruby
+             :ensure t)
 
-; yaml-mode
-;
-(unless (package-installed-p 'yaml-mode)
-    (package-install 'yaml-mode))
+(use-package haskell-mode
+             :ensure t)
 
 
 ; multiple-cursors
@@ -280,12 +276,6 @@
 (unless (package-installed-p 'multiple-cursors)
     (package-install 'multiple-cursors))
 (global-set-key (kbd "C-c m c") 'mc/edit-lines)
-
-
-; markdown-mode+
-;
-(unless (package-installed-p 'markdown-mode+)
-    (package-install 'markdown-mode+))
 
 
 ; expand-region
@@ -300,12 +290,6 @@
 (unless (package-installed-p 'highlight-symbol)
     (package-install 'highlight-symbol))
 (global-set-key (kbd "C-#") 'highlight-symbol-next)
-
-(use-package inf-ruby
-             :ensure t)
-
-(use-package haskell-mode
-             :ensure t)
 
 
 (defvar pthx/haskell-font-lock-extra-symbols
