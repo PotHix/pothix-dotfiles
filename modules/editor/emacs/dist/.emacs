@@ -94,14 +94,6 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 
 
-; Improve transpose-chars to change chars behind it
-; so, after typing `teh` it may become `the` instead of `te h`
-(global-set-key (kbd "C-t")
-                (lambda () (interactive)
-                  (backward-char)
-                  (transpose-chars 1)))
-
-
 ; No trailing whitespaces
 ;
 (add-hook 'before-save-hook
@@ -179,78 +171,38 @@
 (define-key helm-find-files-map (kbd "<tab>") 'helm-execute-persistent-action)
 
 
-; Projectile
-;
-(unless (package-installed-p 'projectile)
-    (package-install 'projectile))
+(use-package projectile
+  :ensure t)
 
+(use-package helm-projectile
+  :ensure t)
 
-; Helm - projectile
-;
-(unless (package-installed-p 'helm-projectile)
-    (package-install 'helm-projectile))
+(use-package helm-projectile
+  :ensure t
+  :bind (("C-c C-f" . help-projectile-find-file)))
 
-(require 'helm-projectile)
-(global-set-key (kbd "C-c C-f") 'helm-projectile-find-file)
+(use-package ace-jump-mode
+  :ensure t
+  :bind (("C-c SPC" . ace-jump-mode)
+         ("C-x SPC" . ace-jump-mode-pop-mark)))
 
+(use-package ace-jump-zap
+  :ensure t
+  :bind (("M-z" . ace-jump-zap-to-char)
+         ("M-Z" . ace-jump-zap-up-to-char)))
 
-; Ace jump
-;
-(unless (package-installed-p 'ace-jump-mode)
-  (package-install 'ace-jump-mode))
-(require 'ace-jump-mode)
+(use-package ace-window
+  :ensure t
+  :bind ("C-x o" . ace-window)
+  :config (setq aw-keys '(?a ?r ?s ?t ?h ?n ?i ?o))) ; colemak home row
 
-(autoload 'ace-jump-mode "ace-jump-mode" "Emacs quick move minor mode" t)
-(define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
-(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+(use-package discover-my-major
+  :ensure t
+  :bind (("C-h C-m" . discover-my-major)))
 
-;; enable a more powerful jump back function from ace jump mode
-(autoload 'ace-jump-mode-pop-mark "ace-jump-mode" "Ace jump back:-)" t)
-(eval-after-load "ace-jump-mode" '(ace-jump-mode-enable-mark-sync))
-
-
-; Ace jump Zap
-;
-(unless (package-installed-p 'ace-jump-zap)
-    (package-install 'ace-jump-zap))
-(define-key global-map (kbd "M-z") 'ace-jump-zap-to-char)
-(define-key global-map (kbd "M-Z") 'ace-jump-zap-up-to-char)
-
-
-; Ace window
-;
-(unless (package-installed-p 'ace-window)
-    (package-install 'ace-window))
-(global-set-key (kbd "C-x o") 'ace-window)
-(setq aw-keys '(?a ?r ?s ?t ?h ?n ?i ?o)) ; colemak home row
-
-
-; Dot mode
-;
-(unless (package-installed-p 'dot-mode)
-    (package-install 'dot-mode))
-(require 'dot-mode)
-(add-hook 'find-file-hooks 'dot-mode-on)
-(autoload 'dot-mode "dot-mode" nil t) ; vi `.' command emulation
-(global-set-key [(control ?.)] (lambda () (interactive) (dot-mode 1)(message "Dot mode activated.")))
-
-
-; Discover my major
-;
-(unless (package-installed-p 'discover-my-major)
-    (package-install 'discover-my-major))
-(global-set-key (kbd "C-h C-m") 'discover-my-major)
-
-
-; flycheck
-;
 (use-package flycheck
   :ensure t
   :init (global-flycheck-mode))
-
-;(with-eval-after-load 'flycheck
-;    (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))) ; emacs-lisp)))
-
 
 (use-package rust-mode
              :ensure t)
