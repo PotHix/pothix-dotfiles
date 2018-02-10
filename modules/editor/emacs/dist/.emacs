@@ -179,7 +179,7 @@
 
 (use-package helm-projectile
   :ensure t
-  :bind (("C-c C-f" . help-projectile-find-file)))
+  :bind (("C-c C-f" . helm-projectile-find-file)))
 
 (use-package ace-jump-mode
   :ensure t
