@@ -55,30 +55,12 @@
 
 
 ; ---------------------------------
-; functions
-; ---------------------------------
-
-(defun pothix-prepend-line (&optional arg)
-  (interactive "P")
-  (move-beginning-of-line arg)
-  (open-line 1))
-
-(defun pothix-append-line (&optional arg)
-  (interactive "P")
-  (move-end-of-line arg)
-  (open-line 1)
-  (forward-line 1))
-
-
-; ---------------------------------
 ; global bindings
 ; ---------------------------------
 
 (setq kill-whole-line t)
 (global-set-key (kbd "C-k") 'kill-whole-line)
 (global-set-key (kbd "C-M-k") 'kill-line)
-(global-set-key (kbd "C-o") 'pothix-append-line)
-(global-set-key (kbd "C-S-o") 'pothix-prepend-line)
 (global-set-key (kbd "<C-return>") 'rectangle-mark-mode)
 
 
@@ -119,57 +101,38 @@
 
 
 (use-package bm
-             :ensure t
-             :bind (("<C-f2>" . bm-toggle)
-                    ("<f2>"   . bm-next)
-                    ("<S-f2>" . bm-previous)))
+  :ensure t
+  :bind (("<C-f2>" . bm-toggle)
+         ("<f2>"   . bm-next)
+         ("<S-f2>" . bm-previous)))
 
 (use-package writegood-mode
-             :ensure t)
+  :ensure t)
 
 (use-package artbollocks-mode
-             :ensure t)
+  :ensure t)
 
 (use-package which-key
-             :ensure t
-             :config
-             (which-key-mode))
+  :ensure t
+  :config
+  (which-key-mode))
 
-(unless (package-installed-p 'wakatime-mode)
-    (package-install 'wakatime-mode))
-(setq wakatime-cli-path "/usr/bin/wakatime")
-(setq wakatime-python-bin "/usr/bin/python2.7")
-(global-wakatime-mode)
+(use-package wakatime-mode
+  :ensure t
+  :config (setq wakatime-cli-path "/usr/bin/wakatime"
+           wakatime-python-bin "/usr/bin/python2.7")
+  :init (global-wakatime-mode))
 
-; Magit
-;
-(unless (package-installed-p 'magit)
-    (package-install 'magit))
+(use-package magit
+  :ensure t
+  :bind ("<f9>" . magit-status))
 
-(global-set-key (kbd "<f9>") 'magit-status)
-
-
-; scratch
-;
-(unless (package-installed-p 'scratch)
-    (package-install 'scratch))
-
-
-; Helm
-;
-(unless (package-installed-p 'helm)
-  (package-install 'helm))
-
-(require 'helm-config)
-(helm-mode t)
-
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
-(global-set-key (kbd "C-c h") 'helm-command-prefix)
-
-(define-key helm-find-files-map (kbd "<tab>") 'helm-execute-persistent-action)
-
+(use-package helm
+  :ensure t
+  :init (setq helm-command-prefix-key "C-c h")
+  :bind (("M-x" . helm-M-x)
+         ("C-x C-f" . helm-find-files)
+         ("C-x b" . helm-buffers-list)))
 
 (use-package projectile
   :ensure t)
@@ -183,8 +146,7 @@
 
 (use-package ace-jump-mode
   :ensure t
-  :bind (("C-c SPC" . ace-jump-mode)
-         ("C-x SPC" . ace-jump-mode-pop-mark)))
+  :bind ("C-c SPC" . ace-jump-mode))
 
 (use-package ace-jump-zap
   :ensure t
@@ -202,7 +164,11 @@
 
 (use-package flycheck
   :ensure t
-  :init (global-flycheck-mode))
+  :init (global-flycheck-mode)
+  :config
+  (add-hook 'text-mode-hook #'flycheck-mode)
+  (add-hook 'org-mode-hook #'flycheck-mode)
+  (define-key flycheck-mode-map (kbd "s-;") 'flycheck-previous-error))
 
 (use-package rust-mode
              :ensure t)
