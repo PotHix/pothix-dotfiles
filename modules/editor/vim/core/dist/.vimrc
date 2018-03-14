@@ -2,6 +2,7 @@
 " USING VUNDLE FOR VIM PLUGINS
 " ****************************************************************
 set nocompatible              " be iMproved, required
+let mapleader = ","           " a better leader
 filetype off                  " required
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -38,12 +39,98 @@ filetype plugin indent on
 hi    Search ctermbg=green ctermfg=black
 hi IncSearch ctermbg=black ctermfg=green
 
+" Useful shortcuts
+cab W w | cab Q q | cab Wq wq | cab wQ wq | cab WQ wq
+cab Wqa wqa | cab Wa wa | cab WQa wqa | cab WQA wqa | cab w] w | cab w[ w
 
-" ****************************************************************
-" INCLUDES
-" ****************************************************************
-source ~/.vim/custom/settings.vim
-source ~/.vim/custom/useful_mappings.vim
+" Saving when a forgot to open file as root
+cmap w!! w !sudo tee % >/dev/null
+
+" Comment lines
+map <leader># :s/^/#/<CR>:nohls<CR>
+
+" DOS2nix
+nmap <leader>unix :%s/\r$//<CR>
+
+" Pasting on the below line when yanked with visual mode
+nmap <leader>p :put<CR>==
+
+" Mapping <tab> to chage tabs on commands mode
+nmap <tab> :tabnext<CR>
+
+" Fixing 80 chars.
+imap <C-g> <ESC>gqipA
+
+" Make <c-l> clear the highlight as well as redraw
+nnoremap <C-L> :nohls<CR><C-L>
+inoremap <C-L> <C-O>:nohls<CR>
+
+" Pasting made easy
+set pastetoggle=<F11>
+
+" Easy home and end
+map H ^
+
+"make Y consistent with C and D
+nnoremap Y y$
+
+
+" Enabling spelling to Brazillian Portuguese
+nmap <F8> :setlocal spell spelllang=pt<CR>
+nmap <F9> :setlocal spell spelllang=en<CR>
+nmap <F10> :setlocal nospell<CR>
+
+
+" ****************************************************
+" Setting statusline
+" ****************************************************
+let g:airline#extensions#ale#enabled = 1
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+let g:solarized_termcolors=16
+let g:airline_solarized_normal_green=1
+
+
+" ****************************************************
+" Search configurations
+" ****************************************************
+set is                              " IncrementedSearch
+set hls                             " HighLightedSearch
+set ic                              " IgnoreCase
+set scs                             " SmartCaSe
+
+
+" ****************************************************
+" My set configurations
+" ****************************************************
+set ai                                          " AutoIndent
+set bs=2                                        " Backspace over everything in insert mode
+set cursorline                                  " Setting a line over cursor
+set copyindent                                  " Copy previous indent on the current line
+set encoding=utf-8                              " Default encoding is utf8
+set expandtab                                   " Default encoding is utf8
+set hidden					" Don't close buffers, just hidden them
+set laststatus=2                                " Always show status line.
+set list                                        " Configuration to use definitions below
+set listchars=tab:\ \ ,extends:>,precedes:<     " Special chars to show tabs, eol and bol
+set nu                                          " Line numbers on
+set sw=2                                        " ShiftWidth: Used on autoindent
+set timeout timeoutlen=1000 ttimeoutlen=100     " Removing esc timeout
+set wildmenu                                    " Enable ctrl-n and ctrl-p to scroll thru matches
+set wildmode=list:longest                       " Make cmdline tab completion similar to bash
+set wildignore+=*.o,*~,*.swp,*.pyc,*.pyo,*.gif  " Stuff to ignore when tab completing
+set wildignore+=*.dll,*.obj,*.bak,*.jpg,*.png   " Stuff to ignore when tab completing
+
+
+" ****************************************************
+" Removing some default confs
+" ****************************************************
+set nocompatible                    " We're running Vim, not Vi!
+set nowrap                          " Line wrapping off
+set novisualbell                    " No blinking .
+set noerrorbells                    " No noise.
+set notitle                         " Removing 'Thanks for flying Vim' :)
+set nofoldenable                    " I don't want it folding by default
 
 
 " ****************************************************************
@@ -62,6 +149,12 @@ autocmd FileType ruby       set expandtab sw=2 ts=2 sts=2
 autocmd FileType python     set expandtab sw=4 ts=4 sts=4
 autocmd FileType javascript set expandtab sw=4 ts=4 sts=4
 
+function! HTMLFormatting()
+  "set noexpandtab " Removing tabs
+  set softtabstop=4 shiftwidth=4 tabstop=4
+  autocmd User Rails set softtabstop=4 shiftwidth=4 tabstop=4
+endfunction
+
 
 " ****************************************************************
 " LANGUAGE SPECIFIC
@@ -70,16 +163,10 @@ autocmd BufWritePre *.go Fmt  " Always running gofmt for Go lang.
 
 
 " ****************************************************************
-" TRAILING SPACE REMOVER
-" ****************************************************************
-autocmd BufWritePre * :%s/\s\+$//e
-
-
-" ****************************************************************
 " TEMPLATES
 " ****************************************************************
 " HTML: When a new .html is opened, it will come with a skeleton pre-designed
-"au BufNewFile *.html read ~/.vim/templates/html/skeleton.html
+au BufNewFile *.html read ~/.vim/templates/html/skeleton.html
 
 
 " ****************************************************************
@@ -89,33 +176,5 @@ autocmd BufWritePre * :%s/\s\+$//e
 set viminfo='10,\"30,:40,%,n~/.viminfo
 au BufReadPost * if line("'\"")|execute("normal `\"")|endif
 
-
-" ****************************************************************
-" SPECIFIC FUNCTIONS
-" ****************************************************************
-"define :Lorem command to dump in a paragraph of lorem ipsum
-command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
-      \ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      \ magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-      \ ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-      \ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-      \ fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non
-      \ proident, sunt in culpa qui officia deserunt mollit anim id est
-      \ laborum
-
-
-let g:browser = 'firefox -new-tab '
-
-
-" Run the current spec file with spec command
-function! RunCurrentSpec(spec)
-   exec '!rspec '.a:spec
-endfunction
-map <F7> :call RunCurrentSpec(bufname("%"))<cr>
-
-
-function! HTMLFormatting()
-  "set noexpandtab " Removing tabs
-  set softtabstop=4 shiftwidth=4 tabstop=4
-  autocmd User Rails set softtabstop=4 shiftwidth=4 tabstop=4
-endfunction
+" Trailing spaces remover
+autocmd BufWritePre * :%s/\s\+$//e
