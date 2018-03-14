@@ -16,12 +16,13 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-ragtag'
+Plugin 'w0rp/ale'
 Plugin 'vim-scripts/vimwiki'
-Plugin 'kien/ctrlp.vim'
-Plugin 'othree/html5.vim'
-Plugin 'scrooloose/syntastic'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'honza/vim-snippets'
+Plugin 'kien/ctrlp.vim'
+Plugin 'othree/html5.vim'
 Plugin 'wakatime/vim-wakatime'
 
 call vundle#end()
@@ -78,7 +79,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 " TEMPLATES
 " ****************************************************************
 " HTML: When a new .html is opened, it will come with a skeleton pre-designed
-au BufNewFile *.html read ~/.vim/templates/html/skeleton.html
+"au BufNewFile *.html read ~/.vim/templates/html/skeleton.html
 
 
 " ****************************************************************
