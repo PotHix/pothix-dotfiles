@@ -18,6 +18,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-ragtag'
 Plugin 'w0rp/ale'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/vimwiki'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'elixir-lang/vim-elixir'
@@ -28,9 +30,17 @@ Plugin 'wakatime/vim-wakatime'
 
 call vundle#end()
 
-" ****************************************************************
+" ****************************************************
+" Setting statusline
+" ****************************************************
+let g:airline#extensions#ale#enabled = 1
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+let g:airline_solarized_normal_green=1
+
+" ****************************************************
 " COLORS AND SYNTAX
-" ****************************************************************
+" ****************************************************
 colorscheme desert
 syntax on               " Enable syntax highlighting
 filetype plugin indent on
