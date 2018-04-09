@@ -16,7 +16,7 @@ then
     cd -
 fi
 
-sudo aura -Ayu --noconfirm
+sudo aura -Axuy --noconfirm
 
 echo "Installing basic packages"
 sudo pacman -S --noconfirm --needed xorg-server
@@ -51,7 +51,6 @@ sudo pacman -S --noconfirm --needed xsel
 sudo pacman -S --noconfirm --needed unzip
 sudo pacman -S --noconfirm --needed unrar
 sudo pacman -S --noconfirm --needed imagemagick
-# sudo aura   -A --noconfirm --needed imagemagick-no-hdri # needed for rmagick
 sudo pacman -S --noconfirm --needed bash-completion
 sudo pacman -S --noconfirm --needed alsa-utils
 sudo pacman -S --noconfirm --needed redshift
