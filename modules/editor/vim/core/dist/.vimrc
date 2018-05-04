@@ -38,6 +38,11 @@ let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 let g:airline_solarized_normal_green=1
 
+let g:ale_fixers = {
+\   'python': ['yapf'],
+\}
+let g:ale_fix_on_save = 1
+
 " ****************************************************
 " COLORS AND SYNTAX
 " ****************************************************
