@@ -30,8 +30,9 @@ Plugin 'wakatime/vim-wakatime'
 
 call vundle#end()
 
+
 " ****************************************************
-" Setting statusline
+" Configuring plugins
 " ****************************************************
 let g:airline#extensions#ale#enabled = 1
 let g:airline_theme='solarized'
@@ -42,6 +43,9 @@ let g:ale_fixers = {
 \   'python': ['yapf'],
 \}
 let g:ale_fix_on_save = 1
+
+let g:ctrlp_map = '<c-t>'
+
 
 " ****************************************************
 " COLORS AND SYNTAX
