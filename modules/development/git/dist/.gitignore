@@ -11,3 +11,4 @@
 *.pyc
 .ruby-version
 .#*
+.pytest_cache
