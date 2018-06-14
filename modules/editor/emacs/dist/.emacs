@@ -170,6 +170,12 @@
   (add-hook 'org-mode-hook #'flycheck-mode)
   (define-key flycheck-mode-map (kbd "s-;") 'flycheck-previous-error))
 
+(use-package flycheck-rust
+  :ensure t
+  :init (flycheck-rust-setup)
+  :config
+  (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+
 (use-package py-yapf
              :ensure t
              :config
