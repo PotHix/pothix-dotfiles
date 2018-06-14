@@ -174,6 +174,7 @@
   :ensure t
   :init (flycheck-rust-setup)
   :config
+  (setq rust-format-on-save t)
   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
 (use-package py-yapf
