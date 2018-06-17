@@ -4,7 +4,6 @@ echo "Updating repos"
 sudo pacman -Syu --noconfirm
 
 # aura-bin dependency
-sudo pacman -S --noconfirm --needed abs
 sudo pacman -S --noconfirm --needed curl
 
 if [[ ! $(command -v aura) ]]
