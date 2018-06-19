@@ -18,121 +18,147 @@ fi
 sudo aura -Axuy --noconfirm
 
 echo "Installing basic packages"
-sudo pacman -S --noconfirm --needed xorg-server
-sudo pacman -S --noconfirm --needed xorg-xinit xorg-xrdb xorg-xmodmap xf86-input-libinput
-sudo pacman -S --noconfirm --needed slim
-sudo pacman -S --noconfirm --needed systemd
-sudo pacman -S --noconfirm --needed systemd-arch-units
-sudo pacman -S --noconfirm --needed openssh
-sudo pacman -S --noconfirm --needed sysstat
+sudo pacman -S --noconfirm --needed \
+     xorg-server \
+     xorg-xinit xorg-xrdb xorg-xmodmap xf86-input-libinput \
+     slim \
+     systemd \
+     systemd-arch-units \
+     openssh \
+     sysstat
 
 echo "Installing wireless packages"
-sudo pacman -S --noconfirm --needed wpa_supplicant
-sudo pacman -S --noconfirm --needed netctl
-sudo pacman -S --noconfirm --needed networkmanager
-sudo pacman -S --noconfirm --needed network-manager-applet
+sudo pacman -S --noconfirm --needed \
+     wpa_supplicant \
+     netctl \
+     networkmanager \
+     network-manager-applet
 
 echo "Installing sound packages"
-sudo pacman -S --noconfirm --needed pulseaudio
-sudo pacman -S --noconfirm --needed pavucontrol
+sudo pacman -S --noconfirm --needed \
+     pulseaudio \
+     pavucontrol
 
 echo "Installing fonts"
-sudo pacman -S --noconfirm --needed ttf-dejavu        # just a good font
-sudo pacman -S --noconfirm --needed terminus-font     # just a good font
-sudo pacman -S --noconfirm --needed ttf-symbola       # allow emoji
-sudo aura   -A --noconfirm --needed ttf-font-awesome  # icons for status bars
+sudo pacman -S --noconfirm --needed \
+     ttf-dejavu \
+     terminus-font \
+     ttf-symbola
+
+sudo aura -Ax --noconfirm --needed ttf-font-awesome
 
 echo "Installing basic tools"
-sudo pacman -S --noconfirm --needed rsync
-sudo pacman -S --noconfirm --needed ntp
-sudo pacman -S --noconfirm --needed ripgrep
-sudo pacman -S --noconfirm --needed xsel
-sudo pacman -S --noconfirm --needed unzip
-sudo pacman -S --noconfirm --needed unrar
-sudo pacman -S --noconfirm --needed imagemagick
-sudo pacman -S --noconfirm --needed bash-completion
-sudo pacman -S --noconfirm --needed alsa-utils
-sudo pacman -S --noconfirm --needed redshift
+sudo pacman -S --noconfirm --needed \
+     rsync \
+     ntp \
+     ripgrep \
+     xsel \
+     unzip \
+     unrar \
+     imagemagick \
+     bash-completion \
+     alsa-utils \
+     redshift
 
 echo "Installing development tools"
-sudo pacman -S --noconfirm --needed base-devel
-sudo pacman -S --noconfirm --needed git
-sudo pacman -S --noconfirm --needed bpython2
-sudo aura   -A --noconfirm --needed ngrok
-sudo aura   -A --noconfirm --needed rbenv ruby-build
-sudo aura   -A --noconfirm --needed android-sdk-platform-tools
+sudo pacman -S --noconfirm --needed \
+     base-devel \
+     git \
+     bpython2
+
+sudo aura -Ax --noconfirm --needed \
+     ngrok \
+     rbenv ruby-build \
+     android-sdk-platform-tools
 
 echo "Installing languages"
-sudo pacman -S --noconfirm --needed ruby
-sudo pacman -S --noconfirm --needed python
-sudo pacman -S --noconfirm --needed python2
-sudo pacman -S --noconfirm --needed nodejs
-sudo pacman -S --noconfirm --needed go
-sudo pacman -S --noconfirm --needed elixir
-sudo pacman -S --noconfirm --needed rustup
+sudo pacman -S --noconfirm --needed \
+     ruby \
+     python \
+     python2 \
+     nodejs \
+     go \
+     elixir \
+     rustup
 
 echo "Docker"
-sudo pacman -S --noconfirm --needed docker
-sudo pacman -S --noconfirm --needed docker-compose
+sudo pacman -S --noconfirm --needed \
+     docker \
+     docker-compose
 
 echo "Installing editors"
-sudo pacman -S --noconfirm --needed emacs
-sudo pacman -S --noconfirm --needed aspell-pt
-sudo pacman -S --noconfirm --needed aspell-en
-sudo pacman -S --noconfirm --needed vim
+sudo pacman -S --noconfirm --needed \
+     emacs \
+     aspell-pt \
+     aspell-en \
+     vim
 
 echo "Installing xfce4"
-sudo pacman -S --noconfirm --needed xfce4
-sudo pacman -S --noconfirm --needed xfce4-goodies
-sudo pacman -S --noconfirm --needed mupdf
-sudo pacman -S --noconfirm --needed file-roller
-sudo pacman -S --noconfirm --needed gvfs
-sudo aura   -A --noconfirm --needed sardi-icons
-sudo aura   -A --noconfirm --needed xfwm-axiom-theme
-sudo aura   -A --noconfirm --needed xfce4-hardware-monitor-plugin
+sudo pacman -S --noconfirm --needed \
+     xfce4 \
+     xfce4-goodies \
+     mupdf \
+     file-roller \
+     gvfs
+
+sudo aura -Ax --noconfirm --needed \
+     sardi-icons \
+     xfwm-axiom-theme \
+     xfce4-hardware-monitor-plugin
 
 echo "Installing i3/sway"
-sudo pacman -S --noconfirm --needed i3-wm i3lock i3status sway
-sudo aura   -A --noconfirm --needed i3blocks
-sudo pacman -S --noconfirm --needed rxvt-unicode
+sudo pacman -S --noconfirm --needed \
+     i3-wm \
+     i3lock \
+     i3status \
+     sway \
+     rxvt-unicode
+
+sudo aura -Ax --noconfirm --needed i3blocks
 
 echo "Installing common software"
-sudo pacman -S --noconfirm --needed gimp
-sudo pacman -S --noconfirm --needed inkscape
-sudo pacman -S --noconfirm --needed pidgin
-sudo pacman -S --noconfirm --needed texlive-bin
-sudo pacman -S --noconfirm --needed dos2unix
-sudo pacman -S --noconfirm --needed shotwell
-sudo pacman -S --noconfirm --needed tmux
-sudo pacman -S --noconfirm --needed keybase
-sudo pacman -S --noconfirm --needed transmission
-sudo aura   -A --noconfirm --needed tmate
-sudo aura   -A --noconfirm --needed dropbox
-sudo aura   -A --noconfirm --needed forticlientsslvpn
-sudo aura   -A --noconfirm --needed gdrive
+sudo pacman -S --noconfirm --needed \
+     gimp \
+     inkscape \
+     pidgin \
+     texlive-bin \
+     dos2unix \
+     shotwell \
+     tmux \
+     keybase \
+     transmission
+
+sudo aura -Ax --noconfirm --needed \
+     tmate \
+     dropbox \
+     forticlientsslvpn \
+     gdrive
 
 echo "Installing video software"
-sudo pacman -S --noconfirm --needed vlc
-sudo pacman -S --noconfirm --needed obs-studio
-sudo pacman -S --noconfirm --needed stremio-bin
+sudo pacman -S --noconfirm --needed \
+     vlc \
+     obs-studio \
+     stremio-bin
 
 echo "Installing entretainment software"
 sudo pacman -S --noconfirm --needed steam
 
 echo "Installing browsers"
 sudo pacman -S --noconfirm --needed firefox
-sudo aura   -A --noconfirm --needed google-chrome-dev
+sudo aura -Ax --noconfirm --needed google-chrome-dev
 
 echo "Installing productivity related software"
-sudo aura  -A  --noconfirm --needed rescuetime
-sudo aura  -Ax --noconfirm --needed toggldesktop-bin
+sudo aura -A  --noconfirm --needed \
+     rescuetime \
+     toggldesktop-bin
 
 echo "Installing kernel flavors"
 sudo pacman -S --noconfirm --needed linux-zen
 
 echo "Laptop improvements"
-sudo pacman -S --noconfirm --needed acpid
-sudo pacman -S --noconfirm --needed tlp
+sudo pacman -S --noconfirm --needed \
+     acpid \
+     tlp
 
 echo "Install virtualization software"
 sudo pacman -S --noconfirm --needed virtualbox
