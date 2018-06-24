@@ -1,4 +1,4 @@
-next_color=1
+next_color=3
 viewer_size=64
 viewer_text_overlay_position=1
 use_background_color=false
@@ -20,15 +20,21 @@ viewer_text_overlay_color=-1347440641
 type=network_load
 interface_type=5
 interface_direction=0
-max=743460
+max=0
 tag=
 color=1566228912
+fixed_max=false
+update_interval=1000
+add_to_text_overlay=true
 
 [2]
 type=network_load
 interface_type=0
 interface_direction=0
-max=1349767
+max=0
 tag=
 color=-2004900944
+fixed_max=false
+update_interval=1000
+add_to_text_overlay=true
 

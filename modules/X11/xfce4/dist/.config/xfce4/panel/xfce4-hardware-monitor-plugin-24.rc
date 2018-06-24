@@ -1,4 +1,4 @@
-next_color=2
+next_color=3
 viewer_size=64
 viewer_text_overlay_position=1
 use_background_color=false
@@ -23,4 +23,9 @@ network_type_5_interface_name=wlan0
 network_type_6_interface_name=wlan1
 network_type_7_interface_name=wlan2
 fill_color=1972416176
+include_low_priority=false
+include_iowait=false
+update_interval=1000
+fixed_max=false
+add_to_text_overlay=true
 
