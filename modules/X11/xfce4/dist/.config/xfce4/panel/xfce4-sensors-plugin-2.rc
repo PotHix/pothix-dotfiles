@@ -17,7 +17,7 @@ Command_Name=xfce4-sensors
 Number_Chips=4
 Suppress_Hddtemp_Message=true
 Suppress_Tooltip=false
-Preferred_Width=381
+Preferred_Width=383
 Preferred_Height=372
 
 [Chip0]
@@ -31,7 +31,7 @@ Name=Package id 0
 Color=#00B000
 Show=true
 Min=30.00
-Max=90.00
+Max=95.00
 
 [Chip1]
 Name=acpitz-0
@@ -44,7 +44,7 @@ Name=temp1
 Color=#00B000
 Show=true
 Min=30.00
-Max=90.00
+Max=95.00
 
 [Chip2]
 Name=thinkpad-0
@@ -57,18 +57,9 @@ Name=fan1
 Color=#00B000
 Show=true
 Min=1000.00
-Max=6000.00
+Max=6500.00
 
 [Chip3]
 Name=ACPI
 Number=3
-
-[Chip3_Feature2]
-Id=2
-Address=2
-Name=thermal_zone1
-Color=#0000B0
-Show=true
-Min=20.00
-Max=60.00
 
