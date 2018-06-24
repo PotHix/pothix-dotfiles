@@ -178,30 +178,32 @@
   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
 (use-package py-yapf
-             :ensure t
-             :config
-             (add-hook 'python-mode-hook #'py-yapf-enable-on-save))
+  :ensure t
+  :config
+  (add-hook 'python-mode-hook #'py-yapf-enable-on-save))
 
 (use-package rust-mode
-             :ensure t)
+  :ensure t)
 
 (use-package cargo
-             :ensure t)
+  :config
+  (add-hook 'rust-mode-hook #'cargo-minor-mode)
+  :ensure t)
 
 (use-package elixir-mode
-             :ensure t)
+  :ensure t)
 
 (use-package go-mode
-             :ensure t)
+  :ensure t)
 
 (use-package markdown-mode+
-             :ensure t)
+  :ensure t)
 
 (use-package inf-ruby
-             :ensure t)
+  :ensure t)
 
 (use-package haskell-mode
-             :ensure t)
+  :ensure t)
 
 
 ; multiple-cursors
