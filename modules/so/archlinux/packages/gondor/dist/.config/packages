@@ -85,7 +85,7 @@ echo "Preparing Rust language"
 # I don't want to update nightly all the time
 # rustup install nightly
 rustup install stable
-cargo +nightly install clippy rustfmt racer
+cargo +nightly install clippy rustfmt-nightly racer
 
 echo "Docker"
 sudo pacman -S --noconfirm --needed \
