@@ -81,6 +81,10 @@ sudo pacman -S --noconfirm --needed \
      elixir \
      rustup
 
+echo "Preparing Rust language"
+rustup install stable nightly
+cargo +nightly install clippy rustfmt racer
+
 echo "Docker"
 sudo pacman -S --noconfirm --needed \
      docker \
@@ -169,8 +173,5 @@ sudo systemctl enable slim.service
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable acpid.service
 sudo systemctl enable nscd.service
-
-echo "Updating all packages"
-sudo pacman -Syu --noconfirm
 
 exit 0
