@@ -170,17 +170,18 @@
   (add-hook 'org-mode-hook #'flycheck-mode)
   (define-key flycheck-mode-map (kbd "s-;") 'flycheck-previous-error))
 
+(use-package py-yapf
+  :ensure t
+  :config
+  (add-hook 'python-mode-hook #'py-yapf-enable-on-save))
+
+; Rust related packages
 (use-package flycheck-rust
   :ensure t
   :init (flycheck-rust-setup)
   :config
   (setq rust-format-on-save t)
   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
-
-(use-package py-yapf
-  :ensure t
-  :config
-  (add-hook 'python-mode-hook #'py-yapf-enable-on-save))
 
 (use-package rust-mode
   :ensure t)
@@ -190,19 +191,32 @@
   (add-hook 'rust-mode-hook #'cargo-minor-mode)
   :ensure t)
 
+(use-package racer
+  :ensure t
+  :config
+  (add-hook 'rust-mode-hook #'racer-mode)
+  (add-hook 'racer-mode-hook #'eldoc-mode))
+
+(use-package company
+  :ensure t
+  :config
+  (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
+  (setq company-tooltip-align-annotations t)
+  (add-hook 'racer-mode-hook #'company-mode))
+
+; Elixir related packages
 (use-package elixir-mode
   :ensure t)
 
+; Go related packages
 (use-package go-mode
   :ensure t)
 
-(use-package markdown-mode+
-  :ensure t)
-
+; Ruby related packages
 (use-package inf-ruby
   :ensure t)
 
-(use-package haskell-mode
+(use-package markdown-mode+
   :ensure t)
 
 
