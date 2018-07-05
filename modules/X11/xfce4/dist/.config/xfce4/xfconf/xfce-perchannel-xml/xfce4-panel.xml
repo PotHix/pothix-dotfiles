@@ -62,6 +62,7 @@
         <value type="string" value="pidgin"/>
         <value type="string" value="chromium"/>
         <value type="string" value="rescuetime"/>
+        <value type="string" value="zoom"/>
         <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="rambox"/>
         <value type="string" value="franz"/>
