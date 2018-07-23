@@ -82,10 +82,11 @@ sudo pacman -S --noconfirm --needed \
      rustup
 
 echo "Preparing Rust language"
-# I don't want to update nightly all the time
-# rustup install nightly
 rustup install stable
-cargo +nightly install clippy rustfmt-nightly racer
+rustup install nighly
+rustup component add rustfmt-preview
+rustup component add clippy-preview
+cargo +nightly install racer -q
 
 echo "Docker"
 sudo pacman -S --noconfirm --needed \
