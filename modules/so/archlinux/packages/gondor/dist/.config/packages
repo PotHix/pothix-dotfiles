@@ -139,7 +139,8 @@ sudo aura -Ax --noconfirm --needed \
      tmate \
      dropbox \
      forticlientsslvpn \
-     gdrive
+     gdrive \
+     peek
 
 echo "Installing video software"
 sudo pacman -S --noconfirm --needed \
