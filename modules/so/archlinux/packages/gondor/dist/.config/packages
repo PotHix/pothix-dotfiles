@@ -83,7 +83,7 @@ sudo pacman -S --noconfirm --needed \
 
 echo "Preparing Rust language"
 rustup install stable
-rustup install nighly
+rustup install nightly
 rustup component add rustfmt-preview
 rustup component add clippy-preview
 cargo +nightly install racer -q
