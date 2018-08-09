@@ -8,4 +8,10 @@ request() {
         sed 's/Doist,//g; s/,/   \t\t/g'
 }
 
+todays_link() {
+    echo
+    echo "https://toggl.com/app/reports/summary/1822560/period/today"
+}
+
 request
+todays_link
