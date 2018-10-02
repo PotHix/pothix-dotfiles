@@ -10,7 +10,8 @@ if [[ ! $(command -v aura) ]]
 then
     echo "Installing Aura"
     cd /tmp
-    curl aur.sh | bash -si aura-bin
+    curl https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=aura-bin > PKGBUILD
+    makepkg
     echo Y | sudo pacman -U aura-bin/aura-bin*.tar.xz
     cd -
 fi
@@ -20,10 +21,12 @@ sudo aura -Axuy --noconfirm
 echo "Installing basic packages"
 sudo pacman -S --noconfirm --needed \
      xorg-server \
-     xorg-xinit xorg-xrdb xorg-xmodmap xf86-input-libinput \
+     xorg-xinit \
+     xorg-xrdb \
+     xorg-xmodmap \
+     xf86-input-libinput \
      slim \
      systemd \
-     systemd-arch-units \
      openssh \
      sysstat
 
@@ -42,8 +45,7 @@ sudo pacman -S --noconfirm --needed \
 echo "Installing fonts"
 sudo pacman -S --noconfirm --needed \
      ttf-dejavu \
-     terminus-font \
-     ttf-symbola
+     terminus-font
 
 sudo aura -Ax --noconfirm --needed ttf-font-awesome
 
