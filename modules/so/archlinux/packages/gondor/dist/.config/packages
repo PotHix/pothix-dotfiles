@@ -138,13 +138,13 @@ sudo pacman -S --noconfirm --needed \
      tmux \
      keybase \
      audacity \
-     transmission
+     transmission \
+     peek
 
 sudo aura -Ax --noconfirm --needed \
      tmate \
      dropbox \
-     gdrive \
-     peek
+     gdrive
 
 echo "Installing video software"
 sudo pacman -S --noconfirm --needed \
