@@ -71,7 +71,8 @@ sudo pacman -S --noconfirm --needed \
 sudo aura -Ax --noconfirm --needed \
      ngrok \
      rbenv ruby-build \
-     android-sdk-platform-tools
+     android-sdk-platform-tools \
+     wakatime
 
 echo "Installing languages"
 sudo pacman -S --noconfirm --needed \
