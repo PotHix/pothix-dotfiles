@@ -45,7 +45,9 @@ sudo pacman -S --noconfirm --needed \
 echo "Installing fonts"
 sudo pacman -S --noconfirm --needed \
      ttf-dejavu \
-     terminus-font
+     terminus-font \
+     noto-fonts-cjk \
+     noto-fonts-emoji
 
 sudo aura -Ax --noconfirm --needed ttf-font-awesome-4
 
