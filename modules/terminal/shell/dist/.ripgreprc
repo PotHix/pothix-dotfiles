@@ -1,0 +1,3 @@
+# freaking map files in the repository...
+--glob=!*.min.js
+--glob=!*.js.map
