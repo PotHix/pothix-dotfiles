@@ -70,7 +70,8 @@ sudo pacman -S --noconfirm --needed \
 
 sudo aura -Ax --noconfirm --needed \
      ngrok \
-     rbenv ruby-build \
+     rbenv \
+     ruby-build \
      android-sdk-platform-tools \
      wakatime
 
@@ -86,6 +87,7 @@ sudo pacman -S --noconfirm --needed \
 
 echo "Preparing Rust language"
 rustup install stable
+rustup default stable
 rustup install nightly
 rustup component add rustfmt-preview
 rustup component add clippy-preview
@@ -130,7 +132,6 @@ echo "Installing common software"
 sudo pacman -S --noconfirm --needed \
      gimp \
      inkscape \
-     pidgin \
      texlive-bin \
      dos2unix \
      shotwell \
@@ -142,7 +143,6 @@ sudo pacman -S --noconfirm --needed \
 sudo aura -Ax --noconfirm --needed \
      tmate \
      dropbox \
-     forticlientsslvpn \
      gdrive \
      peek
 
@@ -177,7 +177,6 @@ sudo pacman -S --noconfirm --needed virtualbox
 
 echo "Activate needed services"
 sudo systemctl enable ntpd.service
-sudo systemctl enable slim.service
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable acpid.service
 sudo systemctl enable nscd.service
