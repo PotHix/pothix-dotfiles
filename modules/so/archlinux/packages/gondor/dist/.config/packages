@@ -75,7 +75,8 @@ sudo aura -Ax --noconfirm --needed \
      rbenv \
      ruby-build \
      android-sdk-platform-tools \
-     wakatime
+     wakatime \
+     heroku-toolbelt
 
 echo "Installing languages"
 sudo pacman -S --noconfirm --needed \
@@ -140,7 +141,7 @@ sudo pacman -S --noconfirm --needed \
      tmux \
      keybase \
      audacity \
-     transmission \
+     transmission-gtk \
      peek
 
 sudo aura -Ax --noconfirm --needed \
@@ -151,8 +152,7 @@ sudo aura -Ax --noconfirm --needed \
 echo "Installing video software"
 sudo pacman -S --noconfirm --needed \
      vlc \
-     obs-studio \
-     stremio-bin
+     obs-studio
 
 echo "Installing entretainment software"
 sudo pacman -S --noconfirm --needed steam
