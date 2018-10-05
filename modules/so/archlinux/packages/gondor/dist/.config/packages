@@ -68,10 +68,12 @@ echo "Installing development tools"
 sudo pacman -S --noconfirm --needed \
      base-devel \
      git \
-     bpython2
+     bpython2 \
+     tmux
 
 sudo aura -Ax --noconfirm --needed \
      ngrok \
+     tmuxinator \
      rbenv \
      ruby-build \
      android-sdk-platform-tools \
