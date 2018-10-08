@@ -62,7 +62,8 @@ sudo pacman -S --noconfirm --needed \
      imagemagick \
      bash-completion \
      alsa-utils \
-     redshift
+     redshift \
+     gnome-calculator
 
 echo "Installing development tools"
 sudo pacman -S --noconfirm --needed \
