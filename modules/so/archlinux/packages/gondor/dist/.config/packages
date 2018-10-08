@@ -150,6 +150,7 @@ sudo pacman -S --noconfirm --needed \
 sudo aura -Ax --noconfirm --needed \
      tmate \
      dropbox \
+     zoom \
      gdrive
 
 echo "Installing video software"
