@@ -179,7 +179,9 @@ sudo pacman -S --noconfirm --needed \
      tlp
 
 echo "Install virtualization software"
-sudo pacman -S --noconfirm --needed virtualbox
+sudo pacman -S --noconfirm --needed \
+    virtualbox \
+    virtualbox-host-modules-arch
 
 echo "Activate needed services"
 sudo systemctl enable ntpd.service
