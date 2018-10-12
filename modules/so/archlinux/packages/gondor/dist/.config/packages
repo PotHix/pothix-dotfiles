@@ -79,7 +79,7 @@ sudo aura -Ax --noconfirm --needed \
      ruby-build \
      android-sdk-platform-tools \
      wakatime \
-     heroku-toolbelt
+     heroku-cli
 
 echo "Installing languages"
 sudo pacman -S --noconfirm --needed \
