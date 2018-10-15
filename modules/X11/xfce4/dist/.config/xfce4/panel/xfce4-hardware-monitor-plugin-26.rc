@@ -1,8 +1,8 @@
-next_color=0
+next_color=2
 viewer_size=64
 viewer_text_overlay_position=1
 use_background_color=false
-network_type_0_interface_name=enp0s25
+network_type_0_interface_name=enp0s31f6
 network_type_1_interface_name=eth1
 network_type_2_interface_name=eth2
 network_type_3_interface_name=ppp
