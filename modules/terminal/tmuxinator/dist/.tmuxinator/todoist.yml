@@ -1,0 +1,17 @@
+name: todoist
+root: ~/repos/Todoist
+
+on_project_first_start:
+  - docker-compose up -d
+  - docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && ./configs/sql/init_db.py && configs/sql/apply_migrations.py"
+
+on_project_stop: docker-compose down
+
+windows:
+  - todoist:
+      layout: tiled
+      panes:
+        - docker-compose exec todoist mysql -D todoist_main
+        - while true; do docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && ./scripts/launch_server.py"; sleep 1; done
+        - docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && ./scripts/shell.py"
+        - ngrok http 8080 -subdomain todoist
