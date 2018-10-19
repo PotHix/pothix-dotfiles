@@ -54,15 +54,6 @@ Max=95.00
 Name=coretemp-0
 Number=3
 
-[Chip3_Feature0]
-Id=0
-Address=0
-Name=Package id 0
-Color=#00B000
-Show=true
-Min=30.00
-Max=95.00
-
 [Chip4]
 Name=pch_skylake-0
 Number=4
