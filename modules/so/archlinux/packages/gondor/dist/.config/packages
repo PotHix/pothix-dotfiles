@@ -71,7 +71,8 @@ sudo pacman -S --noconfirm --needed \
      base-devel \
      git \
      bpython2 \
-     tmux
+     tmux \
+     jq
 
 sudo aura -Ax --noconfirm --needed \
      ngrok \
