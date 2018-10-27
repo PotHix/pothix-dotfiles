@@ -100,7 +100,7 @@ rustup component add rustfmt-preview
 rustup component add clippy-preview
 
 rustup install nightly
-rustup default nighly
+rustup default nightly
 rustup component add rustfmt-preview
 rustup component add clippy-preview
 cargo +nightly install racer -q
