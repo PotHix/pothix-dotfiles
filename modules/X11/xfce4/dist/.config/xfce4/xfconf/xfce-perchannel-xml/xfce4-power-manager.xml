@@ -15,5 +15,6 @@
     <property name="blank-on-ac" type="int" value="20"/>
     <property name="brightness-level-on-ac" type="uint" value="50"/>
     <property name="lid-action-on-ac" type="uint" value="1"/>
+    <property name="dpms-enabled" type="bool" value="false"/>
   </property>
 </channel>
