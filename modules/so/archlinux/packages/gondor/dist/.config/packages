@@ -177,7 +177,8 @@ sudo aura -A  --noconfirm --needed \
      toggldesktop-bin
 
 echo "Installing kernel flavors"
-sudo pacman -S --noconfirm --needed linux-zen
+sudo pacman -S --noconfirm --needed linux-zen linux-zen-headers
+sudo pacman -S --noconfirm --needed linux-headers
 
 echo "Laptop improvements"
 sudo pacman -S --noconfirm --needed \
