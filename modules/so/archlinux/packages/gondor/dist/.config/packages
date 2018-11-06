@@ -70,7 +70,6 @@ echo "Installing development tools"
 sudo pacman -S --noconfirm --needed \
      base-devel \
      git \
-     bpython2 \
      tmux \
      jq
 
@@ -92,6 +91,12 @@ sudo pacman -S --noconfirm --needed \
      go \
      elixir \
      rustup
+
+echo "Essential python packages"
+sudo pacman -S --noconfirm --needed \
+     flake8 \
+     bpython2 \
+     python2-flake8
 
 echo "Preparing Rust language"
 rustup install stable
