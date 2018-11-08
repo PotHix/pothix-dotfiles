@@ -9,11 +9,11 @@ on_project_stop: docker-compose down
 
 windows:
   - todoist:
-      layout: tiled
+      layout: 7381,280x57,0,0[281x28,0,0{140x28,0,0,0,70x28,141,0,1,69x28,212,0,5},281x29,0,29{140x29,0,29,2,70x29,141,29,3,69x29,212,29,4}]
       panes:
         - docker-compose exec todoist mysql -D todoist_main
         - while true; do docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && ./scripts/launch_server.py"; sleep 1; done
+        - docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && python todoist/workers/processor.py"
         - docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && ./scripts/shell.py"
         - ngrok http 8080 -subdomain todoist
         - docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && python todoist/sqs_workers/processor.py"
-        - docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && python todoist/workers/processor.py"
