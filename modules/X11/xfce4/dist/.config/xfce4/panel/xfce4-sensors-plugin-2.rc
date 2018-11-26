@@ -14,21 +14,17 @@ Exec_Command=true
 Show_Units=true
 Small_Spacings=false
 Command_Name=xfce4-sensors
-Number_Chips=6
+Number_Chips=3
 Suppress_Hddtemp_Message=true
 Suppress_Tooltip=false
 Preferred_Width=404
 Preferred_Height=372
 
 [Chip0]
-Name=iwlwifi-0
+Name=thinkpad-0
 Number=0
 
-[Chip1]
-Name=thinkpad-0
-Number=1
-
-[Chip1_Feature0]
+[Chip0_Feature0]
 Id=0
 Address=0
 Name=fan1
@@ -37,28 +33,20 @@ Show=true
 Min=1000.00
 Max=6500.00
 
-[Chip2]
-Name=acpitz-0
-Number=2
+[Chip1]
+Name=coretemp-0
+Number=1
 
-[Chip2_Feature0]
+[Chip1_Feature0]
 Id=0
 Address=0
-Name=temp1
+Name=Package id 0
 Color=#00B000
 Show=true
-Min=30.00
-Max=95.00
+Min=0.00
+Max=76.00
 
-[Chip3]
-Name=coretemp-0
-Number=3
-
-[Chip4]
-Name=pch_skylake-0
-Number=4
-
-[Chip5]
+[Chip2]
 Name=ACPI
-Number=5
+Number=2
 
