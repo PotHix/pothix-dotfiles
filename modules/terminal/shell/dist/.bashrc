@@ -226,6 +226,10 @@ pre_prompt_command() {
 # Language specific paths
 ###############################################################################################
 
+# asdf-vm
+source $HOME/.asdf/asdf.sh
+source $HOME/.asdf/completions/asdf.bash
+
 # Ruby (rvm and rbenv)
 export PATH="$HOME/.rvm/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
