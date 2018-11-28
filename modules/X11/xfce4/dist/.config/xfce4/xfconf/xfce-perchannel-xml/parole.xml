@@ -15,4 +15,7 @@
   <property name="audio" type="empty">
     <property name="volume" type="int" value="50"/>
   </property>
+  <property name="playlist" type="empty">
+    <property name="show-playlist" type="bool" value="false"/>
+  </property>
 </channel>
