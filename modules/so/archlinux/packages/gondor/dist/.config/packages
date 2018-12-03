@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Updating repos"
-sudo pacman -Syu --noconfirm
+sudo pacman -Syyu --noconfirm
 
 # aura-bin dependency
 sudo pacman -S --noconfirm --needed curl
