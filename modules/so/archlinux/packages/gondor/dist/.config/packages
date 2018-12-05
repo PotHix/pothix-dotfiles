@@ -185,10 +185,13 @@ echo "Installing kernel flavors"
 sudo pacman -S --noconfirm --needed linux-zen linux-zen-headers
 sudo pacman -S --noconfirm --needed linux-headers
 
-echo "Laptop improvements"
+echo "Laptop improvements (mostly thinkpad specifics)"
 sudo pacman -S --noconfirm --needed \
      acpid \
-     tlp
+     tlp \
+     smartmontools \
+     ethtool \
+     acpi_call
 
 echo "Install virtualization software"
 sudo pacman -S --noconfirm --needed \
