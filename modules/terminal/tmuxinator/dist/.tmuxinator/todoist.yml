@@ -16,4 +16,4 @@ windows:
         - docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && python todoist/workers/processor.py"
         - docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && ./scripts/shell.py"
         - ngrok http 8080 -subdomain todoist
-        - docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && python todoist/sqs_workers/processor.py"
+        - docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && ./configs/sql/migrations/01_sqs_queues.py && python todoist/sqs_workers/processor.py"
