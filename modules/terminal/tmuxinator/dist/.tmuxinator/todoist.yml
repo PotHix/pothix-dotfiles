@@ -14,6 +14,7 @@ windows:
         - docker-compose exec todoist mysql -D todoist_main
         - while true; do docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && ./scripts/launch_server.py"; sleep 1; done
         - docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && python todoist/workers/processor.py"
-        - docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && ./scripts/shell.py"
+        - echo "./scripts/shell.py is buggy inside tmux 🤔"
+        #- docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && ./scripts/shell.py"
         - ngrok http 8080 -subdomain todoist
         - docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && ./configs/sql/migrations/01_sqs_queues.py && python todoist/sqs_workers/processor.py"
