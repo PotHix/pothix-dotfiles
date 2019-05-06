@@ -49,6 +49,7 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="names-visible" type="array">
         <value type="string" value="obs"/>
+        <value type="string" value="twist"/>
         <value type="string" value="rescuetime"/>
         <value type="string" value="transmission"/>
         <value type="string" value="kupfer.py"/>
@@ -58,17 +59,20 @@
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="vlc"/>
         <value type="string" value="chromium"/>
-        <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="task manager"/>
-        <value type="string" value="toggl desktop"/>
+        <value type="string" value="zoom"/>
+        <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="telegramdesktop"/>
         <value type="string" value="franz"/>
-        <value type="string" value="redshift-gtk"/>
-        <value type="string" value="zoom"/>
+        <value type="string" value="electron"/>
         <value type="string" value="skype"/>
+        <value type="string" value="redshift-gtk"/>
+        <value type="string" value="toggl desktop"/>
         <value type="string" value="rambox"/>
+        <value type="string" value="todoist"/>
         <value type="string" value="thunar"/>
         <value type="string" value="emojione-picker"/>
+        <value type="string" value="dropbox"/>
       </property>
       <property name="names-hidden" type="array">
       </property>
