@@ -15,5 +15,5 @@ windows:
         - while true; do docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && ./scripts/launch_server.py"; sleep 1; done
         - docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && python todoist/workers/processor.py"
         - docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && ./scripts/shell.py"
-        - ngrok http 8080 -subdomain todoist
+        - ngrok http 8080 --bind-tls true -subdomain todoist
         - docker-compose exec todoist bash -c "source ~/env/bin/activate && cd ~/todoist && python ./scripts/sqs_create_missing_queues.py && python todoist/sqs_workers/processor.py"
