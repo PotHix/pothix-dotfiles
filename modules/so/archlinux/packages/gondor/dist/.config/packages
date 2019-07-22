@@ -71,8 +71,8 @@ echo "Installing development tools"
 sudo pacman -S --noconfirm --needed \
      base-devel \
      git \
-     tmux \
-     jq
+     jq \
+#    tmux
 
 sudo aura -Ax --noconfirm --needed \
      ngrok \
