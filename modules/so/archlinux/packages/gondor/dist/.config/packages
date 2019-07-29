@@ -132,8 +132,8 @@ sudo pacman -S --noconfirm --needed \
 
 sudo aura -Ax --noconfirm --needed \
      sardi-icons \
-     xfwm-axiom-theme \
      xfce4-hardware-monitor-plugin
+#     xfwm-axiom-theme  # I'm using it but it's not working via AUR
 
 echo "Installing i3/sway"
 sudo pacman -S --noconfirm --needed \
