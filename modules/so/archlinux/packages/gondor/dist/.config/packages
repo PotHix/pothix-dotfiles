@@ -152,7 +152,6 @@ sudo pacman -S --noconfirm --needed \
      texlive-bin \
      dos2unix \
      shotwell \
-     tmux \
      keybase \
      audacity \
      transmission-gtk \
