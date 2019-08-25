@@ -41,7 +41,7 @@
     <property name="raise_with_any_button" type="bool" value="true"/>
     <property name="repeat_urgent_blink" type="bool" value="false"/>
     <property name="resize_opacity" type="int" value="100"/>
-    <property name="scroll_workspaces" type="bool" value="true"/>
+    <property name="scroll_workspaces" type="bool" value="false"/>
     <property name="shadow_delta_height" type="int" value="0"/>
     <property name="shadow_delta_width" type="int" value="0"/>
     <property name="shadow_delta_x" type="int" value="0"/>
@@ -85,5 +85,8 @@
     </property>
     <property name="margin_top" type="int" value="0"/>
     <property name="margin_left" type="int" value="0"/>
+    <property name="cycle_raise" type="bool" value="false"/>
+    <property name="frame_border_top" type="int" value="0"/>
+    <property name="vblank_mode" type="string" value="auto"/>
   </property>
 </channel>

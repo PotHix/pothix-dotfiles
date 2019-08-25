@@ -2,7 +2,7 @@
 
 <channel name="xsettings" version="1.0">
   <property name="Net" type="empty">
-    <property name="ThemeName" type="string" value="Xfce-dusk"/>
+    <property name="ThemeName" type="string" value="Adwaita-dark"/>
     <property name="IconThemeName" type="string" value="Sardi-Mono-Vertexed"/>
     <property name="DoubleClickTime" type="empty"/>
     <property name="DoubleClickDistance" type="int" value="5"/>
@@ -35,6 +35,9 @@
     <property name="CursorThemeName" type="string" value="Adwaita"/>
     <property name="CursorThemeSize" type="empty"/>
     <property name="DecorationLayout" type="empty"/>
+  </property>
+  <property name="Gdk" type="empty">
+    <property name="WindowScalingFactor" type="int" value="1"/>
   </property>
   <property name="Xfce" type="empty">
     <property name="LastCustomDPI" type="int" value="130"/>
