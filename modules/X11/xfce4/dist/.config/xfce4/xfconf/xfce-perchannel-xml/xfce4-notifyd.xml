@@ -3,6 +3,7 @@
 <channel name="xfce4-notifyd" version="1.0">
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
+      <value type="string" value="com.uploadedlobster.peek"/>
       <value type="string" value="Dropbox"/>
       <value type="string" value="Electron"/>
       <value type="string" value="Firefox"/>
