@@ -230,11 +230,6 @@ pre_prompt_command() {
 source $HOME/.asdf/asdf.sh
 source $HOME/.asdf/completions/asdf.bash
 
-# Ruby (rvm and rbenv)
-export PATH="$HOME/.rvm/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 # Rust
 export PATH=$HOME/.cargo/bin:$PATH
 
