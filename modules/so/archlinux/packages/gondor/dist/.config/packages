@@ -30,6 +30,14 @@ sudo pacman -S --noconfirm --needed \
      openssh \
      sysstat
 
+echo "Installing display manager packages"
+# helps testing lightdm on X
+sudo pacman -S --noconfirm --needed xorg-server-xephyr
+sudo pacman -S --noconfirm --needed \
+     lightdm \
+     lightdm-gtk-greeter \
+     accountsservice
+
 echo "Installing wireless packages"
 sudo pacman -S --noconfirm --needed \
      wpa_supplicant \
@@ -171,8 +179,7 @@ echo "Installing entretainment software"
 sudo pacman -S --noconfirm --needed steam
 
 echo "Installing browsers"
-sudo pacman -S --noconfirm --needed firefox
-sudo aura -Ax --noconfirm --needed google-chrome-dev
+sudo pacman -S --noconfirm --needed firefox chromium
 
 echo "Installing productivity related software"
 sudo aura -A  --noconfirm --needed \
@@ -201,5 +208,6 @@ sudo systemctl enable ntpd.service
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable acpid.service
 sudo systemctl enable nscd.service
+sudo systemctl enable lightdm.service
 
 exit 0
