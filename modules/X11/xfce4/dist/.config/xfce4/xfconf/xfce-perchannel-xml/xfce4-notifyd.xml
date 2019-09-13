@@ -16,6 +16,7 @@
       <value type="string" value="Todoist"/>
       <value type="string" value="Transmission"/>
       <value type="string" value="Twist"/>
+      <value type="string" value="Xfce volume control"/>
       <value type="string" value="Xfce4-notifyd settings"/>
       <value type="string" value="xfce4-power-manager"/>
     </property>

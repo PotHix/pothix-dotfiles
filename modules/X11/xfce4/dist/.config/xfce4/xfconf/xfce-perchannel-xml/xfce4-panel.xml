@@ -20,6 +20,7 @@
         <value type="int" value="2"/>
         <value type="int" value="4"/>
         <value type="int" value="22"/>
+        <value type="int" value="5"/>
         <value type="int" value="1"/>
         <value type="int" value="6"/>
         <value type="int" value="16"/>
@@ -121,5 +122,8 @@
       <property name="expand" type="bool" value="true"/>
     </property>
     <property name="plugin-3" type="string" value="xkb"/>
+    <property name="plugin-5" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+    </property>
   </property>
 </channel>

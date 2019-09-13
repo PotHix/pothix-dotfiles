@@ -12,11 +12,13 @@
       </property>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="empty"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="empty"/>
       <property name="XF86Display" type="empty"/>
       <property name="&lt;Super&gt;p" type="empty"/>
       <property name="&lt;Primary&gt;Escape" type="empty"/>
       <property name="XF86WWW" type="empty"/>
       <property name="XF86Mail" type="empty"/>
+      <property name="Print" type="empty"/>
     </property>
     <property name="custom" type="empty">
       <property name="&lt;Alt&gt;F3" type="string" value="xfce4-appfinder">
@@ -34,7 +36,6 @@
       <property name="&lt;Super&gt;p" type="string" value="xfce4-display-settings --minimal"/>
       <property name="&lt;Primary&gt;Escape" type="string" value="xfdesktop --menu"/>
       <property name="override" type="bool" value="true"/>
-      <property name="&lt;Super&gt;r" type="string" value="xfce4-appfinder"/>
       <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r -s /home/pothix/Pictures"/>
       <property name="Print" type="string" value="xfce4-screenshooter -f -s /home/pothix/Pictures"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r -c"/>
@@ -43,8 +44,8 @@
       <property name="XF86AudioLowerVolume" type="string" value="pactl set-sink-volume @DEFAULT_SINK@ &apos;-10%&apos;"/>
       <property name="XF86AudioRaiseVolume" type="string" value="pactl set-sink-volume @DEFAULT_SINK@ &apos;+10%&apos;"/>
       <property name="&lt;Super&gt;c" type="string" value="/bin/gnome-calculator"/>
-      <property name="&lt;Super&gt;s" type="string" value="/bin/pavucontrol"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;f" type="string" value="/usr/bin/thunar"/>
+      <property name="&lt;Super&gt;r" type="string" value="xfce4-appfinder"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
