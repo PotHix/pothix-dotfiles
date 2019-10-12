@@ -46,6 +46,8 @@
       <property name="&lt;Super&gt;c" type="string" value="/bin/gnome-calculator"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;f" type="string" value="/usr/bin/thunar"/>
       <property name="&lt;Super&gt;r" type="string" value="xfce4-appfinder"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;p" type="string" value="xfconf-query -c xsettings -p /Xft/DPI -s 130"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;p" type="string" value="xfconf-query -c xsettings -p /Xft/DPI -s -1"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

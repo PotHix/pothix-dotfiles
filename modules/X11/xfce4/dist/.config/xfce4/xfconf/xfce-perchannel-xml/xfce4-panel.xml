@@ -78,6 +78,7 @@
       <property name="names-hidden" type="array">
       </property>
       <property name="names-ordered" type="array">
+        <value type="string" value="electron"/>
         <value type="string" value="orage"/>
         <value type="string" value="todoist"/>
         <value type="string" value="thunar"/>
@@ -124,6 +125,7 @@
     <property name="plugin-3" type="string" value="xkb"/>
     <property name="plugin-5" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="mpris-players" type="string" value="chromium.instance254794"/>
     </property>
   </property>
 </channel>
