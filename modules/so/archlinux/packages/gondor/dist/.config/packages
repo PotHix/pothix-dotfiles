@@ -106,6 +106,7 @@ sudo pacman -S --noconfirm --needed \
      python2-flake8
 
 echo "Preparing Rust language"
+rustup set profile complete
 rustup install stable
 rustup default stable
 rustup component add rustfmt-preview
@@ -183,8 +184,8 @@ sudo pacman -S --noconfirm --needed firefox chromium
 
 echo "Installing productivity related software"
 sudo aura -A  --noconfirm --needed \
-     rescuetime \
-     toggldesktop-bin
+     rescuetime2 \
+     toggldesktop
 
 echo "Installing kernel flavors"
 sudo pacman -S --noconfirm --needed linux-zen linux-zen-headers
