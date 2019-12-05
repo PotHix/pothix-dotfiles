@@ -5,11 +5,11 @@
     <property name="font" type="string" value="Sans Bold 20"/>
   </property>
   <property name="folders" type="empty">
-    <property name="last-used-media" type="string" value="/tmp/mozilla_pothix0"/>
+    <property name="last-used-media" type="string" value="/home/pothix/Downloads"/>
   </property>
   <property name="window" type="empty">
     <property name="maximized" type="bool" value="true"/>
-    <property name="width" type="int" value="2537"/>
+    <property name="width" type="int" value="2539"/>
     <property name="height" type="int" value="1056"/>
   </property>
   <property name="audio" type="empty">

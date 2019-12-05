@@ -78,6 +78,7 @@
       <property name="names-hidden" type="array">
       </property>
       <property name="names-ordered" type="array">
+        <value type="string" value="private internet access"/>
         <value type="string" value="electron"/>
         <value type="string" value="orage"/>
         <value type="string" value="todoist"/>
