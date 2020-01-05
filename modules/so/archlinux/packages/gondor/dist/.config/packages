@@ -197,7 +197,8 @@ sudo pacman -S --noconfirm --needed \
      tlp \
      smartmontools \
      ethtool \
-     acpi_call
+     acpi_call \
+     throttled
 
 echo "Install virtualization software"
 sudo pacman -S --noconfirm --needed \
@@ -210,5 +211,6 @@ sudo systemctl enable NetworkManager.service
 sudo systemctl enable acpid.service
 sudo systemctl enable nscd.service
 sudo systemctl enable lightdm.service
+sudo systemctl enable lenovo_fix.service
 
 exit 0
