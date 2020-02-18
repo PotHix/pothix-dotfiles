@@ -73,6 +73,7 @@ sudo pacman -S --noconfirm --needed \
      alsa-utils \
      redshift \
      gnome-calculator \
+     xournalpp \
      hugo
 
 echo "Installing development tools"
@@ -80,7 +81,7 @@ sudo pacman -S --noconfirm --needed \
      base-devel \
      git \
      jq \
-#    tmux
+     tmux
 
 sudo aura -Ax --noconfirm --needed \
      ngrok \
