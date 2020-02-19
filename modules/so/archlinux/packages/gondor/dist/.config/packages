@@ -16,7 +16,7 @@ then
     cd -
 fi
 
-sudo aura -Axuy --noconfirm
+sudo aura -Axu --noconfirm
 
 echo "Installing basic packages"
 sudo pacman -S --noconfirm --needed \
