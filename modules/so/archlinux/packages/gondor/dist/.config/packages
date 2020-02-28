@@ -103,7 +103,6 @@ sudo pacman -S --noconfirm --needed \
 echo "Essential python packages"
 sudo pacman -S --noconfirm --needed \
      flake8 \
-     bpython2 \
      python2-flake8
 
 echo "Preparing Rust language"
