@@ -5,30 +5,36 @@ set nocompatible              " be iMproved, required
 let mapleader = ","           " a better leader
 filetype off                  " required
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-ragtag'
-Plugin 'w0rp/ale'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-scripts/vimwiki'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'honza/vim-snippets'
-Plugin 'kien/ctrlp.vim'
-Plugin 'othree/html5.vim'
-Plugin 'wakatime/vim-wakatime'
+call plug#begin()
 
-call vundle#end()
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-ragtag'
+Plug 'w0rp/ale'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/vimwiki'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'elixir-lang/vim-elixir'
+Plug 'honza/vim-snippets'
+Plug 'kien/ctrlp.vim'
+Plug 'othree/html5.vim'
+Plug 'wakatime/vim-wakatime'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+
+call plug#end()
 
 
 " ****************************************************
@@ -173,12 +179,6 @@ function! HTMLFormatting()
   set softtabstop=4 shiftwidth=4 tabstop=4
   autocmd User Rails set softtabstop=4 shiftwidth=4 tabstop=4
 endfunction
-
-
-" ****************************************************************
-" LANGUAGE SPECIFIC
-" ****************************************************************
-autocmd BufWritePre *.go Fmt  " Always running gofmt for Go lang.
 
 
 " ****************************************************************
