@@ -1,15 +1,12 @@
 name: twist
 root: ~/repos/twist
 
-on_project_first_start:
-  - make migrations
-
 on_project_stop: docker-compose stop
 
 windows:
   - twist:
-      layout: 947e,281x58,0,0{140x58,0,0,2,140x58,141,0[140x29,141,0,3,140x28,141,30,4]}
       panes:
+        - make migrations
         - make up
         - make server
         - make workers
