@@ -78,6 +78,8 @@
       <property name="names-hidden" type="array">
       </property>
       <property name="names-ordered" type="array">
+        <value type="string" value="telegramdesktop"/>
+        <value type="string" value="javaembeddedframe"/>
         <value type="string" value="private internet access"/>
         <value type="string" value="electron"/>
         <value type="string" value="orage"/>
@@ -126,7 +128,7 @@
     <property name="plugin-3" type="string" value="xkb"/>
     <property name="plugin-5" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="chromium.instance254794"/>
+      <property name="mpris-players" type="string" value="chromium.instance12626;chromium.instance254794"/>
     </property>
   </property>
 </channel>
