@@ -1,15 +1,11 @@
 ##############################################
 #    Helper Commands
 ##############################################
-alias t='tail -f'
-
 alias log='sudo journalctl -f'
 alias reload='source $HOME/.bashrc 1>/dev/null'
 alias clipboard='xsel'
 alias lstree='ls -R | grep ":$" | sed -e "s/:$//" -e "s/[^-][^\/]*\//--/g" -e "s/^/ /" -e "s/-/|/"'
-alias sshr="ssh -l root"
 alias open="xdg-open"
-alias xmod="xmodmap ~/.Xmodmap"
 alias tz="\
     printf 'Sao Paulo:\t ';\
     TZ='America/Sao_Paulo' date;\
@@ -44,13 +40,10 @@ alias gi='git commit'
 alias gl='git log'
 alias gco='git checkout'
 alias gp='git pull -p --rebase'
-alias gpa='git-pull-all'
-alias gpt='git push --tags'
 alias gra='git rebase --abort'
 alias grc='git rebase --continue'
 alias gs='git status --untracked-files'
 alias gt='git tag'
-alias gut='git-update-tag | xargs git tag'
 alias gpu='git pull -p --rebase && git submodule update'
 
 

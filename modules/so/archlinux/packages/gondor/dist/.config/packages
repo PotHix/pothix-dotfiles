@@ -77,6 +77,9 @@ sudo pacman -S --noconfirm --needed \
      xournalpp \
      hugo
 
+sudo aura -Ax --noconfirm --needed \
+     starship \
+
 echo "Installing development tools"
 sudo pacman -S --noconfirm --needed \
      base-devel \
