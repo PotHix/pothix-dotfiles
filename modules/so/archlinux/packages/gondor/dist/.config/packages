@@ -56,7 +56,8 @@ sudo pacman -S --noconfirm --needed \
      terminus-font \
      noto-fonts-cjk \
      noto-fonts-emoji \
-     xorg-fonts-misc
+     xorg-fonts-misc \
+     ttf-nerd-fonts-symbols
 
 sudo aura -Ax --noconfirm --needed ttf-font-awesome-4
 
