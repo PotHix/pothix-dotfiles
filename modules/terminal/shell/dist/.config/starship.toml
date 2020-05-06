@@ -1,9 +1,11 @@
 # Don't print a new line at the start of the prompt
-add_newline = true
+add_newline = false
 
-# Replace the "❯" symbol in the prompt with "➜"
 [character]      # The name of the module we are configuring is "character"
 symbol = "➜"     # The "symbol" segment is being set to "➜"
+
+[line_break]
+disabled = true
 
 [aws]
 symbol = " "
@@ -51,9 +53,11 @@ symbol = " "
 
 [nodejs]
 symbol = " "
+disabled = true
 
 [package]
 symbol = " "
+disabled = true
 
 [php]
 symbol = " "

@@ -31,6 +31,7 @@ then
     cp -R ~/.bashrc modules/terminal/shell/dist/
     cp -R ~/.bash_aliases modules/terminal/shell/dist/
     cp -R ~/.gitconfig modules/development/git/dist/.gitconfig
+    cp -R ~/.config/starship.toml modules/terminal/shell/dist/.config/
     log_done
 elif [[ "$1" == "editors" ]]
 then
