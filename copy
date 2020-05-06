@@ -32,6 +32,7 @@ then
     cp -R ~/.bash_aliases modules/terminal/shell/dist/
     cp -R ~/.gitconfig modules/development/git/dist/.gitconfig
     cp -R ~/.config/starship.toml modules/terminal/shell/dist/.config/
+    cp -R ~/.tmuxinator/* modules/terminal/tmuxinator/dist/.tmuxinator/
     log_done
 elif [[ "$1" == "editors" ]]
 then

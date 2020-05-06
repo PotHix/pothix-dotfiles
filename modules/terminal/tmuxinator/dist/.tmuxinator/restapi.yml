@@ -1,0 +1,10 @@
+name: restapi
+root: ~/repos/rest-api
+
+windows:
+  - restapi:
+      layout: main-vertical
+      panes:
+        - "curl -sH \"Authorization: Bearer $token\" http://localhost:8080/rest/v1/tasks"
+        - ENV=development DD_APM_ENABLED=true STRIP=/rest/v1 go run main.go
+        - docker run -v /var/run/docker.sock:/var/run/docker.sock:ro -v /proc/:/host/proc/:ro -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro -p 127.0.0.1:8126:8126/tcp -e DD_API_KEY=$dd_api_key -e DD_APM_ENABLED=true datadog/agent:latest
