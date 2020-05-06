@@ -39,32 +39,6 @@ then
 fi
 
 ########################################
-# GIT FUNCTIONS
-########################################
-
-# github repository cloning
-# usage:
-#    github username repository ~> will clone someone else's
-github() {
-    if [ $# = 1 ]; then
-        git clone git@github.com:$GITHUB_USER/$1.git $CODES/$1;
-        builtin cd $1 && ls;
-    elif [ $# = 2 ]; then
-        git clone git://github.com/$1/$2.git $CODES/$2;
-        builtin cd $2 && ls;
-    else
-        echo "Usage:";
-        echo "    github <repo>        ~> will clone $GITHUB_USER's <repo> to $CODES";
-        echo "    github <user> <repo> ~> will clone <user>'s <repo> to $CODES";
-    fi
-}
-
-git-push (){
-    git push origin `git branch 2> /dev/null | grep \* | sed 's/* //'`
-}
-
-
-########################################
 # Random helpers
 ########################################
 
