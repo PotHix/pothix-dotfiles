@@ -33,7 +33,7 @@ fi
 ########################################
 source $HOME/.bash_aliases
 
-if command -v gh
+if [[ "$(command -v gh)" != "" ]]
 then
     eval "$(gh completion -s bash)"
 fi
