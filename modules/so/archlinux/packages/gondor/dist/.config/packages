@@ -87,6 +87,13 @@ sudo pacman -S --noconfirm --needed \
      jq \
      tmux
 
+# If asdf is installed, update all plugins
+if [[ "$(command -v asdf)" != "" ]]
+then
+        asdf plugin update --all
+fi
+
+
 sudo aura -Ax --noconfirm --needed \
      ngrok \
      ruby-build \
