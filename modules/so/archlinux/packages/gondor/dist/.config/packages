@@ -18,17 +18,32 @@ fi
 
 sudo aura -Axu --noconfirm
 
-echo "Installing basic packages"
-sudo pacman -S --noconfirm --needed \
-     xorg-server \
-     xorg-xinit \
-     xorg-xrdb \
-     xorg-xmodmap \
-     xf86-input-libinput \
-     slim \
-     systemd \
-     openssh \
-     sysstat
+PAC=(-S --noconfirm --needed)
+AUR=(-Ax --noconfirm --needed)
+
+# basic packages
+PAC+=(xorg-server)
+PAC+=(xorg-xinit)
+PAC+=(xorg-xrdb)
+PAC+=(xorg-xmodmap)
+PAC+=(xf86-input-libinput)
+PAC+=(slim)
+PAC+=(systemd)
+PAC+=(openssh)
+PAC+=(sysstat)
+
+# fonts
+PAC+=(ttf-dejavu)
+PAC+=(terminus-font)
+PAC+=(noto-fonts-cjk)
+PAC+=(noto-fonts-emoji)
+PAC+=(xorg-fonts-misc)
+PAC+=(ttf-nerd-fonts-symbols)
+
+AUR+=(ttf-font-awesome-4)
+
+sudo pacman "${PAC[@]}"
+sudo aura "${AUR[@]}"
 
 echo "Installing display manager packages"
 # helps testing lightdm on X
@@ -50,22 +65,10 @@ sudo pacman -S --noconfirm --needed \
      pulseaudio \
      pavucontrol
 
-echo "Installing fonts"
-sudo pacman -S --noconfirm --needed \
-     ttf-dejavu \
-     terminus-font \
-     noto-fonts-cjk \
-     noto-fonts-emoji \
-     xorg-fonts-misc \
-     ttf-nerd-fonts-symbols
-
-sudo aura -Ax --noconfirm --needed ttf-font-awesome-4
-
 echo "Installing basic tools"
 sudo pacman -S --noconfirm --needed \
      rsync \
      ntp \
-     ripgrep \
      xsel \
      unzip \
      unrar \
@@ -76,6 +79,12 @@ sudo pacman -S --noconfirm --needed \
      gnome-calculator \
      xournalpp \
      hugo
+
+# rust alternative to common commands
+sudo pacman -S --noconfirm --needed \
+     exa \
+     ripgrep \
+     bat
 
 sudo aura -Ax --noconfirm --needed \
      starship \
@@ -92,7 +101,6 @@ if [[ "$(command -v asdf)" != "" ]]
 then
         asdf plugin update --all
 fi
-
 
 sudo aura -Ax --noconfirm --needed \
      ngrok \
