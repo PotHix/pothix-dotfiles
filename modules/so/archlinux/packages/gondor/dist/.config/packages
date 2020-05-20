@@ -39,26 +39,23 @@ PAC+=(noto-fonts-cjk)
 PAC+=(noto-fonts-emoji)
 PAC+=(xorg-fonts-misc)
 PAC+=(ttf-nerd-fonts-symbols)
-
 AUR+=(ttf-font-awesome-4)
+
+# display manager packages
+
+PAC+=(xorg-server-xephyr) # helps testing lightdm on X
+PAC+=(lightdm)
+PAC+=(lightdm-gtk-greeter)
+PAC+=(accountsservice)
+
+# wireless packages
+PAC+=(wpa_supplicant)
+PAC+=(netctl)
+PAC+=(networkmanager)
+PAC+=(network-manager-applet)
 
 sudo pacman "${PAC[@]}"
 sudo aura "${AUR[@]}"
-
-echo "Installing display manager packages"
-# helps testing lightdm on X
-sudo pacman -S --noconfirm --needed xorg-server-xephyr
-sudo pacman -S --noconfirm --needed \
-     lightdm \
-     lightdm-gtk-greeter \
-     accountsservice
-
-echo "Installing wireless packages"
-sudo pacman -S --noconfirm --needed \
-     wpa_supplicant \
-     netctl \
-     networkmanager \
-     network-manager-applet
 
 echo "Installing sound packages"
 sudo pacman -S --noconfirm --needed \
