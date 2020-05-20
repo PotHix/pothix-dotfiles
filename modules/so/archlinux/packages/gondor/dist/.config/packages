@@ -1,10 +1,12 @@
 #!/bin/sh
 
-echo "Updating repos"
-sudo pacman -Syyu --noconfirm
+PAC=(-S --noconfirm --needed)
+AUR=(-Ax --noconfirm --needed)
+
+sudo pacman -Sy --noconfirm
 
 # aura-bin dependency
-sudo pacman -S --noconfirm --needed curl
+sudo pacman "${PAC[@]}" curl
 
 if [[ ! $(command -v aura) ]]
 then
@@ -15,11 +17,6 @@ then
     echo Y | sudo pacman -U aura-bin/aura-bin*.tar.xz
     cd -
 fi
-
-sudo aura -Axu --noconfirm
-
-PAC=(-S --noconfirm --needed)
-AUR=(-Ax --noconfirm --needed)
 
 # basic packages
 PAC+=(xorg-server)
@@ -42,7 +39,6 @@ PAC+=(ttf-nerd-fonts-symbols)
 AUR+=(ttf-font-awesome-4)
 
 # display manager packages
-
 PAC+=(xorg-server-xephyr) # helps testing lightdm on X
 PAC+=(lightdm)
 PAC+=(lightdm-gtk-greeter)
@@ -54,72 +50,145 @@ PAC+=(netctl)
 PAC+=(networkmanager)
 PAC+=(network-manager-applet)
 
-sudo pacman "${PAC[@]}"
-sudo aura "${AUR[@]}"
+# sound packages
+PAC+=(pulseaudio)
+PAC+=(pavucontrol)
 
-echo "Installing sound packages"
-sudo pacman -S --noconfirm --needed \
-     pulseaudio \
-     pavucontrol
-
-echo "Installing basic tools"
-sudo pacman -S --noconfirm --needed \
-     rsync \
-     ntp \
-     xsel \
-     unzip \
-     unrar \
-     imagemagick \
-     bash-completion \
-     alsa-utils \
-     redshift \
-     gnome-calculator \
-     xournalpp \
-     hugo
+# basic tools"
+PAC+=(rsync)
+PAC+=(ntp)
+PAC+=(xsel)
+PAC+=(unzip)
+PAC+=(unrar)
+PAC+=(imagemagick)
+PAC+=(bash-completion)
+PAC+=(alsa-utils)
+PAC+=(redshift)
+PAC+=(gnome-calculator)
+PAC+=(xournalpp)
+PAC+=(hugo)
 
 # rust alternative to common commands
-sudo pacman -S --noconfirm --needed \
-     exa \
-     ripgrep \
-     bat
+PAC+=(exa)
+PAC+=(ripgrep)
+PAC+=(bat)
 
-sudo aura -Ax --noconfirm --needed \
-     starship \
+AUR+=(starship)
 
-echo "Installing development tools"
-sudo pacman -S --noconfirm --needed \
-     base-devel \
-     git \
-     jq \
-     tmux
+# development tools
+PAC+=(base-devel)
+PAC+=(git)
+PAC+=(jq)
+PAC+=(tmux)
+
+AUR+=(ngrok)
+AUR+=(ruby-build)
+AUR+=(android-sdk-platform-tools)
+AUR+=(wakatime)
+AUR+=(heroku-cli)
+
+# languages
+PAC+=(ruby)
+PAC+=(python)
+PAC+=(python2)
+PAC+=(nodejs)
+PAC+=(go)
+PAC+=(elixir)
+PAC+=(rustup)
+
+# python packages
+PAC+=(flake8)
+
+# docker
+PAC+=(docker)
+PAC+=(docker-compose)
+
+# editors
+PAC+=(emacs)
+PAC+=(aspell-pt)
+PAC+=(aspell-en)
+PAC+=(vim)
+
+# xfce4
+PAC+=(xfce4)
+PAC+=(xfce4-goodies)
+PAC+=(mupdf)
+PAC+=(file-roller)
+PAC+=(gvfs)
+
+AUR+=(sardi-icons)
+AUR+=(xfce4-hardware-monitor-plug)
+# AUR+=(xfwm-axiom-theme)  # I'm using it but it's not working via AUR
+
+# i3/sway
+PAC+=(i3-wm)
+PAC+=(i3lock)
+PAC+=(i3status)
+PAC+=(sway)
+PAC+=(rxvt-unicode)
+AUR+=(i3blocks)
+
+# common software
+PAC+=(gimp)
+PAC+=(inkscape)
+PAC+=(texlive-bin)
+PAC+=(dos2unix)
+PAC+=(shotwell)
+PAC+=(keybase)
+PAC+=(audacity)
+PAC+=(transmission-gtk)
+PAC+=(peek)
+
+AUR+=(dropbox)
+AUR+=(zoom)
+AUR+=(gdrive)
+AUR+=(telegram-desktop)
+
+# tools and monitoring software
+PAC+=(bandwhich)
+
+# video software
+PAC+=(vlc)
+PAC+=(obs-studio)
+
+# entretainment software
+PAC+=(steam)
+
+# browsers
+PAC+=(firefox)
+PAC+=(chromium)
+
+# productivity related software
+AUR+=(rescuetime2)
+AUR+=(toggldesktop)
+
+# kernel flavors
+PAC+=(linux-zen)
+PAC+=(linux-zen-headers)
+PAC+=(linux-headers)
+
+# Laptop improvements (mostly thinkpad specifics)"
+PAC+=(acpid)
+PAC+=(tlp)
+PAC+=(smartmontools)
+PAC+=(ethtool)
+PAC+=(acpi_call)
+PAC+=(throttled)
+
+# Install virtualization software"
+PAC+=(virtualbox)
+PAC+=(virtualbox-host-modules-arch)
+
+# Install all packages named before
+sudo pacman "${PAC[@]}"
+sudo aura   "${AUR[@]}"
+
+# Update all dependencies
+sudo pacman -Syu --noconfirm
+sudo aura   -Axu --noconfirm
 
 # If asdf is installed, update all plugins
-if [[ "$(command -v asdf)" != "" ]]
-then
-        asdf plugin update --all
-fi
-
-sudo aura -Ax --noconfirm --needed \
-     ngrok \
-     ruby-build \
-     android-sdk-platform-tools \
-     wakatime \
-     heroku-cli
-
-echo "Installing languages"
-sudo pacman -S --noconfirm --needed \
-     ruby \
-     python \
-     python2 \
-     nodejs \
-     go \
-     elixir \
-     rustup
-
-echo "Essential python packages"
-sudo pacman -S --noconfirm --needed \
-     flake8 \
-     python2-flake8
+command -v asdf >/dev/null && asdf plugin update --all
 
 echo "Preparing Rust language"
 rustup set profile complete
@@ -133,96 +202,6 @@ rustup default nightly
 rustup component add rustfmt-preview
 rustup component add clippy-preview
 cargo +nightly install racer -q
-
-echo "Docker"
-sudo pacman -S --noconfirm --needed \
-     docker \
-     docker-compose
-
-echo "Installing editors"
-sudo pacman -S --noconfirm --needed \
-     emacs \
-     aspell-pt \
-     aspell-en \
-     vim
-
-echo "Installing xfce4"
-sudo pacman -S --noconfirm --needed \
-     xfce4 \
-     xfce4-goodies \
-     mupdf \
-     file-roller \
-     gvfs
-
-sudo aura -Ax --noconfirm --needed \
-     sardi-icons \
-     xfce4-hardware-monitor-plugin
-#     xfwm-axiom-theme  # I'm using it but it's not working via AUR
-
-echo "Installing i3/sway"
-sudo pacman -S --noconfirm --needed \
-     i3-wm \
-     i3lock \
-     i3status \
-     sway \
-     rxvt-unicode
-
-sudo aura -Ax --noconfirm --needed i3blocks
-
-echo "Installing common software"
-sudo pacman -S --noconfirm --needed \
-     gimp \
-     inkscape \
-     texlive-bin \
-     dos2unix \
-     shotwell \
-     keybase \
-     audacity \
-     transmission-gtk \
-     peek
-
-sudo aura -Ax --noconfirm --needed \
-     dropbox \
-     zoom \
-     gdrive \
-     telegram-desktop
-
-echo "Installing tools and monitoring software"
-sudo pacman -S --noconfirm --needed bandwhich
-
-echo "Installing video software"
-sudo pacman -S --noconfirm --needed \
-     vlc \
-     obs-studio
-
-echo "Installing entretainment software"
-sudo pacman -S --noconfirm --needed steam
-
-echo "Installing browsers"
-sudo pacman -S --noconfirm --needed firefox chromium
-
-echo "Installing productivity related software"
-sudo aura -A  --noconfirm --needed \
-     rescuetime2 \
-     toggldesktop
-
-echo "Installing kernel flavors"
-sudo pacman -S --noconfirm --needed linux-zen linux-zen-headers
-sudo pacman -S --noconfirm --needed linux-headers
-
-echo "Laptop improvements (mostly thinkpad specifics)"
-sudo pacman -S --noconfirm --needed \
-     acpid \
-     tlp \
-     smartmontools \
-     ethtool \
-     acpi_call \
-     throttled
-
-echo "Install virtualization software"
-sudo pacman -S --noconfirm --needed \
-    virtualbox \
-    virtualbox-host-modules-arch
 
 echo "Activate needed services"
 sudo systemctl enable ntpd.service
