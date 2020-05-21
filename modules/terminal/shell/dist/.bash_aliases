@@ -48,6 +48,16 @@ alias gpu='git pull -p --rebase && git submodule update'
 
 
 ##############################################
+#    better default commands
+##############################################
+
+alias ls="exa"
+alias cat="bat"
+alias find="fd"
+alias grep="rg"
+
+
+##############################################
 #    Typos
 ##############################################
 

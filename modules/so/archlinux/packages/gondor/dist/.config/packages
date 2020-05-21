@@ -27,7 +27,7 @@ PAC+=(xf86-input-libinput)
 PAC+=(slim)
 PAC+=(systemd)
 PAC+=(openssh)
-PAC+=(sysstat)
+PAC+=(sysstat)                         # mostly for iostat
 
 # fonts
 PAC+=(ttf-dejavu)
@@ -69,9 +69,11 @@ PAC+=(xournalpp)
 PAC+=(hugo)
 
 # rust alternative to common commands
-PAC+=(exa)
-PAC+=(ripgrep)
-PAC+=(bat)
+PAC+=(exa)                             # alternative to ls
+PAC+=(ripgrep)                         # alternative to grep
+PAC+=(bat)                             # alternative to cat
+PAC+=(fd)                              # alternative to find
+PAC+=(sd)                              # alternative to sed
 
 AUR+=(starship)
 
