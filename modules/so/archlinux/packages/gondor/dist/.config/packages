@@ -57,16 +57,16 @@ PAC+=(pavucontrol)
 # basic tools"
 PAC+=(rsync)
 PAC+=(ntp)
-PAC+=(xsel)
-PAC+=(unzip)
-PAC+=(unrar)
+PAC+=(xsel)                            # add data to clipboard via command line
+PAC+=(unzip)                           # extract .zip files
+PAC+=(unrar)                           # extract .rar files
 PAC+=(imagemagick)
 PAC+=(bash-completion)
 PAC+=(alsa-utils)
-PAC+=(redshift)
-PAC+=(gnome-calculator)
-PAC+=(xournalpp)
-PAC+=(hugo)
+PAC+=(redshift)                        # makes the screen red at night
+PAC+=(gnome-calculator)                # default calculator for gnome
+PAC+=(xournalpp)                       # annotate PDFs
+PAC+=(hugo)                            # static pagde generator
 
 # rust alternative to common commands
 PAC+=(exa)                             # alternative to ls
