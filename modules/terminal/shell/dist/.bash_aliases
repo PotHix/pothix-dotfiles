@@ -15,8 +15,8 @@ alias tz="\
     TZ='Europe/London' date;\
     printf 'Porto:\t\t ';\
     TZ='Europe/Lisbon' date;\
-    printf 'Copenhagen:\t ';\
-    TZ='Europe/Copenhagen' date;\
+    printf 'Prague:\t\t ';\
+    TZ='Europe/Prague' date;\
 "
 
 
