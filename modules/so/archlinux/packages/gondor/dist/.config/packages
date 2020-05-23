@@ -126,9 +126,9 @@ AUR+=(xfce4-hardware-monitor-plug)
 PAC+=(i3-wm)
 PAC+=(i3lock)
 PAC+=(i3status)
+PAC+=(i3blocks)
 PAC+=(sway)
 PAC+=(rxvt-unicode)
-AUR+=(i3blocks)
 
 # common software
 PAC+=(gimp)
