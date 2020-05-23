@@ -3,6 +3,8 @@
 PAC=(-Syu --noconfirm --needed)
 AUR=(-Axu --noconfirm --needed)
 
+echo "-----> starting the update 😎"
+
 if [[ ! $(command -v aura) ]]
 then
     sudo pacman "${PAC[@]}" curl
@@ -15,16 +17,25 @@ then
     cd -
 fi
 
-# basic packages
+# xorg and graphical stuff to boot X
 PAC+=(xorg-server)                     # xorg-server
 PAC+=(xorg-xinit)                      # xorg-xinit
 PAC+=(xorg-xrdb)                       # xorg-xrdb
 PAC+=(xorg-xmodmap)                    # xorg-xmodmap
 PAC+=(xf86-input-libinput)             # xf86-input-libinput
-PAC+=(slim)                            # slim
+PAC+=(xorg-server-xephyr)              # helps testing lightdm on X
+PAC+=(lightdm)                         # lightdm
+PAC+=(lightdm-gtk-greeter)             # lightdm-gtk-greeter
+PAC+=(accountsservice)                 # accountsservice
+
+# required base software
 PAC+=(systemd)                         # systemd
-PAC+=(openssh)                         # openssh
-PAC+=(sysstat)                         # mostly for iostat
+PAC+=(ntp)                             # keep date and time in sync
+
+# kernel flavors
+PAC+=(linux-zen)                       # linux-zen
+PAC+=(linux-zen-headers)               # linux-zen-headers
+PAC+=(linux-headers)                   # linux-headers
 
 # fonts
 PAC+=(ttf-dejavu)                      # ttf-dejavu
@@ -35,35 +46,55 @@ PAC+=(xorg-fonts-misc)                 # xorg-fonts-misc
 PAC+=(ttf-nerd-fonts-symbols)          # ttf-nerd-fonts-symbols
 AUR+=(ttf-font-awesome-4)              # ttf-font-awesome-4
 
-# display manager packages
-PAC+=(xorg-server-xephyr)              # helps testing lightdm on X
-PAC+=(lightdm)                         # lightdm
-PAC+=(lightdm-gtk-greeter)             # lightdm-gtk-greeter
-PAC+=(accountsservice)                 # accountsservice
-
 # wireless packages
 PAC+=(wpa_supplicant)                  # wpa_supplicant
 PAC+=(netctl)                          # netctl
 PAC+=(networkmanager)                  # networkmanager
 PAC+=(network-manager-applet)          # network-manager-applet
 
-# sound packages
+# basic sound packages
 PAC+=(pulseaudio)                      # pulseaudio
 PAC+=(pavucontrol)                     # pavucontrol
+PAC+=(alsa-utils)                      # alsa-utils
 
-# basic tools"
-PAC+=(rsync)                           # rsync
-PAC+=(ntp)                             # ntp
+# development tools
+PAC+=(base-devel)                      # compilers and stuff
+PAC+=(git)                             # git
+PAC+=(jq)                              # parse json from the command line
+PAC+=(tmux)                            # multiple terminals in one tab
+AUR+=(ngrok)                           # expose the local env to the internetz
+AUR+=(android-sdk-platform-tools)      # adb + fastboot to play with android roms
+AUR+=(wakatime)                        # wakatime
+AUR+=(heroku-cli)                      # heroku-cli
+PAC+=(flake8)                          # python syntax checker
+PAC+=(docker)                          # docker
+PAC+=(docker-compose)                  # docker-compose
+
+# terminal enhancements
+PAC+=(bash-completion)                 # bash-completion
+AUR+=(starship)                        # shell line
+
+# image apps
+PAC+=(imagemagick)                     # low level image manipulation
+PAC+=(gimp)                            # image manipulation
+PAC+=(inkscape)                        # vector drawing
+PAC+=(shotwell)                        # photo management
+PAC+=(peek)                            # gif generator
+
+# audio/video apps
+PAC+=(vlc)                             # video player
+PAC+=(obs-studio)                      # video recording and streaming
+PAC+=(audacity)                        # audio mixer
+
+# utilitaries
 PAC+=(xsel)                            # add data to clipboard via command line
 PAC+=(unzip)                           # extract .zip files
 PAC+=(unrar)                           # extract .rar files
-PAC+=(imagemagick)                     # imagemagick
-PAC+=(bash-completion)                 # bash-completion
-PAC+=(alsa-utils)                      # alsa-utils
-PAC+=(redshift)                        # makes the screen red at night
 PAC+=(gnome-calculator)                # default calculator for gnome
 PAC+=(xournalpp)                       # annotate PDFs
 PAC+=(hugo)                            # static pagde generator
+PAC+=(texlive-bin)                     # compile TeX files
+PAC+=(dos2unix)                        # convert files from windows to Linux format
 
 # rust alternative to common commands
 PAC+=(exa)                             # alternative to ls
@@ -72,51 +103,27 @@ PAC+=(bat)                             # alternative to cat
 PAC+=(fd)                              # alternative to find
 PAC+=(sd)                              # alternative to sed
 
-AUR+=(starship)
-
-# development tools
-PAC+=(base-devel)                      # base-devel
-PAC+=(git)                             # git
-PAC+=(jq)                              # jq
-PAC+=(tmux)                            # tmux
-AUR+=(ngrok)                           # ngrok
-AUR+=(ruby-build)                      # ruby-build
-AUR+=(android-sdk-platform-tools)      # android-sdk-platform-tools
-AUR+=(wakatime)                        # wakatime
-AUR+=(heroku-cli)                      # heroku-cli
-
-# languages
-PAC+=(ruby)                            # system version of ruby (dep for packages)
+# languages and language managers
 PAC+=(python)                          # system version of python (dep for packages)
 PAC+=(python2)                         # system version of python2 (dep for packages)
 PAC+=(nodejs)                          # system version of nodejs (dep for packages)
-PAC+=(go)                              # system version of go (dep for packages)
-PAC+=(elixir)                          # system version of elixir (dep for packages)
 AUR+=(asdf-vm)                         # default way to install programming languages
-
-# python packages
-PAC+=(flake8)                          # flake8
-
-# docker
-PAC+=(docker)                          # docker
-PAC+=(docker-compose)                  # docker-compose
 
 # editors
 PAC+=(emacs)                           # emacs
-PAC+=(aspell-pt)                       # aspell-pt
-PAC+=(aspell-en)                       # aspell-en
 PAC+=(vim)                             # vim
+PAC+=(aspell-pt)                       # pt dictionary
+PAC+=(aspell-en)                       # en dictionary
 
 # xfce4
-PAC+=(xfce4)                           # xfce4
-PAC+=(xfce4-goodies)                   # xfce4-goodies
-PAC+=(mupdf)                           # mupdf
-PAC+=(file-roller)                     # file-roller
-PAC+=(gvfs)                            # gvfs
-
-AUR+=(sardi-icons)                     # sardi-icons
+PAC+=(xfce4)                           # xfce4 window manager
+PAC+=(xfce4-goodies)                   # xfce4 additional apps
+PAC+=(file-roller)                     # archive manager for compressed files
+PAC+=(gvfs)                            # network functionality for file managers
+AUR+=(sardi-icons)                     # sardi icons
+AUR+=(newaita-icons-git)               # newaita icons
 AUR+=(xfce4-hardware-monitor-plug)     # xfce4-hardware-monitor-plug
-# AUR+=(xfwm-axiom-theme)  # I'm using it but it's not working via AUR
+# AUR+=(xfwm-axiom-theme)              # axiomd theme. Not reliable to install via AUR
 
 # i3/sway
 PAC+=(i3-wm)                           # i3-wm
@@ -126,28 +133,14 @@ PAC+=(i3blocks)                        # i3blocks
 PAC+=(sway)                            # sway
 PAC+=(rxvt-unicode)                    # rxvt-unicode
 
-# common software
-PAC+=(gimp)                            # gimp
-PAC+=(inkscape)                        # inkscape
-PAC+=(texlive-bin)                     # texlive-bin
-PAC+=(dos2unix)                        # dos2unix
-PAC+=(shotwell)                        # shotwell
+# communication
 PAC+=(keybase)                         # keybase
-PAC+=(audacity)                        # audacity
-PAC+=(transmission-gtk)                # transmission-gtk
-PAC+=(peek)                            # peek
-
-AUR+=(dropbox)                         # dropbox
-AUR+=(zoom)                            # zoom
-AUR+=(gdrive)                          # gdrive
 AUR+=(telegram-desktop)                # telegram-desktop
+AUR+=(zoom)                            # zoom
 
-# tools and monitoring software
-PAC+=(bandwhich)                       # bandwhich
-
-# video software
-PAC+=(vlc)                             # vlc
-PAC+=(obs-studio)                      # obs-studio
+# file sharing
+AUR+=(dropbox)                         # dropbox
+AUR+=(gdrive)                          # gdrive
 
 # entretainment software
 PAC+=(steam)                           # steam
@@ -157,35 +150,49 @@ PAC+=(firefox)                         # firefox
 PAC+=(chromium)                        # chromium
 
 # productivity related software
+PAC+=(redshift)                        # makes the screen red at night
 AUR+=(rescuetime2)                     # rescuetime2
 AUR+=(toggldesktop)                    # toggldesktop
 
-# kernel flavors
-PAC+=(linux-zen)                       # linux-zen
-PAC+=(linux-zen-headers)               # linux-zen-headers
-PAC+=(linux-headers)                   # linux-headers
+# networking tools and monitoring software
+PAC+=(bandwhich)                       # bandwhich
+PAC+=(sysstat)                         # mostly for iostat
+PAC+=(openssh)                         # openssh
 
-# Laptop improvements (mostly thinkpad specifics)"
+# laptop improvements (mostly thinkpad specifics)
 PAC+=(acpid)                           # acpid
-PAC+=(tlp)                             # tlp
-PAC+=(smartmontools)                   # smartmontools
-PAC+=(ethtool)                         # ethtool
-PAC+=(acpi_call)                       # acpi_call
-PAC+=(throttled)                       # throttled
+PAC+=(tlp)                             # advanced power management
+PAC+=(smartmontools)                   # disk monitoring tool
+PAC+=(ethtool)                         # tool to read and modify network interfaces
+PAC+=(acpi_call)                       # improve battery usage on thinkpads (recommended by tlp)
+PAC+=(throttled)                       # avoid thermal throttling on thinkpad
 
-# Install virtualization software"
+# install virtualization software
 PAC+=(virtualbox)                      # virtualbox
 PAC+=(virtualbox-host-modules-arch)    # virtualbox-host-modules-arch
+PAC+=(qemu)                            # machine emulator and virtualizer
+PAC+=(virt-manager)                    # libvirt + virt-manager
 
-# Install all packages named before
-sudo pacman "${PAC[@]}"
-sudo aura   "${AUR[@]}"
+# update all installed packages and install the ones mentioned above
+sudo pacman "${PAC[@]}" 2>/dev/null
 
-# Update all dependencies
-sudo pacman -Syu --noconfirm
-sudo aura   -Axu --noconfirm
+echo "-----> checking aura packages 👻"
+sudo aura   "${AUR[@]}" 2>/dev/null
 
-# If asdf is installed, update all plugins
+# activate essential services
+SVC=(ntpd.service)                     # ntp service
+SVC+=(NetworkManager.service)          # network manager service
+SVC+=(acpid.service)                   # acpi service
+SVC+=(nscd.service)                    # domain name caching service
+SVC+=(lightdm.service)                 # login manager service
+SVC+=(lenovo_fix.service)              # throttled service
+SVC+=(tlp.service)                     # battery optimizing service
+
+echo "-----> activating services 💪"
+sudo systemctl enable "${SVC[@]}"
+
+echo "-----> installing programming languages 💻"
+# install and/or update all programming languages
 asdf plugin add elixir
 asdf plugin add golang
 asdf plugin add nodejs
@@ -222,12 +229,5 @@ asdf install rust nightly
 asdf global rust nightly
 cargo +nightly install racer -q
 
-echo "Activate needed services"
-sudo systemctl enable ntpd.service
-sudo systemctl enable NetworkManager.service
-sudo systemctl enable acpid.service
-sudo systemctl enable nscd.service
-sudo systemctl enable lightdm.service
-sudo systemctl enable lenovo_fix.service
-
+echo "-----> done! ✨"
 exit 0
