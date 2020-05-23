@@ -52,8 +52,8 @@ PAC+=(pulseaudio)                      # pulseaudio
 PAC+=(pavucontrol)                     # pavucontrol
 
 # basic tools"
-PAC+=(rsync)                           #rsync
-PAC+=(ntp)                             #ntp
+PAC+=(rsync)                           # rsync
+PAC+=(ntp)                             # ntp
 PAC+=(xsel)                            # add data to clipboard via command line
 PAC+=(unzip)                           # extract .zip files
 PAC+=(unrar)                           # extract .rar files
@@ -79,7 +79,6 @@ PAC+=(base-devel)                      # base-devel
 PAC+=(git)                             # git
 PAC+=(jq)                              # jq
 PAC+=(tmux)                            # tmux
-
 AUR+=(ngrok)                           # ngrok
 AUR+=(ruby-build)                      # ruby-build
 AUR+=(android-sdk-platform-tools)      # android-sdk-platform-tools
@@ -87,13 +86,13 @@ AUR+=(wakatime)                        # wakatime
 AUR+=(heroku-cli)                      # heroku-cli
 
 # languages
-PAC+=(ruby)                            # ruby
-PAC+=(python)                          # python
-PAC+=(python2)                         # python2
-PAC+=(nodejs)                          # nodejs
-PAC+=(go)                              # go
-PAC+=(elixir)                          # elixir
-PAC+=(rustup)                          # rustup
+PAC+=(ruby)                            # system version of ruby (dep for packages)
+PAC+=(python)                          # system version of python (dep for packages)
+PAC+=(python2)                         # system version of python2 (dep for packages)
+PAC+=(nodejs)                          # system version of nodejs (dep for packages)
+PAC+=(go)                              # system version of go (dep for packages)
+PAC+=(elixir)                          # system version of elixir (dep for packages)
+AUR+=(asdf-vm)                         # default way to install programming languages
 
 # python packages
 PAC+=(flake8)                          # flake8
@@ -187,19 +186,40 @@ sudo pacman -Syu --noconfirm
 sudo aura   -Axu --noconfirm
 
 # If asdf is installed, update all plugins
-command -v asdf >/dev/null && asdf plugin update --all
+asdf plugin add elixir
+asdf plugin add golang
+asdf plugin add nodejs
+asdf plugin add python
+asdf plugin add ruby
+asdf plugin add rust
 
-echo "Preparing Rust language"
-rustup set profile complete
-rustup install stable
-rustup default stable
-rustup component add rustfmt-preview
-rustup component add clippy-preview
+asdf plugin update --all
 
-rustup install nightly
-rustup default nightly
-rustup component add rustfmt-preview
-rustup component add clippy-preview
+LATEST_ELIXIR=$(asdf list all elixir | rg "^\d+\.\d+\.\d+-otp.*$" | tail -n 1)
+LATEST_GOLANG=$(asdf list all golang | rg "^\d+\.\d+\.\d+$" | tail -n 1)
+LATEST_NODEJS=$(asdf list all nodejs | rg "^\d+\.\d+\.\d+$" | tail -n 1)
+LATEST_PYTHON=$(asdf list all python | rg "^\d+\.\d+\.\d+$" | tail -n 1)
+LATEST_RUBY=$(asdf list all ruby | rg "^\d+\.\d+\.\d+$" | tail -n 1)
+
+asdf install elixir $LATEST_ELIXIR
+asdf global elixir $LATEST_ELIXIR
+
+asdf install golang $LATEST_GOLANG
+asdf global golang $LATEST_GOLANG
+
+sh ~/.asdf/plugins/nodejs/bin/import-release-team-keyring 2>/dev/null
+asdf install nodejs $LATEST_NODEJS
+asdf global nodejs $LATEST_NODEJS
+
+asdf install python $LATEST_PYTHON
+asdf global python $LATEST_PYTHON
+
+asdf install ruby $LATEST_RUBY
+asdf global ruby $LATEST_RUBY
+
+asdf install rust stable
+asdf install rust nightly
+asdf global rust nightly
 cargo +nightly install racer -q
 
 echo "Activate needed services"

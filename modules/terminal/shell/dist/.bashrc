@@ -87,8 +87,7 @@ iconver (){
 ########################################
 
 # asdf-vm
-source $HOME/.asdf/asdf.sh
-source $HOME/.asdf/completions/asdf.bash
+source /opt/asdf-vm/asdf.sh
 
 # Rust
 export PATH=$HOME/.cargo/bin:$PATH
