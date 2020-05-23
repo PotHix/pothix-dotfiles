@@ -1,15 +1,12 @@
 #!/bin/sh
 
-PAC=(-S --noconfirm --needed)
-AUR=(-Ax --noconfirm --needed)
-
-sudo pacman -Sy --noconfirm
-
-# aura-bin dependency
-sudo pacman "${PAC[@]}" curl
+PAC=(-Syu --noconfirm --needed)
+AUR=(-Axu --noconfirm --needed)
 
 if [[ ! $(command -v aura) ]]
 then
+    sudo pacman "${PAC[@]}" curl
+
     echo "Installing Aura"
     cd /tmp
     curl https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=aura-bin > PKGBUILD
@@ -19,50 +16,50 @@ then
 fi
 
 # basic packages
-PAC+=(xorg-server)
-PAC+=(xorg-xinit)
-PAC+=(xorg-xrdb)
-PAC+=(xorg-xmodmap)
-PAC+=(xf86-input-libinput)
-PAC+=(slim)
-PAC+=(systemd)
-PAC+=(openssh)
+PAC+=(xorg-server)                     # xorg-server
+PAC+=(xorg-xinit)                      # xorg-xinit
+PAC+=(xorg-xrdb)                       # xorg-xrdb
+PAC+=(xorg-xmodmap)                    # xorg-xmodmap
+PAC+=(xf86-input-libinput)             # xf86-input-libinput
+PAC+=(slim)                            # slim
+PAC+=(systemd)                         # systemd
+PAC+=(openssh)                         # openssh
 PAC+=(sysstat)                         # mostly for iostat
 
 # fonts
-PAC+=(ttf-dejavu)
-PAC+=(terminus-font)
-PAC+=(noto-fonts-cjk)
-PAC+=(noto-fonts-emoji)
-PAC+=(xorg-fonts-misc)
-PAC+=(ttf-nerd-fonts-symbols)
-AUR+=(ttf-font-awesome-4)
+PAC+=(ttf-dejavu)                      # ttf-dejavu
+PAC+=(terminus-font)                   # terminus-font
+PAC+=(noto-fonts-cjk)                  # noto-fonts-cjk
+PAC+=(noto-fonts-emoji)                # noto-fonts-emoji
+PAC+=(xorg-fonts-misc)                 # xorg-fonts-misc
+PAC+=(ttf-nerd-fonts-symbols)          # ttf-nerd-fonts-symbols
+AUR+=(ttf-font-awesome-4)              # ttf-font-awesome-4
 
 # display manager packages
-PAC+=(xorg-server-xephyr) # helps testing lightdm on X
-PAC+=(lightdm)
-PAC+=(lightdm-gtk-greeter)
-PAC+=(accountsservice)
+PAC+=(xorg-server-xephyr)              # helps testing lightdm on X
+PAC+=(lightdm)                         # lightdm
+PAC+=(lightdm-gtk-greeter)             # lightdm-gtk-greeter
+PAC+=(accountsservice)                 # accountsservice
 
 # wireless packages
-PAC+=(wpa_supplicant)
-PAC+=(netctl)
-PAC+=(networkmanager)
-PAC+=(network-manager-applet)
+PAC+=(wpa_supplicant)                  # wpa_supplicant
+PAC+=(netctl)                          # netctl
+PAC+=(networkmanager)                  # networkmanager
+PAC+=(network-manager-applet)          # network-manager-applet
 
 # sound packages
-PAC+=(pulseaudio)
-PAC+=(pavucontrol)
+PAC+=(pulseaudio)                      # pulseaudio
+PAC+=(pavucontrol)                     # pavucontrol
 
 # basic tools"
-PAC+=(rsync)
-PAC+=(ntp)
+PAC+=(rsync)                           #rsync
+PAC+=(ntp)                             #ntp
 PAC+=(xsel)                            # add data to clipboard via command line
 PAC+=(unzip)                           # extract .zip files
 PAC+=(unrar)                           # extract .rar files
-PAC+=(imagemagick)
-PAC+=(bash-completion)
-PAC+=(alsa-utils)
+PAC+=(imagemagick)                     # imagemagick
+PAC+=(bash-completion)                 # bash-completion
+PAC+=(alsa-utils)                      # alsa-utils
 PAC+=(redshift)                        # makes the screen red at night
 PAC+=(gnome-calculator)                # default calculator for gnome
 PAC+=(xournalpp)                       # annotate PDFs
@@ -78,108 +75,108 @@ PAC+=(sd)                              # alternative to sed
 AUR+=(starship)
 
 # development tools
-PAC+=(base-devel)
-PAC+=(git)
-PAC+=(jq)
-PAC+=(tmux)
+PAC+=(base-devel)                      # base-devel
+PAC+=(git)                             # git
+PAC+=(jq)                              # jq
+PAC+=(tmux)                            # tmux
 
-AUR+=(ngrok)
-AUR+=(ruby-build)
-AUR+=(android-sdk-platform-tools)
-AUR+=(wakatime)
-AUR+=(heroku-cli)
+AUR+=(ngrok)                           # ngrok
+AUR+=(ruby-build)                      # ruby-build
+AUR+=(android-sdk-platform-tools)      # android-sdk-platform-tools
+AUR+=(wakatime)                        # wakatime
+AUR+=(heroku-cli)                      # heroku-cli
 
 # languages
-PAC+=(ruby)
-PAC+=(python)
-PAC+=(python2)
-PAC+=(nodejs)
-PAC+=(go)
-PAC+=(elixir)
-PAC+=(rustup)
+PAC+=(ruby)                            # ruby
+PAC+=(python)                          # python
+PAC+=(python2)                         # python2
+PAC+=(nodejs)                          # nodejs
+PAC+=(go)                              # go
+PAC+=(elixir)                          # elixir
+PAC+=(rustup)                          # rustup
 
 # python packages
-PAC+=(flake8)
+PAC+=(flake8)                          # flake8
 
 # docker
-PAC+=(docker)
-PAC+=(docker-compose)
+PAC+=(docker)                          # docker
+PAC+=(docker-compose)                  # docker-compose
 
 # editors
-PAC+=(emacs)
-PAC+=(aspell-pt)
-PAC+=(aspell-en)
-PAC+=(vim)
+PAC+=(emacs)                           # emacs
+PAC+=(aspell-pt)                       # aspell-pt
+PAC+=(aspell-en)                       # aspell-en
+PAC+=(vim)                             # vim
 
 # xfce4
-PAC+=(xfce4)
-PAC+=(xfce4-goodies)
-PAC+=(mupdf)
-PAC+=(file-roller)
-PAC+=(gvfs)
+PAC+=(xfce4)                           # xfce4
+PAC+=(xfce4-goodies)                   # xfce4-goodies
+PAC+=(mupdf)                           # mupdf
+PAC+=(file-roller)                     # file-roller
+PAC+=(gvfs)                            # gvfs
 
-AUR+=(sardi-icons)
-AUR+=(xfce4-hardware-monitor-plug)
+AUR+=(sardi-icons)                     # sardi-icons
+AUR+=(xfce4-hardware-monitor-plug)     # xfce4-hardware-monitor-plug
 # AUR+=(xfwm-axiom-theme)  # I'm using it but it's not working via AUR
 
 # i3/sway
-PAC+=(i3-wm)
-PAC+=(i3lock)
-PAC+=(i3status)
-PAC+=(i3blocks)
-PAC+=(sway)
-PAC+=(rxvt-unicode)
+PAC+=(i3-wm)                           # i3-wm
+PAC+=(i3lock)                          # i3lock
+PAC+=(i3status)                        # i3status
+PAC+=(i3blocks)                        # i3blocks
+PAC+=(sway)                            # sway
+PAC+=(rxvt-unicode)                    # rxvt-unicode
 
 # common software
-PAC+=(gimp)
-PAC+=(inkscape)
-PAC+=(texlive-bin)
-PAC+=(dos2unix)
-PAC+=(shotwell)
-PAC+=(keybase)
-PAC+=(audacity)
-PAC+=(transmission-gtk)
-PAC+=(peek)
+PAC+=(gimp)                            # gimp
+PAC+=(inkscape)                        # inkscape
+PAC+=(texlive-bin)                     # texlive-bin
+PAC+=(dos2unix)                        # dos2unix
+PAC+=(shotwell)                        # shotwell
+PAC+=(keybase)                         # keybase
+PAC+=(audacity)                        # audacity
+PAC+=(transmission-gtk)                # transmission-gtk
+PAC+=(peek)                            # peek
 
-AUR+=(dropbox)
-AUR+=(zoom)
-AUR+=(gdrive)
-AUR+=(telegram-desktop)
+AUR+=(dropbox)                         # dropbox
+AUR+=(zoom)                            # zoom
+AUR+=(gdrive)                          # gdrive
+AUR+=(telegram-desktop)                # telegram-desktop
 
 # tools and monitoring software
-PAC+=(bandwhich)
+PAC+=(bandwhich)                       # bandwhich
 
 # video software
-PAC+=(vlc)
-PAC+=(obs-studio)
+PAC+=(vlc)                             # vlc
+PAC+=(obs-studio)                      # obs-studio
 
 # entretainment software
-PAC+=(steam)
+PAC+=(steam)                           # steam
 
 # browsers
-PAC+=(firefox)
-PAC+=(chromium)
+PAC+=(firefox)                         # firefox
+PAC+=(chromium)                        # chromium
 
 # productivity related software
-AUR+=(rescuetime2)
-AUR+=(toggldesktop)
+AUR+=(rescuetime2)                     # rescuetime2
+AUR+=(toggldesktop)                    # toggldesktop
 
 # kernel flavors
-PAC+=(linux-zen)
-PAC+=(linux-zen-headers)
-PAC+=(linux-headers)
+PAC+=(linux-zen)                       # linux-zen
+PAC+=(linux-zen-headers)               # linux-zen-headers
+PAC+=(linux-headers)                   # linux-headers
 
 # Laptop improvements (mostly thinkpad specifics)"
-PAC+=(acpid)
-PAC+=(tlp)
-PAC+=(smartmontools)
-PAC+=(ethtool)
-PAC+=(acpi_call)
-PAC+=(throttled)
+PAC+=(acpid)                           # acpid
+PAC+=(tlp)                             # tlp
+PAC+=(smartmontools)                   # smartmontools
+PAC+=(ethtool)                         # ethtool
+PAC+=(acpi_call)                       # acpi_call
+PAC+=(throttled)                       # throttled
 
 # Install virtualization software"
-PAC+=(virtualbox)
-PAC+=(virtualbox-host-modules-arch)
+PAC+=(virtualbox)                      # virtualbox
+PAC+=(virtualbox-host-modules-arch)    # virtualbox-host-modules-arch
 
 # Install all packages named before
 sudo pacman "${PAC[@]}"
