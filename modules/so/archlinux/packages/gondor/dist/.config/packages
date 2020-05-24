@@ -169,9 +169,11 @@ PAC+=(throttled)                       # avoid thermal throttling on thinkpad
 
 # install virtualization software
 PAC+=(virtualbox)                      # virtualbox
-PAC+=(virtualbox-host-modules-arch)    # virtualbox-host-modules-arch
+PAC+=(virtualbox-host-dkms)            # virtualbox modules source (conflicts with virtualbox-host-modules-arch)
 PAC+=(qemu)                            # machine emulator and virtualizer
 PAC+=(virt-manager)                    # libvirt + virt-manager
+PAC+=(firewalld)                       # required to boot the network for qemu
+PAC+=(dnsmasq)                         # required to boot the network for qemu
 
 # update all installed packages and install the ones mentioned above
 sudo pacman "${PAC[@]}" 2>/dev/null
