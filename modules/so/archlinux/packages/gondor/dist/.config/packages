@@ -187,6 +187,7 @@ SVC+=(nscd.service)                    # domain name caching service
 SVC+=(lightdm.service)                 # login manager service
 SVC+=(lenovo_fix.service)              # throttled service
 SVC+=(tlp.service)                     # battery optimizing service
+SVC+=(libvirtd.service)                # virtualization daemon from libvirt
 
 echo "-----> activating services 💪"
 sudo systemctl enable "${SVC[@]}"
