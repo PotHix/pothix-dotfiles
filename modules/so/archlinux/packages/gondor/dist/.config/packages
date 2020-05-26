@@ -122,7 +122,6 @@ PAC+=(file-roller)                     # archive manager for compressed files
 PAC+=(gvfs)                            # network functionality for file managers
 AUR+=(sardi-icons)                     # sardi icons
 AUR+=(newaita-icons-git)               # newaita icons
-AUR+=(xfce4-hardware-monitor-plug)     # xfce4-hardware-monitor-plug
 # AUR+=(xfwm-axiom-theme)              # axiomd theme. Not reliable to install via AUR
 
 # i3/sway
