@@ -49,6 +49,7 @@
       <property name="&lt;Shift&gt;&lt;Super&gt;p" type="string" value="xfconf-query -c xsettings -p /Xft/DPI -s 130"/>
       <property name="&lt;Primary&gt;&lt;Super&gt;p" type="string" value="xfconf-query -c xsettings -p /Xft/DPI -s -1"/>
       <property name="&lt;Super&gt;t" type="string" value="/bin/telegram-desktop"/>
+      <property name="&lt;Super&gt;d" type="string" value="/bin/discord"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -125,7 +126,6 @@
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Left" type="string" value="move_window_left_key"/>
       <property name="&lt;Alt&gt;F6" type="string" value="stick_window_key"/>
       <property name="&lt;Alt&gt;F12" type="string" value="above_key"/>
-      <property name="&lt;Alt&gt;F9" type="string" value="hide_window_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Down" type="string" value="down_workspace_key"/>
       <property name="Escape" type="string" value="cancel_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;End" type="string" value="move_window_next_workspace_key"/>
@@ -167,6 +167,7 @@
       <property name="&lt;Shift&gt;&lt;Super&gt;e" type="string" value="move_window_workspace_3_key"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;i" type="string" value="move_window_workspace_4_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;5" type="string" value="move_window_workspace_5_key"/>
+      <property name="&lt;Super&gt;k" type="string" value="hide_window_key"/>
     </property>
   </property>
   <property name="providers" type="array">
