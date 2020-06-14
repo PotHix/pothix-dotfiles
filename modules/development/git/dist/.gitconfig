@@ -3,17 +3,20 @@
 	email = pothix@pothix.com
 
 [alias]
+	a = add -A
+	all = "!f(){ find -type d -name .git -prune | xargs -t -I{} git -C {}/../ $@; }; f"
 	br = branch
+	ca = commit --amend
 	ci = commit
 	co = checkout
+	d = diff
+	l = log
+	master = checkout master
+	pom = pull --rebase origin master
 	rank = shortlog -sn --no-merges
 	st = status
-	list-stable = !git tags | grep stable | sort -t . -k 1.8,1 -k 2,2 -k 3,3 -n
-	list-testing = !git tags | grep testing | sort -t . -k 1.9,1 -k 2,2 -k 3,3 -n
-	tags = !git for-each-ref refs/tags/* --format='%(refname)' --sort='authordate' | sed 's/refs\\/tags\\///g'
-	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue%an%Creset' --abbrev-commit --date=relative
 	today = !git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --since=$(date --rfc-3339=date --date=yesterday)
-	all = "!f(){ find -type d -name .git -prune | xargs -t -I{} git -C {}/../ $@; }; f"
+	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue%an%Creset' --abbrev-commit --date=relative
 	unadd = reset HEAD --
 	autoremove = "!f() { \
 		whitelist=\"master|staging|dev|legacy\"; \
@@ -69,12 +72,6 @@
 
 [github]
 	user = PotHix
-
-[url "git://gitorious.org/"]
-	insteadOf = gitorious:
-
-[url "git@gitorious.org:"]
-	pushInsteadOf = gitorious:
 
 [url "git://github.com/"]
 	insteadOf = github:

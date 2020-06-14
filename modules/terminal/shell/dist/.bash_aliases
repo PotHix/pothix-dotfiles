@@ -32,6 +32,7 @@ alias removelog='find * -name "*.log" -delete'
 #    Git
 ##############################################
 
+alias g='git'
 alias ga='git add'
 alias gb='git branch -a'
 alias gd='git diff'
