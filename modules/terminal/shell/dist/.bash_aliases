@@ -33,6 +33,7 @@ alias removelog='find * -name "*.log" -delete'
 ##############################################
 
 alias g='git'
+__git_complete g _git
 alias ga='git add'
 alias gb='git branch -a'
 alias gd='git diff'
@@ -40,6 +41,7 @@ alias gu='git push origin HEAD'
 alias gi='git commit'
 alias gl='git log'
 alias gco='git checkout'
+__git_complete gco _git_checkout
 alias gp='git pull -p --rebase'
 alias gra='git rebase --abort'
 alias grc='git rebase --continue'
@@ -49,7 +51,7 @@ alias gpu='git pull -p --rebase && git submodule update'
 
 
 ##############################################
-#    better default commands
+#    Better default commands powered by Rust
 ##############################################
 
 alias ls="exa"
