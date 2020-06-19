@@ -235,7 +235,6 @@ asdf global ruby $LATEST_RUBY
 asdf install rust stable
 asdf install rust nightly
 asdf global rust nightly
-cargo +nightly install racer -q
 
 echo "-----> done! ✨"
 exit 0
