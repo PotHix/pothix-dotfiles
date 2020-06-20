@@ -7,6 +7,7 @@
 	all = "!f(){ find -type d -name .git -prune | xargs -t -I{} git -C {}/../ $@; }; f"
 	br = branch
 	ca = commit --amend
+	cc = "!git commit --amend -m "
 	ci = commit
 	co = checkout
 	d = diff
