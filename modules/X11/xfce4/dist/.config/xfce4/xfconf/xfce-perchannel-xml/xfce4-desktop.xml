@@ -163,6 +163,34 @@
           <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-teal.jpg"/>
         </property>
       </property>
+      <property name="monitorDP-1-1" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/home/pothix/Pictures/wallpaper.png"/>
+          <property name="rgba1" type="array">
+            <value type="double" value="0.000000"/>
+            <value type="double" value="0.000000"/>
+            <value type="double" value="0.000000"/>
+            <value type="double" value="1.000000"/>
+          </property>
+        </property>
+        <property name="workspace1" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-stripes.png"/>
+        </property>
+        <property name="workspace2" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-stripes.png"/>
+        </property>
+        <property name="workspace3" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-stripes.png"/>
+        </property>
+      </property>
     </property>
   </property>
   <property name="last" type="empty">
