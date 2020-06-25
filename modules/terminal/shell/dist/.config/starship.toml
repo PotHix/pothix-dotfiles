@@ -8,6 +8,7 @@ symbol = "➜"     # The "symbol" segment is being set to "➜"
 disabled = true
 
 [aws]
+disabled = true
 symbol = " "
 
 [battery]
@@ -18,7 +19,7 @@ discharging_symbol = ""
 [conda]
 symbol = " "
 
-[docker]
+[docker_context]
 symbol = " "
 
 [elixir]
@@ -29,6 +30,9 @@ symbol = " "
 
 [git_branch]
 symbol = ""
+
+[git_commit]
+disabled = true
 
 [golang]
 symbol = " "
