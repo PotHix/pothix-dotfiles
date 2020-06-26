@@ -46,14 +46,19 @@ PAC+=(xorg-fonts-misc)                 # xorg-fonts-misc
 PAC+=(ttf-nerd-fonts-symbols)          # ttf-nerd-fonts-symbols
 AUR+=(ttf-font-awesome-4)              # ttf-font-awesome-4
 
-# wireless packages
-PAC+=(wpa_supplicant)                  # wpa_supplicant
-PAC+=(netctl)                          # netctl
+# connectivity packages
+PAC+=(wpa_supplicant)                  # wpa_supplicant for Wifi
+PAC+=(netctl)                          # netctl as an alternative to networkmanager
 PAC+=(networkmanager)                  # networkmanager
 PAC+=(network-manager-applet)          # network-manager-applet
+PAC+=(bluez)                           # for bluetooth
+PAC+=(bluez-utils)                     # tools for bluetooth
+PAC+=(blueman)                         # GUI for bluetooth
+PAC+=(bluez)                           # netctl
 
 # basic sound packages
 PAC+=(pulseaudio)                      # pulseaudio
+PAC+=(pulseaudio-bluetooth)            # for bluetooth headphones
 PAC+=(pavucontrol)                     # pavucontrol
 PAC+=(alsa-utils)                      # alsa-utils
 
@@ -191,6 +196,7 @@ SVC+=(lightdm.service)                 # login manager service
 SVC+=(lenovo_fix.service)              # throttled service
 SVC+=(tlp.service)                     # battery optimizing service
 SVC+=(libvirtd.service)                # virtualization daemon from libvirt
+SVC+=(bluetooth.service)               # to be able to use bluetooth
 
 echo "-----> activating services 💪"
 sudo systemctl enable "${SVC[@]}"
