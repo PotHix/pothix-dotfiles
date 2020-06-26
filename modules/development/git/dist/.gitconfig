@@ -4,40 +4,26 @@
 
 [alias]
 	a = add -A
+	b = branch -a
+	d = diff
+	i = commit
+	l = log
+	p = pull -p --rebase
+	s = status --untracked-files
+	u = push origin HEAD
+
 	all = "!f(){ find -type d -name .git -prune | xargs -t -I{} git -C {}/../ $@; }; f"
-	br = branch
 	ca = "!git add -A && git commit --amend"
 	cc = commit --amend -m
-	ci = commit
 	co = checkout
-	d = diff
-	l = log
 	master = checkout master
-	pom = pull --rebase origin master
+	pu = "!git pull -p --rebase && git submodule update"
+	ra = rebase --abort'
 	rank = shortlog -sn --no-merges
-	st = status
-	today = !git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --since=$(date --rfc-3339=date --date=yesterday)
+	rc = rebase --continue'
+	today = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --since=$(date --rfc-3339=date --date=yesterday)
 	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue%an%Creset' --abbrev-commit --date=relative
 	unadd = reset HEAD --
-	autoremove = "!f() { \
-		whitelist=\"master|staging|dev|legacy\"; \
-		git fetch --prune; \
-		if [ -z \"$1\" ]; then \
-			list=$(git branch --merged | egrep -v \"(^\\*|$whitelist)\") && \
-			cmd='echo \"$list\" | xargs -n 1 git branch -d'; \
-		else \
-			list=$(git branch -r --merged | grep \"$1\" | egrep -v \"(>|$whitelist)\") && \
-			cmd='echo \"$list\" | cut -d'/' -f2- | xargs -n 1 git push \"$1\" --delete'; \
-		fi; \
-		echo \"On branch $(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'). \"; echo \"\"; \
-		if [ -z \"$list\" ]; then \
-			echo \"No branches to remove.\"; \
-		else \
-			echo \"Branches to remove:\"; echo \"$list\"; echo \"\"; \
-			read -p 'Press enter to continue'; echo \" \"; \
-			eval $cmd; \
-		fi \
-	}; f"
 
 [apply]
 	whitespace=fix
@@ -66,10 +52,6 @@
 [rerere]
 	enabled = true
 
-
-# ########################
-# GitHub and Gitorious
-# ########################
 
 [github]
 	user = PotHix
