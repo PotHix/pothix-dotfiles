@@ -59,8 +59,6 @@ __git_complete gco _git_checkout
 
 alias ls="exa"
 alias cat="bat"
-alias find="fd"
-alias grep="rg"
 
 
 ##############################################
