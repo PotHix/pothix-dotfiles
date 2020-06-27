@@ -6,11 +6,11 @@
 	a = add -A
 	b = branch -a
 	d = diff
+	h = push origin HEAD
 	i = commit
 	l = log
 	p = pull -p --rebase
 	s = status --untracked-files
-	u = push origin HEAD
 
 	all = "!f(){ find -type d -name .git -prune | xargs -t -I{} git -C {}/../ $@; }; f"
 	ca = "!git add -A && git commit --amend"
