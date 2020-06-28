@@ -33,6 +33,7 @@ alias removelog='find * -name "*.log" -delete'
 ##############################################
 
 alias g='git'
+alias gs='git status'
 
 # loading the completion for Git
 _completion_loader git
