@@ -34,6 +34,12 @@ symbol = ""
 [git_commit]
 disabled = true
 
+[git_state]
+disabled = false
+
+[git_status]
+disabled = false
+
 [golang]
 symbol = " "
 

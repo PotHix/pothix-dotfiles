@@ -2,7 +2,6 @@
 # EXPORTING ENVIRONMENT VARIABLES
 ########################################
 
-export PATH="$HOME/bin:$PATH"
 export CDPATH=.:~:$HOME/repos:$HOME/go/src
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
@@ -81,6 +80,11 @@ iconver (){
     for i in `find . | grep utf`; do cp $i ${i%%.utf}; rm $i; done
 }
 
+pathadd() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="${PATH:+"$PATH:"}$1"
+    fi
+}
 
 ########################################
 # Language specific paths
@@ -89,14 +93,10 @@ iconver (){
 # asdf-vm
 source /opt/asdf-vm/asdf.sh
 
-# Rust
-export PATH=$HOME/.cargo/bin:$PATH
-
-# Golang
-export PATH=$HOME/go/bin:$PATH
-
-# Javascript / npm
-export PATH=$HOME/.npm-global/bin:$PATH
+pathadd $HOME/bin               # my personal scripts
+pathadd $HOME/.cargo/bin        # rust binaries
+pathadd $HOME/go/bin            # golang binaries
+pathadd $HOME/.npm-global/bin   # javascript/npm binaries
 
 # Start starship
 eval "$(starship init bash)"
