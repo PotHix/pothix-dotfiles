@@ -13,11 +13,9 @@
 	s = status --untracked-files
 
 	all = "!f(){ find -type d -name .git -prune | xargs -t -I{} git -C {}/../ $@; }; f"
-	ca = "!git add -A && git commit --amend"
 	cc = commit --amend -m
 	co = checkout
 	master = checkout master
-	pu = "!git pull -p --rebase && git submodule update"
 	ra = rebase --abort'
 	rank = shortlog -sn --no-merges
 	rc = rebase --continue'
