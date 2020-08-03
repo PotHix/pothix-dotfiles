@@ -1,7 +1,7 @@
 #!/bin/sh
 
 PAC=(-Syu --noconfirm --needed)
-AUR=(-Axu --noconfirm)
+AUR=(-Axu --noconfirm --needed)
 
 echo "-----> starting the update 😎"
 
@@ -187,6 +187,10 @@ sudo pacman "${PAC[@]}" 2>/dev/null
 
 echo "-----> checking aura packages 👻"
 sudo aura   "${AUR[@]}" 2>/dev/null
+
+# since we're using "--needed" above, we have need a separate command to update
+# packages, unfortunately. The `--needed` makes it to not update current packages
+sudo aura -Axu --noconfirm
 
 # activate essential services
 SVC=(ntpd.service)                     # ntp service
