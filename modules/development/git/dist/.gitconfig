@@ -13,6 +13,7 @@
 	s = status --untracked-files
 
 	all = "!f(){ find -type d -name .git -prune | xargs -t -I{} git -C {}/../ $@; }; f"
+	br = branch
 	cc = commit --amend -m
 	co = checkout
 	master = checkout master
