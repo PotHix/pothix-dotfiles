@@ -39,10 +39,11 @@ alias gd='git diff'
 alias gu='git push origin HEAD'
 alias gi='git commit'
 alias gl='git log'
-alias gco='git checkout'
 alias gp='git pull -p --rebase'
 alias gs='git status --untracked-files'
 alias gt='git tag'
+alias gco='git checkout'
+alias gpu='git pull --rebase && git submodule update'
 
 # loading the completion for Git
 _completion_loader git
