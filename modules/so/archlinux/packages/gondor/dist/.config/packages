@@ -78,6 +78,7 @@ PAC+=(docker-compose)                  # docker-compose
 
 # terminal enhancements
 PAC+=(bash-completion)                 # bash-completion
+PAC+=(fzf)                             # fuzzy finder for terminal and vim
 AUR+=(starship)                        # shell line
 
 # image apps

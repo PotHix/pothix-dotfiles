@@ -28,10 +28,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/vimwiki'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'elixir-lang/vim-elixir'
-Plug 'kien/ctrlp.vim'
 Plug 'othree/html5.vim'
 Plug 'wakatime/vim-wakatime'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
