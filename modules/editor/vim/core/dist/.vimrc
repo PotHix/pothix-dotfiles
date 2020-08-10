@@ -40,17 +40,14 @@ call plug#end()
 " ****************************************************
 " Configuring plugins
 " ****************************************************
-let g:airline#extensions#ale#enabled = 1
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
-let g:airline_solarized_normal_green=1
-
 let g:ale_fixers = {
-\   'python': ['yapf'],
+\   'python': ['black'],
 \}
 let g:ale_fix_on_save = 1
 
-let g:ctrlp_map = '<c-t>'
+" fzf configurations
+nnoremap <silent> <Leader>f :Rg<CR>
+nnoremap <silent> <C-f> :Files<CR>
 
 
 " ****************************************************
@@ -128,23 +125,25 @@ set scs                             " SmartCaSe
 " ****************************************************
 " My set configurations
 " ****************************************************
-set ai                                          " AutoIndent
-set bs=2                                        " Backspace over everything in insert mode
-set cursorline                                  " Setting a line over cursor
-set copyindent                                  " Copy previous indent on the current line
-set encoding=utf-8                              " Default encoding is utf8
-set expandtab                                   " Default encoding is utf8
-set hidden					" Don't close buffers, just hidden them
-set laststatus=2                                " Always show status line.
-set list                                        " Configuration to use definitions below
-set listchars=tab:\ \ ,extends:>,precedes:<     " Special chars to show tabs, eol and bol
-set nu                                          " Line numbers on
-set sw=2                                        " ShiftWidth: Used on autoindent
-set timeout timeoutlen=1000 ttimeoutlen=100     " Removing esc timeout
-set wildmenu                                    " Enable ctrl-n and ctrl-p to scroll thru matches
-set wildmode=list:longest                       " Make cmdline tab completion similar to bash
-set wildignore+=*.o,*~,*.swp,*.pyc,*.pyo,*.gif  " Stuff to ignore when tab completing
-set wildignore+=*.dll,*.obj,*.bak,*.jpg,*.png   " Stuff to ignore when tab completing
+set ai                                             " AutoIndent
+set bs=2                                           " Backspace over everything in insert mode
+set cursorline                                     " Setting a line over cursor
+set copyindent                                     " Copy previous indent on the current line
+set encoding=utf-8                                 " Default encoding is utf8
+set expandtab                                      " Default encoding is utf8
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow  " Uses rg instead of grep
+set hidden					   " Don't close buffers, just hidden them
+set laststatus=2                                   " Always show status line.
+set list                                           " Configuration to use definitions below
+set listchars=tab:\ \ ,extends:>,precedes:<        " Special chars to show tabs, eol and bol
+set nu                                             " Line numbers on
+set sw=2                                           " ShiftWidth: Used on autoindent
+set timeout timeoutlen=1000 ttimeoutlen=100        " Removing esc timeout
+set wildmenu                                       " Enable ctrl-n and ctrl-p to scroll thru matches
+set wildmode=list:longest                          " Make cmdline tab completion similar to bash
+set wildignore+=*.o,*~,*.swp,*.pyc,*.pyo,*.gif     " Stuff to ignore when tab completing
+set wildignore+=*.dll,*.obj,*.bak,*.jpg,*.png      " Stuff to ignore when tab completing
+
 
 
 " ****************************************************
