@@ -32,9 +32,17 @@ fi
 ########################################
 source $HOME/.bash_aliases
 
+# loads GitHub CLI completion
 if [[ "$(command -v gh)" != "" ]]
 then
     eval "$(gh completion -s bash)"
+fi
+
+# loads fzf completion
+if [[ "$(command -v fzf)" != "" ]]
+then
+    source /usr/share/fzf/key-bindings.bash
+    source /usr/share/fzf/completion.bash
 fi
 
 ########################################
