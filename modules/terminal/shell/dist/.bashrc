@@ -95,6 +95,85 @@ pathadd() {
 }
 
 ########################################
+# fzf helpers
+########################################
+
+# Install one or more versions of specified language
+# e.g. `vmi rust` # => fzf multimode, tab to mark, enter to install
+# if no plugin is supplied (e.g. `vmi<CR>`), fzf will list them for you
+# Mnemonic [V]ersion [M]anager [I]nstall
+vmi() {
+  local lang=${1}
+
+  if [[ ! $lang ]]; then
+    lang=$(asdf plugin-list | fzf)
+  fi
+
+  if [[ $lang ]]; then
+    local versions=$(asdf list-all $lang | tail -r | fzf -m)
+    if [[ $versions ]]; then
+      for version in $(echo $versions);
+      do asdf install $lang $version; done;
+    fi
+  fi
+}
+
+# Remove one or more versions of specified language
+# e.g. `vmi rust` # => fzf multimode, tab to mark, enter to remove
+# if no plugin is supplied (e.g. `vmi<CR>`), fzf will list them for you
+# Mnemonic [V]ersion [M]anager [C]lean
+vmc() {
+  local lang=${1}
+
+  if [[ ! $lang ]]; then
+    lang=$(asdf plugin-list | fzf)
+  fi
+
+  if [[ $lang ]]; then
+    local versions=$(asdf list $lang | fzf -m)
+    if [[ $versions ]]; then
+      for version in $(echo $versions);
+      do asdf uninstall $lang $version; done;
+    fi
+  fi
+}
+
+# fco_preview - checkout git branch/tag, with a preview showing the commits between the tag/branch and HEAD
+fco_preview() {
+  local tags branches target
+  branches=$(
+    git --no-pager branch --all \
+      --format="%(if)%(HEAD)%(then)%(else)%(if:equals=HEAD)%(refname:strip=3)%(then)%(else)%1B[0;34;1mbranch%09%1B[m%(refname:short)%(end)%(end)" \
+    | sed '/^$/d') || return
+  tags=$(
+    git --no-pager tag | awk '{print "\x1b[35;1mtag\x1b[m\t" $1}') || return
+  target=$(
+    (echo "$branches"; echo "$tags") |
+    fzf --no-hscroll --no-multi -n 2 \
+        --ansi --preview="git --no-pager log -150 --pretty=format:%s '..{2}'") || return
+  git checkout $(awk '{print $2}' <<<"$target" )
+}
+
+# fkill - kill process
+fkill() {
+  local pid
+  pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
+
+  if [ "x$pid" != "x" ]
+  then
+    echo $pid | xargs kill -${1:-9}
+  fi
+}
+
+# cdf - cd into the directory of the selected file
+cdf() {
+   local file
+   local dir
+   file=$(fzf +m -q "$1") && dir=$(dirname "$file") && cd "$dir"
+}
+
+
+########################################
 # Language specific paths
 ########################################
 
