@@ -52,13 +52,6 @@ __git_complete gco _git_checkout
 
 
 ##############################################
-#    fzf useful mappings
-##############################################
-
-alias lastpass="lpass show -c --password $(lpass ls  | fzf | awk '{print $(NF)}' | sed 's/\]//g')"
-
-
-##############################################
 #    Better default commands powered by Rust
 ##############################################
 
