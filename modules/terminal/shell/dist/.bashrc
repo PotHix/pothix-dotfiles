@@ -98,11 +98,6 @@ pathadd() {
 # fzf helpers
 ########################################
 
-# Use fzf to find a password using lpass CLI
-lastpass() {
-    lpass show -c --password $(lpass ls  | fzf | awk '{print $(NF)}' | sed 's/\]//g')
-}
-
 # fkill - kill process
 fkill() {
   local pid
