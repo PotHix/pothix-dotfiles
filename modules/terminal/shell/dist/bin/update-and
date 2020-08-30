@@ -15,6 +15,7 @@ update_packages () {
     eval "$packages"
 }
 
+sudo pacman -Syu --noconfirm
 update_conf
 update_packages
 execute_action $@
