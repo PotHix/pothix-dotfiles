@@ -75,11 +75,13 @@ AUR+=(heroku-cli)                      # heroku-cli
 PAC+=(flake8)                          # python syntax checker
 PAC+=(docker)                          # docker
 PAC+=(docker-compose)                  # docker-compose
+AUR+=(git-delta-bin)                   # better git diff
 
 # terminal enhancements
 PAC+=(bash-completion)                 # bash-completion
 PAC+=(fzf)                             # fuzzy finder for terminal and vim
 AUR+=(starship)                        # shell line
+PAC+=(z)                               # better cd that records the "frecency"
 
 # image apps
 PAC+=(imagemagick)                     # low level image manipulation
