@@ -124,6 +124,9 @@ cdf() {
 # asdf-vm
 source /opt/asdf-vm/asdf.sh
 
+# z
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
 pathadd $HOME/bin               # my personal scripts
 pathadd $HOME/.cargo/bin        # rust binaries
 pathadd $HOME/go/bin            # golang binaries
