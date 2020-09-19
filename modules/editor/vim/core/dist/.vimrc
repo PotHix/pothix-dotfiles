@@ -172,6 +172,7 @@ autocmd FileType go         set noexpandtab sw=8 ts=8 sts=8
 autocmd FileType ruby       set expandtab sw=2 ts=2 sts=2
 autocmd FileType python     set expandtab sw=4 ts=4 sts=4
 autocmd FileType javascript set expandtab sw=4 ts=4 sts=4
+autocmd FileType typescript set expandtab sw=4 ts=4 sts=4
 
 function! HTMLFormatting()
   "set noexpandtab " Removing tabs
