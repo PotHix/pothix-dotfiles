@@ -38,7 +38,7 @@ then
 elif [[ "$1" == "editors" ]]
 then
     log_starting $1
-    cp -R ~/.vimrc modules/editor/vim/core/dist/.vimrc
+    cp ~/.vimrc modules/editor/vim/core/dist/.vimrc
     cp -R ~/.emacs modules/editor/emacs/dist/
     log_done
 fi
