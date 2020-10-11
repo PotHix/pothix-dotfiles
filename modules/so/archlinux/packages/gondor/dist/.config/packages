@@ -87,6 +87,7 @@ PAC+=(z)                               # better cd that records the "frecency"
 PAC+=(imagemagick)                     # low level image manipulation
 PAC+=(gimp)                            # image manipulation
 PAC+=(inkscape)                        # vector drawing
+PAC+=(scour)                           # svg optimizer for inkscape
 PAC+=(shotwell)                        # photo management
 PAC+=(peek)                            # gif generator
 
