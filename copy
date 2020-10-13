@@ -41,4 +41,9 @@ then
     cp ~/.vimrc modules/editor/vim/core/dist/.vimrc
     cp -R ~/.emacs modules/editor/emacs/dist/
     log_done
+elif [[ "$1" == "tmuxinator" ]]
+then
+    log_starting $1
+    cp ~/.tmuxinator/* modules/terminal/tmuxinator/dist/.tmuxinator/
+    log_done
 fi
