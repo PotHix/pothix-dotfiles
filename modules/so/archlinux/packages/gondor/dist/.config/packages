@@ -157,7 +157,7 @@ AUR+=(gdrive)                          # gdrive
 PAC+=(steam)                           # steam
 
 # browsers
-PAC+=(firefox)                         # firefox
+PAC+=(firefox-developer-edition)       # firefox
 PAC+=(chromium)                        # chromium
 
 # productivity related software
