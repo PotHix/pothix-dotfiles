@@ -72,3 +72,5 @@
 
 [url "git@github.com:"]
 	pushInsteadOf = github:
+[diff]
+	colorMoved = default
