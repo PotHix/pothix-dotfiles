@@ -212,6 +212,10 @@ SVC+=(bluetooth.service)               # to be able to use bluetooth
 echo "-----> activating services 💪"
 sudo systemctl enable "${SVC[@]}"
 
+echo "-----> set the default browser"
+xdg-settings set default-web-browser firefox-developer-edition.desktop
+xdg-mime default firefox-developer-edition.desktop text/html
+
 echo "-----> install vagrant plugins 👻"
 [[ $(vagrant plugin list | grep vagrant-libvirt) ]] || vagrant plugin install vagrant-libvirt
 [[ $(vagrant plugin list | grep vagrant-mutate) ]]  || vagrant plugin install vagrant-mutate
