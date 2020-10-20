@@ -119,6 +119,8 @@ PAC+=(sd)                              # alternative to sed
 PAC+=(python)                          # system version of python (dep for packages)
 PAC+=(python2)                         # system version of python2 (dep for packages)
 PAC+=(nodejs)                          # system version of nodejs (dep for packages)
+PAC+=(rustup)                          # rust installer system wide
+PAC+=(sccache)                         # caches compilation (especially used for Rust via cargo)
 AUR+=(asdf-vm)                         # default way to install programming languages
 
 # editors
@@ -227,7 +229,6 @@ asdf plugin add golang
 asdf plugin add nodejs
 asdf plugin add python
 asdf plugin add ruby
-asdf plugin add rust
 
 asdf plugin update --all
 
@@ -253,9 +254,16 @@ asdf global python $LATEST_PYTHON
 asdf install ruby $LATEST_RUBY
 asdf global ruby $LATEST_RUBY
 
-asdf install rust stable
-asdf install rust nightly
-asdf global rust nightly
+rustup toolchain install stable                  # install rust stable
+rustup toolchain install nightly                 # install rust nightly
+rustup default nightly                           # set nightly as default
+rustup component add rls rust-analysis rust-src  # rust language server
+rustup component add rust-src                    # source for rust analyzer
+rustup component add clippy                      # install clippy
+rustup component add rustfmt                     # install rust fmt
+cargo +nightly install racer                     # install racer
+
+# rust is not installed via asdf bicause `rustup` is awesome
 
 echo "-----> done! ✨"
 exit 0
