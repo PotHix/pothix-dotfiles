@@ -57,6 +57,12 @@ colorscheme desert
 syntax on               " Enable syntax highlighting
 filetype plugin indent on
 
+" Better highlight for autocomplete and other popups
+highlight Pmenu ctermbg=gray guibg=gray
+highlight PmenuSel ctermbg=gray guibg=gray
+highlight PmenuSbar ctermbg=gray guibg=gray
+highlight PmenuThumb ctermbg=gray guibg=gray
+
 " Search Options
 hi    Search ctermbg=green ctermfg=black
 hi IncSearch ctermbg=black ctermfg=green
