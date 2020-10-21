@@ -1,3 +1,4 @@
 #!/bin/sh
 
 vim +PlugInstall +qall
+vim -c 'CocInstall coc-rls|q'
