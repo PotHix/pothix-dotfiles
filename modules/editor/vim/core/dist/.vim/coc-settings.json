@@ -1,0 +1,13 @@
+{
+  "coc.preferences.colorSupport": false,
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.formatOnSaveFiletypes": ["rust"],
+  "languageserver": {
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    }
+  }
+}

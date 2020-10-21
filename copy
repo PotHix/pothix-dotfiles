@@ -40,6 +40,7 @@ elif [[ "$1" == "editors" ]]
 then
     log_starting $1
     cp ~/.vimrc modules/editor/vim/core/dist/.vimrc
+    cp ~/.vim/coc-settings.json modules/editor/vim/core/dist/.vim/
     cp -R ~/.emacs modules/editor/emacs/dist/
     log_done
 elif [[ "$1" == "tmuxinator" ]]
