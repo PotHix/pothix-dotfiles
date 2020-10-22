@@ -254,6 +254,7 @@ asdf global python $LATEST_PYTHON
 asdf install ruby $LATEST_RUBY
 asdf global ruby $LATEST_RUBY
 
+# rust is not installed via asdf bicause `rustup` is awesome
 rustup toolchain install stable                  # install rust stable
 rustup toolchain install nightly                 # install rust nightly
 rustup default nightly                           # set nightly as default
@@ -262,8 +263,6 @@ rustup component add rust-src                    # source for rust analyzer
 rustup component add clippy                      # install clippy
 rustup component add rustfmt                     # install rust fmt
 cargo +nightly install racer                     # install racer
-
-# rust is not installed via asdf bicause `rustup` is awesome
 
 echo "-----> done! ✨"
 exit 0
