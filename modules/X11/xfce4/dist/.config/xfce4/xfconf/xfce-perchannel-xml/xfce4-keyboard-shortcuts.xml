@@ -50,6 +50,7 @@
       <property name="&lt;Primary&gt;&lt;Super&gt;p" type="string" value="xfconf-query -c xsettings -p /Xft/DPI -s -1"/>
       <property name="&lt;Super&gt;t" type="string" value="/bin/telegram-desktop"/>
       <property name="&lt;Super&gt;d" type="string" value="/bin/discord"/>
+      <property name="&lt;Primary&gt;Print" type="string" value="xfce4-screenshooter -f -c"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
