@@ -40,6 +40,3 @@ matches:
 
   - trigger: ":en_linkedin"
     replace: "Hi ,\n\nThanks for contacting me. I'm currently enjoying my current job (I believe in the company values and mission), so I'm not interested in a new position at this particular moment.\n\nI hope to be able to contact you again in the future if things change.\n\nAll the best,\n\nWillian Molinari"
-
-  - trigger: ":nf_doist:"
-    replace: "Doist Inc.	00.000.000/0000-00		00000-000"
