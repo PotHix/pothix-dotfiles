@@ -76,6 +76,7 @@ PAC+=(flake8)                          # python syntax checker
 PAC+=(docker)                          # docker
 PAC+=(docker-compose)                  # docker-compose
 AUR+=(git-delta-bin)                   # better git diff
+PAC+=(github-cli)                      # github CLI
 
 # terminal enhancements
 PAC+=(bash-completion)                 # bash-completion
