@@ -27,6 +27,8 @@ if [ -f /bin/urxvt ]; then
     export TERM=rxvt
 fi
 
+export ANDROID_HOME=$HOME/Android
+
 ########################################
 # USING COMPLETION AND ALIAS
 ########################################
