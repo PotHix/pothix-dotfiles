@@ -107,7 +107,6 @@ PAC+=(hugo)                            # static pagde generator
 PAC+=(texlive-bin)                     # compile TeX files
 PAC+=(dos2unix)                        # convert files from windows to Linux format
 PAC+=(lastpass-cli)                    # ClI for LastPass
-AUR+=(espanso-bin)                     # text expander
 
 # rust alternative to common commands
 PAC+=(exa)                             # alternative to ls
