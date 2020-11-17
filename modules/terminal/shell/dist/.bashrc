@@ -96,6 +96,11 @@ pathadd() {
     fi
 }
 
+create_pr() {
+    local reviewer=$1
+    gh pr create -f -a $GITHUB_USER -r $reviewer
+}
+
 ########################################
 # fzf helpers
 ########################################
