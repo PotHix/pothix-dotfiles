@@ -167,6 +167,7 @@ set nofoldenable                    " I don't want it folding by default
 " LANGUAGUE INDENT CONFIGURATION
 " ****************************************************************
 autocmd FileType make       set noexpandtab
+autocmd FileType markdown   set tw=80
 
 autocmd FileType eruby      call HTMLFormatting()
 autocmd FileType html       call HTMLFormatting()
