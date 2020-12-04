@@ -153,10 +153,9 @@ AUR+=(zoom)                            # zoom
 
 # file sharing
 AUR+=(dropbox)                         # dropbox
-AUR+=(gdrive)                          # gdrive
 
 # entretainment software
-PAC+=(steam)                           # steam
+# PAC+=(steam)                           # steam (requires multilib)
 
 # browsers
 PAC+=(firefox-developer-edition)       # firefox
