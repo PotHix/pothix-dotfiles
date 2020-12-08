@@ -102,6 +102,7 @@ PAC+=(xsel)                            # add data to clipboard via command line
 PAC+=(unzip)                           # extract .zip files
 PAC+=(unrar)                           # extract .rar files
 PAC+=(gnome-calculator)                # default calculator for gnome
+PAC+=(evince)                          # PDF reader
 PAC+=(xournalpp)                       # annotate PDFs
 PAC+=(hugo)                            # static pagde generator
 PAC+=(texlive-bin)                     # compile TeX files
