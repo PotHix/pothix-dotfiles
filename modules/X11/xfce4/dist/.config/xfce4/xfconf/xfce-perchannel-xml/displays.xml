@@ -15,9 +15,9 @@
       </property>
     </property>
     <property name="eDP-1" type="string" value="Laptop">
-      <property name="Active" type="bool" value="true"/>
-      <property name="Resolution" type="string" value="2560x1440"/>
-      <property name="RefreshRate" type="double" value="60.011538"/>
+      <property name="Active" type="bool" value="false"/>
+      <property name="Resolution" type="string" value="3840x2160"/>
+      <property name="RefreshRate" type="double" value="60.000000"/>
       <property name="Rotation" type="int" value="0"/>
       <property name="Reflection" type="string" value="0"/>
       <property name="Primary" type="bool" value="false"/>
@@ -25,7 +25,7 @@
         <property name="X" type="int" value="0"/>
         <property name="Y" type="int" value="0"/>
       </property>
-      <property name="EDID" type="string" value="65a301653dc3cd17bbb81d259529ed5addf0ff1d"/>
+      <property name="EDID" type="string" value="76dde8c69e9579a368bfa6de4cc54c74be5a354a"/>
     </property>
     <property name="DP-1" type="string" value="2. LG 34&quot;">
       <property name="Active" type="bool" value="false"/>
@@ -103,7 +103,7 @@
     </property>
   </property>
   <property name="Notify" type="bool" value="false"/>
-  <property name="ActiveProfile" type="string" value="6c3a72eaf6235dfa967f2bba4dfc3e431c3e1180"/>
+  <property name="ActiveProfile" type="string" value="Default"/>
   <property name="6c3a72eaf6235dfa967f2bba4dfc3e431c3e1180" type="string" value="Office">
     <property name="eDP-1" type="string" value="Laptop">
       <property name="Active" type="bool" value="false"/>
@@ -171,9 +171,9 @@
   <property name="Fallback" type="empty">
     <property name="eDP-1" type="string" value="Laptop">
       <property name="Active" type="bool" value="true"/>
-      <property name="EDID" type="string" value="65a301653dc3cd17bbb81d259529ed5addf0ff1d"/>
-      <property name="Resolution" type="string" value="2560x1440"/>
-      <property name="RefreshRate" type="double" value="60.011538"/>
+      <property name="EDID" type="string" value="76dde8c69e9579a368bfa6de4cc54c74be5a354a"/>
+      <property name="Resolution" type="string" value="3840x2160"/>
+      <property name="RefreshRate" type="double" value="60.000000"/>
       <property name="Rotation" type="int" value="0"/>
       <property name="Reflection" type="string" value="0"/>
       <property name="Primary" type="bool" value="false"/>

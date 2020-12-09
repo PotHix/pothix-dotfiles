@@ -10,13 +10,9 @@
       <property name="position-locked" type="bool" value="true"/>
       <property name="size" type="uint" value="20"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="24"/>
         <value type="int" value="28"/>
-        <value type="int" value="39"/>
         <value type="int" value="31"/>
-        <value type="int" value="25"/>
         <value type="int" value="36"/>
-        <value type="int" value="26"/>
         <value type="int" value="2"/>
         <value type="int" value="4"/>
         <value type="int" value="22"/>
@@ -131,7 +127,7 @@
     <property name="plugin-3" type="string" value="xkb"/>
     <property name="plugin-5" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="chromium.instance12626;chromium.instance162879;chromium.instance1693018;chromium.instance1715938;chromium.instance254794;chromium.instance3526652;chromium.instance4033;chromium.instance4214;chromium.instance4533;firefox.instance12329"/>
+      <property name="mpris-players" type="string" value="chromium.instance12626;chromium.instance162879;chromium.instance1693018;chromium.instance1715938;chromium.instance254794;chromium.instance3526652;chromium.instance4033;chromium.instance4214;chromium.instance4533;firefox.instance12329;firefox.instance2688"/>
     </property>
   </property>
 </channel>
