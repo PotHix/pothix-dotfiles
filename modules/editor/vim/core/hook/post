@@ -3,3 +3,4 @@
 vim +PlugInstall +qall
 vim -c 'CocInstall -sync coc-rls|qall'
 vim -c 'CocUpdateSync|qall'
+vim -c 'GoInstallBinaries|qall'
