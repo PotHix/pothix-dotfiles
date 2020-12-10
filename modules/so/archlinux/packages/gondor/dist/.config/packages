@@ -122,6 +122,7 @@ PAC+=(python)                          # system version of python (dep for packa
 PAC+=(python2)                         # system version of python2 (dep for packages)
 PAC+=(nodejs)                          # system version of nodejs (dep for packages)
 PAC+=(jdk-openjdk)                     # java stuff
+PAC+=(gopls)                           # Language server for Go programming language
 PAC+=(rustup)                          # rust installer system wide
 PAC+=(sccache)                         # caches compilation (especially used for Rust via cargo)
 AUR+=(asdf-vm)                         # default way to install programming languages
