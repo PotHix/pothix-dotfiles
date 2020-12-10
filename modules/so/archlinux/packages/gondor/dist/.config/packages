@@ -152,6 +152,7 @@ PAC+=(rxvt-unicode)                    # rxvt-unicode
 # communication
 PAC+=(keybase)                         # keybase
 PAC+=(telegram-desktop)                # telegram-desktop
+PAC+=(discord)                         # linux client for Discord
 AUR+=(zoom)                            # zoom
 
 # file sharing
