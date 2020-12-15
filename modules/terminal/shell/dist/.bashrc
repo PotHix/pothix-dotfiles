@@ -101,6 +101,12 @@ create_pr() {
     gh pr create -f -a $GITHUB_USER -r $reviewer
 }
 
+tweethix() {
+    pushd $CODES/pothix.github.com
+    local post=$(hugo new posts/$1| sed -r 's/^(.*) .*/\1/g')
+    vim $post
+}
+
 ########################################
 # fzf helpers
 ########################################
