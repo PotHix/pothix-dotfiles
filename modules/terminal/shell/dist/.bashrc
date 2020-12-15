@@ -103,7 +103,7 @@ create_pr() {
 
 tweethix() {
     pushd $CODES/pothix.github.com
-    local post=$(hugo new posts/$1| sed -r 's/^(.*) .*/\1/g')
+    local post=$(hugo new posts/$1.md| sed -r 's/^(.*) .*/\1/g')
     vim $post
 }
 
