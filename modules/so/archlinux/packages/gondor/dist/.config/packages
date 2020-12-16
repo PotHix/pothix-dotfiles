@@ -44,7 +44,7 @@ PAC+=(noto-fonts-cjk)                  # noto-fonts-cjk
 PAC+=(noto-fonts-emoji)                # noto-fonts-emoji
 PAC+=(xorg-fonts-misc)                 # xorg-fonts-misc
 PAC+=(ttf-nerd-fonts-symbols)          # ttf-nerd-fonts-symbols
-AUR+=(ttf-font-awesome-4)              # ttf-font-awesome-4
+PAC+=(ttf-font-awesome)                # ttf-font-awesome
 AUR+=(ttf-tengwar-annatar)             # tengwar font for elvish
 
 # connectivity packages
