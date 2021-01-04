@@ -1,12 +1,12 @@
 [General]
 Show_Title=false
 Show_Labels=false
-Use_Bar_UI=2
+Use_Bar_UI=3
 Show_Colored_Bars=true
 Scale=0
 str_fontsize=medium
 val_fontsize=2
-Font=Sans 12
+Font=Sans 8
 Lines_Size=10
 Cover_All_Panel_Rows=false
 Update_Interval=5
@@ -14,11 +14,11 @@ Exec_Command=true
 Show_Units=true
 Small_Spacings=false
 Command_Name=xfce4-sensors
-Number_Chips=6
+Number_Chips=10
 Suppress_Hddtemp_Message=true
 Suppress_Tooltip=false
 Preferred_Width=404
-Preferred_Height=372
+Preferred_Height=374
 Tachos_ColorValue=0.80
 Tachos_Alpha=0.80
 
@@ -35,10 +35,14 @@ Min=0.00
 Max=76.00
 
 [Chip1]
-Name=thinkpad-0
+Name=ucsi_source_psy_USBC000:001-0
 Number=1
 
-[Chip1_Feature0]
+[Chip2]
+Name=thinkpad-0
+Number=2
+
+[Chip2_Feature0]
 Address=0
 Name=fan1
 Color=#00B000
@@ -46,19 +50,31 @@ Show=true
 Min=1000.00
 Max=6500.00
 
-[Chip2]
-Name=acpitz-0
-Number=2
-
 [Chip3]
-Name=iwlwifi-0
+Name=nvme-300
 Number=3
 
 [Chip4]
-Name=pch_skylake-0
+Name=iwlwifi_1-0
 Number=4
 
 [Chip5]
-Name=ACPI
+Name=ucsi_source_psy_USBC000:002-0
 Number=5
+
+[Chip6]
+Name=pch_cannonlake-0
+Number=6
+
+[Chip7]
+Name=BAT0-0
+Number=7
+
+[Chip8]
+Name=acpitz-0
+Number=8
+
+[Chip9]
+Name=ACPI
+Number=9
 
