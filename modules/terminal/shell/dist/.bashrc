@@ -16,6 +16,8 @@ export GIT_EDITOR=vim
 export GITHUB_USER=pothix
 export CODES=$HOME/repos
 
+export GOPRIVATE="github.com/Doist"
+
 export GPG_TTY=$(/usr/bin/tty)
 
 export LANG=en_US.UTF-8
