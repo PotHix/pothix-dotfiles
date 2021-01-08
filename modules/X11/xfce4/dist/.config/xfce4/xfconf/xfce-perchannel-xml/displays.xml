@@ -22,8 +22,8 @@
       <property name="Reflection" type="string" value="0"/>
       <property name="Primary" type="bool" value="true"/>
       <property name="Position" type="empty">
-        <property name="X" type="int" value="274"/>
-        <property name="Y" type="int" value="1080"/>
+        <property name="X" type="int" value="0"/>
+        <property name="Y" type="int" value="0"/>
       </property>
       <property name="EDID" type="string" value="76dde8c69e9579a368bfa6de4cc54c74be5a354a"/>
       <property name="Scale" type="empty">
@@ -186,8 +186,8 @@
       <property name="Reflection" type="string" value="0"/>
       <property name="Primary" type="bool" value="true"/>
       <property name="Position" type="empty">
-        <property name="X" type="int" value="274"/>
-        <property name="Y" type="int" value="1080"/>
+        <property name="X" type="int" value="0"/>
+        <property name="Y" type="int" value="0"/>
       </property>
       <property name="Scale" type="empty">
         <property name="X" type="double" value="0.500000"/>
@@ -209,6 +209,25 @@
       <property name="Scale" type="empty">
         <property name="X" type="double" value="1.000000"/>
         <property name="Y" type="double" value="1.000000"/>
+      </property>
+    </property>
+  </property>
+  <property name="b1d702459399a2512fba5a402d4d5f26aee34693" type="string" value="Mobile">
+    <property name="eDP-1" type="string" value="Laptop">
+      <property name="Active" type="bool" value="true"/>
+      <property name="EDID" type="string" value="76dde8c69e9579a368bfa6de4cc54c74be5a354a"/>
+      <property name="Resolution" type="string" value="3840x2160"/>
+      <property name="RefreshRate" type="double" value="60.000000"/>
+      <property name="Rotation" type="int" value="0"/>
+      <property name="Reflection" type="string" value="0"/>
+      <property name="Primary" type="bool" value="true"/>
+      <property name="Scale" type="empty">
+        <property name="X" type="double" value="0.500000"/>
+        <property name="Y" type="double" value="0.500000"/>
+      </property>
+      <property name="Position" type="empty">
+        <property name="X" type="int" value="0"/>
+        <property name="Y" type="int" value="0"/>
       </property>
     </property>
   </property>

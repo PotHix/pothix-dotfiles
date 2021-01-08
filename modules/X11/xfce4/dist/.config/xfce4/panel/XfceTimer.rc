@@ -1,0 +1,8 @@
+[others]
+nowin_if_alarm=false
+use_global_command=false
+global_command=
+repeat_alarm=false
+repetitions=1
+repeat_interval=10
+
