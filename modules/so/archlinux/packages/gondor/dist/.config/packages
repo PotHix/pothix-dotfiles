@@ -190,7 +190,7 @@ PAC+=(virt-manager)                    # libvirt + virt-manager
 PAC+=(firewalld)                       # required to boot the network for qemu
 PAC+=(dnsmasq)                         # required to boot the network for qemu
 PAC+=(ebtables)                        # required to boot the network for qemu
-PAC+=(vagrant)                         # vagrant to automate virtualization
+#PAC+=(vagrant)                         # vagrant to automate virtualization
 
 # update all installed packages and install the ones mentioned above
 sudo pacman "${PAC[@]}" 2>/dev/null
@@ -222,8 +222,8 @@ xdg-settings set default-web-browser firefox-developer-edition.desktop
 xdg-mime default firefox-developer-edition.desktop text/html
 
 echo "-----> install vagrant plugins 👻"
-[[ $(vagrant plugin list | grep vagrant-libvirt) ]] || vagrant plugin install vagrant-libvirt
-[[ $(vagrant plugin list | grep vagrant-mutate) ]]  || vagrant plugin install vagrant-mutate
+#[[ $(vagrant plugin list | grep vagrant-libvirt) ]] || vagrant plugin install vagrant-libvirt
+#[[ $(vagrant plugin list | grep vagrant-mutate) ]]  || vagrant plugin install vagrant-mutate
 
 echo "-----> installing programming languages 💻"
 # install and/or update all programming languages
