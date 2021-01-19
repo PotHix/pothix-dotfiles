@@ -33,6 +33,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'dpelle/vim-LanguageTool'
 
 call plug#end()
 

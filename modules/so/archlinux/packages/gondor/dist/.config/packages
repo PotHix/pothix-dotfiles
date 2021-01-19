@@ -130,6 +130,7 @@ PAC+=(emacs)                           # emacs
 PAC+=(vim)                             # vim
 PAC+=(aspell-pt)                       # pt dictionary
 PAC+=(aspell-en)                       # en dictionary
+PAC+=(languagetool)                    # language checker (to be used with Vim)
 
 # xfce4
 PAC+=(xfce4)                           # xfce4 window manager
