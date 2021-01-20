@@ -33,7 +33,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'dpelle/vim-LanguageTool'
+Plug 'rhysd/vim-grammarous'
 
 call plug#end()
 
@@ -49,6 +49,9 @@ let g:ale_fix_on_save = 1
 " fzf configurations
 nnoremap <silent> <Leader>f :Rg<CR>
 nnoremap <silent> <C-f> :Files<CR>
+
+" Using system languagetool
+let g:grammarous#languagetool_cmd = 'languagetool'
 
 
 " ****************************************************
