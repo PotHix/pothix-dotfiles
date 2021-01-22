@@ -52,6 +52,10 @@ nnoremap <silent> <C-f> :Files<CR>
 
 " Using system languagetool
 let g:grammarous#languagetool_cmd = 'languagetool'
+let g:grammarous#use_vim_spelllang = 1
+let g:grammarous#disabled_rules = {
+            \ '*' : ['EN_QUOTES'],
+            \ }
 
 
 " ****************************************************
