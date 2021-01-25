@@ -70,8 +70,11 @@
 
 [url "git://github.com/"]
 	insteadOf = github:
+[url "git://"]
+	insteadOf = https://
 
 [url "git@github.com:"]
 	pushInsteadOf = github:
 [diff]
 	colorMoved = default
+
