@@ -103,10 +103,14 @@ create_pr() {
     gh pr create -f -a $GITHUB_USER -r $reviewer
 }
 
-tweethix() {
+blogpost() {
     pushd $CODES/pothix.github.com
     local post=$(hugo new posts/$1.md| sed -r 's/^(.*) .*/\1/g')
     vim $post
+}
+
+dockerstopall() {
+    docker ps -q | xargs docker stop
 }
 
 ########################################
