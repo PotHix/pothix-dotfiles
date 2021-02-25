@@ -109,7 +109,7 @@ blogpost() {
     vim $post
 }
 
-dockerstopall() {
+docker-stop-all() {
     docker ps -q | xargs docker stop
 }
 
