@@ -40,7 +40,7 @@ alias removelog='find * -name "*.log" -delete'
 
 alias g='git'
 alias ga='git add -A'
-alias gb='git branch -a'
+alias gb='git branch'
 alias gd='git diff'
 alias gu='git push origin HEAD'
 alias gi='git commit'
