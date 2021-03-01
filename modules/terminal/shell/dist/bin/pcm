@@ -1,2 +1,0 @@
-#!/bin/bash
-pcmfile=$(mktemp); curl -s http://www.playartecinemas.com.br/cinemas/PCM >$pcmfile; if cat $pcmfile | pup --color 'table#horario td span text{}' | grep -q Legendado $pcmfile; then cat $pcmfile | pup --color 'table#horario td.tit-movie a text{}' | sort | uniq | mail -s "Filme legendado disponível!" pothix@pothix.com; fi; rm $pcmfile
