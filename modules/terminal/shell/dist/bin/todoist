@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ "$1" == "server" ] || [ "$1" == "" ]; then
+  ide todoist init start logs
+elif [ "$1" == "ngrok" ]; then
+  ngrok http -bind-tls true -subdomain pothix -host-header=rewrite local.todoist.com:443
+fi
