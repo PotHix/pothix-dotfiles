@@ -116,7 +116,8 @@ docker-stop-all() {
 base64-img() {
     # I still want something better than this so I can get a better base64 but
     # the current version works
-    magick -size 640x480 $1 - | base64 -w 0 | xsel -b }
+    magick -size 640x480 $1 - | base64 -w 0 | xsel -b
+}
 
 ########################################
 # fzf helpers
