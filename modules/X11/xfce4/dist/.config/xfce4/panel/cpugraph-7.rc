@@ -9,4 +9,5 @@ TrackedCore=0
 InTerminal=1
 StartupNotification=0
 ColorMode=0
+PerCore=0
 
