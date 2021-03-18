@@ -62,6 +62,7 @@
       <property name="&lt;Super&gt;d" type="string" value="/bin/discord"/>
       <property name="&lt;Primary&gt;Print" type="string" value="xfce4-screenshooter -f -c"/>
       <property name="&lt;Super&gt;1" type="string" value="/usr/bin/1password"/>
+      <property name="&lt;Super&gt;a" type="string" value="/usr/bin/authy"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
