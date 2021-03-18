@@ -5,6 +5,14 @@ AUR=(-Axu --noconfirm --needed)
 
 echo "-----> starting the update 😎"
 
+if [[ ! $(command -v paru) ]]
+then
+    sudo pacman -S --needed base-devel
+    git clone https://aur.archlinux.org/paru.git
+    cd paru
+    makepkg -si
+fi
+
 if [[ ! $(command -v aura) ]]
 then
     sudo pacman "${PAC[@]}" curl
