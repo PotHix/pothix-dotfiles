@@ -1,0 +1,7 @@
+#!/bin/sh
+
+get_comments () {
+    curl -sH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/comments?task_id=$(curl -sH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/tasks?project_id=2236452565" | jq -r '.[] | "\(.id),\(.content)"' | rg "$1" | sed -r 's/([0-9]+).*/\1/g' | head -n1)" | jq -r '.[].content'
+}
+
+get_comments $1
