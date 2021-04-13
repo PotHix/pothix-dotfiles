@@ -1,7 +1,21 @@
 #!/bin/sh
 
-get_comments () {
-    curl -sH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/comments?task_id=$(curl -sH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/tasks?project_id=2236452565" | jq -r '.[] | "\(.id),\(.content)"' | rg "$1" | sed -r 's/([0-9]+).*/\1/g' | head -n1)" | jq -r '.[].content'
+print_header () {
+    echo "- Author::"
+    echo "  **Tags:** #article"
+    echo "  **URL:** $1"
+    echo "  **Recommended by:**"
+    echo "- Summary::"
+    echo "- **Notes**:"
 }
 
-get_comments $1
+get_comments () {
+    local task_info=$(curl -sH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/tasks?project_id=2236452565" | jq -r '.[] | "\(.id),\(.content)"' | rg "$@" | head -n1)
+    local task_id=$(echo $task_info | sed -r 's/([0-9]+).*/\1/g')
+    local task_url=$(echo $task_info | sed -r 's@.*(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9():%_\+.~#?&//=]*)).*@\1@g')
+
+    print_header $task_url
+    curl -sH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/comments?task_id=$task_id" | jq -r '.[].content'
+}
+
+get_comments "$@"
