@@ -15,7 +15,7 @@
       </property>
     </property>
     <property name="eDP-1" type="string" value="Laptop">
-      <property name="Active" type="bool" value="false"/>
+      <property name="Active" type="bool" value="true"/>
       <property name="Resolution" type="string" value="3840x2160"/>
       <property name="RefreshRate" type="double" value="60.000000"/>
       <property name="Rotation" type="int" value="0"/>
@@ -111,7 +111,7 @@
     </property>
   </property>
   <property name="Notify" type="bool" value="false"/>
-  <property name="ActiveProfile" type="string" value="Default"/>
+  <property name="ActiveProfile" type="string" value="17dc9a83744348b236bfe6e6683d12f00e3fd7e7"/>
   <property name="6c3a72eaf6235dfa967f2bba4dfc3e431c3e1180" type="string" value="Office">
     <property name="eDP-1" type="string" value="Laptop">
       <property name="Active" type="bool" value="false"/>
@@ -195,7 +195,7 @@
       </property>
     </property>
     <property name="DP-1-1" type="string" value="Goldstar Company Ltd 34&quot;">
-      <property name="Active" type="bool" value="false"/>
+      <property name="Active" type="bool" value="true"/>
       <property name="EDID" type="string" value="7a2749cf20e18723c657a33d3caec1e639388274"/>
       <property name="Resolution" type="string" value="2560x1080"/>
       <property name="RefreshRate" type="double" value="59.999534"/>
@@ -203,7 +203,7 @@
       <property name="Reflection" type="string" value="0"/>
       <property name="Primary" type="bool" value="false"/>
       <property name="Position" type="empty">
-        <property name="X" type="int" value="3840"/>
+        <property name="X" type="int" value="0"/>
         <property name="Y" type="int" value="0"/>
       </property>
       <property name="Scale" type="empty">
@@ -275,6 +275,29 @@
         <property name="X" type="int" value="640"/>
         <property name="Y" type="int" value="0"/>
       </property>
+    </property>
+  </property>
+  <property name="99f707ef02f096ed1e08d922e18da99b31d43e4f" type="string" value="fix">
+    <property name="eDP-1" type="string" value="Laptop">
+      <property name="Active" type="bool" value="true"/>
+      <property name="EDID" type="string" value="76dde8c69e9579a368bfa6de4cc54c74be5a354a"/>
+      <property name="Resolution" type="string" value="3840x2160"/>
+      <property name="RefreshRate" type="double" value="60.000000"/>
+      <property name="Rotation" type="int" value="0"/>
+      <property name="Reflection" type="string" value="0"/>
+      <property name="Primary" type="bool" value="true"/>
+      <property name="Scale" type="empty">
+        <property name="X" type="double" value="1.000000"/>
+        <property name="Y" type="double" value="1.000000"/>
+      </property>
+      <property name="Position" type="empty">
+        <property name="X" type="int" value="0"/>
+        <property name="Y" type="int" value="0"/>
+      </property>
+    </property>
+    <property name="DP-1-1" type="string" value="Goldstar Company Ltd 34&quot;">
+      <property name="Active" type="bool" value="false"/>
+      <property name="EDID" type="string" value="7a2749cf20e18723c657a33d3caec1e639388274"/>
     </property>
   </property>
 </channel>

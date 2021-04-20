@@ -93,6 +93,7 @@
         <value type="string" value="xfce4-power-manager"/>
       </property>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="thunar"/>
         <value type="string" value="task manager"/>
         <value type="string" value="toggl desktop"/>
         <value type="string" value="xfce4-power-manager"/>
@@ -100,6 +101,11 @@
         <value type="string" value="ibus panel"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="zoom"/>
+        <value type="string" value="dropbox-client-3728665"/>
+        <value type="string" value="dropbox-client-5031"/>
+        <value type="string" value="obs"/>
+        <value type="string" value="dropbox-client-4091"/>
         <value type="string" value="1Password1"/>
         <value type="string" value="dropbox-client-4274"/>
         <value type="string" value="dropbox-client-1263"/>
@@ -142,7 +148,7 @@
     <property name="plugin-3" type="string" value="xkb"/>
     <property name="plugin-5" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="chromium.instance12626;chromium.instance162879;chromium.instance1693018;chromium.instance1715938;chromium.instance254794;chromium.instance3526652;chromium.instance4033;chromium.instance4214;chromium.instance4533;firefox.instance12329;firefox.instance1266;firefox.instance12674;firefox.instance1692;firefox.instance2688;firefox.instance3854;vlc"/>
+      <property name="mpris-players" type="string" value="chromium.instance12626;chromium.instance162879;chromium.instance1682802;chromium.instance1693018;chromium.instance1715938;chromium.instance254794;chromium.instance3526652;chromium.instance4033;chromium.instance4214;chromium.instance4533;firefox.instance12329;firefox.instance1266;firefox.instance12674;firefox.instance1692;firefox.instance2407;firefox.instance2688;firefox.instance3347;firefox.instance3854;firefox.instance3964272;tdesktop;vlc"/>
     </property>
     <property name="plugin-7" type="string" value="cpugraph"/>
     <property name="plugin-8" type="string" value="systemload"/>
