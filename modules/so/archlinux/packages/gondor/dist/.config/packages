@@ -104,6 +104,7 @@ PAC+=(peek)                            # gif generator
 PAC+=(vlc)                             # video player
 PAC+=(obs-studio)                      # video recording and streaming
 PAC+=(audacity)                        # audio mixer
+PAC+=(id3v2)                           # tool to handle id3 from mp3 files
 
 # utilitaries
 PAC+=(xsel)                            # add data to clipboard via command line
