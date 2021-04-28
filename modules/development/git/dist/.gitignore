@@ -12,5 +12,4 @@
 .ruby-version
 .#*
 .pytest_cache
-tags
 .tool-versions
