@@ -43,7 +43,6 @@
       <property name="XF86Mail" type="string" value="exo-open --launch MailReader"/>
       <property name="XF86Display" type="string" value="xfce4-display-settings --minimal"/>
       <property name="XF86WWW" type="string" value="exo-open --launch WebBrowser"/>
-      <property name="&lt;Super&gt;p" type="string" value="xfce4-display-settings --minimal"/>
       <property name="&lt;Primary&gt;Escape" type="string" value="xfdesktop --menu"/>
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r -s /home/pothix/Pictures"/>
@@ -56,13 +55,12 @@
       <property name="&lt;Super&gt;c" type="string" value="/bin/gnome-calculator"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;f" type="string" value="/usr/bin/thunar"/>
       <property name="&lt;Super&gt;r" type="string" value="xfce4-appfinder"/>
-      <property name="&lt;Shift&gt;&lt;Super&gt;p" type="string" value="xfconf-query -c xsettings -p /Xft/DPI -s 130"/>
-      <property name="&lt;Primary&gt;&lt;Super&gt;p" type="string" value="xfconf-query -c xsettings -p /Xft/DPI -s -1"/>
       <property name="&lt;Super&gt;t" type="string" value="/bin/telegram-desktop"/>
       <property name="&lt;Super&gt;d" type="string" value="/bin/discord"/>
       <property name="&lt;Primary&gt;Print" type="string" value="xfce4-screenshooter -f -c"/>
       <property name="&lt;Super&gt;1" type="string" value="/usr/bin/1password"/>
       <property name="&lt;Super&gt;a" type="string" value="/usr/bin/authy"/>
+      <property name="&lt;Super&gt;p" type="string" value="xfce4-display-settings"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

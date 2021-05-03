@@ -15,7 +15,7 @@
       </property>
     </property>
     <property name="eDP-1" type="string" value="Laptop">
-      <property name="Active" type="bool" value="true"/>
+      <property name="Active" type="bool" value="false"/>
       <property name="Resolution" type="string" value="3840x2160"/>
       <property name="RefreshRate" type="double" value="60.000000"/>
       <property name="Rotation" type="int" value="0"/>
@@ -111,7 +111,7 @@
     </property>
   </property>
   <property name="Notify" type="bool" value="false"/>
-  <property name="ActiveProfile" type="string" value="17dc9a83744348b236bfe6e6683d12f00e3fd7e7"/>
+  <property name="ActiveProfile" type="string" value="00040bab8a787438c2c0cf5248ac025642115fad"/>
   <property name="6c3a72eaf6235dfa967f2bba4dfc3e431c3e1180" type="string" value="Office">
     <property name="eDP-1" type="string" value="Laptop">
       <property name="Active" type="bool" value="false"/>
@@ -178,7 +178,7 @@
   <property name="IdentityPopups" type="bool" value="false"/>
   <property name="Fallback" type="empty">
     <property name="eDP-1" type="string" value="Laptop">
-      <property name="Active" type="bool" value="true"/>
+      <property name="Active" type="bool" value="false"/>
       <property name="EDID" type="string" value="76dde8c69e9579a368bfa6de4cc54c74be5a354a"/>
       <property name="Resolution" type="string" value="3840x2160"/>
       <property name="RefreshRate" type="double" value="60.000000"/>
