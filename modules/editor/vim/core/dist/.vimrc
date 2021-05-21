@@ -1,6 +1,3 @@
-" ****************************************************************
-" USING VUNDLE FOR VIM PLUGINS
-" ****************************************************************
 set nocompatible              " be iMproved, required
 let mapleader = ","           " a better leader
 filetype off                  " required
