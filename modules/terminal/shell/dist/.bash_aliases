@@ -32,6 +32,7 @@ alias lastfzf="lpass ls  | fzf | awk '{print $$(NF)}' | sed 's/\]//g'"
 
 alias removepyc='find * -name "*.pyc" -delete'
 alias removelog='find * -name "*.log" -delete'
+alias removepycache='find * -type d -name "__pycache__" -delete'
 
 
 ##############################################
