@@ -4,4 +4,6 @@ if [ "$1" == "server" ] || [ "$1" == "" ]; then
   ide todoist start logs
 elif [ "$1" == "ngrok" ]; then
   ngrok http -bind-tls true -subdomain pothix -host-header=rewrite local.todoist.com:443
+elif [ "$1" == "test" ]; then
+  docker exec -it $(docker ps | grep server.sh | awk '{print $1}') /home/ec2-user/env3/bin/pytest -v $2
 fi
