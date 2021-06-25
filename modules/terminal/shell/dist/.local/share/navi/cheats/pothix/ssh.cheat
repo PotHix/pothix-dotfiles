@@ -1,0 +1,4 @@
+% ssh
+
+# Add ssh key
+ssh-add ~/.ssh/id_ed25519

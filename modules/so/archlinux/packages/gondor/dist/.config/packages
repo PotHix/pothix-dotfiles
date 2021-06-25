@@ -79,6 +79,7 @@ PAC+=(bash-completion)                 # bash-completion
 PAC+=(fzf)                             # fuzzy finder for terminal and vim
 AUR+=(starship-bin)                    # shell line
 PAC+=(z)                               # better cd that records the "frecency"
+AUR+=(navi)                            # shellscript cheatsheets
 
 # image apps
 PAC+=(imagemagick)                     # low level image manipulation
