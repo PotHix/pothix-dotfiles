@@ -1,0 +1,4 @@
+% todoist
+
+# Run a separate shell for debugging
+docker-compose run todoist sh -c "cd todoist && /home/ec2-user/env3/bin/python ./scripts/launch_server.py"
