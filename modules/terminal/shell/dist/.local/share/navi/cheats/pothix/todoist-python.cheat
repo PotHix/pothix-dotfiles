@@ -1,0 +1,13 @@
+% todoist-python
+
+# Add a task
+python -c "import todoist; import os; token = os.environ.get('token'); api = todoist.TodoistAPI(token); api.items.add('test'); api.commit()"```
+
+# Sync
+python -c "import todoist; import os; token = os.environ.get('token'); api = todoist.TodoistAPI(token); print(api.sync())"
+
+# Get task
+python -c "import todoist; import os; token = os.environ.get('token'); api = todoist.TodoistAPI(token); item = api.items.get_by_id(2980780897); print(item);"
+
+# Release a new version (after changing the version in setup.py)
+rm -rf dist/; pip install wheel; python setup.py bdist_wheel --universal; python -m twine upload
