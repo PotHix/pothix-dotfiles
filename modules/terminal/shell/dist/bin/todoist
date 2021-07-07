@@ -1,9 +1,11 @@
 #!/bin/sh
 
 if [ "$1" == "server" ] || [ "$1" == "" ]; then
-  ide todoist start logs
+    ide todoist start logs
 elif [ "$1" == "ngrok" ]; then
-  ngrok http -bind-tls true -subdomain pothix -host-header=rewrite local.todoist.com:443
+    ngrok http -bind-tls true -subdomain pothix -host-header=rewrite local.todoist.com:443
 elif [ "$1" == "test" ]; then
-  docker exec -it $(docker ps | grep server.sh | awk '{print $1}') /home/ec2-user/env3/bin/pytest -v todoist/$2
+    container=$(docker ps --no-trunc | grep todoist | grep server | head -n1 | awk '{print $1}')
+    echo "Running on todoist container $container"
+    docker exec -it $container /home/ec2-user/env3/bin/pytest -v todoist/$2
 fi
