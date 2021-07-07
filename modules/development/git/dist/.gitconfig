@@ -76,3 +76,5 @@
 [diff]
 	colorMoved = default
 
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs
