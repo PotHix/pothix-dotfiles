@@ -175,7 +175,8 @@ PAC+=(sysstat)                         # mostly for iostat
 PAC+=(openssh)                         # openssh
 
 # laptop improvements (mostly thinkpad specifics)
-PAC+=(acpid)                           # acpid
+PAC+=(acpi)                            # acpi client
+PAC+=(acpid)                           # acpi daemon
 PAC+=(tlp)                             # advanced power management
 PAC+=(smartmontools)                   # disk monitoring tool
 PAC+=(ethtool)                         # tool to read and modify network interfaces
