@@ -32,7 +32,7 @@ Name=Package id 0
 Color=#00B000
 Show=true
 Min=0.00
-Max=76.00
+Max=90.00
 
 [Chip1]
 Name=ucsi_source_psy_USBC000:001-0
@@ -47,19 +47,19 @@ Address=0
 Name=fan1
 Color=#00B000
 Show=true
-Min=1000.00
-Max=6500.00
+Min=0.00
+Max=6535.00
 
 [Chip3]
 Name=nvme-300
 Number=3
 
 [Chip4]
-Name=iwlwifi_1-0
+Name=ucsi_source_psy_USBC000:002-0
 Number=4
 
 [Chip5]
-Name=ucsi_source_psy_USBC000:002-0
+Name=iwlwifi_1-0
 Number=5
 
 [Chip6]
