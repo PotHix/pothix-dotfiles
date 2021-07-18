@@ -1,4 +1,7 @@
 % github
 
-# Get my PRs for the week
+# Get my merged PRs for the week
 gh pr list --search "is:pr author:$USER merged:$(date -dlast-monday +%Y-%m-%d)..$(date -dnext-monday +%Y-%m-%d)"
+
+# Get all merged and open PRs for the last week. Roam formatted
+gh pr list --search "is:pr author:$USER merged:$(date -dlast-monday +%Y-%m-%d)..$(date -dnext-monday +%Y-%m-%d)" --json url,title,number --jq '.[] | "- - \(.title) [#\(.number)](\(.url))"' && echo "- - " && gh pr list --search "is:pr author:$USER created:$(date -dlast-monday +%Y-%m-%d)..$(date -dnext-monday +%Y-%m-%d)" --json url,title,number --jq '.[] | "- - \(.title) [#\(.number)](\(.url))"'
