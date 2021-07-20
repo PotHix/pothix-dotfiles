@@ -195,12 +195,12 @@
         <property name="Y" type="int" value="0"/>
       </property>
       <property name="Scale" type="empty">
-        <property name="X" type="double" value="0.500000"/>
-        <property name="Y" type="double" value="0.500000"/>
+        <property name="X" type="double" value="1.000000"/>
+        <property name="Y" type="double" value="1.000000"/>
       </property>
     </property>
     <property name="DP-1-1" type="string" value="Goldstar Company Ltd 34&quot;">
-      <property name="Active" type="bool" value="false"/>
+      <property name="Active" type="bool" value="true"/>
       <property name="EDID" type="string" value="7a2749cf20e18723c657a33d3caec1e639388274"/>
       <property name="Resolution" type="string" value="2560x1080"/>
       <property name="RefreshRate" type="double" value="59.999534"/>
