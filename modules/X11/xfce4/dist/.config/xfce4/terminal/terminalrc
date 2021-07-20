@@ -27,8 +27,14 @@ MiscDefaultWorkingDir=
 MiscRewrapOnResize=TRUE
 MiscUseShiftArrowsToScroll=FALSE
 BackgroundDarkness=0.920000
-ScrollingUnlimited=TRUE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ScrollingOnOutput=FALSE
 FontName=Monospace 11
+MiscCopyOnSelect=FALSE
+MiscShowRelaunchDialog=TRUE
+MiscSlimTabs=FALSE
+MiscNewTabAdjacent=FALSE
+MiscSearchDialogOpacity=100
+MiscShowUnsafePasteDialog=TRUE
+ScrollingLines=10000
 
