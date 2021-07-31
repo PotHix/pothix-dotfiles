@@ -23,6 +23,7 @@ PAC+=(xorg-server-xephyr)              # helps testing lightdm on X
 PAC+=(lightdm)                         # lightdm
 PAC+=(lightdm-gtk-greeter)             # lightdm-gtk-greeter
 PAC+=(accountsservice)                 # accountsservice
+AUR+=(keyd-git)                        # keyboard mappings
 
 # required base software
 PAC+=(systemd)                         # systemd
