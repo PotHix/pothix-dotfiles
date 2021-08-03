@@ -17,19 +17,19 @@ curl -X POST --data '{"name": "<label_name>"}' -H 'Content-type: application/jso
 # api.todoist.com: Delete a label
 curl -X DELETE -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/labels/<api_label_id>"
 
-# api.todoist.com: Get all labels
+# localhost: Get all labels
 curl -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "http://localhost:8080/rest/v1/labels"
 
-# api.todoist.com: Get one label
+# localhost: Get one label
 curl -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "http://localhost:8080/rest/v1/labels/<local_label_id>"
 
-# api.todoist.com: Create a new label
+# localhost: Create a new label
 curl -X POST --data '{"name": "<label_name>", "favorite": <bool>}' -H 'Content-typew application/json' -svH "Authorization: Bearer $token" "http://localhost:8080/rest/v1/labels"
 
-# api.todoist.com: Update a label
+# localhost: Update a label
 curl -X POST --data '{"name": "<label_name>"}' -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "http://localhost:8080/rest/v1/labels/<local_label_id>"
 
-# api.todoist.com: Delete a label
+# localhost: Delete a label
 curl -X DELETE -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "http://localhost:8080/rest/v1/labels/<local_label_id>"
 
 $ api_label_id: curl -H 'Content-type: application/json' -sH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/labels" | jq '.[].id'
