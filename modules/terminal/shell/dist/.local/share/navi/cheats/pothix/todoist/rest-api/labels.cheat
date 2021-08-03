@@ -1,0 +1,21 @@
+% todoist-rest-api
+
+; Labels
+
+# localhost: Get all labels
+curl -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/labels"
+
+# localhost: Get one label
+curl -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/labels/<label_id>"
+
+# localhost: Create a new label
+curl -X POST --data '{"name": "<label_name>", "favorite": true}' -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/labels"
+
+# localhost: Update a label
+curl -X POST --data '{"name": "<label_name>"}' -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/labels/<label_id>"
+
+# localhost: Delete a label
+curl -X DELETE -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/labels/<label_id>"
+
+$ label_id: curl -H 'Content-type: application/json' -sH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/labels" | jq '.[].id'
+$ label_name: for i in {1..10}; do echo label$((1 + $RANDOM % 10000)); done
