@@ -254,3 +254,5 @@ function 2gif() {
 }
 
 function weather() { curl -s http://wttr.in/$1; }
+
+source /home/pothix/.config/broot/launcher/bash/br

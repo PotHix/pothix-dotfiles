@@ -118,6 +118,7 @@ PAC+=(fd)                              # alternative to find
 PAC+=(sd)                              # alternative to sed
 PAC+=(dust)                            # alternative to dh
 AUR+=(duf-bin)                         # auternative to df
+AUR+=(broot)                           # auternative to tree
 
 # languages and language managers
 PAC+=(python)                          # system version of python (dep for packages)
