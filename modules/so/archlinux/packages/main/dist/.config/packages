@@ -110,7 +110,7 @@ AUR+=(1password)                       # 1password Linux app
 AUR+=(authy)                           # authy 2FA app
 AUR+=(roam-research)                   # note-taking app
 
-# rust alternative to common commands
+# modern unix commands (mostly rust 🙂)
 PAC+=(exa)                             # alternative to ls
 PAC+=(ripgrep)                         # alternative to grep
 PAC+=(bat)                             # alternative to cat
@@ -119,6 +119,12 @@ PAC+=(sd)                              # alternative to sed
 PAC+=(dust)                            # alternative to dh
 AUR+=(duf-bin)                         # auternative to df
 AUR+=(broot)                           # auternative to tree
+AUR+=(choose)                          # auternative to cut / awk
+PAC+=(tldr)                            # alternative to man
+PAC+=(pping)                           # alternative to ping (with charts)
+PAC+=(procs)                           # alternative to ps
+PAC+=(curlie)                          # alternative to curl
+PAC+=(dog)                             # alternative to dig
 
 # languages and language managers
 PAC+=(python)                          # system version of python (dep for packages)
