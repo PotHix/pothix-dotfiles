@@ -1,0 +1,4 @@
+% X11
+
+# Split a maximized terminal into three (left, topright, bottomright)
+xdotool key Super+Left && /usr/bin/xfce4-terminal && xdotool key Super+Alt+Up && /usr/bin/xfce4-terminal && xdotool key Super+Alt+Down

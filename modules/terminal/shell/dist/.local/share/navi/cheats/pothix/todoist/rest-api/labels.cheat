@@ -2,37 +2,22 @@
 
 ; Labels
 
-# api.todoist.com: Get all labels
-curl -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/labels"
+# Get all labels
+curl -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "<url>/rest/v1/labels"
 
-# api.todoist.com: Get one label
-curl -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/labels/<api_label_id>"
+# Get one label
+curl -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "<url>/rest/v1/labels/<api_label_id>"
 
-# api.todoist.com: Create a new label
-curl -X POST --data '{"name": "<label_name>", "favorite": <bool>}' -H 'Content-typew application/json' -svH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/labels"
+# Create a new label
+curl -X POST --data '{"name": "<label_name>", "favorite": <bool>}' -H 'Content-typew application/json' -svH "Authorization: Bearer $token" "<url>/rest/v1/labels"
 
-# api.todoist.com: Update a label
-curl -X POST --data '{"name": "<label_name>"}' -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/labels/<api_label_id>"
+# Update a label
+curl -X POST --data '{"name": "<label_name>"}' -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "<url>/rest/v1/labels/<api_label_id>"
 
-# api.todoist.com: Delete a label
-curl -X DELETE -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/labels/<api_label_id>"
+# Delete a label
+curl -X DELETE -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "<url>/rest/v1/labels/<api_label_id>"
 
-# localhost: Get all labels
-curl -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "http://localhost:8080/rest/v1/labels"
-
-# localhost: Get one label
-curl -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "http://localhost:8080/rest/v1/labels/<local_label_id>"
-
-# localhost: Create a new label
-curl -X POST --data '{"name": "<label_name>", "favorite": <bool>}' -H 'Content-typew application/json' -svH "Authorization: Bearer $token" "http://localhost:8080/rest/v1/labels"
-
-# localhost: Update a label
-curl -X POST --data '{"name": "<label_name>"}' -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "http://localhost:8080/rest/v1/labels/<local_label_id>"
-
-# localhost: Delete a label
-curl -X DELETE -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "http://localhost:8080/rest/v1/labels/<local_label_id>"
-
-$ api_label_id: curl -H 'Content-type: application/json' -sH "Authorization: Bearer $token" "https://api.todoist.com/rest/v1/labels" | jq '.[].id'
-$ local_label_id: curl -H 'Content-type: application/json' -sH "Authorization: Bearer $token" "http://localhost:8080/rest/v1/labels" | jq '.[].id'
+$ api_label_id: curl -H 'Content-type: application/json' -sH "Authorization: Bearer $token" "$url/rest/v1/labels" | jq '.[].id'
 $ label_name: for i in {1..10}; do echo label$((1 + $RANDOM % 10000)); done
 $ bool: echo "true false" | tr ' ' '\n'
+$ url: echo "https://api.todoist.com http://localhost:8080" | tr ' ' '\n'
