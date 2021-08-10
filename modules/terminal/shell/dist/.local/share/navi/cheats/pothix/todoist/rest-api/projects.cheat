@@ -1,0 +1,20 @@
+% todoist-rest-api, projects
+
+# Get all projects
+curl -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "<url>/rest/v1/projects"
+
+# Get one project
+curl -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "<url>/rest/v1/projects/<project_id>"
+
+# Create a new project
+curl -X POST --data '{"name": "<name>"}' -H 'Content-typew application/json' -svH "Authorization: Bearer $token" "<url>/rest/v1/projects"
+
+# Update a project
+curl -X POST --data '{"name": "<name>"}' -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "<url>/rest/v1/projects/<project_id>"
+
+# Delete a project
+curl -X DELETE -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "<url>/rest/v1/labels/<project_id>"
+
+$ project_id: curl -H 'Content-type: application/json' -sH "Authorization: Bearer $token" "$url/rest/v1/projects" | jq '.[].id'
+$ name: for i in {1..10}; do echo label$((1 + $RANDOM % 10000)); done
+$ url: echo "https://api.todoist.com http://localhost:8080" | tr ' ' '\n'

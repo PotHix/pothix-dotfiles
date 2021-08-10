@@ -1,6 +1,4 @@
-% todoist-rest-api
-
-; Labels
+% todoist-rest-api, labels
 
 # Get all labels
 curl -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "<url>/rest/v1/labels"
