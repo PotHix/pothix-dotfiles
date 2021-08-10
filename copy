@@ -51,6 +51,6 @@ then
 elif [[ "$1" == "navi" ]]
 then
     log_starting $1
-    cp ~/.local/share/navi/cheats/pothix/* modules/terminal/shell/dist/.local/share/navi/cheats/pothix/
+    cp -R ~/.local/share/navi/cheats/pothix/* modules/terminal/shell/dist/.local/share/navi/cheats/pothix/
     log_done
 fi
