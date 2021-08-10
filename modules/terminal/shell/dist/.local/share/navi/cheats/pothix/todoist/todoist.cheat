@@ -1,7 +1,7 @@
 % todoist
 
-# Run a separate shell for debugging
-docker-compose run todoist sh -c "cd todoist && /home/ec2-user/env3/bin/python ./scripts/launch_server.py"
+# Run a separate server for debugging
+docker-compose run --rm todoist sh -c "cd todoist && /home/ec2-user/env3/bin/python ./scripts/launch_server.py"
 
 # Install ide-tools
 pip install --extra-index-url=https://pkgs.dev.azure.com/doist/ide-tools/_packaging/ide-tools/pypi/simple/ doist-ide --upgrade
