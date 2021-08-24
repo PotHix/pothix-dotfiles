@@ -1,0 +1,9 @@
+% inoreader
+
+# Transform inoreader annotated items to my Roam format
+curl -s https://www.inoreader.com/reader/api/0/stream/contents/user/-/state/com.google/annotated?annotations=1 -d AppKey=$inoreaderAppKey -d AppId=$inoreaderAppId -H"Authorization: GoogleLogin auth=$inoreaderauth" | jq -r '.items[] | "\n\n- Article:: \(.title)\n  **Author**: ppl/\(.author)**\n  **URL:** \(.canonical[0].href)\n  **Recommended by:** [[Inoreader]]\n- Summary::\n- **Notes**:", "  - \(.annotations[].text)", "    - > \(.annotations[].note)"'
+
+# Transform inoreader lists into Roam article bullet points with current time
+curl -s https://www.inoreader.com/reader/api/0/stream/contents/user/-/state/com.google/<feed> -d AppKey=$inoreaderAppKey -d AppId=$inoreaderAppId -H"Authorization: GoogleLogin auth=$inoreaderauth" | jq '.items[] | "\(now|strftime("%H:%M")) Reading [[article/\(.title)]]"'
+
+$ feed: echo "annotated starred" | tr ' ' '\n'
