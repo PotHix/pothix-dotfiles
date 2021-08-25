@@ -13,9 +13,9 @@ curl -X POST --data '{"name": "<name>"}' -H 'Content-typew application/json' -sv
 curl -X POST --data '{"name": "<name>"}' -H 'Content-type: application/json' -svH "Authorization: Bearer <apitoken>" "<url>/rest/v1/projects/<project_id>"
 
 # Delete a project
-curl -X DELETE -H 'Content-type: application/json' -svH "Authorization: Bearer <apitoken>" "<url>/rest/v1/labels/<project_id>"
+curl -X DELETE -H 'Content-type: application/json' -svH "Authorization: Bearer <apitoken>" "<url>/rest/v1/projects/<project_id>"
 
 $ project_id: curl -H 'Content-type: application/json' -sH "Authorization: Bearer $apitoken" "$url/rest/v1/projects" | jq '.[].id'
-$ name: for i in {1..10}; do echo label$((1 + $RANDOM % 10000)); done
+$ name: for i in {1..10}; do echo project$((1 + $RANDOM % 10000)); done
 $ url: echo "https://pothix.ngrok.io https://api.todoist.com http://localhost:8080" | tr ' ' '\n'
 $ apitoken: echo "$ltoken $token" | tr ' ' '\n'
