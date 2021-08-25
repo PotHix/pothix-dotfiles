@@ -1,6 +1,6 @@
 % X11
 
 # Split a maximized terminal into three (left, topright, bottomright) and paste clipboard
-xdotool key Super+Left && xdotool key Space && xdotool key Ctrl+Shift+v && xdotool key Enter && \
-        /usr/bin/xfce4-terminal && xdotool key Super+Alt+Up && xdotool key Space && xdotool key Ctrl+Shift+v && xdotool key Enter && \
-        /usr/bin/xfce4-terminal && xdotool key Super+Alt+Down && xdotool key Space && xdotool key Ctrl+Shift+v && xdotool key Enter
+xdotool key Super+Left && xdotool key space && xdotool key Ctrl+Shift+v && xdotool key Enter && \
+        /usr/bin/xfce4-terminal && xdotool key Super+Alt+Up && xdotool key space && xdotool key Ctrl+Shift+v && xdotool key Enter && \
+        /usr/bin/xfce4-terminal && xdotool key Super+Alt+Down && xdotool key space && xdotool key Ctrl+Shift+v && xdotool key Enter
