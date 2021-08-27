@@ -6,4 +6,4 @@ curl -s https://www.inoreader.com/reader/api/0/stream/contents/user/-/state/com.
 # Inoreader items as a list to daily notes in roam Roam.
 curl -s https://www.inoreader.com/reader/api/0/stream/contents/user/-/state/com.google/<feed> -d AppKey=$inoreaderAppKey -d AppId=$inoreaderAppId -H"Authorization: GoogleLogin auth=$inoreaderauth" | jq -r '.items[] | "- \(now|strftime("%H:%M")) Reading [[article/\(.title)]]"'
 
-$ feed: echo "annotated starred" | tr ' ' '\n'
+$ feed: echo "annotated starred saved-web-pages" | tr ' ' '\n'
