@@ -1,9 +1,9 @@
 % inoreader
 
 # Inoreader items to roam article format. Annotations are also shown.
-curl -s https://www.inoreader.com/reader/api/0/stream/contents/user/-/state/com.google/<feed>?annotations=1 -d AppKey=$inoreaderAppKey -d AppId=$inoreaderAppId -H"Authorization: GoogleLogin auth=$inoreaderauth" | jq -r '.items[] | {title: .title, author: .author, url: .canonical[0].href, recommended_by: "[[Inoreader]]", summary: (.annotations | sort_by(.added_on) | last | if .note != null then .note else "" end), notes: [(.annotations | sort_by(.added_on) | .[] | if .note != "" and .text != "" then "  - > \(.text)\n    - \(.note)" elif .note == "" then "  - > \(.text)" else "" end)]} | "\n\n- Article:: \(.title)\n  **Author**: ppl/\(.author)**\n  **URL:** \(.url)\n  **Recommended by:** [[Inoreader]]\n- Summary::\n  - \(.summary)\n- **Notes**:", .notes[]'
+curl -s https://www.inoreader.com/reader/api/0/stream/contents/user/-<feed>?annotations=1 -d AppKey=$inoreaderAppKey -d AppId=$inoreaderAppId -H"Authorization: GoogleLogin auth=$inoreaderauth" | jq -r '.items[] | {title: .title, author: .author, url: .canonical[0].href, recommended_by: "[[Inoreader]]", summary: (.annotations | sort_by(.added_on) | last | if .note != null then .note else "" end), notes: [(.annotations | sort_by(.added_on) | .[] | if .note != "" and .text != "" then "  - > \(.text)\n    - \(.note)" elif .note == "" then "  - > \(.text)" else "" end)]} | "\n\n- Article:: \(.title)\n- **Author**: [[ppl/\(.author)]]\n- **URL:** \(.url)\n- **Recommended by:** [[Inoreader]]\n- Summary::\n  - \(.summary)\n- **Notes**:", .notes[]'
 
 # Inoreader items as a list to daily notes in roam Roam.
-curl -s https://www.inoreader.com/reader/api/0/stream/contents/user/-/state/com.google/<feed> -d AppKey=$inoreaderAppKey -d AppId=$inoreaderAppId -H"Authorization: GoogleLogin auth=$inoreaderauth" | jq -r '.items[] | "- \(now|strftime("%H:%M")) Reading [[article/\(.title)]]"'
+curl -s https://www.inoreader.com/reader/api/0/stream/contents/user/-<feed> -d AppKey=$inoreaderAppKey -d AppId=$inoreaderAppId -H"Authorization: GoogleLogin auth=$inoreaderauth" | jq -r '.items[] | "- \(now|strftime("%H:%M")) Reading [[article/\(.title)]]"'
 
-$ feed: echo "annotated starred saved-web-pages" | tr ' ' '\n'
+$ feed: echo "/state/com.google/annotated /state/com.google/starred /state/com.google/saved-web-pages /label/notes_inbox" | tr ' ' '\n'
