@@ -1,0 +1,42 @@
+# espanso configuration file
+
+# This is the default configuration file, change it as you like it
+# You can refer to the official documentation:
+# https://espanso.org/docs/
+
+# Matches are the substitution rules, when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  # Dates
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Shell commands
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo Hello from your shell"
+
+  - trigger: ":sig"
+    replace: "--\nWillian Molinari\na.k.a. PotHix"
+
+  - trigger: ":mail"
+    replace: "pothix@pothix.com"
+
+  - trigger: ":linkedin"
+    replace: "Olá ,\n\nObrigado pelo contato! No momento estou bem feliz com meu trabalho atual (acredito bastante na missão e valores da empresa) e não estou em busca de novas oportunidades.\n\nDe qualquer forma, agradeço o contato e espero falarmos novamente no futuro.\n\nGrato,\n\nWillian Molinari"
+
+  - trigger: ":en_linkedin"
+    replace: "Hi ,\n\nThanks for contacting me. I'm currently enjoying my current job (I believe in the company values and mission), so I'm not interested in a new position at this particular moment.\n\nI hope to be able to contact you again in the future if things change.\n\nAll the best,\n\nWillian Molinari"

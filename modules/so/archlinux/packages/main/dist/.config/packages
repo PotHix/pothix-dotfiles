@@ -109,6 +109,7 @@ PAC+=(dos2unix)                        # convert files from windows to Linux for
 AUR+=(1password)                       # 1password Linux app
 AUR+=(authy)                           # authy 2FA app
 AUR+=(roam-research)                   # note-taking app
+AUR+=(espanso-bin)                     # text expander
 
 # modern unix commands (mostly rust 🙂)
 PAC+=(exa)                             # alternative to ls
