@@ -152,6 +152,12 @@ AUR+=(sardi-icons)                     # sardi icons
 AUR+=(newaita-icons-git)               # newaita icons
 # AUR+=(xfwm-axiom-theme)              # axiomd theme. Not reliable to install via AUR
 
+# launchers
+PAC+=(rofi)                            # rofi launcher
+PAC+=(rofi-emoji)                      # brings emoji mode to rofi
+PAC+=(rofi-calc)                       # brings calculations to rofi
+AUR+=(ulauncher)                       # ulauncher launcher. Requires to be using system python (not asdf)
+
 # i3/sway
 PAC+=(i3-wm)                           # i3-wm
 PAC+=(i3lock)                          # i3lock
