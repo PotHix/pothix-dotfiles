@@ -26,6 +26,7 @@ Plug 'vim-scripts/vimwiki'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'elixir-lang/vim-elixir'
 Plug 'othree/html5.vim'
+Plug 'rust-lang/rust.vim'
 Plug 'wakatime/vim-wakatime'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -112,6 +113,12 @@ nnoremap Y y$
 nmap <F8> :setlocal spell spelllang=pt<CR>
 nmap <F9> :setlocal spell spelllang=en<CR>
 nmap <F10> :setlocal nospell<CR>
+
+" using ripgrep
+if executable('rg')
+  set grepprg=rg\ --no-heading\ --vimgrep
+  set grepformat=%f:%l:%c:%m
+endif
 
 
 " ****************************************************

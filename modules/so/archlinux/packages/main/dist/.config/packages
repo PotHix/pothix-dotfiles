@@ -138,9 +138,10 @@ AUR+=(asdf-vm)                         # default way to install programming lang
 # editors
 PAC+=(emacs)                           # emacs
 PAC+=(vim)                             # vim
+PAC+=(neovim)                          # neovim
 PAC+=(aspell-pt)                       # pt dictionary
 PAC+=(aspell-en)                       # en dictionary
-# PAC+=(languagetool)                    # language checker (to be used with Vim)
+PAC+=(languagetool)                    # language checker (to be used with Vim)
 
 # xfce4
 PAC+=(xfce4)                           # xfce4 window manager
