@@ -32,9 +32,9 @@ then
     cp -R ~/.bash_aliases modules/terminal/shell/dist/
     cp -R ~/.gitconfig modules/development/git/dist/.gitconfig
     cp -R ~/.config/starship.toml modules/terminal/shell/dist/.config/
-    cp -R ~/.config/espanso/*  modules/terminal/shell/dist/.config/espanso/
-    cp -R ~/.config/rofi/*  modules/terminal/shell/dist/.config/rofi/
-    cp -R ~/.config/ulauncher/*  modules/terminal/shell/dist/.config/ulauncher/
+    cp -R ~/.config/espanso/* modules/terminal/shell/dist/.config/espanso/
+    cp -R ~/.config/rofi/* modules/X11/rofi/dist/.config/rofi/
+    cp -R ~/.config/ulauncher/* modules/X11/ulauncher/dist/.config/ulauncher/
     cp -R ~/{.dmrc,.xinitrc,.Xmodmap,.xprofile,.Xresources} modules/X11/x/dist/
     log_done
 elif [[ "$1" == "editors" ]]
