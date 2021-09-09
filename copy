@@ -33,7 +33,8 @@ then
     cp -R ~/.gitconfig modules/development/git/dist/.gitconfig
     cp -R ~/.config/starship.toml modules/terminal/shell/dist/.config/
     cp -R ~/.config/espanso/*  modules/terminal/shell/dist/.config/espanso/
-    cp -R ~/.tmuxinator/* modules/terminal/tmuxinator/dist/.tmuxinator/
+    cp -R ~/.config/rofi/*  modules/terminal/shell/dist/.config/rofi/
+    cp -R ~/.config/ulauncher/*  modules/terminal/shell/dist/.config/ulauncher/
     cp -R ~/{.dmrc,.xinitrc,.Xmodmap,.xprofile,.Xresources} modules/X11/x/dist/
     log_done
 elif [[ "$1" == "editors" ]]
@@ -42,11 +43,6 @@ then
     cp ~/.vimrc modules/editor/vim/core/dist/.vimrc
     cp ~/.vim/coc-settings.json modules/editor/vim/core/dist/.vim/
     cp -R ~/.emacs modules/editor/emacs/dist/
-    log_done
-elif [[ "$1" == "tmuxinator" ]]
-then
-    log_starting $1
-    cp ~/.tmuxinator/* modules/terminal/tmuxinator/dist/.tmuxinator/
     log_done
 elif [[ "$1" == "navi" ]]
 then
