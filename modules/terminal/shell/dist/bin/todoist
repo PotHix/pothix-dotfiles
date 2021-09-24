@@ -7,5 +7,5 @@ elif [ "$1" == "ngrok" ]; then
 elif [ "$1" == "test" ]; then
     container=$(docker ps --no-trunc | grep todoist | grep server | head -n1 | awk '{print $1}')
     echo "Running on todoist container $container"
-    docker exec -it $container /home/ec2-user/env3/bin/pytest -v todoist/$2
+    docker exec -it $container /home/ec2-user/env3/bin/pytest -vv todoist/$2
 fi
