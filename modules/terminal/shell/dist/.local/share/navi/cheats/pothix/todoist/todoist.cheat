@@ -5,3 +5,6 @@ docker-compose run --rm todoist sh -c "cd todoist && /home/ec2-user/env3/bin/pyt
 
 # Install ide-tools
 pip install --extra-index-url=https://pkgs.dev.azure.com/doist/ide-tools/_packaging/ide-tools/pypi/simple/ doist-ide --upgrade
+
+# Run ngrok for todoist
+ngrok http -bind-tls true -subdomain pothix -host-header=rewrite local.todoist.com:443
