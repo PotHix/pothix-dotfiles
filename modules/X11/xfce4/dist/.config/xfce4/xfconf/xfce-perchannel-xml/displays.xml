@@ -116,7 +116,7 @@
     </property>
   </property>
   <property name="Notify" type="bool" value="false"/>
-  <property name="ActiveProfile" type="string" value="00040bab8a787438c2c0cf5248ac025642115fad"/>
+  <property name="ActiveProfile" type="string" value="Default"/>
   <property name="6c3a72eaf6235dfa967f2bba4dfc3e431c3e1180" type="string" value="Office">
     <property name="eDP-1" type="string" value="Laptop">
       <property name="Active" type="bool" value="false"/>
