@@ -18,6 +18,8 @@ alias tz="\
     printf 'Prague:\t\t ';\
     TZ='Europe/Prague' date;\
 "
+alias n='navi --best-match --query '
+alias np='navi --print --best-match --query '
 
 
 ##############################################

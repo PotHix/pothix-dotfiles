@@ -100,7 +100,13 @@ pathadd() {
 
 create_pr() {
     local reviewer=$1
-    gh pr create -f -a $GITHUB_USER -r $reviewer
+
+    if [ "$reviewer" != "" ]
+    then
+        gh pr create -f -a $GITHUB_USER -r $reviewer
+    else
+        gh pr create -f -a $GITHUB_USER
+    fi
 }
 
 blogpost() {
@@ -109,14 +115,16 @@ blogpost() {
     vim $post
 }
 
-docker-stop-all() {
-    docker ps -q | xargs docker stop
-}
-
 base64-img() {
-    # I still want something better than this so I can get a better base64 but
-    # the current version works
-    magick -size 640x480 $1 - | base64 -w 0 | xsel -b
+    local image=$1
+
+    if [ "$image" == "" ]
+    then
+        echo "Please provide the path of the image as an argument"
+        return 1
+    fi
+
+    magick -size 640x480 $image - | base64 -w 0 | xsel -b
 }
 
 ########################################
