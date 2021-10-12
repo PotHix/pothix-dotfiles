@@ -106,6 +106,7 @@
         <value type="string" value="ibus panel"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="dropbox-client-641822"/>
         <value type="string" value="dropbox-client-2832"/>
         <value type="string" value="dropbox-client-3489361"/>
         <value type="string" value="dropbox-client-2045"/>
