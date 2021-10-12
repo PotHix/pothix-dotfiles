@@ -28,6 +28,7 @@ AUR+=(keyd-git)                        # keyboard mappings
 # required base software
 PAC+=(systemd)                         # systemd
 PAC+=(ntp)                             # keep date and time in sync
+PAC+=(reflector)                       # refresh the pacman mirrorlist
 
 # kernel flavors
 PAC+=(linux-zen)                       # linux-zen
@@ -228,10 +229,11 @@ SVC+=(lightdm.service)                 # login manager service
 SVC+=(tlp.service)                     # battery optimizing service
 SVC+=(libvirtd.service)                # virtualization daemon from libvirt
 SVC+=(bluetooth.service)               # to be able to use bluetooth
-SVC+=(docker.service)                  # docke should be enabled
+SVC+=(docker.service)                  # docker should be enabled
+SVC+=(reflector.timer)                 # runs periodically to keep mirrors updated
 #SVC+=(lenovo_fix.service)             # throttled service (not working well for now)
 
-echo "-----> activating services 💪"
+echo "-----> activating services and timers 💪"
 sudo systemctl enable "${SVC[@]}"
 
 echo "-----> set the default browser"
