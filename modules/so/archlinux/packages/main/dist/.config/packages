@@ -35,7 +35,7 @@ PAC+=(linux-zen)                       # linux-zen
 PAC+=(linux-zen-headers)               # linux-zen-headers
 PAC+=(linux-headers)                   # linux-headers
 
-# fonts
+# fonts and symbols
 PAC+=(ttf-dejavu)                      # ttf-dejavu
 PAC+=(terminus-font)                   # terminus-font
 PAC+=(noto-fonts-cjk)                  # noto-fonts-cjk
@@ -44,6 +44,7 @@ PAC+=(xorg-fonts-misc)                 # xorg-fonts-misc
 PAC+=(ttf-nerd-fonts-symbols)          # ttf-nerd-fonts-symbols
 PAC+=(ttf-font-awesome)                # ttf-font-awesome
 AUR+=(ttf-tengwar-annatar)             # tengwar font for elvish
+AUR+=(unipicker)                       # for emojis and symbols
 
 # connectivity packages
 PAC+=(wpa_supplicant)                  # wpa_supplicant for Wifi
