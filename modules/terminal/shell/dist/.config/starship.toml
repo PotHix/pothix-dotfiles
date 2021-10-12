@@ -1,20 +1,11 @@
-# Don't print a new line at the start of the prompt
 add_newline = false
-
-[character]      # The name of the module we are configuring is "character"
-symbol = "➜"     # The "symbol" segment is being set to "➜"
 
 [line_break]
 disabled = true
 
 [aws]
-disabled = true
 symbol = " "
-
-[battery]
-full_symbol = ""
-charging_symbol = ""
-discharging_symbol = ""
+disabled = true
 
 [conda]
 symbol = " "
@@ -31,20 +22,8 @@ symbol = " "
 [git_branch]
 symbol = ""
 
-[git_commit]
-disabled = true
-
-[git_state]
-disabled = false
-
-[git_status]
-disabled = false
-
 [golang]
 symbol = " "
-
-[haskell]
-symbol = " "
 
 [hg_branch]
 symbol = " "
