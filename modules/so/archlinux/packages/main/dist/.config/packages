@@ -159,7 +159,6 @@ AUR+=(newaita-icons-git)               # newaita icons
 PAC+=(rofi)                            # rofi launcher
 PAC+=(rofi-emoji)                      # brings emoji mode to rofi
 PAC+=(rofi-calc)                       # brings calculations to rofi
-AUR+=(ulauncher)                       # ulauncher launcher. Requires to be using system python (not asdf)
 
 # i3/sway
 PAC+=(i3-wm)                           # i3-wm

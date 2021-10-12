@@ -34,7 +34,6 @@ then
     cp -R ~/.config/starship.toml modules/terminal/shell/dist/.config/
     cp -R ~/.config/espanso/* modules/terminal/shell/dist/.config/espanso/
     cp -R ~/.config/rofi/* modules/X11/rofi/dist/.config/rofi/
-    cp -R ~/.config/ulauncher/* modules/X11/ulauncher/dist/.config/ulauncher/
     cp -R ~/{.dmrc,.xinitrc,.Xmodmap,.xprofile,.Xresources} modules/X11/x/dist/
     log_done
 elif [[ "$1" == "editors" ]]
