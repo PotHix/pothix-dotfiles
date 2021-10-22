@@ -16,6 +16,7 @@
       <value type="string" value="notify-send"/>
       <value type="string" value="org.gnome.baobab"/>
       <value type="string" value="signal"/>
+      <value type="string" value="thunar"/>
       <value type="string" value="Thunar"/>
       <value type="string" value="thunar-volman"/>
       <value type="string" value="Todoist"/>

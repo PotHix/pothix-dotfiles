@@ -195,8 +195,8 @@
         <property name="Y" type="int" value="0"/>
       </property>
       <property name="Scale" type="empty">
-        <property name="X" type="double" value="0.500000"/>
-        <property name="Y" type="double" value="0.500000"/>
+        <property name="X" type="double" value="1.000000"/>
+        <property name="Y" type="double" value="1.000000"/>
       </property>
     </property>
     <property name="DP-1-1" type="string" value="Goldstar Company Ltd 34&quot;">
