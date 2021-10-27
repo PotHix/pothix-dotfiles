@@ -241,6 +241,7 @@ xdg-mime default firefox-developer-edition.desktop text/html
 
 echo "-----> installing programming languages 💻"
 # install and/or update all programming languages
+asdf plugin add erlang
 asdf plugin add elixir
 asdf plugin add golang
 asdf plugin add nodejs
@@ -249,11 +250,15 @@ asdf plugin add ruby
 
 asdf plugin update --all
 
+LATEST_ERLANG=$(asdf list all erlang | rg "^\d+\.\d+\.\d+$" | tail -n 1)
 LATEST_ELIXIR=$(asdf list all elixir | rg "^\d+\.\d+\.\d+-otp.*$" | tail -n 1)
 LATEST_GOLANG=$(asdf list all golang | rg "^\d+\.\d+\.\d+$" | tail -n 1)
 LATEST_NODEJS=$(asdf list all nodejs | rg "^\d+\.\d+\.\d+$" | tail -n 1)
 LATEST_PYTHON=$(asdf list all python | rg "^\d+\.\d+\.\d+$" | tail -n 1)
 LATEST_RUBY=$(asdf list all ruby | rg "^\d+\.\d+\.\d+$" | tail -n 1)
+
+asdf install erlang $LATEST_ERLANG
+asdf global erlang $LATEST_ERLANG
 
 asdf install elixir $LATEST_ELIXIR
 asdf global elixir $LATEST_ELIXIR
