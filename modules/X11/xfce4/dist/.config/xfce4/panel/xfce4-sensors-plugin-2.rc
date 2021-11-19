@@ -1,38 +1,17 @@
 [General]
-Show_Title=false
 Show_Labels=false
-Use_Bar_UI=3
-Show_Colored_Bars=true
-Scale=0
-str_fontsize=medium
-val_fontsize=2
-Font=Sans 8
-Lines_Size=10
-Cover_All_Panel_Rows=false
-Update_Interval=3
-Exec_Command=true
-Show_Units=true
-Small_Spacings=false
-Command_Name=xfce4-sensors
-Number_Chips=10
 Suppress_Hddtemp_Message=true
-Suppress_Tooltip=false
+Use_Bar_UI=3
+Lines_Size=10
+Update_Interval=3
 Preferred_Width=404
 Preferred_Height=374
-Tachos_ColorValue=0.80
-Tachos_Alpha=0.80
+Number_Chips=10
+Font=Sans 8
 
 [Chip0]
-Name=coretemp-0
+Name=ucsi_source_psy_USBC000:001-0
 Number=0
-
-[Chip0_Feature0]
-Address=0
-Name=Package id 0
-Color=#00B000
-Show=true
-Min=0.00
-Max=90.00
 
 [Chip1]
 Name=iwlwifi_1-0
@@ -51,8 +30,16 @@ Name=ucsi_source_psy_USBC000:002-0
 Number=4
 
 [Chip5]
-Name=ucsi_source_psy_USBC000:001-0
+Name=coretemp-0
 Number=5
+
+[Chip5_Feature0]
+Address=0
+Name=Package id 0
+Color=#00B000
+Show=true
+Min=40.00
+Max=90.00
 
 [Chip6]
 Name=thinkpad-0
