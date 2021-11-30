@@ -10,4 +10,6 @@ InTerminal=1
 StartupNotification=0
 ColorMode=0
 PerCore=0
+Command=xfce4-taskmanager
+Background=rgb(61,56,70)
 
