@@ -237,7 +237,7 @@ sudo systemctl enable "${SVC[@]}"
 
 echo "-----> set the default browser"
 xdg-settings set default-web-browser firefox-developer-edition.desktop
-xdg-mime default firefox-developer-edition.desktop text/html
+xdg-mime default firefox-developer-edition.desktop x-scheme-handler/https x-scheme-handler/http text/html
 
 echo "-----> installing programming languages 💻"
 # install and/or update all programming languages
