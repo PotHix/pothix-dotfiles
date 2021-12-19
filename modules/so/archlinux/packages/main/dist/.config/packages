@@ -58,10 +58,9 @@ PAC+=(blueman)                         # GUI for bluetooth
 PAC+=(bluez)                           # netctl
 
 # basic sound packages
-PAC+=(pulseaudio)                      # pulseaudio
-PAC+=(pulseaudio-bluetooth)            # for bluetooth headphones
+PAC+=(pipewire)                        # sound
+PAC+=(pipewire-pulse)                  # pulse interface
 PAC+=(pavucontrol)                     # pavucontrol
-PAC+=(alsa-utils)                      # alsa-utils
 
 # development tools
 PAC+=(base-devel)                      # compilers and stuff
