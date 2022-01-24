@@ -120,7 +120,7 @@ PAC+=(bat)                             # alternative to cat
 PAC+=(fd)                              # alternative to find
 PAC+=(sd)                              # alternative to sed
 PAC+=(dust)                            # alternative to dh
-AUR+=(duf-bin)                         # auternative to df
+PAC+=(duf)                             # auternative to df
 AUR+=(broot)                           # auternative to tree
 AUR+=(choose)                          # auternative to cut / awk
 PAC+=(tldr)                            # alternative to man
@@ -213,6 +213,7 @@ PAC+=(firewalld)                       # required to boot the network for qemu
 PAC+=(dnsmasq)                         # required to boot the network for qemu
 
 echo "-----> checking AUR packages 👻"
+echo paru "${AUR[@]}" 2>/dev/null
 paru "${AUR[@]}" 2>/dev/null || (echo "❌ paru packages installation failed" && exit 1)
 
 # update all installed packages and install the ones mentioned above
