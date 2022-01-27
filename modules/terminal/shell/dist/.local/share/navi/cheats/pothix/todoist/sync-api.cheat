@@ -1,0 +1,9 @@
+% todoist-sync-api
+
+# Sync all resources
+curl -s "<url>" -d token=$token -d sync_token='*' -d resource_types='["all"]'
+
+# Sync only items
+curl -s "<url>" -d token=$token -d sync_token='*' -d resource_types='["items"]' | jq '.items'
+
+$ url: echo "https://todoist.com/sync/v8/sync https://pothix.ngrok.io/sync/v8/sync" | tr ' ' '\n'
