@@ -1,0 +1,290 @@
+#!/bin/sh
+
+set -o pipefail
+
+PAC=(-Syu --noconfirm --needed)
+AUR=(-Syu --noconfirm --needed --sudoloop --skipreview)
+
+echo "-----> starting the update 😎"
+
+if [[ ! $(command -v paru) ]]
+then
+    sudo pacman -S --needed base-devel
+    git clone https://aur.archlinux.org/paru.git
+    cd paru
+    makepkg -si
+fi
+
+# packages installed manually
+PAC+=(git)
+PAC+=(firefox-developer-edition)
+PAC+=(gnome)
+
+# # xorg and graphical stuff to boot X
+# PAC+=(xorg-server)                     # xorg-server
+# PAC+=(xorg-xinit)                      # xorg-xinit
+# PAC+=(xorg-xrdb)                       # xorg-xrdb
+# PAC+=(xorg-xmodmap)                    # xorg-xmodmap
+# PAC+=(xf86-input-libinput)             # xf86-input-libinput
+# PAC+=(xorg-server-xephyr)              # helps testing lightdm on X
+# PAC+=(lightdm)                         # lightdm
+# PAC+=(lightdm-gtk-greeter)             # lightdm-gtk-greeter
+# PAC+=(accountsservice)                 # accountsservice
+# # AUR+=(keyd-git)                      # keyboard mappings
+# 
+# # required base software
+# PAC+=(systemd)                         # systemd
+# PAC+=(ntp)                             # keep date and time in sync
+# PAC+=(reflector)                       # refresh the pacman mirrorlist
+# 
+# # kernel flavors
+# PAC+=(linux-zen)                       # linux-zen
+# PAC+=(linux-zen-headers)               # linux-zen-headers
+# PAC+=(linux-headers)                   # linux-headers
+# 
+# # fonts and symbols
+# PAC+=(ttf-dejavu)                      # ttf-dejavu
+# PAC+=(terminus-font)                   # terminus-font
+# PAC+=(noto-fonts-cjk)                  # noto-fonts-cjk
+# PAC+=(noto-fonts-emoji)                # noto-fonts-emoji
+# PAC+=(xorg-fonts-misc)                 # xorg-fonts-misc
+# PAC+=(ttf-nerd-fonts-symbols)          # ttf-nerd-fonts-symbols
+# PAC+=(ttf-font-awesome)                # ttf-font-awesome
+# AUR+=(ttf-tengwar-annatar)             # tengwar font for elvish
+# 
+# # connectivity packages
+# PAC+=(wpa_supplicant)                  # wpa_supplicant for Wifi
+# PAC+=(netctl)                          # netctl as an alternative to networkmanager
+# PAC+=(networkmanager)                  # networkmanager
+# PAC+=(network-manager-applet)          # network-manager-applet
+# PAC+=(bluez)                           # for bluetooth
+# PAC+=(bluez-utils)                     # tools for bluetooth
+# PAC+=(blueman)                         # GUI for bluetooth
+# PAC+=(bluez)                           # netctl
+# 
+# # basic sound packages
+
+PAC+=(pipewire)                        # sound
+# PAC+=(pipewire-pulse)                  # pulse interface
+# PAC+=(pavucontrol)                     # pavucontrol
+# 
+# # development tools
+# PAC+=(base-devel)                      # compilers and stuff
+# PAC+=(git)                             # git
+# PAC+=(jq)                              # parse json from the command line
+# PAC+=(tmux)                            # multiple terminals in one tab
+# AUR+=(wakatime-cli-bin)                # record time doing development
+# AUR+=(ngrok)                           # expose the local env to the internetz
+# AUR+=(android-sdk-platform-tools)      # adb + fastboot to play with android roms
+# AUR+=(heroku-cli)                      # heroku-cli
+# PAC+=(flake8)                          # python syntax checker
+# PAC+=(docker)                          # docker
+# PAC+=(docker-compose)                  # docker-compose
+# PAC+=(git-delta)                       # better git diff
+# PAC+=(github-cli)                      # github CLI
+# 
+# # terminal enhancements
+# PAC+=(bash-completion)                 # bash-completion
+# PAC+=(fzf)                             # fuzzy finder for terminal and vim
+# PAC+=(starship)                        # shell line
+# PAC+=(z)                               # better cd that records the "frecency"
+AUR+=(navi)                            # shellscript cheatsheets
+# 
+# # image apps
+# PAC+=(imagemagick)                     # low level image manipulation
+PAC+=(gimp)                            # image manipulation
+# PAC+=(inkscape)                        # vector drawing
+# PAC+=(scour)                           # svg optimizer for inkscape
+# PAC+=(shotwell)                        # photo management
+# PAC+=(peek)                            # gif generator
+# 
+# # audio/video apps
+# PAC+=(vlc)                             # video player
+# PAC+=(obs-studio)                      # video recording and streaming
+# PAC+=(audacity)                        # audio mixer
+# PAC+=(id3v2)                           # tool to handle id3 from mp3 files
+# 
+# # utilitaries
+# PAC+=(xsel)                            # add data to clipboard via command line
+# PAC+=(unzip)                           # extract .zip files
+# PAC+=(unrar)                           # extract .rar files
+# PAC+=(gnome-calculator)                # default calculator for gnome
+# PAC+=(evince)                          # PDF reader
+# PAC+=(xournalpp)                       # annotate PDFs
+# PAC+=(hugo)                            # static pagde generator
+# PAC+=(texlive-bin)                     # compile TeX files
+# PAC+=(dos2unix)                        # convert files from windows to Linux format
+# AUR+=(1password)                       # 1password Linux app
+# AUR+=(authy)                           # authy 2FA app
+# AUR+=(roam-research)                   # note-taking app
+# AUR+=(espanso-bin)                     # text expander
+# 
+# # modern unix commands (mostly rust 🙂)
+# PAC+=(exa)                             # alternative to ls
+# PAC+=(ripgrep)                         # alternative to grep
+# PAC+=(bat)                             # alternative to cat
+# PAC+=(fd)                              # alternative to find
+# PAC+=(sd)                              # alternative to sed
+# PAC+=(dust)                            # alternative to dh
+# PAC+=(duf)                             # auternative to df
+# AUR+=(broot)                           # auternative to tree
+# AUR+=(choose)                          # auternative to cut / awk
+# PAC+=(tldr)                            # alternative to man
+# PAC+=(procs)                           # alternative to ps
+# PAC+=(curlie)                          # alternative to curl
+# PAC+=(dog)                             # alternative to dig
+# 
+# # languages and language managers
+# PAC+=(python)                          # system version of python (dep for packages)
+# PAC+=(python2)                         # system version of python2 (dep for packages)
+# PAC+=(nodejs)                          # system version of nodejs (dep for packages)
+# PAC+=(jdk-openjdk)                     # java stuff
+# PAC+=(rustup)                          # rust installer system wide
+# PAC+=(sccache)                         # caches compilation (especially used for Rust via cargo)
+# AUR+=(asdf-vm)                         # default way to install programming languages
+# 
+# # editors
+# PAC+=(emacs)                           # emacs
+# PAC+=(vim)                             # vim
+# PAC+=(neovim)                          # neovim
+# PAC+=(aspell-pt)                       # pt dictionary
+# PAC+=(aspell-en)                       # en dictionary
+# PAC+=(languagetool)                    # language checker (to be used with Vim)
+# 
+# # xfce4
+# PAC+=(xfce4)                           # xfce4 window manager
+# PAC+=(xfce4-goodies)                   # xfce4 additional apps
+# PAC+=(file-roller)                     # archive manager for compressed files
+# PAC+=(gvfs)                            # network functionality for file managers
+# PAC+=(gvfs-smb)                        # smb for thunar
+# PAC+=(sshfs)                           # aid thunar to get remote locations done
+# AUR+=(sardi-icons)                     # sardi icons
+# # AUR+=(newaita-icons-git)             # newaita icons. Not reliable to install via AUR
+# # AUR+=(xfwm-axiom-theme)              # axiomd theme. Not reliable to install via AUR
+# 
+# # launchers
+# PAC+=(rofi)                            # rofi launcher
+# PAC+=(rofi-emoji)                      # brings emoji mode to rofi
+# PAC+=(rofi-calc)                       # brings calculations to rofi
+# 
+# # i3/sway
+# PAC+=(i3-wm)                           # i3-wm
+# PAC+=(i3lock)                          # i3lock
+# PAC+=(i3status)                        # i3status
+# PAC+=(i3blocks)                        # i3blocks
+# PAC+=(sway)                            # sway
+# PAC+=(rxvt-unicode)                    # rxvt-unicode
+# 
+# # communication
+# PAC+=(keybase)                         # keybase
+# PAC+=(telegram-desktop)                # telegram-desktop
+# PAC+=(discord)                         # linux client for Discord
+# # AUR+=(zoom)                            # zoom
+# 
+# # file sharing
+# AUR+=(dropbox)                         # dropbox
+# 
+# # entretainment software
+# # PAC+=(steam)                           # steam (requires multilib)
+# 
+# # browsers
+# PAC+=(firefox-developer-edition)       # firefox
+# PAC+=(chromium)                        # chromium
+# 
+# # productivity related software
+# PAC+=(redshift)                        # makes the screen red at night
+# AUR+=(rescuetime2)                     # rescuetime2
+# AUR+=(toggldesktop)                    # toggldesktop
+# 
+# # networking tools and monitoring software
+# PAC+=(bandwhich)                       # bandwhich
+# PAC+=(sysstat)                         # mostly for iostat
+# PAC+=(openssh)                         # openssh
+# 
+# # laptop improvements (mostly thinkpad specifics)
+# PAC+=(acpi)                            # acpi client
+# PAC+=(acpid)                           # acpi daemon
+# PAC+=(tlp)                             # advanced power management
+# PAC+=(smartmontools)                   # disk monitoring tool
+# PAC+=(ethtool)                         # tool to read and modify network interfaces
+# PAC+=(acpi_call)                       # improve battery usage on thinkpads (recommended by tlp)
+# PAC+=(throttled)                       # avoid thermal throttling on thinkpad
+# 
+# # install virtualization software
+# PAC+=(virtualbox)                      # virtualbox
+# PAC+=(virtualbox-host-dkms)            # virtualbox modules source (conflicts with virtualbox-host-modules-arch)
+# PAC+=(qemu)                            # machine emulator and virtualizer
+# PAC+=(virt-manager)                    # libvirt + virt-manager
+# PAC+=(firewalld)                       # required to boot the network for qemu
+# PAC+=(dnsmasq)                         # required to boot the network for qemu
+# 
+# echo "-----> checking AUR packages 👻"
+# echo paru "${AUR[@]}" 2>/dev/null
+# paru "${AUR[@]}" 2>/dev/null || (echo "❌ paru packages installation failed" && exit 1)
+# 
+# # update all installed packages and install the ones mentioned above
+# # TODO: check if it's still needed after using paru -Syu
+# sudo pacman "${PAC[@]}" 2>/dev/null || (echo "❌ pacman packages installation failed" && exit 1)
+# 
+# # activate essential services
+# SVC=(ntpd.service)                     # ntp service
+# SVC+=(NetworkManager.service)          # network manager service
+# SVC+=(acpid.service)                   # acpi service
+# SVC+=(nscd.service)                    # domain name caching service
+# SVC+=(lightdm.service)                 # login manager service
+# SVC+=(tlp.service)                     # battery optimizing service
+# SVC+=(libvirtd.service)                # virtualization daemon from libvirt
+# SVC+=(bluetooth.service)               # to be able to use bluetooth
+# SVC+=(docker.service)                  # docker should be enabled
+# SVC+=(reflector.timer)                 # runs periodically to keep mirrors updated
+# SVC+=(lenovo_fix.service)             # throttled service (not working well for now)
+# 
+# echo "-----> activating services and timers 💪"
+# sudo systemctl enable "${SVC[@]}"
+# 
+# echo "-----> set the default browser"
+# xdg-settings set default-web-browser firefox-developer-edition.desktop
+# xdg-mime default firefox-developer-edition.desktop x-scheme-handler/https x-scheme-handler/http text/html
+# 
+# echo "-----> installing programming languages 💻"
+# # install and/or update all programming languages
+# asdf plugin add erlang
+# asdf plugin add elixir
+# asdf plugin add golang
+# asdf plugin add nodejs
+# asdf plugin add python
+# asdf plugin add ruby
+# 
+# asdf plugin update --all
+# 
+# asdf install erlang latest
+# asdf global erlang latest
+# 
+# asdf install elixir latest
+# asdf global elixir latest
+# 
+# asdf install golang latest
+# asdf global golang latest
+# 
+# sh ~/.asdf/plugins/nodejs/bin/import-release-team-keyring 2>/dev/null
+# asdf install nodejs latest
+# asdf global nodejs latest
+# 
+# asdf install python latest
+# asdf global python latest
+# 
+# asdf install ruby latest
+# asdf global ruby latest
+# 
+# # rust is not installed via asdf because `rustup` is awesome
+# rustup toolchain install stable                  # install rust stable
+# rustup toolchain install nightly                 # install rust nightly
+# rustup default nightly                           # set nightly as default
+# rustup component add rls rust-analysis rust-src  # rust language server
+# rustup component add rust-src                    # source for rust analyzer
+# rustup component add clippy                      # install clippy
+# rustup component add rustfmt                     # install rust fmt
+# cargo +nightly install racer                     # install racer
+# 
+# echo "-----> done! ✨"
+# exit 0
