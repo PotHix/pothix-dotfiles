@@ -27,11 +27,12 @@ fi
 # PAC+=(lightdm-gtk-greeter)             # lightdm-gtk-greeter
 # PAC+=(accountsservice)                 # accountsservice
 # # AUR+=(keyd-git)                      # keyboard mappings
-#
-# required base software
+
+# base software
 PAC+=(systemd)                         # systemd
 PAC+=(ntp)                             # keep date and time in sync
 PAC+=(reflector)                       # refresh the pacman mirrorlist
+PAC+=(usbutils)
 
 # kernel flavors
 PAC+=(linux-zen)                       # linux-zen
@@ -111,10 +112,8 @@ PAC+=(xournalpp)                       # annotate PDFs
 PAC+=(hugo)                            # static pagde generator
 PAC+=(texlive-bin)                     # compile TeX files
 PAC+=(dos2unix)                        # convert files from windows to Linux format
-# AUR+=(1password)                       # 1password Linux app
 AUR+=(authy)                           # authy 2FA app
 AUR+=(roam-research)                   # note-taking app
-# AUR+=(espanso-bin)                     # text expander
 
 # modern unix commands (mostly rust 🙂)
 PAC+=(exa)                             # alternative to ls
@@ -190,14 +189,13 @@ PAC+=(waybar)                            # Topbar for sway
 PAC+=(keybase)                         # keybase
 PAC+=(telegram-desktop)                # telegram-desktop
 PAC+=(discord)                         # linux client for Discord
-# AUR+=(zoom)                            # zoom
-#
+
 # file sharing
 AUR+=(dropbox)                         # dropbox
 
 # entretainment software
-# PAC+=(steam)                           # steam (requires multilib)
-#
+PAC+=(steam)                           # steam (requires multilib)
+
 # browsers
 PAC+=(firefox-developer-edition)       # firefox
 PAC+=(chromium)                        # chromium
