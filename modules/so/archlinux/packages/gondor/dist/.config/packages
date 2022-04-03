@@ -174,7 +174,8 @@ PAC+=(fprintd)                         # fingerprint reader
 
 # Window managers / desktop environment
 PAC+=(gnome)
-PAC+=(sway)                            # sway
+PAC+=(sway)                              # sway tiling window manager
+PAC+=(waybar)                            # Topbar for sway
 
 # Xfce stuff. Disabled for now
 # PAC+=(xfce4)                           # xfce4 window manager
