@@ -15,19 +15,6 @@ then
     makepkg -si
 fi
 
-
-# # xorg and graphical stuff to boot X
-# PAC+=(xorg-server)                     # xorg-server
-# PAC+=(xorg-xinit)                      # xorg-xinit
-# PAC+=(xorg-xrdb)                       # xorg-xrdb
-# PAC+=(xorg-xmodmap)                    # xorg-xmodmap
-# PAC+=(xf86-input-libinput)             # xf86-input-libinput
-# PAC+=(xorg-server-xephyr)              # helps testing lightdm on X
-# PAC+=(lightdm)                         # lightdm
-# PAC+=(lightdm-gtk-greeter)             # lightdm-gtk-greeter
-# PAC+=(accountsservice)                 # accountsservice
-# # AUR+=(keyd-git)                      # keyboard mappings
-
 # base software
 PAC+=(systemd)                         # systemd
 PAC+=(ntp)                             # keep date and time in sync
@@ -38,6 +25,19 @@ PAC+=(usbutils)
 PAC+=(linux-zen)                       # linux-zen
 PAC+=(linux-zen-headers)               # linux-zen-headers
 PAC+=(linux-headers)                   # linux-headers
+
+# Window managers / desktop environment
+PAC+=(gnome)
+PAC+=(sway)                              # sway tiling window manager
+PAC+=(waybar)                            # Topbar for sway
+
+# Xfce stuff. Disabled for now
+# PAC+=(xfce4)                           # xfce4 window manager
+# PAC+=(xfce4-goodies)                   # xfce4 additional apps
+# # AUR+=(xfwm-axiom-theme)              # axiomd theme. Not reliable to install via AUR
+# PAC+=(file-roller)                     # archive manager for compressed files
+# PAC+=(gvfs)                            # network functionality for file managers
+# PAC+=(gvfs-smb)                        # smb for thunar
 
 # fonts and symbols
 # PAC+=(ttf-dejavu)                      # ttf-dejavu
@@ -114,6 +114,8 @@ PAC+=(texlive-bin)                     # compile TeX files
 PAC+=(dos2unix)                        # convert files from windows to Linux format
 AUR+=(authy)                           # authy 2FA app
 AUR+=(roam-research)                   # note-taking app
+AUR+=(dropbox)                         # dropbox
+PAC+=(steam)                           # steam (requires multilib)
 
 # modern unix commands (mostly rust 🙂)
 PAC+=(exa)                             # alternative to ls
@@ -153,13 +155,12 @@ AUR+=(nordic-theme)                     # sardi icons
 
 # Icon themes
 # AUR+=(sardi-icons)                     # sardi icons
-# # AUR+=(newaita-icons-git)             # newaita icons. Not reliable to install via AUR
+# AUR+=(newaita-icons-git)             # newaita icons. Not reliable to install via AUR
 AUR+=(tela-icon-theme)
 
 # Gnome
 PAC+=(dconf-editor)                    # edit gnome configuration
 PAC+=(fprintd)                         # fingerprint reader
-
 
 # x11 launchers
 # PAC+=(rofi)                            # rofi launcher
@@ -167,34 +168,14 @@ PAC+=(fprintd)                         # fingerprint reader
 # PAC+=(rofi-calc)                       # brings calculations to rofi
 
 # wayland launchers
-# PAC+=(wofi)                            # rofi launcher
-# AUR+=(wofi-emoji-git)                  # emoji mode to wofi
-# AUR+=(wofi-calc-git)                   # calculations to wofi
-
-# Window managers / desktop environment
-PAC+=(gnome)
-PAC+=(sway)                              # sway tiling window manager
-PAC+=(waybar)                            # Topbar for sway
-
-# Xfce stuff. Disabled for now
-# PAC+=(xfce4)                           # xfce4 window manager
-# PAC+=(xfce4-goodies)                   # xfce4 additional apps
-# # AUR+=(xfwm-axiom-theme)              # axiomd theme. Not reliable to install via AUR
-# PAC+=(file-roller)                     # archive manager for compressed files
-# PAC+=(gvfs)                            # network functionality for file managers
-# PAC+=(gvfs-smb)                        # smb for thunar
-
+PAC+=(wofi)                              # rofi launcher
+AUR+=(wofi-emoji-git)                    # emoji mode to wofi
+AUR+=(unipicker)                         # unicode picker
 
 # communication
 PAC+=(keybase)                         # keybase
 PAC+=(telegram-desktop)                # telegram-desktop
 PAC+=(discord)                         # linux client for Discord
-
-# file sharing
-AUR+=(dropbox)                         # dropbox
-
-# entretainment software
-PAC+=(steam)                           # steam (requires multilib)
 
 # browsers
 PAC+=(firefox-developer-edition)       # firefox
@@ -210,7 +191,7 @@ PAC+=(bandwhich)                       # bandwhich
 PAC+=(sysstat)                         # mostly for iostat
 PAC+=(openssh)                         # openssh
 PAC+=(sshfs)                           # creates ssh mounts. Aids some file managers to connect remotely (e.g thunar)
-#
+
 # # laptop improvements (mostly thinkpad specifics)
 # PAC+=(acpi)                            # acpi client
 # PAC+=(acpid)                           # acpi daemon
@@ -218,8 +199,7 @@ PAC+=(sshfs)                           # creates ssh mounts. Aids some file mana
 # PAC+=(smartmontools)                   # disk monitoring tool
 # PAC+=(ethtool)                         # tool to read and modify network interfaces
 # PAC+=(acpi_call)                       # improve battery usage on thinkpads (recommended by tlp)
-# PAC+=(throttled)                       # avoid thermal throttling on thinkpad
-#
+
 # # install virtualization software
 # PAC+=(virtualbox)                      # virtualbox
 # PAC+=(virtualbox-host-dkms)            # virtualbox modules source (conflicts with virtualbox-host-modules-arch)
@@ -239,18 +219,16 @@ sudo pacman "${PAC[@]}" 2>/dev/null || (echo "❌ pacman packages installation f
 # SVC=(ntpd.service)                     # ntp service
 # SVC+=(NetworkManager.service)          # network manager service
 # SVC+=(acpid.service)                   # acpi service
-# SVC+=(nscd.service)                    # domain name caching service
-# SVC+=(lightdm.service)                 # login manager service
+SVC+=(nscd.service)                    # domain name caching service
 # SVC+=(tlp.service)                     # battery optimizing service
 # SVC+=(libvirtd.service)                # virtualization daemon from libvirt
 SVC+=(bluetooth.service)               # to be able to use bluetooth
-# SVC+=(docker.service)                  # docker should be enabled
+SVC+=(docker.service)                  # docker should be enabled
 SVC+=(reflector.timer)                 # runs periodically to keep mirrors updated
-# SVC+=(lenovo_fix.service)             # throttled service (not working well for now)
-#
+
 # echo "-----> activating services and timers 💪"
-# sudo systemctl enable "${SVC[@]}"
-#
+sudo systemctl enable "${SVC[@]}"
+
 # echo "-----> set the default browser"
 # xdg-settings set default-web-browser firefox-developer-edition.desktop
 # xdg-mime default firefox-developer-edition.desktop x-scheme-handler/https x-scheme-handler/http text/html
