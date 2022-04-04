@@ -58,7 +58,6 @@ PAC+=(bluez)                           # for bluetooth
 PAC+=(bluez-utils)                     # tools for bluetooth
 PAC+=(blueman)                         # GUI for bluetooth
 
-
 # basic sound packages
 PAC+=(pipewire)                        # sound
 PAC+=(pipewire-pulse)                  # pulse interface
@@ -87,6 +86,7 @@ PAC+=(fzf)                             # fuzzy finder for terminal and vim
 PAC+=(starship)                        # shell line
 PAC+=(z)                               # better cd that records the "frecency"
 AUR+=(navi)                            # shellscript cheatsheets
+AUR+=(steampipe)                       # query the cloud
 
 # image apps
 PAC+=(imagemagick)                     # low level image manipulation
