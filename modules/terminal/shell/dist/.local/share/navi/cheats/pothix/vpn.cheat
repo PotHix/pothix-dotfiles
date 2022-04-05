@@ -1,0 +1,7 @@
+% vpn
+
+# doist wireguard up via network manager
+nmcli --show-secrets --ask connection up doist
+
+# doist wireguard down via network manager
+nmcli --show-secrets --ask connection down doist
