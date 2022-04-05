@@ -3,7 +3,7 @@
 packages=$HOME/.config/packages
 
 update_conf () {
-    sh <(curl -s https://raw.githubusercontent.com/dgvncsz0f/dot-install/master/dot-install) repo=git://github.com/PotHix/pothix-dotfiles.git bundle=$USER@$HOSTNAME force=true verbosity=99
+    sh <(curl -s https://raw.githubusercontent.com/dgvncsz0f/dot-install/master/dot-install) repo=git@github.com:PotHix/pothix-dotfiles.git bundle=$USER@$HOSTNAME force=true verbosity=99
 }
 
 execute_action () {
