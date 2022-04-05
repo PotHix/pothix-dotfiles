@@ -1,0 +1,256 @@
+[GWeather]
+temperature-unit='centigrade'
+
+[Music]
+window-maximized=true
+window-position=[0, 0]
+window-size=[2256, 1472]
+
+[Weather]
+locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747645728156, -0.81368157299186683)], [(-0.41073414481823473, -0.81361432545578749)])>)>, <(uint32 2, <('Indaiatuba', '', false, [(-0.40300141120739624, -0.82411061340423375)], [(-0.39968039870670141, -0.82175918366289935)])>)>]
+
+[calculator]
+accuracy=9
+angle-units='degrees'
+base=10
+button-mode='basic'
+number-format='automatic'
+show-thousands=false
+show-zeroes=false
+source-currency=''
+source-units='degree'
+target-currency=''
+target-units='radian'
+window-position=(30, 26)
+word-size=64
+
+[calendar]
+active-view='month'
+window-maximized=true
+window-position=(0, 0)
+window-size=(2560, 1051)
+
+[cheese]
+burst-delay=1000
+camera='Laptop Camera'
+video-x-resolution=0
+video-y-resolution=0
+
+[clocks]
+world-clocks=[{'location': <(uint32 2, <('Toronto', 'CYTZ', true, [(0.76154532446909495, -1.3857914260834978)], [(0.76212711252195475, -1.3860823201099277)])>)>}, {'location': <(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>}, {'location': <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>}, {'location': <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>}, {'location': <(uint32 2, <('Dhaka', 'VGHS', true, [(0.41626102660064762, 1.5777776438028739)], [(0.41404543583499592, 1.5779279341047632)])>)>}]
+
+[clocks/state/window]
+panel-id='world'
+size=(870, 690)
+state=87168
+
+[control-center]
+last-panel='keyboard'
+
+[desktop/app-folders]
+folder-children=['Utilities', 'YaST']
+
+[desktop/app-folders/folders/Utilities]
+apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop']
+categories=['X-GNOME-Utilities']
+name='X-GNOME-Utilities.directory'
+translate=true
+
+[desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[desktop/background]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///home/pothix/.local/share/backgrounds/2022-04-03-00-02-31-gandalf2.jpg'
+primary-color='#000000000000'
+secondary-color='#000000000000'
+
+[desktop/calendar]
+show-weekdate=false
+
+[desktop/input-sources]
+per-window=false
+sources=[('xkb', 'us+colemak')]
+xkb-options=['caps:ctrl_modifier']
+
+[desktop/interface]
+clock-show-date=true
+cursor-theme='Adwaita'
+enable-hot-corners=true
+font-antialiasing='grayscale'
+font-hinting='slight'
+font-name='Roboto 11'
+gtk-im-module='gtk-im-context-simple'
+gtk-theme='Nordic'
+icon-theme='Tela-green-dark'
+show-battery-percentage=true
+text-scaling-factor=0.90000000000000002
+
+[desktop/notifications]
+application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition']
+show-banners=true
+
+[desktop/notifications/application/alacritty]
+application-id='Alacritty.desktop'
+
+[desktop/notifications/application/firefox-developer-edition]
+application-id='firefox-developer-edition.desktop'
+
+[desktop/notifications/application/gnome-network-panel]
+application-id='gnome-network-panel.desktop'
+
+[desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
+
+[desktop/notifications/application/telegramdesktop]
+application-id='telegramdesktop.desktop'
+
+[desktop/peripherals/touchpad]
+two-finger-scrolling-enabled=true
+
+[desktop/screensaver]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///home/pothix/.local/share/backgrounds/2022-04-03-00-02-31-gandalf2.jpg'
+primary-color='#000000000000'
+secondary-color='#000000000000'
+
+[desktop/search-providers]
+sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
+
+[desktop/wm/keybindings]
+maximize=['<Super>m']
+minimize=@as []
+move-to-workspace-1=['<Shift><Super>h']
+move-to-workspace-2=['<Shift><Super>n']
+move-to-workspace-3=['<Shift><Super>e']
+move-to-workspace-4=['<Shift><Super>i']
+switch-applications=@as []
+switch-applications-backward=@as []
+switch-to-workspace-1=['<Super>h']
+switch-to-workspace-2=['<Super>n']
+switch-to-workspace-3=['<Super>e']
+switch-to-workspace-4=['<Super>i']
+switch-to-workspace-last=['<Super>0']
+switch-windows=['<Super>Tab']
+switch-windows-backward=['<Shift><Super>Tab']
+
+[desktop/wm/preferences]
+button-layout='appmenu:close'
+num-workspaces=5
+
+[eog/view]
+background-color='rgb(0,0,0)'
+use-background-color=true
+
+[epiphany]
+ask-for-default=false
+
+[epiphany/state]
+is-maximized=false
+window-position=(-1, -1)
+window-size=(1024, 768)
+
+[evolution-data-server]
+migrated=true
+network-monitor-gio-name=''
+
+[libgnomekbd/preview]
+height=384
+width=870
+x=141
+y=94
+
+[mutter]
+dynamic-workspaces=false
+
+[nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+
+[nautilus/window-state]
+initial-size=(890, 550)
+maximized=false
+
+[photos]
+window-maximized=true
+
+[settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/']
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Super>Return'
+command='/usr/bin/alacritty'
+name='Allacrity'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Super>t'
+command='/usr/bin/telegram-desktop'
+name='Telegram'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom2]
+binding='<Super>d'
+command='/usr/bin/discord'
+name='Discord'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom3]
+binding='<Primary><Shift>e'
+command='/usr/bin/wofi-emoji'
+name='Wofi emoji'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom4]
+binding='<Super>c'
+command='/usr/bin/gnome-calculator'
+name='Gnome calculator'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom5]
+binding='<Primary><Shift>u'
+command='/usr/bin/unipicker --command "wofi -dmenu" --copy-command "wl-copy"'
+name='Unipicker'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom6]
+binding='<Shift><Super>t'
+command='/usr/bin/TogglDesktop'
+name='Toggl'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom7]
+binding='<Super>r'
+command='wofi --show drun'
+name='Run wofi'
+
+[shell]
+disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'wintile@nowsci.com']
+enabled-extensions=@as []
+favorite-apps=['org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'firefox-developer-edition.desktop']
+had-bluetooth-devices-setup=true
+welcome-dialog-last-shown-version='41.5'
+
+[shell/app-switcher]
+current-workspace-only=true
+
+[shell/extensions/wintile]
+delay=500
+distance=25
+preview=false
+use-maximize=false
+
+[shell/keybindings]
+focus-active-notification=@as []
+toggle-message-tray=@as []
+
+[shell/weather]
+automatic-location=true
+locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747645728156, -0.81368157299186683)], [(-0.41073414481823473, -0.81361432545578749)])>)>, <(uint32 2, <('Indaiatuba', '', false, [(-0.40300141120739624, -0.82411061340423375)], [(-0.39968039870670141, -0.82175918366289935)])>)>]
+
+[shell/world-clocks]
+locations=[<(uint32 2, <('Toronto', 'CYTZ', true, [(0.76154532446909495, -1.3857914260834978)], [(0.76212711252195475, -1.3860823201099277)])>)>, <(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Dhaka', 'VGHS', true, [(0.41626102660064762, 1.5777776438028739)], [(0.41404543583499592, 1.5779279341047632)])>)>]
+
+[software]
+check-timestamp=int64 1649087116
+first-run=false
+
+[tweaks]
+show-extensions-notice=false

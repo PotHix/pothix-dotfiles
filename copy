@@ -19,6 +19,9 @@ then
     cp -R ~/.config/xfce4/* modules/X11/xfce4/dist/.config/xfce4/
     cp -R ~/.config/autostart/* modules/X11/xfce4/dist/.config/autostart/
     log_done
+elif [[ "$1" == "gnome" ]]
+then
+    dconf dump /org/gnome/ > /home/pothix/repos/pothix-dotfiles/modules/wayland/gnome/dist/.config/gnome-dconf-dump-config.txt
 elif [[ "$1" == "bin" ]]
 then
     log_starting $1
