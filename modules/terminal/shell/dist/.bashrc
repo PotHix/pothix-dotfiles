@@ -25,10 +25,6 @@ export LANG=en_US.UTF-8
 # when building kernels from AUR
 export MAKEFLAGS=-$(nproc)
 
-if [ -f /bin/urxvt ]; then
-    export TERM=rxvt
-fi
-
 export ANDROID_HOME=$HOME/Android
 
 ########################################
@@ -160,7 +156,7 @@ source /opt/asdf-vm/asdf.sh
 # z
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
-pathadd $HOME/bin               # my personal scripts
+pathadd $HOME/.local/bin        # my personal scripts and lvim
 pathadd $HOME/.cargo/bin        # rust binaries
 pathadd $HOME/go/bin            # golang binaries
 pathadd $HOME/.npm-global/bin   # javascript/npm binaries
