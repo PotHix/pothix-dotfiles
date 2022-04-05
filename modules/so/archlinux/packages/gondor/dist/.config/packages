@@ -40,14 +40,14 @@ PAC+=(waybar)                            # Topbar for sway
 # PAC+=(gvfs-smb)                        # smb for thunar
 
 # fonts and symbols
-# PAC+=(ttf-dejavu)                      # ttf-dejavu
+PAC+=(ttf-dejavu)                      # ttf-dejavu
 # PAC+=(terminus-font)                   # terminus-font
 # PAC+=(noto-fonts-cjk)                  # noto-fonts-cjk
 # PAC+=(noto-fonts-emoji)                # noto-fonts-emoji
 # PAC+=(xorg-fonts-misc)                 # xorg-fonts-misc
-# PAC+=(ttf-nerd-fonts-symbols)          # ttf-nerd-fonts-symbols
-# PAC+=(ttf-font-awesome)                # ttf-font-awesome
-# AUR+=(ttf-tengwar-annatar)             # tengwar font for elvish
+PAC+=(ttf-nerd-fonts-symbols)          # ttf-nerd-fonts-symbols
+PAC+=(ttf-font-awesome)                # ttf-font-awesome
+AUR+=(ttf-tengwar-annatar)             # tengwar font for elvish
 
 # connectivity packages
 PAC+=(wpa_supplicant)                  # wpa_supplicant for Wifi
@@ -267,8 +267,7 @@ asdf global ruby latest
 rustup toolchain install stable                  # install rust stable
 rustup toolchain install nightly                 # install rust nightly
 rustup default nightly                           # set nightly as default
-rustup component add rls rust-analysis rust-src  # rust language server
-rustup component add rust-src                    # source for rust analyzer
+rustup component add rust-src                    # source for rust analyzer (installed via pacman)
 rustup component add clippy                      # install clippy
 rustup component add rustfmt                     # install rust fmt
 
