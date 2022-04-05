@@ -63,7 +63,7 @@ translate=true
 
 [desktop/background]
 color-shading-type='solid'
-picture-options='zoom'
+picture-options='centered'
 picture-uri='file:///home/pothix/.local/share/backgrounds/2022-04-03-00-02-31-gandalf2.jpg'
 primary-color='#000000000000'
 secondary-color='#000000000000'
@@ -79,6 +79,7 @@ xkb-options=['caps:ctrl_modifier']
 [desktop/interface]
 clock-show-date=true
 cursor-theme='Adwaita'
+enable-animations=true
 enable-hot-corners=true
 font-antialiasing='grayscale'
 font-hinting='slight'
@@ -113,7 +114,7 @@ two-finger-scrolling-enabled=true
 
 [desktop/screensaver]
 color-shading-type='solid'
-picture-options='zoom'
+picture-options='centered'
 picture-uri='file:///home/pothix/.local/share/backgrounds/2022-04-03-00-02-31-gandalf2.jpg'
 primary-color='#000000000000'
 secondary-color='#000000000000'
