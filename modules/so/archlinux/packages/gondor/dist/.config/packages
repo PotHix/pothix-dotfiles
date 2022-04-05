@@ -27,7 +27,8 @@ PAC+=(linux-zen-headers)               # linux-zen-headers
 PAC+=(linux-headers)                   # linux-headers
 
 # Window managers / desktop environment
-PAC+=(gnome)
+PAC+=(gnome)                             # Gnome desktop environment
+AUR+=(viagee)                            # gnome-gmail
 PAC+=(sway)                              # sway tiling window manager
 PAC+=(waybar)                            # Topbar for sway
 
@@ -41,9 +42,9 @@ PAC+=(waybar)                            # Topbar for sway
 
 # fonts and symbols
 PAC+=(ttf-dejavu)                      # ttf-dejavu
-# PAC+=(terminus-font)                   # terminus-font
-# PAC+=(noto-fonts-cjk)                  # noto-fonts-cjk
-# PAC+=(noto-fonts-emoji)                # noto-fonts-emoji
+PAC+=(terminus-font)                   # terminus-font
+PAC+=(noto-fonts-cjk)                  # noto-fonts-cjk
+PAC+=(noto-fonts-emoji)                # noto-fonts-emoji
 # PAC+=(xorg-fonts-misc)                 # xorg-fonts-misc
 PAC+=(ttf-nerd-fonts-symbols)          # ttf-nerd-fonts-symbols
 PAC+=(ttf-font-awesome)                # ttf-font-awesome
