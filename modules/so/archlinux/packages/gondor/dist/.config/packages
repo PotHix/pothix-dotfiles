@@ -19,7 +19,8 @@ fi
 PAC+=(systemd)                         # systemd
 PAC+=(ntp)                             # keep date and time in sync
 PAC+=(reflector)                       # refresh the pacman mirrorlist
-PAC+=(usbutils)
+PAC+=(usbutils)                        # lsusb
+PAC+=(man)                             # manpages are useful
 
 # kernel flavors
 PAC+=(linux-zen)                       # linux-zen
@@ -77,6 +78,7 @@ PAC+=(flake8)                          # python syntax checker
 PAC+=(docker)                          # docker
 PAC+=(docker-compose)                  # docker-compose
 PAC+=(git-delta)                       # better git diff
+PAC+=(difftastic)                      # better diff / git diff
 PAC+=(github-cli)                      # github CLI
 PAC+=(llvm)                            # required to compile Rust from source
 PAC+=(cmake)                           # dependency for some projects I have to compile
