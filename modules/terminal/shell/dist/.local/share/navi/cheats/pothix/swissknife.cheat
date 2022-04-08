@@ -1,0 +1,4 @@
+% swissknife
+
+# Remove images and related stopped containers docker
+docker rm $(docker rmi <image> |& sed 's/.*stopped container //g')
