@@ -62,10 +62,10 @@ alias cat="bat --paging=never --style=plain"
 #    Typos
 ##############################################
 
-alias vmi='vim'
-alias ivm='vim'
-alias cim='vim'
-alias bim='vim'
+alias vmi='v'
+alias ivm='v'
+alias cim='v'
+alias bim='v'
 
 
 # Add completion to all my aliases. This code is based on a script mentioned in the following places:

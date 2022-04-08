@@ -52,14 +52,15 @@ fi
 v (){
     local editor="vi"
 
-    if [[ "$(command -v vim)" != "" ]]
+    if [[ "$(command -v lvim)" != "" ]]
     then
-        editor="vim"
-    fi
-
-    if [[ "$(command -v nvim)" != "" ]]
+        editor="lvim"
+    elif  [[ "$(command -v nvim)" != "" ]]
     then
         editor="nvim"
+    elif  [[ "$(command -v vim)" != "" ]]
+    then
+        editor="vim"
     fi
 
     # Removing : from a file name and adding + to go to the especified line
