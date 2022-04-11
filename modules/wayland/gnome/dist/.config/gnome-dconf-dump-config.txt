@@ -45,7 +45,8 @@ size=(870, 690)
 state=87168
 
 [control-center]
-last-panel='keyboard'
+last-panel='power'
+window-state=(980, 640, false)
 
 [desktop/app-folders]
 folder-children=['Utilities', 'YaST']
@@ -65,6 +66,7 @@ translate=true
 color-shading-type='solid'
 picture-options='centered'
 picture-uri='file:///home/pothix/.local/share/backgrounds/2022-04-03-00-02-31-gandalf2.jpg'
+picture-uri-dark='file:///home/pothix/.local/share/backgrounds/2022-04-03-00-02-31-gandalf2.jpg'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -78,9 +80,10 @@ xkb-options=['caps:ctrl_modifier']
 
 [desktop/interface]
 clock-show-date=true
+color-scheme='prefer-dark'
 cursor-theme='Adwaita'
 enable-animations=true
-enable-hot-corners=true
+enable-hot-corners=false
 font-antialiasing='grayscale'
 font-hinting='slight'
 font-name='Roboto 11'
@@ -93,9 +96,19 @@ text-scaling-factor=0.90000000000000002
 [desktop/notifications]
 application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition']
 show-banners=true
+show-in-lock-screen=true
 
 [desktop/notifications/application/alacritty]
 application-id='Alacritty.desktop'
+
+[desktop/notifications/application/authy]
+application-id='authy.desktop'
+
+[desktop/notifications/application/chromium]
+application-id='chromium.desktop'
+
+[desktop/notifications/application/dropbox]
+enable=true
 
 [desktop/notifications/application/firefox-developer-edition]
 application-id='firefox-developer-edition.desktop'
@@ -105,6 +118,9 @@ application-id='gnome-network-panel.desktop'
 
 [desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
+
+[desktop/notifications/application/org-gnome-evince]
+application-id='org.gnome.Evince.desktop'
 
 [desktop/notifications/application/telegramdesktop]
 application-id='telegramdesktop.desktop'
@@ -121,6 +137,13 @@ secondary-color='#000000000000'
 
 [desktop/search-providers]
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
+
+[desktop/session]
+idle-delay=uint32 300
+
+[desktop/sound]
+event-sounds=true
+theme-name='__custom'
 
 [desktop/wm/keybindings]
 maximize=['<Super>m']
@@ -155,9 +178,29 @@ is-maximized=false
 window-position=(-1, -1)
 window-size=(1024, 768)
 
+[evince/default]
+window-ratio=(0.98085320792744379, 0.3777619387027798)
+
 [evolution-data-server]
 migrated=true
 network-monitor-gio-name=''
+
+[file-roller/listing]
+list-mode='as-folder'
+name-column-width=250
+show-path=false
+sort-method='name'
+sort-type='ascending'
+
+[file-roller/ui]
+sidebar-width=200
+window-height=480
+window-width=600
+
+[gnome-screenshot]
+delay=0
+include-pointer=false
+last-save-directory='file:///home/pothix/Pictures'
 
 [libgnomekbd/preview]
 height=384
@@ -176,8 +219,20 @@ search-filter-time-type='last_modified'
 initial-size=(890, 550)
 maximized=false
 
+[nm-applet/eap/c5aac269-ad38-42f4-a0cc-7d02860979ec]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[nm-applet/eap/fca57e6c-2825-44c9-a46a-f4fd009e2a78]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [photos]
 window-maximized=true
+
+[settings-daemon/plugins/color]
+night-light-enabled=true
+night-light-temperature=uint32 3200
 
 [settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/']
@@ -222,15 +277,24 @@ binding='<Super>r'
 command='wofi --show drun'
 name='Run wofi'
 
+[settings-daemon/plugins/power]
+power-button-action='suspend'
+
 [shell]
-disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'wintile@nowsci.com']
-enabled-extensions=@as []
+command-history=['r', 'restart']
+disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'wintile@nowsci.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com']
 favorite-apps=['org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'firefox-developer-edition.desktop']
 had-bluetooth-devices-setup=true
 welcome-dialog-last-shown-version='41.5'
 
 [shell/app-switcher]
 current-workspace-only=true
+
+[shell/extensions/appindicator]
+custom-icons=@a(sss) []
+icon-opacity=100
+tray-pos='right'
 
 [shell/extensions/wintile]
 delay=500
@@ -250,7 +314,7 @@ locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747
 locations=[<(uint32 2, <('Toronto', 'CYTZ', true, [(0.76154532446909495, -1.3857914260834978)], [(0.76212711252195475, -1.3860823201099277)])>)>, <(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Dhaka', 'VGHS', true, [(0.41626102660064762, 1.5777776438028739)], [(0.41404543583499592, 1.5779279341047632)])>)>]
 
 [software]
-check-timestamp=int64 1649087116
+check-timestamp=int64 1649689872
 first-run=false
 
 [tweaks]
