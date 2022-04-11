@@ -275,5 +275,8 @@ rustup component add rust-src                    # source for rust analyzer (ins
 rustup component add clippy                      # install clippy
 rustup component add rustfmt                     # install rust fmt
 
+# apply gnome backup
+dconf load /org/gnome/ < ~/.config/gnome-dconf-dump-config.txt
+
 echo "-----> done! ✨"
 exit 0
