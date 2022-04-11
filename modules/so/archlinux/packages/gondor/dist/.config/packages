@@ -134,6 +134,7 @@ PAC+=(tldr)                            # alternative to man
 PAC+=(procs)                           # alternative to ps
 PAC+=(curlie)                          # alternative to curl
 PAC+=(dog)                             # alternative to dig
+PAC+=(bottom)                          # alternative to top
 
 # languages and language managers
 PAC+=(python)                          # system version of python (dep for packages)
