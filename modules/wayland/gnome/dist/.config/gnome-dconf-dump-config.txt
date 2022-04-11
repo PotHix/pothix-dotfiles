@@ -94,7 +94,7 @@ show-battery-percentage=true
 text-scaling-factor=0.90000000000000002
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition']
+application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium']
 show-banners=true
 show-in-lock-screen=true
 
@@ -202,6 +202,17 @@ delay=0
 include-pointer=false
 last-save-directory='file:///home/pothix/Pictures'
 
+[gnome-system-monitor]
+maximized=false
+network-total-in-bits=false
+show-dependencies=false
+show-whose-processes='user'
+window-state=(700, 500, 30, 26)
+
+[gnome-system-monitor/disktreenew]
+col-6-visible=true
+col-6-width=0
+
 [libgnomekbd/preview]
 height=384
 width=870
@@ -217,7 +228,7 @@ search-filter-time-type='last_modified'
 
 [nautilus/window-state]
 initial-size=(890, 550)
-maximized=false
+maximized=true
 
 [nm-applet/eap/c5aac269-ad38-42f4-a0cc-7d02860979ec]
 ignore-ca-cert=false
@@ -283,7 +294,7 @@ power-button-action='suspend'
 [shell]
 command-history=['r', 'restart']
 disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'wintile@nowsci.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'system-monitor@paradoxxx.zero.gmail.com']
 favorite-apps=['org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'firefox-developer-edition.desktop']
 had-bluetooth-devices-setup=true
 welcome-dialog-last-shown-version='41.5'
@@ -295,6 +306,37 @@ current-workspace-only=true
 custom-icons=@a(sss) []
 icon-opacity=100
 tray-pos='right'
+
+[shell/extensions/system-monitor]
+center-display=false
+compact-display=false
+cpu-display=true
+cpu-graph-width=50
+cpu-individual-cores=false
+cpu-show-menu=true
+cpu-show-text=false
+disk-display=true
+disk-graph-width=50
+disk-show-text=false
+disk-usage-style='bar'
+fan-display=true
+fan-show-text=false
+fan-style='digit'
+icon-display=false
+memory-graph-width=50
+memory-show-text=false
+memory-style='graph'
+move-clock=false
+net-graph-width=50
+net-show-text=false
+show-tooltip=false
+thermal-display=true
+thermal-graph-width=50
+thermal-sensor-file='/sys/class/hwmon/hwmon4/temp1_input'
+thermal-show-text=false
+thermal-style='digit'
+thermal-threshold=80
+thermal-tz0-color='#f2002eff'
 
 [shell/extensions/wintile]
 delay=500
