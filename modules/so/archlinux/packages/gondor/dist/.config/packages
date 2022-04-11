@@ -158,10 +158,10 @@ PAC+=(aspell-en)                       # en dictionary
 PAC+=(languagetool)                    # language checker (to be used with Vim)
 
 # GTK Themes
-AUR+=(nordic-theme)                     # sardi icons
+AUR+=(nordic-theme)                    # nordic theme (for gnome?)
 
 # Icon themes
-# AUR+=(sardi-icons)                     # sardi icons
+# AUR+=(sardi-icons)                   # sardi icons
 # AUR+=(newaita-icons-git)             # newaita icons. Not reliable to install via AUR
 AUR+=(tela-icon-theme)
 
@@ -169,15 +169,16 @@ AUR+=(tela-icon-theme)
 PAC+=(dconf-editor)                    # edit gnome configuration
 PAC+=(fprintd)                         # fingerprint reader
 
+# wayland-specific stuff
+PAC+=(xdg-desktop-portal-gnome)
+PAC+=(wofi)                              # rofi launcher
+AUR+=(wofi-emoji-git)                    # emoji mode to wofi
+AUR+=(unipicker)                         # unicode picker
+
 # x11 launchers
 # PAC+=(rofi)                            # rofi launcher
 # PAC+=(rofi-emoji)                      # brings emoji mode to rofi
 # PAC+=(rofi-calc)                       # brings calculations to rofi
-
-# wayland launchers
-PAC+=(wofi)                              # rofi launcher
-AUR+=(wofi-emoji-git)                    # emoji mode to wofi
-AUR+=(unipicker)                         # unicode picker
 
 # communication
 PAC+=(keybase)                         # keybase
