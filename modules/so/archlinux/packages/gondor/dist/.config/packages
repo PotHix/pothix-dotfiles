@@ -28,10 +28,13 @@ PAC+=(linux-zen-headers)               # linux-zen-headers
 PAC+=(linux-headers)                   # linux-headers
 
 # Window managers / desktop environment
-PAC+=(gnome)                             # Gnome desktop environment
-AUR+=(viagee)                            # gnome-gmail
-PAC+=(sway)                              # sway tiling window manager
-PAC+=(waybar)                            # Topbar for sway
+PAC+=(gnome)                              # Gnome desktop environment
+PAC+=(sway)                               # sway tiling window manager
+PAC+=(waybar)                             # Topbar for sway
+
+# Gnome stuff
+AUR+=(viagee)                             # gnome-gmail
+PAC+=(gnome-shell-extension-appindicator) # app indicator needed for Dropbox
 
 # Xfce stuff. Disabled for now
 # PAC+=(xfce4)                           # xfce4 window manager
@@ -46,7 +49,7 @@ PAC+=(ttf-dejavu)                      # ttf-dejavu
 PAC+=(terminus-font)                   # terminus-font
 PAC+=(noto-fonts-cjk)                  # noto-fonts-cjk
 PAC+=(noto-fonts-emoji)                # noto-fonts-emoji
-# PAC+=(xorg-fonts-misc)                 # xorg-fonts-misc
+PAC+=(xorg-fonts-misc)                 # xorg-fonts-misc
 PAC+=(ttf-nerd-fonts-symbols)          # ttf-nerd-fonts-symbols
 PAC+=(ttf-font-awesome)                # ttf-font-awesome
 AUR+=(ttf-tengwar-annatar)             # tengwar font for elvish
