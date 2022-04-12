@@ -58,6 +58,7 @@ AUR+=(ttf-tengwar-annatar)             # tengwar font for elvish
 PAC+=(wpa_supplicant)                  # wpa_supplicant for Wifi
 PAC+=(netctl)                          # netctl as an alternative to networkmanager
 PAC+=(networkmanager)                  # networkmanager
+PAC+=(networkmanager-openvpn)          # install openvpn and its client
 PAC+=(network-manager-applet)          # network-manager-applet
 PAC+=(bluez)                           # for bluetooth
 PAC+=(bluez-utils)                     # tools for bluetooth
