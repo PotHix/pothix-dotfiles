@@ -40,12 +40,13 @@ video-y-resolution=0
 world-clocks=[{'location': <(uint32 2, <('Toronto', 'CYTZ', true, [(0.76154532446909495, -1.3857914260834978)], [(0.76212711252195475, -1.3860823201099277)])>)>}, {'location': <(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>}, {'location': <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>}, {'location': <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>}, {'location': <(uint32 2, <('Dhaka', 'VGHS', true, [(0.41626102660064762, 1.5777776438028739)], [(0.41404543583499592, 1.5779279341047632)])>)>}]
 
 [clocks/state/window]
+maximized=false
 panel-id='world'
 size=(870, 690)
 state=87168
 
 [control-center]
-last-panel='power'
+last-panel='display'
 window-state=(980, 640, false)
 
 [desktop/app-folders]
@@ -94,7 +95,7 @@ show-battery-percentage=true
 text-scaling-factor=0.90000000000000002
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium']
+application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden']
 show-banners=true
 show-in-lock-screen=true
 
@@ -103,6 +104,9 @@ application-id='Alacritty.desktop'
 
 [desktop/notifications/application/authy]
 application-id='authy.desktop'
+
+[desktop/notifications/application/bitwarden]
+application-id='bitwarden.desktop'
 
 [desktop/notifications/application/chromium]
 application-id='chromium.desktop'
@@ -122,10 +126,23 @@ application-id='gnome-power-panel.desktop'
 [desktop/notifications/application/org-gnome-evince]
 application-id='org.gnome.Evince.desktop'
 
+[desktop/notifications/application/org-gnome-settings]
+application-id='org.gnome.Settings.desktop'
+
+[desktop/notifications/application/org-gnome-tweaks]
+application-id='org.gnome.tweaks.desktop'
+
+[desktop/notifications/application/piavpn]
+application-id='piavpn.desktop'
+
 [desktop/notifications/application/telegramdesktop]
 application-id='telegramdesktop.desktop'
 
 [desktop/peripherals/touchpad]
+edge-scrolling-enabled=false
+natural-scroll=true
+send-events='enabled'
+tap-to-click=false
 two-finger-scrolling-enabled=true
 
 [desktop/screensaver]
@@ -179,7 +196,7 @@ window-position=(-1, -1)
 window-size=(1024, 768)
 
 [evince/default]
-window-ratio=(0.98085320792744379, 0.3777619387027798)
+window-ratio=(0.98039215686274506, 0.3005050505050505)
 
 [evolution-data-server]
 migrated=true
@@ -187,7 +204,7 @@ network-monitor-gio-name=''
 
 [file-roller/listing]
 list-mode='as-folder'
-name-column-width=250
+name-column-width=74
 show-path=false
 sort-method='name'
 sort-type='ascending'
@@ -203,6 +220,7 @@ include-pointer=false
 last-save-directory='file:///home/pothix/Pictures'
 
 [gnome-system-monitor]
+current-tab='disks'
 maximized=false
 network-total-in-bits=false
 show-dependencies=false
@@ -223,12 +241,20 @@ y=94
 dynamic-workspaces=false
 
 [nautilus/preferences]
-default-folder-viewer='icon-view'
+default-folder-viewer='list-view'
 search-filter-time-type='last_modified'
 
 [nautilus/window-state]
 initial-size=(890, 550)
-maximized=true
+maximized=false
+
+[nm-applet/eap/675f9487-5d1e-45e2-aff2-c93f88b93c2b]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[nm-applet/eap/bde4a89a-94f2-4c4f-aaac-71f42832b565]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
 
 [nm-applet/eap/c5aac269-ad38-42f4-a0cc-7d02860979ec]
 ignore-ca-cert=false
@@ -294,7 +320,7 @@ power-button-action='suspend'
 [shell]
 command-history=['r', 'restart']
 disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'wintile@nowsci.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'system-monitor@paradoxxx.zero.gmail.com']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'system-monitor@paradoxxx.zero.gmail.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=['org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'firefox-developer-edition.desktop']
 had-bluetooth-devices-setup=true
 welcome-dialog-last-shown-version='41.5'
@@ -306,6 +332,13 @@ current-workspace-only=true
 custom-icons=@a(sss) []
 icon-opacity=100
 tray-pos='right'
+
+[shell/extensions/auto-move-windows]
+application-list=['roam-research.desktop:5']
+
+[shell/extensions/freon]
+hot-sensors=['__average__', '__max__']
+show-fan-rpm=true
 
 [shell/extensions/system-monitor]
 center-display=false
@@ -319,7 +352,7 @@ disk-display=true
 disk-graph-width=50
 disk-show-text=false
 disk-usage-style='bar'
-fan-display=true
+fan-display=false
 fan-show-text=false
 fan-style='digit'
 icon-display=false
@@ -356,7 +389,7 @@ locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747
 locations=[<(uint32 2, <('Toronto', 'CYTZ', true, [(0.76154532446909495, -1.3857914260834978)], [(0.76212711252195475, -1.3860823201099277)])>)>, <(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Dhaka', 'VGHS', true, [(0.41626102660064762, 1.5777776438028739)], [(0.41404543583499592, 1.5779279341047632)])>)>]
 
 [software]
-check-timestamp=int64 1649689872
+check-timestamp=int64 1649941306
 first-run=false
 
 [tweaks]
