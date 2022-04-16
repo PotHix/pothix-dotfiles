@@ -46,13 +46,12 @@ PAC+=(gnome-shell-extension-appindicator) # app indicator needed for Dropbox
 
 # fonts and symbols
 PAC+=(ttf-dejavu)                      # ttf-dejavu
-PAC+=(terminus-font)                   # terminus-font
-PAC+=(noto-fonts-cjk)                  # noto-fonts-cjk
 PAC+=(noto-fonts-emoji)                # noto-fonts-emoji
-PAC+=(xorg-fonts-misc)                 # xorg-fonts-misc
 PAC+=(ttf-nerd-fonts-symbols)          # ttf-nerd-fonts-symbols
 PAC+=(ttf-font-awesome)                # ttf-font-awesome
 AUR+=(ttf-tengwar-annatar)             # tengwar font for elvish
+PAC+=(otf-ipafont)                     # Japanese/Chinese chars
+# PAC+=(terminus-font)                   # terminus-font
 
 # connectivity packages
 PAC+=(wpa_supplicant)                  # wpa_supplicant for Wifi
@@ -79,6 +78,7 @@ AUR+=(ngrok)                           # expose the local env to the internetz
 AUR+=(android-sdk-platform-tools)      # adb + fastboot to play with android roms
 AUR+=(heroku-cli-bin)                  # heroku-cli
 PAC+=(flake8)                          # python syntax checker
+PAC+=(bpython)                         # better python shell
 PAC+=(docker)                          # docker
 PAC+=(docker-compose)                  # docker-compose
 PAC+=(git-delta)                       # better git diff
