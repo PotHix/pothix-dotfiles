@@ -9,6 +9,11 @@ window-size=[2256, 1472]
 [Weather]
 locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747645728156, -0.81368157299186683)], [(-0.41073414481823473, -0.81361432545578749)])>)>, <(uint32 2, <('Indaiatuba', '', false, [(-0.40300141120739624, -0.82411061340423375)], [(-0.39968039870670141, -0.82175918366289935)])>)>]
 
+[baobab/ui]
+active-chart='treemap'
+is-maximized=false
+window-size=(960, 600)
+
 [calculator]
 accuracy=9
 angle-units='degrees'
@@ -65,7 +70,7 @@ translate=true
 
 [desktop/background]
 color-shading-type='solid'
-picture-options='centered'
+picture-options='zoom'
 picture-uri='file:///home/pothix/.local/share/backgrounds/2022-04-03-00-02-31-gandalf2.jpg'
 picture-uri-dark='file:///home/pothix/.local/share/backgrounds/2022-04-03-00-02-31-gandalf2.jpg'
 primary-color='#000000000000'
@@ -95,7 +100,7 @@ show-battery-percentage=true
 text-scaling-factor=0.90000000000000002
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden']
+application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab']
 show-banners=true
 show-in-lock-screen=true
 
@@ -111,6 +116,9 @@ application-id='bitwarden.desktop'
 [desktop/notifications/application/chromium]
 application-id='chromium.desktop'
 
+[desktop/notifications/application/discord]
+application-id='discord.desktop'
+
 [desktop/notifications/application/dropbox]
 enable=true
 
@@ -122,6 +130,9 @@ application-id='gnome-network-panel.desktop'
 
 [desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
+
+[desktop/notifications/application/org-gnome-baobab]
+application-id='org.gnome.baobab.desktop'
 
 [desktop/notifications/application/org-gnome-evince]
 application-id='org.gnome.Evince.desktop'
@@ -147,7 +158,7 @@ two-finger-scrolling-enabled=true
 
 [desktop/screensaver]
 color-shading-type='solid'
-picture-options='centered'
+picture-options='zoom'
 picture-uri='file:///home/pothix/.local/share/backgrounds/2022-04-03-00-02-31-gandalf2.jpg'
 primary-color='#000000000000'
 secondary-color='#000000000000'
@@ -389,7 +400,7 @@ locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747
 locations=[<(uint32 2, <('Toronto', 'CYTZ', true, [(0.76154532446909495, -1.3857914260834978)], [(0.76212711252195475, -1.3860823201099277)])>)>, <(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Dhaka', 'VGHS', true, [(0.41626102660064762, 1.5777776438028739)], [(0.41404543583499592, 1.5779279341047632)])>)>]
 
 [software]
-check-timestamp=int64 1649941306
+check-timestamp=int64 1650024760
 first-run=false
 
 [tweaks]
