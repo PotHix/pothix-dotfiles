@@ -180,13 +180,14 @@ move-to-workspace-1=['<Shift><Super>h']
 move-to-workspace-2=['<Shift><Super>n']
 move-to-workspace-3=['<Shift><Super>e']
 move-to-workspace-4=['<Shift><Super>i']
+move-to-workspace-last=['<Shift><Super>o']
 switch-applications=@as []
 switch-applications-backward=@as []
 switch-to-workspace-1=['<Super>h']
 switch-to-workspace-2=['<Super>n']
 switch-to-workspace-3=['<Super>e']
 switch-to-workspace-4=['<Super>i']
-switch-to-workspace-last=['<Super>0']
+switch-to-workspace-last=['<Super>o']
 switch-windows=['<Super>Tab']
 switch-windows-backward=['<Shift><Super>Tab']
 
@@ -400,7 +401,7 @@ locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747
 locations=[<(uint32 2, <('Toronto', 'CYTZ', true, [(0.76154532446909495, -1.3857914260834978)], [(0.76212711252195475, -1.3860823201099277)])>)>, <(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Dhaka', 'VGHS', true, [(0.41626102660064762, 1.5777776438028739)], [(0.41404543583499592, 1.5779279341047632)])>)>]
 
 [software]
-check-timestamp=int64 1650024760
+check-timestamp=int64 1650220495
 first-run=false
 
 [tweaks]
