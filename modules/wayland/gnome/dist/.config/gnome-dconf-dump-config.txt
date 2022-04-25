@@ -107,6 +107,9 @@ show-in-lock-screen=true
 [desktop/notifications/application/alacritty]
 application-id='Alacritty.desktop'
 
+[desktop/notifications/application/around]
+application-id='around.desktop'
+
 [desktop/notifications/application/authy]
 application-id='authy.desktop'
 
@@ -137,6 +140,12 @@ application-id='org.gnome.baobab.desktop'
 [desktop/notifications/application/org-gnome-evince]
 application-id='org.gnome.Evince.desktop'
 
+[desktop/notifications/application/org-gnome-evolution-alarm-notify]
+application-id='org.gnome.Evolution-alarm-notify.desktop'
+
+[desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
 [desktop/notifications/application/org-gnome-settings]
 application-id='org.gnome.Settings.desktop'
 
@@ -145,6 +154,9 @@ application-id='org.gnome.tweaks.desktop'
 
 [desktop/notifications/application/piavpn]
 application-id='piavpn.desktop'
+
+[desktop/notifications/application/rescuetime]
+application-id='RescueTime.desktop'
 
 [desktop/notifications/application/telegramdesktop]
 application-id='telegramdesktop.desktop'
@@ -213,6 +225,9 @@ window-ratio=(0.98039215686274506, 0.3005050505050505)
 [evolution-data-server]
 migrated=true
 network-monitor-gio-name=''
+
+[evolution-data-server/calendar]
+reminders-past=['c887bb3db474bee8692e5ec1e3d7d7b0978aba2f\n672429ff38bc0b8eb3a121746c8963741f98f69a\t20220419T104500\n1650375300\n1650375900\n1650380400\nBEGIN:VEVENT\r\nDTSTART;TZID=America/Sao_Paulo:20220419T104500\r\nDTEND;TZID=America/Sao_Paulo:20220419T120000\r\nDTSTAMP:20220418T143227Z\r\nORGANIZER;CN=willian.molinari@gmail.com:mailto:\r\n willian.molinari@gmail.com\r\nUID:6tr3lcuphlmiifohihjeuhgpak@google.com\r\nATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;\r\n CN=jacqueline.teixeira87@gmail.com;X-NUM-GUESTS=0:mailto:\r\n jacqueline.teixeira87@gmail.com\r\nATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;\r\n CN=willian.molinari@gmail.com;X-NUM-GUESTS=0:mailto:\r\n willian.molinari@gmail.com\r\nX-GOOGLE-CONFERENCE:https://meet.google.com/xxi-mrci-jfh\r\nCREATED:20220418T143226Z\r\nDESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:\r\n ~:~:~:~:~:~:~:~:~::~:~::-\\nDo not edit this section of the \r\n description.\\n\\nThis event has a video call.\\nJoin: https:\r\n //meet.google.com/xxi-mrci-jfh\\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:\r\n ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\r\nLAST-MODIFIED:20220418T143227Z\r\nLOCATION:Slim Face Care Odontologia e Estética\\, R. Manoel da Nóbrega\\, \r\n 522 - Centro\\, Diadema - SP\\, 09910-720\\, Brazil\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Dentista para as crianças\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63785975547\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT10M\r\nX-EVOLUTION-ALARM-UID:672429ff38bc0b8eb3a121746c8963741f98f69a\r\nEND:VALARM\r\nEND:VEVENT\r\n']
 
 [file-roller/listing]
 list-mode='as-folder'
@@ -401,7 +416,7 @@ locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747
 locations=[<(uint32 2, <('Toronto', 'CYTZ', true, [(0.76154532446909495, -1.3857914260834978)], [(0.76212711252195475, -1.3860823201099277)])>)>, <(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Dhaka', 'VGHS', true, [(0.41626102660064762, 1.5777776438028739)], [(0.41404543583499592, 1.5779279341047632)])>)>]
 
 [software]
-check-timestamp=int64 1650220495
+check-timestamp=int64 1650669302
 first-run=false
 
 [tweaks]
