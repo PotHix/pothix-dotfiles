@@ -143,6 +143,29 @@ lvim.plugins = {
       "folke/trouble.nvim",
       cmd = "TroubleToggle",
     },
+    { "wakatime/vim-wakatime" },
+    {
+      "tpope/vim-surround",
+      keys = {
+        { 'n', 'ds' },
+        { 'n', 'cs' },
+        { 'n', 'cS' },
+        { 'n', 'ys' },
+        { 'n', 'yS' },
+        { 'n', 'yss' },
+        { 'n', 'ySs' },
+        { 'n', 'ySS' },
+        { 'x', 'S' },
+        { 'x', 'gS' },
+        { 'i', '<C-S>' },
+        { 'i', '<C-G>s' },
+        { 'i', '<C-G>S' }
+      }
+      -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
+      -- setup = function()
+      --  vim.o.timeoutlen = 500
+      -- end
+    }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
