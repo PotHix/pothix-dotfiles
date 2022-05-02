@@ -143,7 +143,7 @@ lvim.plugins = {
       "folke/trouble.nvim",
       cmd = "TroubleToggle",
     },
-    { "wakatime/vim-wakatime" },
+    {"wakatime/vim-wakatime"},
     {
       "tpope/vim-surround",
       keys = {
