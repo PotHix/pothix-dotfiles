@@ -100,7 +100,7 @@ show-battery-percentage=true
 text-scaling-factor=0.90000000000000002
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab']
+application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element']
 show-banners=true
 show-in-lock-screen=true
 
@@ -119,6 +119,9 @@ application-id='bitwarden.desktop'
 [desktop/notifications/application/chromium]
 application-id='chromium.desktop'
 
+[desktop/notifications/application/com-uploadedlobster-peek]
+application-id='com.uploadedlobster.peek.desktop'
+
 [desktop/notifications/application/discord]
 application-id='discord.desktop'
 
@@ -133,6 +136,9 @@ application-id='gnome-network-panel.desktop'
 
 [desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
+
+[desktop/notifications/application/io-element-element]
+application-id='io.element.Element.desktop'
 
 [desktop/notifications/application/org-gnome-baobab]
 application-id='org.gnome.baobab.desktop'
@@ -220,14 +226,19 @@ window-position=(-1, -1)
 window-size=(1024, 768)
 
 [evince/default]
-window-ratio=(3.0510332991681168, 1.7634228187919463)
+window-ratio=(0.98039215686274506, 0.37752525252525254)
 
 [evolution-data-server]
 migrated=true
 network-monitor-gio-name=''
 
 [evolution-data-server/calendar]
-reminders-past=['c887bb3db474bee8692e5ec1e3d7d7b0978aba2f\n672429ff38bc0b8eb3a121746c8963741f98f69a\t20220419T104500\n1650375300\n1650375900\n1650380400\nBEGIN:VEVENT\r\nDTSTART;TZID=America/Sao_Paulo:20220419T104500\r\nDTEND;TZID=America/Sao_Paulo:20220419T120000\r\nDTSTAMP:20220418T143227Z\r\nORGANIZER;CN=willian.molinari@gmail.com:mailto:\r\n willian.molinari@gmail.com\r\nUID:6tr3lcuphlmiifohihjeuhgpak@google.com\r\nATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;\r\n CN=jacqueline.teixeira87@gmail.com;X-NUM-GUESTS=0:mailto:\r\n jacqueline.teixeira87@gmail.com\r\nATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;\r\n CN=willian.molinari@gmail.com;X-NUM-GUESTS=0:mailto:\r\n willian.molinari@gmail.com\r\nX-GOOGLE-CONFERENCE:https://meet.google.com/xxi-mrci-jfh\r\nCREATED:20220418T143226Z\r\nDESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:\r\n ~:~:~:~:~:~:~:~:~::~:~::-\\nDo not edit this section of the \r\n description.\\n\\nThis event has a video call.\\nJoin: https:\r\n //meet.google.com/xxi-mrci-jfh\\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:\r\n ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\r\nLAST-MODIFIED:20220418T143227Z\r\nLOCATION:Slim Face Care Odontologia e Estética\\, R. Manoel da Nóbrega\\, \r\n 522 - Centro\\, Diadema - SP\\, 09910-720\\, Brazil\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Dentista para as crianças\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63785975547\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT10M\r\nX-EVOLUTION-ALARM-UID:672429ff38bc0b8eb3a121746c8963741f98f69a\r\nEND:VALARM\r\nEND:VEVENT\r\n']
+notify-window-height=149
+notify-window-paned-position=48
+notify-window-width=519
+notify-window-x=30
+notify-window-y=26
+reminders-past=[]
 
 [file-roller/listing]
 list-mode='as-folder'
@@ -273,7 +284,7 @@ search-filter-time-type='last_modified'
 
 [nautilus/window-state]
 initial-size=(890, 550)
-maximized=true
+maximized=false
 
 [nm-applet/eap/675f9487-5d1e-45e2-aff2-c93f88b93c2b]
 ignore-ca-cert=false
@@ -308,8 +319,8 @@ name='Allacrity'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Super>t'
-command='/usr/bin/telegram-desktop'
-name='Telegram'
+command='/usr/bin/TogglDesktop'
+name='Old Telegram, now Toggle'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom2]
 binding='<Super>d'
@@ -416,7 +427,7 @@ locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747
 locations=[<(uint32 2, <('Clinton', 'CWCL', true, [(0.89273591239509953, -2.1205750411731104)], [(0.89186324776910242, -2.1223203704251046)])>)>, <(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Dhaka', 'VGHS', false, [(0.41626102660064762, 1.5777776438028739)], [(0.41626102660064762, 1.5777776438028739)])>)>]
 
 [software]
-check-timestamp=int64 1651239540
+check-timestamp=int64 1651829491
 first-run=false
 
 [tweaks]
