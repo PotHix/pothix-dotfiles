@@ -73,7 +73,7 @@ PAC+=(base-devel)                      # compilers and stuff
 PAC+=(git)                             # git
 PAC+=(jq)                              # parse json from the command line
 PAC+=(tmux)                            # multiple terminals in one tab
-AUR+=(wakatime-cli-bin)                # record time doing development
+PAC+=(wakatime)                        # record time doing development
 AUR+=(ngrok)                           # expose the local env to the internetz
 AUR+=(android-sdk-platform-tools)      # adb + fastboot to play with android roms
 AUR+=(heroku-cli-bin)                  # heroku-cli
@@ -222,6 +222,7 @@ echo paru "${AUR[@]}" 2>/dev/null
 paru "${AUR[@]}" 2>/dev/null || (echo "❌ paru packages installation failed" && exit 1)
 
 # update all installed packages and install the ones mentioned above
+echo pacman "${AUR[@]}" 2>/dev/null
 sudo pacman "${PAC[@]}" 2>/dev/null || (echo "❌ pacman packages installation failed" && exit 1)
 
 # # activate essential services
