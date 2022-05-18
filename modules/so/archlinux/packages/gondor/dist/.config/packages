@@ -222,7 +222,7 @@ echo paru "${AUR[@]}" 2>/dev/null
 paru "${AUR[@]}" 2>/dev/null || (echo "❌ paru packages installation failed" && exit 1)
 
 # update all installed packages and install the ones mentioned above
-echo pacman "${AUR[@]}" 2>/dev/null
+echo pacman "${PAC[@]}" 2>/dev/null
 sudo pacman "${PAC[@]}" 2>/dev/null || (echo "❌ pacman packages installation failed" && exit 1)
 
 # # activate essential services
