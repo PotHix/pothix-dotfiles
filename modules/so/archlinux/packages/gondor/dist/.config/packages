@@ -122,7 +122,7 @@ PAC+=(dos2unix)                        # convert files from windows to Linux for
 AUR+=(authy)                           # authy 2FA app
 AUR+=(roam-research)                   # note-taking app
 AUR+=(dropbox)                         # dropbox
-PAC+=(steam)                           # steam (requires multilib)
+#PAC+=(steam)                           # steam (requires multilib)
 
 # modern unix commands (mostly rust 🙂)
 PAC+=(exa)                             # alternative to ls
