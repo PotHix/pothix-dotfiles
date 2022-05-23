@@ -3,7 +3,10 @@
 set -o pipefail
 
 PAC=(-Syu --noconfirm --needed)
+
+# AUR and GIT are both for AUR, but GIT should be installed every time
 AUR=(-Syu --noconfirm --needed --sudoloop --skipreview)
+GIT=(-Syu --noconfirm --sudoloop --skipreview)
 
 echo "-----> starting the update 😎"
 
@@ -174,7 +177,7 @@ PAC+=(fprintd)                         # fingerprint reader
 PAC+=(xdg-desktop-portal-gnome)
 PAC+=(wofi)                              # rofi launcher
 AUR+=(unipicker)                         # unicode picker
-# AUR+=(wofi-emoji-git)                    # emoji mode to wofi (commented out because fails on paru)
+GIT+=(wofi-emoji-git)                    # emoji mode to wofi (commented out because fails on paru)
 
 # x11 launchers
 # PAC+=(rofi)                            # rofi launcher
@@ -218,8 +221,11 @@ PAC+=(sshfs)                           # creates ssh mounts. Aids some file mana
 # PAC+=(dnsmasq)                         # required to boot the network for qemu
 
 echo "-----> checking AUR packages 👻"
-echo paru "${AUR[@]}" 2>/dev/null
+echo paru "${AUR[@]}"
 paru "${AUR[@]}" 2>/dev/null || (echo "❌ paru packages installation failed" && exit 1)
+echo "-----> checking AUR packages with -git suffix 👻"
+echo paru "${GIT[@]}"
+paru "${GIT[@]}" 2>/dev/null || (echo "❌ paru *-git packages installation failed" && exit 1)
 
 # update all installed packages and install the ones mentioned above
 echo pacman "${PAC[@]}" 2>/dev/null
