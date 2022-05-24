@@ -1,7 +1,7 @@
 % todoist
 
 # Run a separate server for debugging
-docker-compose run --rm todoist sh -c "/home/ec2-user/env3/bin/python ./scripts/launch_server.py"
+docker-compose run --rm todoist sh -c "python ./scripts/launch_server.py"
 
 # Install ide-tools
 pip install doist-ide --upgrade --extra-index https://doist-011833101604.d.codeartifact.us-east-1.amazonaws.com/pypi/doist/simple/
