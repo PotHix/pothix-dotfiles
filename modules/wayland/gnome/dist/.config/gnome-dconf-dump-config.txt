@@ -51,7 +51,7 @@ size=(992, 812)
 state=87168
 
 [control-center]
-last-panel='display'
+last-panel='network'
 window-state=(1067, 662, true)
 
 [desktop/app-folders]
@@ -100,7 +100,7 @@ show-battery-percentage=true
 text-scaling-factor=0.90000000000000002
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element']
+application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters']
 show-banners=true
 show-in-lock-screen=true
 
@@ -143,6 +143,9 @@ application-id='io.element.Element.desktop'
 [desktop/notifications/application/org-gnome-baobab]
 application-id='org.gnome.baobab.desktop'
 
+[desktop/notifications/application/org-gnome-characters]
+application-id='org.gnome.Characters.desktop'
+
 [desktop/notifications/application/org-gnome-evince]
 application-id='org.gnome.Evince.desktop'
 
@@ -167,10 +170,15 @@ application-id='RescueTime.desktop'
 [desktop/notifications/application/telegramdesktop]
 application-id='telegramdesktop.desktop'
 
+[desktop/peripherals/mouse]
+natural-scroll=false
+speed=-0.19665271966527198
+
 [desktop/peripherals/touchpad]
 edge-scrolling-enabled=false
 natural-scroll=true
 send-events='enabled'
+speed=-0.32467532467532467
 tap-to-click=false
 two-finger-scrolling-enabled=true
 
@@ -226,7 +234,17 @@ window-position=(-1, -1)
 window-size=(1024, 768)
 
 [evince/default]
-window-ratio=(0.98039215686274506, 0.37752525252525254)
+continuous=true
+dual-page=false
+dual-page-odd-left=false
+enable-spellchecking=true
+fullscreen=false
+inverted-colors=false
+show-sidebar=true
+sidebar-page='thumbnails'
+sidebar-size=132
+sizing-mode='automatic'
+window-ratio=(1.8954248366013071, 1.2487373737373737)
 
 [evolution-data-server]
 migrated=true
@@ -238,7 +256,7 @@ notify-window-paned-position=48
 notify-window-width=519
 notify-window-x=30
 notify-window-y=26
-reminders-past=[]
+reminders-past=["81d8cd9bd6169e502e81a40a38ebaea66564746e\na95a0a00fc9fcd3232c80bffcf2397ffca63bba0\t20220503T090000\n1651578600\n1651579200\n1651631400\nBEGIN:VEVENT\r\nDTSTART;TZID=America/Sao_Paulo:20130503T090000\r\nDTEND;TZID=America/Sao_Paulo:20130503T233000\r\nRRULE:FREQ=YEARLY\r\nDTSTAMP:20150707T043912Z\r\nUID:pbq0l4f0n4v3u33hnnh67olqpo@google.com\r\nCREATED:20130503T123422Z\r\nX-LIC-ERROR;X-LIC-ERRORTYPE=VALUE-PARSE-ERROR:No value for DESCRIPTION \r\n property. Removing entire property:\r\nLAST-MODIFIED:20150707T043912Z\r\nX-LIC-ERROR;X-LIC-ERRORTYPE=VALUE-PARSE-ERROR:No value for LOCATION \r\n property. Removing entire property:\r\nSEQUENCE:1\r\nSTATUS:CONFIRMED\r\nSUMMARY:dgvncsz0f's birthday\r\nTRANSP:TRANSPARENT\r\nX-EVOLUTION-CALDAV-ETAG:63571927152\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT10M\r\nX-EVOLUTION-ALARM-UID:a95a0a00fc9fcd3232c80bffcf2397ffca63bba0\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:EMAIL\r\nDESCRIPTION:This is an event reminder\r\nSUMMARY:Alarm notification\r\nATTENDEE:mailto:willian.molinari@gmail.com\r\nTRIGGER:-PT10M\r\nX-EVOLUTION-ALARM-UID:bc349f4d8ea3cb26f09d98e877067017a572e0c5\r\nEND:VALARM\r\nEND:VEVENT\r\n", 'c887bb3db474bee8692e5ec1e3d7d7b0978aba2f\nf6f91a8e19afcb745ec5e186facb5ad69780ea0b\t20220502T164500\n1651520100\n1651520700\n1651522500\nBEGIN:VEVENT\r\nDTSTART;TZID=America/Sao_Paulo:20220502T164500\r\nDTEND;TZID=America/Sao_Paulo:20220502T171500\r\nDTSTAMP:20220501T214012Z\r\nORGANIZER;CN=willian.molinari@gmail.com:mailto:\r\n willian.molinari@gmail.com\r\nUID:2hobne7ka54lermbl7kqh7m9v2@google.com\r\nATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=DECLINED;\r\n CN=jacqueline.teixeira87@gmail.com;X-NUM-GUESTS=0:mailto:\r\n jacqueline.teixeira87@gmail.com\r\nATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;\r\n CN=willian.molinari@gmail.com;X-NUM-GUESTS=0:mailto:\r\n willian.molinari@gmail.com\r\nX-GOOGLE-CONFERENCE:https://meet.google.com/jcn-guer-mxz\r\nCREATED:20220418T145507Z\r\nDESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:\r\n ~:~:~:~:~:~:~:~:~::~:~::-\\nDo not edit this section of the \r\n description.\\n\\nThis event has a video call.\\nJoin: https:\r\n //meet.google.com/jcn-guer-mxz\\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:\r\n ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\r\nLAST-MODIFIED:20220501T214012Z\r\nLOCATION:Menegon e Sanches\\, R. Reg. Feijó\\, 67 - Centro\\, Diadema - \r\n SP\\, 09910-770\\, Brazil\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Consulta com o Dr. Marcos Sanches\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63787124412\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT10M\r\nX-EVOLUTION-ALARM-UID:f6f91a8e19afcb745ec5e186facb5ad69780ea0b\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:5700d232e54cc84245f12c68a6c0b17ad37a43ab\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P2D\r\nX-EVOLUTION-ALARM-UID:3db1ee0b5d92bcef410694631cb06383dc47f06e\r\nEND:VALARM\r\nEND:VEVENT\r\n', 'c887bb3db474bee8692e5ec1e3d7d7b0978aba2f\n28f48f37e812ecbc4d055e1f070441399aee6127\t20220502T164500\n1651434300\n1651520700\n1651522500\nBEGIN:VEVENT\r\nDTSTART;TZID=America/Sao_Paulo:20220502T164500\r\nDTEND;TZID=America/Sao_Paulo:20220502T171500\r\nDTSTAMP:20220418T145507Z\r\nORGANIZER;CN=willian.molinari@gmail.com:mailto:\r\n willian.molinari@gmail.com\r\nUID:2hobne7ka54lermbl7kqh7m9v2@google.com\r\nATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;\r\n CN=jacqueline.teixeira87@gmail.com;X-NUM-GUESTS=0:mailto:\r\n jacqueline.teixeira87@gmail.com\r\nATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;\r\n CN=willian.molinari@gmail.com;X-NUM-GUESTS=0:mailto:\r\n willian.molinari@gmail.com\r\nX-GOOGLE-CONFERENCE:https://meet.google.com/jcn-guer-mxz\r\nCREATED:20220418T145507Z\r\nDESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:\r\n ~:~:~:~:~:~:~:~:~::~:~::-\\nDo not edit this section of the \r\n description.\\n\\nThis event has a video call.\\nJoin: https:\r\n //meet.google.com/jcn-guer-mxz\\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:\r\n ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\r\nLAST-MODIFIED:20220418T145507Z\r\nLOCATION:Menegon e Sanches\\, R. Reg. Feijó\\, 67 - Centro\\, Diadema - \r\n SP\\, 09910-770\\, Brazil\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Consulta com o Dr. Marcos Sanches\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63785976907\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P2D\r\nX-EVOLUTION-ALARM-UID:34f77da8b9f3b4c341787a92f04eee3ef12032a8\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT10M\r\nX-EVOLUTION-ALARM-UID:acecd326b254276ac4aa2c9c6361b99c8761ede7\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:28f48f37e812ecbc4d055e1f070441399aee6127\r\nEND:VALARM\r\nEND:VEVENT\r\n', 'c887bb3db474bee8692e5ec1e3d7d7b0978aba2f\n34f77da8b9f3b4c341787a92f04eee3ef12032a8\t20220502T164500\n1651347900\n1651520700\n1651522500\nBEGIN:VEVENT\r\nDTSTART;TZID=America/Sao_Paulo:20220502T164500\r\nDTEND;TZID=America/Sao_Paulo:20220502T171500\r\nDTSTAMP:20220418T145507Z\r\nORGANIZER;CN=willian.molinari@gmail.com:mailto:\r\n willian.molinari@gmail.com\r\nUID:2hobne7ka54lermbl7kqh7m9v2@google.com\r\nATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;\r\n CN=jacqueline.teixeira87@gmail.com;X-NUM-GUESTS=0:mailto:\r\n jacqueline.teixeira87@gmail.com\r\nATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;\r\n CN=willian.molinari@gmail.com;X-NUM-GUESTS=0:mailto:\r\n willian.molinari@gmail.com\r\nX-GOOGLE-CONFERENCE:https://meet.google.com/jcn-guer-mxz\r\nCREATED:20220418T145507Z\r\nDESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:\r\n ~:~:~:~:~:~:~:~:~::~:~::-\\nDo not edit this section of the \r\n description.\\n\\nThis event has a video call.\\nJoin: https:\r\n //meet.google.com/jcn-guer-mxz\\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:\r\n ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\r\nLAST-MODIFIED:20220418T145507Z\r\nLOCATION:Menegon e Sanches\\, R. Reg. Feijó\\, 67 - Centro\\, Diadema - \r\n SP\\, 09910-770\\, Brazil\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Consulta com o Dr. Marcos Sanches\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63785976907\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P2D\r\nX-EVOLUTION-ALARM-UID:34f77da8b9f3b4c341787a92f04eee3ef12032a8\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT10M\r\nX-EVOLUTION-ALARM-UID:acecd326b254276ac4aa2c9c6361b99c8761ede7\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-P1D\r\nX-EVOLUTION-ALARM-UID:28f48f37e812ecbc4d055e1f070441399aee6127\r\nEND:VALARM\r\nEND:VEVENT\r\n', 'c887bb3db474bee8692e5ec1e3d7d7b0978aba2f\n672429ff38bc0b8eb3a121746c8963741f98f69a\t20220419T104500\n1650375300\n1650375900\n1650380400\nBEGIN:VEVENT\r\nDTSTART;TZID=America/Sao_Paulo:20220419T104500\r\nDTEND;TZID=America/Sao_Paulo:20220419T120000\r\nDTSTAMP:20220418T143227Z\r\nORGANIZER;CN=willian.molinari@gmail.com:mailto:\r\n willian.molinari@gmail.com\r\nUID:6tr3lcuphlmiifohihjeuhgpak@google.com\r\nATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;\r\n CN=jacqueline.teixeira87@gmail.com;X-NUM-GUESTS=0:mailto:\r\n jacqueline.teixeira87@gmail.com\r\nATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;\r\n CN=willian.molinari@gmail.com;X-NUM-GUESTS=0:mailto:\r\n willian.molinari@gmail.com\r\nX-GOOGLE-CONFERENCE:https://meet.google.com/xxi-mrci-jfh\r\nCREATED:20220418T143226Z\r\nDESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:\r\n ~:~:~:~:~:~:~:~:~::~:~::-\\nDo not edit this section of the \r\n description.\\n\\nThis event has a video call.\\nJoin: https:\r\n //meet.google.com/xxi-mrci-jfh\\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:\r\n ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\r\nLAST-MODIFIED:20220418T143227Z\r\nLOCATION:Slim Face Care Odontologia e Estética\\, R. Manoel da Nóbrega\\, \r\n 522 - Centro\\, Diadema - SP\\, 09910-720\\, Brazil\r\nSEQUENCE:0\r\nSTATUS:CONFIRMED\r\nSUMMARY:Dentista para as crianças\r\nTRANSP:OPAQUE\r\nX-EVOLUTION-CALDAV-ETAG:63785975547\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT10M\r\nX-EVOLUTION-ALARM-UID:672429ff38bc0b8eb3a121746c8963741f98f69a\r\nEND:VALARM\r\nEND:VEVENT\r\n']
 
 [file-roller/listing]
 list-mode='as-folder'
@@ -251,6 +269,24 @@ sort-type='ascending'
 sidebar-width=200
 window-height=480
 window-width=600
+
+[gedit/plugins]
+active-plugins=['docinfo', 'modelines', 'openlinks', 'spell', 'filebrowser', 'sort']
+
+[gedit/plugins/filebrowser]
+root='file:///'
+tree-view=true
+virtual-root='file:///home/pothix/Downloads'
+
+[gedit/preferences/ui]
+show-tabs-mode='auto'
+
+[gedit/state/window]
+bottom-panel-size=140
+side-panel-active-page='GeditWindowDocumentsPanel'
+side-panel-size=200
+size=(1280, 1013)
+state=76672
 
 [gnome-screenshot]
 delay=0
@@ -281,10 +317,15 @@ dynamic-workspaces=false
 [nautilus/preferences]
 default-folder-viewer='list-view'
 search-filter-time-type='last_modified'
+search-view='list-view'
 
 [nautilus/window-state]
 initial-size=(890, 550)
-maximized=false
+maximized=true
+
+[nm-applet/eap/106d2ab9-9c33-3961-820e-7f667c04196a]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
 
 [nm-applet/eap/675f9487-5d1e-45e2-aff2-c93f88b93c2b]
 ignore-ca-cert=false
@@ -356,11 +397,12 @@ name='Run wofi'
 power-button-action='suspend'
 
 [shell]
-command-history=['r', 'restart']
+command-history=['r', 'restart', 'lt', 'lg']
 disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'wintile@nowsci.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'system-monitor@paradoxxx.zero.gmail.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=['org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'firefox-developer-edition.desktop']
 had-bluetooth-devices-setup=true
+looking-glass-history=['global.context.unsafe_mode = true', 'global.context.unsafe_mode = false']
 welcome-dialog-last-shown-version='41.5'
 
 [shell/app-switcher]
@@ -427,7 +469,7 @@ locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747
 locations=[<(uint32 2, <('Clinton', 'CWCL', true, [(0.89273591239509953, -2.1205750411731104)], [(0.89186324776910242, -2.1223203704251046)])>)>, <(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Dhaka', 'VGHS', false, [(0.41626102660064762, 1.5777776438028739)], [(0.41626102660064762, 1.5777776438028739)])>)>]
 
 [software]
-check-timestamp=int64 1651829491
+check-timestamp=int64 1653562344
 first-run=false
 
 [tweaks]
