@@ -64,29 +64,14 @@ v (){
     fi
 
     # Removing : from a file name and adding + to go to the especified line
-    local file=$(echo $1 | sed -r 's/:([0-9]+).*/ +\1/')
+    local file
+    file=$(echo "$1" | sed -r 's/:([0-9]+).*/ +\1/')
     eval "$editor $file"
 }
 
-goodpractices (){
-    local extensions_regex=".*\.\(py\|j\|c\|rb\|js\|php\)$"
-
-    # Removing trailing spaces
-    find * -type f -regex $extensions_regex | xargs sed -i 's/\s\+$//g'
-
-    # Adding a newline to the end of the file if needed
-    for i in `find * -type f -regex $extensions_regex`; do
-        if [ "`tail -c 1 $i`" != "" ]; then echo >> $i; fi
-
-        for k in $@; do
-            git checkout $k
-        done
-    done
-}
-
 iconver (){
-    for i in `find . | egrep "\.(css|html|js)"`; do iconv -f iso-8859-1 -t utf8 $i > $i.utf; done
-    for i in `find . | grep utf`; do cp $i ${i%%.utf}; rm $i; done
+    for i in $(find . | grep -E "\.(css|html|js)"); do iconv -f iso-8859-1 -t utf8 "$i" > "$i".utf; done
+    for i in $(find . | grep utf); do cp "$i" "${i%%.utf}"; rm "$i"; done
 }
 
 pathadd() {
@@ -100,16 +85,17 @@ create_pr() {
 
     if [ "$reviewer" != "" ]
     then
-        gh pr create -f -a $GITHUB_USER -r $reviewer
+        gh pr create -f -a $GITHUB_USER -r "$reviewer"
     else
         gh pr create -f -a $GITHUB_USER
     fi
 }
 
 blogpost() {
-    pushd $CODES/pothix.github.com
-    local post=$(hugo new posts/$1.md| sed -r 's/^(.*) .*/\1/g')
-    vim $post
+    pushd "$CODES/pothix.github.com" || exit
+    local post
+    post=$(hugo new posts/"$1".md| sed -r 's/^(.*) .*/\1/g')
+    vim "$post"
 }
 
 base64-img() {
@@ -121,7 +107,7 @@ base64-img() {
         return 1
     fi
 
-    magick -size 640x480 $image - | base64 -w 0 | xsel -b
+    magick -size 640x480 "$image" - | base64 -w 0 | xsel -b
 }
 
 ########################################
@@ -135,7 +121,7 @@ fkill() {
 
   if [ "x$pid" != "x" ]
   then
-    echo $pid | xargs kill -${1:-9}
+    echo "$pid" | xargs kill -"${1:-9}"
   fi
 }
 
@@ -143,7 +129,7 @@ fkill() {
 cdf() {
    local file
    local dir
-   file=$(fzf +m -q "$1") && dir=$(dirname "$file") && cd "$dir"
+   file=$(fzf +m -q "$1") && dir=$(dirname "$file") && cd "$dir" || exit
 }
 
 
@@ -157,10 +143,10 @@ source /opt/asdf-vm/asdf.sh
 # z
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
-pathadd $HOME/.local/bin        # my personal scripts and lvim
-pathadd $HOME/.cargo/bin        # rust binaries
-pathadd $HOME/go/bin            # golang binaries
-pathadd $HOME/.npm-global/bin   # javascript/npm binaries
+pathadd "$HOME/.local/bin"        # my personal scripts and lvim
+pathadd "$HOME/.cargo/bin"        # rust binaries
+pathadd "$HOME/go/bin"            # golang binaries
+pathadd "$HOME/.npm-global/bin"   # javascript/npm binaries
 
 # Start starship
 eval "$(starship init bash)"
@@ -175,19 +161,19 @@ alias diskspace="du -S | sort -n -r | less"
 
 # Easy way to extract archives
 extract () {
-   if [ -f $1 ] ; then
-       case $1 in
-           *.tar.bz2)   tar xvjf $1;;
-           *.tar.gz)    tar xvzf $1;;
-           *.bz2)       bunzip2 $1 ;;
-           *.rar)       unrar x $1 ;;
-           *.gz)        gunzip $1  ;;
-           *.tar)       tar xvf $1 ;;
-           *.tbz2)      tar xvjf $1;;
-           *.tgz)       tar xvzf $1;;
-           *.zip)       unzip $1   ;;
-           *.Z)         uncompress $1  ;;
-           *.7z)        7z x $1;;
+   if [ -f "$1" ] ; then
+       case "$1" in
+           *.tar.bz2)   tar xvjf "$1";;
+           *.tar.gz)    tar xvzf "$1";;
+           *.bz2)       bunzip2 "$1" ;;
+           *.rar)       unrar x "$1" ;;
+           *.gz)        gunzip "$1"  ;;
+           *.tar)       tar xvf "$1" ;;
+           *.tbz2)      tar xvjf "$1";;
+           *.tgz)       tar xvzf "$1";;
+           *.zip)       unzip "$1"   ;;
+           *.Z)         uncompress "$1"  ;;
+           *.7z)        7z x "$1";;
            *) echo "don't know how to extract '$1'..." ;;
        esac
    else
