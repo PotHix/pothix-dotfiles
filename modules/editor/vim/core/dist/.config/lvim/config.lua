@@ -59,21 +59,21 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.show_icons.git = 0
+lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
-  "c",
+  -- "c",
   "javascript",
   "json",
   "lua",
   "python",
   "typescript",
-  "tsx",
+  -- "tsx",
   "css",
   "rust",
-  "java",
+  -- "java",
   "yaml",
 }
 
@@ -120,22 +120,23 @@ formatters.setup {
  }
 
 -- -- set additional linters
--- local linters = require "lvim.lsp.null-ls.linters"
--- linters.setup {
---   { command = "flake8", filetypes = { "python" } },
---   {
---     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
---     command = "shellcheck",
---     ---@usage arguments to pass to the formatter
---     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
---     extra_args = { "--severity", "warning" },
---   },
---   {
---     command = "codespell",
---     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
---     filetypes = { "javascript", "python" },
---   },
--- }
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+   { command = "flake8", filetypes = { "python" } },
+   { command = "pylint", filetypes = { "python" } },
+   {
+     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+     command = "shellcheck",
+     ---@usage arguments to pass to the formatter
+     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+     extra_args = { "--severity", "warning" },
+   },
+   {
+     command = "codespell",
+     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+     filetypes = { "javascript", "python" },
+   },
+}
 
 -- Says if I'm going to provide code externally (e.g. GitHub copilot)
 lvim.builtin.sell_soul_to_devel = true
@@ -168,27 +169,36 @@ lvim.plugins = {
       -- setup = function()
       --  vim.o.timeoutlen = 500
       -- end
-    --},
-    --{
-    --  "gelfand/copilot.vim",
-    --  disable = not lvim.builtin.sell_soul_to_devel,
-    --  config = function ()
-    --    -- copilot assume mapped
-    --    vim.g.copilot_assume_mapped = true
-    --    vim.g.copilot_no_tab_map = true
-    --  end
-    --},
-    --{
-    --  "hrsh7th/cmp-copilot",
-    --  disable = not lvim.builtin.sell_soul_to_devel,
-    --  config = function ()
-    --    lvim.builtin.cmp.formatting.source_names["copilot"] = "(Cop)"
-    --    table.insert(lvim.builtin.cmp.sources, {name = "copilot"})
-    --  end
+    },
+    {
+      "gelfand/copilot.vim",
+      disable = not lvim.builtin.sell_soul_to_devel,
+      config = function ()
+        -- copilot assume mapped
+        vim.g.copilot_assume_mapped = true
+        vim.g.copilot_no_tab_map = true
+      end
+    },
+    {
+      "hrsh7th/cmp-copilot",
+      disable = not lvim.builtin.sell_soul_to_devel,
+      config = function ()
+        lvim.builtin.cmp.formatting.source_names["copilot"] = "(Cop)"
+        table.insert(lvim.builtin.cmp.sources, {name = "copilot"})
+      end
     }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- lvim.autocommands.custom_groups = {
---   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
--- }
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--   pattern = { "*.json", "*.jsonc" },
+--   -- enable wrap mode for json files only
+--   command = "setlocal wrap",
+-- })
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = "zsh",
+--   callback = function()
+--     -- let treesitter use bash highlight for zsh files as well
+--     require("nvim-treesitter.highlight").attach(0, "bash")
+--   end,
+-- })
