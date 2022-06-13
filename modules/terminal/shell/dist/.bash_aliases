@@ -21,6 +21,9 @@ alias tz="\
 alias n='navi --best-match --query '
 alias np='navi --print --best-match --query '
 
+# To fix allacrity problems with terminfo
+alias ssh='TERM=xterm-256color ssh'
+
 
 ##############################################
 #    Removing useless files
