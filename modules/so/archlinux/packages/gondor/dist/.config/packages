@@ -166,9 +166,9 @@ PAC+=(fprintd)                         # fingerprint reader
 
 # wayland-specific stuff
 PAC+=(xdg-desktop-portal-gnome)
-PAC+=(wofi)                              # rofi launcher
-AUR+=(unipicker)                         # unicode picker
-GIT+=(wofi-emoji-git)                    # emoji mode to wofi (commented out because fails on paru)
+PAC+=(wofi)                            # rofi launcher
+AUR+=(unipicr)                         # unicode picker
+GIT+=(wofi-eji-git)                    # emoji mode to wofi (commented out because fails on paru)
 
 # communication
 PAC+=(keybase)                         # keybase
@@ -190,10 +190,13 @@ PAC+=(openssh)                         # openssh
 PAC+=(sshfs)                           # creates ssh mounts. Aids some file managers to connect remotely (e.g thunar)
 
 # # laptop improvements
-PAC+=(powertop)                          # battery improvements
-PAC+=(tlp)                               # advanced power management
-PAC+=(smartmontools)                     # disk monitoring tool (recommended by tlp)
-PAC+=(ethtool)                           # tool to read and modify network interfaces (recommended by tlp)
+PAC+=(powertop)                        # battery improvements
+PAC+=(tlp)                             # advanced power management
+PAC+=(smartmontools)                   # disk monitoring tool (recommended by tlp)
+PAC+=(ethtool)                         # tool to read and modify network interfaces (recommended by tlp)
+PAC+=(intel-media-driver)              # improve GPU rendering with Firefox and Chrome (requires extra confs and flags)
+PAC+=(intel-gpu-tools)                 # improve GPU rendering with Firefox and Chrome (requires extra confs and flags)
+
 
 # # install virtualization software
 # PAC+=(virtualbox)                      # virtualbox
