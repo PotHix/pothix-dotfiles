@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
 set -o pipefail
 
 PAC=(-Syu --noconfirm --needed)
 
-# AUR and GIT are both for AUR, but GIT should be installed every time
+# AUR and GIT below are both for AUR, but GIT should be installed every time
 AUR=(-Syu --noconfirm --needed --sudoloop --skipreview)
 GIT=(-Syu --noconfirm --sudoloop --skipreview)
 
@@ -14,7 +14,7 @@ if [[ ! $(command -v paru) ]]
 then
     sudo pacman -S --needed base-devel
     git clone https://aur.archlinux.org/paru.git
-    cd paru
+    cd paru || exit
     makepkg -si
 fi
 
@@ -39,14 +39,6 @@ PAC+=(waybar)                             # Topbar for sway
 AUR+=(viagee)                             # gnome-gmail
 PAC+=(gnome-shell-extension-appindicator) # app indicator needed for Dropbox
 
-# Xfce stuff. Disabled for now
-# PAC+=(xfce4)                           # xfce4 window manager
-# PAC+=(xfce4-goodies)                   # xfce4 additional apps
-# # AUR+=(xfwm-axiom-theme)              # axiomd theme. Not reliable to install via AUR
-# PAC+=(file-roller)                     # archive manager for compressed files
-# PAC+=(gvfs)                            # network functionality for file managers
-# PAC+=(gvfs-smb)                        # smb for thunar
-
 # fonts and symbols
 PAC+=(ttf-dejavu)                      # ttf-dejavu
 PAC+=(noto-fonts-emoji)                # noto-fonts-emoji
@@ -54,7 +46,6 @@ PAC+=(ttf-nerd-fonts-symbols)          # ttf-nerd-fonts-symbols
 PAC+=(ttf-font-awesome)                # ttf-font-awesome
 AUR+=(ttf-tengwar-annatar)             # tengwar font for elvish
 PAC+=(otf-ipafont)                     # Japanese/Chinese chars
-# PAC+=(terminus-font)                   # terminus-font
 
 # connectivity packages
 PAC+=(wpa_supplicant)                  # wpa_supplicant for Wifi
@@ -167,8 +158,6 @@ PAC+=(languagetool)                    # language checker (to be used with Vim)
 AUR+=(nordic-theme)                    # nordic theme (for gnome?)
 
 # Icon themes
-# AUR+=(sardi-icons)                   # sardi icons
-# AUR+=(newaita-icons-git)             # newaita icons. Not reliable to install via AUR
 AUR+=(tela-icon-theme)
 
 # Gnome
@@ -181,11 +170,6 @@ PAC+=(wofi)                              # rofi launcher
 AUR+=(unipicker)                         # unicode picker
 GIT+=(wofi-emoji-git)                    # emoji mode to wofi (commented out because fails on paru)
 
-# x11 launchers
-# PAC+=(rofi)                            # rofi launcher
-# PAC+=(rofi-emoji)                      # brings emoji mode to rofi
-# PAC+=(rofi-calc)                       # brings calculations to rofi
-
 # communication
 PAC+=(keybase)                         # keybase
 PAC+=(telegram-desktop)                # telegram-desktop
@@ -196,7 +180,6 @@ PAC+=(firefox-developer-edition)       # firefox
 PAC+=(chromium)                        # chromium
 
 # productivity related software
-# PAC+=(redshift)                        # makes the screen red at night
 AUR+=(rescuetime2)                     # rescuetime2
 AUR+=(toggldesktop)                    # toggldesktop
 
@@ -206,7 +189,8 @@ PAC+=(sysstat)                         # mostly for iostat
 PAC+=(openssh)                         # openssh
 PAC+=(sshfs)                           # creates ssh mounts. Aids some file managers to connect remotely (e.g thunar)
 
-# # laptop improvements (mostly thinkpad specifics)
+# # laptop improvements
+PAC+=(powertop)                          # battery improvements
 # PAC+=(acpi)                            # acpi client
 # PAC+=(acpid)                           # acpi daemon
 # PAC+=(tlp)                             # advanced power management
@@ -237,7 +221,7 @@ sudo pacman "${PAC[@]}" 2>/dev/null || (echo "❌ pacman packages installation f
 # SVC=(ntpd.service)                     # ntp service
 # SVC+=(NetworkManager.service)          # network manager service
 # SVC+=(acpid.service)                   # acpi service
-SVC+=(nscd.service)                    # domain name caching service
+SVC+=(systemd-resolved.service)          # domain name caching service
 # SVC+=(tlp.service)                     # battery optimizing service
 # SVC+=(libvirtd.service)                # virtualization daemon from libvirt
 SVC+=(bluetooth.service)               # to be able to use bluetooth
