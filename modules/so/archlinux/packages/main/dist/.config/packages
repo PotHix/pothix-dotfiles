@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -o pipefail
 
@@ -11,7 +11,7 @@ if [[ ! $(command -v paru) ]]
 then
     sudo pacman -S --needed base-devel
     git clone https://aur.archlinux.org/paru.git
-    cd paru
+    cd paru || exit
     makepkg -si
 fi
 
@@ -216,8 +216,6 @@ echo "-----> checking AUR packages 👻"
 echo paru "${AUR[@]}" 2>/dev/null
 paru "${AUR[@]}" 2>/dev/null || (echo "❌ paru packages installation failed" && exit 1)
 
-# update all installed packages and install the ones mentioned above
-# TODO: check if it's still needed after using paru -Syu
 sudo pacman "${PAC[@]}" 2>/dev/null || (echo "❌ pacman packages installation failed" && exit 1)
 
 # activate essential services
