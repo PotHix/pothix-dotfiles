@@ -191,12 +191,9 @@ PAC+=(sshfs)                           # creates ssh mounts. Aids some file mana
 
 # # laptop improvements
 PAC+=(powertop)                          # battery improvements
-# PAC+=(acpi)                            # acpi client
-# PAC+=(acpid)                           # acpi daemon
-# PAC+=(tlp)                             # advanced power management
-# PAC+=(smartmontools)                   # disk monitoring tool
-# PAC+=(ethtool)                         # tool to read and modify network interfaces
-# PAC+=(acpi_call)                       # improve battery usage on thinkpads (recommended by tlp)
+PAC+=(tlp)                               # advanced power management
+PAC+=(smartmontools)                     # disk monitoring tool (recommended by tlp)
+PAC+=(ethtool)                           # tool to read and modify network interfaces (recommended by tlp)
 
 # # install virtualization software
 # PAC+=(virtualbox)                      # virtualbox
@@ -218,15 +215,13 @@ echo pacman "${PAC[@]}" 2>/dev/null
 sudo pacman "${PAC[@]}" 2>/dev/null || (echo "❌ pacman packages installation failed" && exit 1)
 
 # # activate essential services
-# SVC=(ntpd.service)                     # ntp service
-# SVC+=(NetworkManager.service)          # network manager service
-# SVC+=(acpid.service)                   # acpi service
-SVC+=(systemd-resolved.service)          # domain name caching service
-# SVC+=(tlp.service)                     # battery optimizing service
-# SVC+=(libvirtd.service)                # virtualization daemon from libvirt
+SVC=(ntpd.service)                     # ntp service
+SVC+=(NetworkManager.service)          # network manager service
+SVC+=(systemd-resolved.service)        # domain name caching service
+SVC+=(tlp.service)                     # battery optimizing service
 SVC+=(bluetooth.service)               # to be able to use bluetooth
 SVC+=(docker.service)                  # docker should be enabled
-SVC+=(reflector.timer)                 # runs periodically to keep mirrors updated
+# SVC+=(libvirtd.service)                # virtualization daemon from libvirt
 
 # echo "-----> activating services and timers 💪"
 sudo systemctl enable "${SVC[@]}"
