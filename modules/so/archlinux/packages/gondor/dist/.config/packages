@@ -196,6 +196,7 @@ PAC+=(smartmontools)                   # disk monitoring tool (recommended by tl
 PAC+=(ethtool)                         # tool to read and modify network interfaces (recommended by tlp)
 PAC+=(intel-media-driver)              # improve GPU rendering with Firefox and Chrome (requires extra confs and flags)
 PAC+=(intel-gpu-tools)                 # improve GPU rendering with Firefox and Chrome (requires extra confs and flags)
+PAC+=(libva-utils)                     # Tools to check if VA (for GPU video playing) is enabled
 
 
 # # install virtualization software
