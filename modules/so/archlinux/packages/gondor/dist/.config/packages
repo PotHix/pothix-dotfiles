@@ -21,7 +21,6 @@ fi
 # base software
 PAC+=(systemd)                         # systemd
 PAC+=(ntp)                             # keep date and time in sync
-PAC+=(reflector)                       # refresh the pacman mirrorlist
 PAC+=(usbutils)                        # lsusb
 PAC+=(man)                             # manpages are useful
 
