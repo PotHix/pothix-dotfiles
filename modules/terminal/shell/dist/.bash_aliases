@@ -49,8 +49,8 @@ alias gp='git pull -p --rebase'
 alias gs='git status --untracked-files'
 alias gt='git tag'
 alias gco='git checkout'
-alias gpu='git pull --rebase && git submodule update'
-
+alias gls='git log --stat'
+alias glp='git log -p'
 
 
 ##############################################
