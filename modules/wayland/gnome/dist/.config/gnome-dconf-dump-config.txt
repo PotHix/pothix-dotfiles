@@ -6,6 +6,10 @@ window-maximized=true
 window-position=[0, 0]
 window-size=[2256, 1472]
 
+[Totem]
+active-plugins=['autoload-subtitles', 'apple-trailers', 'vimeo', 'skipto', 'rotation', 'screensaver', 'save-file', 'mpris', 'variable-rate', 'recent', 'movie-properties', 'open-directory', 'screenshot']
+subtitle-encoding='UTF-8'
+
 [Weather]
 locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747645728156, -0.81368157299186683)], [(-0.41073414481823473, -0.81361432545578749)])>)>, <(uint32 2, <('Indaiatuba', '', false, [(-0.40300141120739624, -0.82411061340423375)], [(-0.39968039870670141, -0.82175918366289935)])>)>]
 
@@ -42,7 +46,7 @@ video-x-resolution=0
 video-y-resolution=0
 
 [clocks]
-world-clocks=[{'location': <(uint32 2, <('Clinton', 'CWCL', true, [(0.89273591239509953, -2.1205750411731104)], [(0.89186324776910242, -2.1223203704251046)])>)>}, {'location': <(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>}, {'location': <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>}, {'location': <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>}, {'location': <(uint32 2, <('Dhaka', 'VGHS', false, [(0.41626102660064762, 1.5777776438028739)], [(0.41626102660064762, 1.5777776438028739)])>)>}]
+world-clocks=[{'location': <(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>}, {'location': <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>}, {'location': <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>}, {'location': <(uint32 2, <('Bristol', 'EGGD', true, [(0.89680834149865551, -0.047414783830276794)], [(0.89797190015108252, -0.045087666525422676)])>)>}, {'location': <(uint32 2, <('Athens', 'LGAV', true, [(0.66206155710541803, 0.41771546182621205)], [(0.66293422173141536, 0.41422480332222328)])>)>}, {'location': <(uint32 2, <('Dhaka', 'VGHS', false, [(0.41626102660064762, 1.5777776438028739)], [(0.41626102660064762, 1.5777776438028739)])>)>}]
 
 [clocks/state/window]
 maximized=false
@@ -51,7 +55,7 @@ size=(992, 812)
 state=87168
 
 [control-center]
-last-panel='network'
+last-panel='display'
 window-state=(1067, 662, true)
 
 [desktop/app-folders]
@@ -170,6 +174,12 @@ application-id='RescueTime.desktop'
 [desktop/notifications/application/telegramdesktop]
 application-id='telegramdesktop.desktop'
 
+[desktop/notifications/application/vlc]
+application-id='vlc.desktop'
+
+[desktop/notifications/application/zoom]
+application-id='Zoom.desktop'
+
 [desktop/peripherals/mouse]
 natural-scroll=false
 speed=-0.19665271966527198
@@ -221,6 +231,9 @@ switch-windows-backward=['<Shift><Super>Tab']
 button-layout='appmenu:close'
 num-workspaces=5
 
+[eog/ui]
+sidebar=false
+
 [eog/view]
 background-color='rgb(0,0,0)'
 use-background-color=true
@@ -233,6 +246,9 @@ is-maximized=false
 window-position=(-1, -1)
 window-size=(1024, 768)
 
+[evince]
+document-directory=@ms 'file:///home/pothix/Dropbox/Aul%C3%AB%20Software/2022/07/doist-receipts'
+
 [evince/default]
 continuous=true
 dual-page=false
@@ -244,7 +260,7 @@ show-sidebar=true
 sidebar-page='thumbnails'
 sidebar-size=132
 sizing-mode='automatic'
-window-ratio=(1.8954248366013071, 1.2487373737373737)
+window-ratio=(1.8941176470588235, 0.85850178359096319)
 
 [evolution-data-server]
 migrated=true
@@ -313,6 +329,9 @@ y=94
 
 [mutter]
 dynamic-workspaces=false
+
+[nautilus/compression]
+default-compression-format='zip'
 
 [nautilus/preferences]
 default-folder-viewer='list-view'
@@ -466,10 +485,10 @@ automatic-location=true
 locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747645728156, -0.81368157299186683)], [(-0.41073414481823473, -0.81361432545578749)])>)>, <(uint32 2, <('Indaiatuba', '', false, [(-0.40300141120739624, -0.82411061340423375)], [(-0.39968039870670141, -0.82175918366289935)])>)>]
 
 [shell/world-clocks]
-locations=[<(uint32 2, <('Clinton', 'CWCL', true, [(0.89273591239509953, -2.1205750411731104)], [(0.89186324776910242, -2.1223203704251046)])>)>, <(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Dhaka', 'VGHS', false, [(0.41626102660064762, 1.5777776438028739)], [(0.41626102660064762, 1.5777776438028739)])>)>]
+locations=[<(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Bristol', 'EGGD', true, [(0.89680834149865551, -0.047414783830276794)], [(0.89797190015108252, -0.045087666525422676)])>)>, <(uint32 2, <('Athens', 'LGAV', true, [(0.66206155710541803, 0.41771546182621205)], [(0.66293422173141536, 0.41422480332222328)])>)>, <(uint32 2, <('Dhaka', 'VGHS', false, [(0.41626102660064762, 1.5777776438028739)], [(0.41626102660064762, 1.5777776438028739)])>)>]
 
 [software]
-check-timestamp=int64 1653562344
+check-timestamp=int64 1660059017
 first-run=false
 
 [tweaks]
