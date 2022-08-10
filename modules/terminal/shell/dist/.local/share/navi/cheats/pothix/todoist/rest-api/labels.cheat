@@ -1,21 +1,20 @@
 % todoist-rest-api, labels
 
 # Get all labels
-curl -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "<url>/rest/v1/labels"
+curl -H 'Content-type: application/json' -sH "Authorization: Bearer $token" "<url>/rest/v1/labels"
 
 # Get one label
-curl -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "<url>/rest/v1/labels/<api_label_id>"
+curl -H 'Content-type: application/json' -sH "Authorization: Bearer $token" "<url>/rest/v1/labels/<api_label_id>"
 
 # Create a new label
-curl -X POST --data '{"name": "<label_name>", "favorite": <bool>}' -H 'Content-typew application/json' -svH "Authorization: Bearer $token" "<url>/rest/v1/labels"
+curl -X POST --data '{"name": "<label_name>"}' -H 'Content-typew application/json' -sH "Authorization: Bearer $token" "<url>/rest/v1/labels"
 
 # Update a label
-curl -X POST --data '{"name": "<label_name>"}' -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "<url>/rest/v1/labels/<api_label_id>"
+curl -X POST --data '{"name": "<label_name>"}' -H 'Content-type: application/json' -sH "Authorization: Bearer $token" "<url>/rest/v1/labels/<api_label_id>"
 
 # Delete a label
-curl -X DELETE -H 'Content-type: application/json' -svH "Authorization: Bearer $token" "<url>/rest/v1/labels/<api_label_id>"
+curl -X DELETE -H 'Content-type: application/json' -sH "Authorization: Bearer $token" "<url>/rest/v1/labels/<api_label_id>"
 
 $ api_label_id: curl -H 'Content-type: application/json' -sH "Authorization: Bearer $token" "$url/rest/v1/labels" | jq '.[].id'
 $ label_name: for i in {1..10}; do echo label$((1 + $RANDOM % 10000)); done
-$ bool: echo "true false" | tr ' ' '\n'
-$ url: echo "https://api.todoist.com http://localhost:8080" | tr ' ' '\n'
+$ url: echo "https://api.todoist.com https://pothix.ngrok.io" | tr ' ' '\n'
