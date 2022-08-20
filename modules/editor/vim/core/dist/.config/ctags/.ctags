@@ -16,4 +16,5 @@
 --exclude=\*.csproj
 --exclude=\*.csproj.user
 --exclude=\*.cache
+--exclude=\*.dll
 --exclude=\*.pdb
