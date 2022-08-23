@@ -108,6 +108,7 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
    { command = "black", filetypes = { "python" } },
    { command = "isort", filetypes = { "python" } },
+   { command = "rubocop", filetypes = { "ruby" } },
 --   {
 --     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
 --     command = "prettier",
@@ -124,6 +125,7 @@ local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
    { command = "flake8", filetypes = { "python" } },
    { command = "pylint", filetypes = { "python" } },
+   { command = "rubocop", filetypes = { "ruby" } },
    {
      -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
      command = "shellcheck",
