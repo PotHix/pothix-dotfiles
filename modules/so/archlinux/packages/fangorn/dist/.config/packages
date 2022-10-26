@@ -271,7 +271,7 @@ asdf global ruby latest
 rustup toolchain install stable                  # install rust stable
 rustup toolchain install nightly                 # install rust nightly
 rustup default nightly                           # set nightly as default
-rustup component add rls rust-analysis rust-src  # rust language server
+rustup component add rust-analyzer               # rust language server
 rustup component add rust-src                    # source for rust analyzer
 rustup component add clippy                      # install clippy
 rustup component add rustfmt                     # install rust fmt
