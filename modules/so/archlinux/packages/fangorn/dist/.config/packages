@@ -129,7 +129,6 @@ PAC+=(dog)                             # alternative to dig
 
 # languages and language managers
 PAC+=(python)                          # system version of python (dep for packages)
-PAC+=(python2)                         # system version of python2 (dep for packages)
 PAC+=(nodejs)                          # system version of nodejs (dep for packages)
 PAC+=(jdk-openjdk)                     # java stuff
 PAC+=(rustup)                          # rust installer system wide
