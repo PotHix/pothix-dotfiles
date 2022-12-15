@@ -166,7 +166,7 @@ PAC+=(fprintd)                         # fingerprint reader
 # wayland-specific stuff
 PAC+=(xdg-desktop-portal-gnome)
 PAC+=(wofi)                            # rofi launcher
-AUR+=(unipicr)                         # unicode picker
+AUR+=(unipicker)                       # unicode picker
 GIT+=(wofi-emoji-git)                  # emoji mode to wofi (commented out because fails on paru)
 
 # communication
