@@ -94,6 +94,7 @@ xkb-options=['caps:ctrl_modifier']
 
 [desktop/interface]
 clock-show-date=true
+clock-show-weekday=false
 color-scheme='prefer-dark'
 cursor-theme='Adwaita'
 enable-animations=true
@@ -108,7 +109,7 @@ show-battery-percentage=true
 text-scaling-factor=0.90000000000000002
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters']
+application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters', 'org-telegram-desktop']
 show-banners=true
 show-in-lock-screen=true
 
@@ -142,6 +143,12 @@ enable=true
 [desktop/notifications/application/firefox-developer-edition]
 application-id='firefox-developer-edition.desktop'
 
+[desktop/notifications/application/firefoxdeveloperedition]
+application-id='firefoxdeveloperedition.desktop'
+
+[desktop/notifications/application/gimp]
+application-id='gimp.desktop'
+
 [desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
 
@@ -163,14 +170,23 @@ application-id='org.gnome.Evince.desktop'
 [desktop/notifications/application/org-gnome-evolution-alarm-notify]
 application-id='org.gnome.Evolution-alarm-notify.desktop'
 
+[desktop/notifications/application/org-gnome-fileroller]
+application-id='org.gnome.FileRoller.desktop'
+
 [desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
 
 [desktop/notifications/application/org-gnome-settings]
 application-id='org.gnome.Settings.desktop'
 
+[desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
 [desktop/notifications/application/org-gnome-tweaks]
 application-id='org.gnome.tweaks.desktop'
+
+[desktop/notifications/application/org-telegram-desktop]
+application-id='org.telegram.desktop.desktop'
 
 [desktop/notifications/application/piavpn]
 application-id='piavpn.desktop'
@@ -342,6 +358,7 @@ default-compression-format='zip'
 
 [nautilus/preferences]
 default-folder-viewer='list-view'
+migrated-gtk-settings=true
 search-filter-time-type='last_modified'
 search-view='list-view'
 
@@ -359,6 +376,10 @@ ignore-phase2-ca-cert=false
 
 [nm-applet/eap/a83a26ab-c74d-4c22-b493-5102bdc41ab2]
 ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[nm-applet/eap/b3a0e333-93e0-42bf-8708-36485fd695d4]
+ignore-ca-cert=true
 ignore-phase2-ca-cert=false
 
 [nm-applet/eap/bde4a89a-94f2-4c4f-aaac-71f42832b565]
