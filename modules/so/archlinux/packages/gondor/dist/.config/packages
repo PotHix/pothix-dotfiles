@@ -41,7 +41,7 @@ PAC+=(gnome-shell-extension-appindicator) # app indicator needed for Dropbox
 # fonts and symbols
 PAC+=(ttf-dejavu)                      # ttf-dejavu
 PAC+=(noto-fonts-emoji)                # noto-fonts-emoji
-PAC+=(ttf-nerd-fonts-symbols)          # ttf-nerd-fonts-symbols
+PAC+=(ttf-nerd-fonts-symbols-common)   # ttf-nerd-fonts-symbols-common
 PAC+=(ttf-font-awesome)                # ttf-font-awesome
 AUR+=(ttf-tengwar-annatar)             # tengwar font for elvish
 PAC+=(otf-ipafont)                     # Japanese/Chinese chars
@@ -213,8 +213,8 @@ echo paru "${GIT[@]}"
 paru "${GIT[@]}" 2>/dev/null || (echo "❌ paru *-git packages installation failed" && exit 1)
 
 # update all installed packages and install the ones mentioned above
-echo pacman "${PAC[@]}" 2>/dev/null
-sudo pacman "${PAC[@]}" 2>/dev/null || (echo "❌ pacman packages installation failed" && exit 1)
+echo sudo pacman "${PAC[@]}" 2>/dev/null
+sudo pacman "${PAC[@]}" |& grep error && (echo "❌ pacman packages installation failed" && exit 1)
 
 # # activate essential services
 SVC=(ntpd.service)                     # ntp service
