@@ -179,7 +179,6 @@ PAC+=(chromium)                        # chromium
 
 # productivity related software
 AUR+=(rescuetime2)                     # rescuetime2
-AUR+=(toggldesktop)                    # toggldesktop
 
 # networking tools and monitoring software
 PAC+=(bandwhich)                       # bandwhich

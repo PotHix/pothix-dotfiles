@@ -186,7 +186,6 @@ PAC+=(chromium)                        # chromium
 # productivity related software
 PAC+=(redshift)                        # makes the screen red at night
 AUR+=(rescuetime2)                     # rescuetime2
-AUR+=(toggldesktop)                    # toggldesktop
 
 # networking tools and monitoring software
 PAC+=(bandwhich)                       # bandwhich
