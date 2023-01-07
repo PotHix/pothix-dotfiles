@@ -109,7 +109,7 @@ show-battery-percentage=true
 text-scaling-factor=0.90000000000000002
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters', 'org-telegram-desktop', 'org-gnome-nautilus', 'firefoxdeveloperedition']
+application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters', 'org-telegram-desktop', 'org-gnome-nautilus', 'firefoxdeveloperedition', 'org-gnome-eog']
 show-banners=true
 show-in-lock-screen=true
 
@@ -163,6 +163,9 @@ application-id='org.gnome.baobab.desktop'
 
 [desktop/notifications/application/org-gnome-characters]
 application-id='org.gnome.Characters.desktop'
+
+[desktop/notifications/application/org-gnome-eog]
+application-id='org.gnome.eog.desktop'
 
 [desktop/notifications/application/org-gnome-evince]
 application-id='org.gnome.Evince.desktop'
@@ -283,7 +286,7 @@ show-sidebar=true
 sidebar-page='thumbnails'
 sidebar-size=132
 sizing-mode='automatic'
-window-ratio=(1.8942953020134228, 0.85866983372921613)
+window-ratio=(1.8954248366013071, 0.85984848484848486)
 
 [evolution-data-server]
 migrated=true
@@ -295,7 +298,7 @@ notify-window-paned-position=48
 notify-window-width=519
 notify-window-x=30
 notify-window-y=26
-reminders-past=['81d8cd9bd6169e502e81a40a38ebaea66564746e\n9e96d15b1dae7c8b55481f21daa501e11c46433f\t20221227T090000\n1672141800\n1672142400\n1672194600\nBEGIN:VEVENT\r\nDTSTART;TZID=America/Sao_Paulo:20101227T090000\r\nDTEND;TZID=America/Sao_Paulo:20101227T233000\r\nRRULE:FREQ=YEARLY;WKST=SU\r\nDTSTAMP:20150707T043912Z\r\nUID:313ash37j1ueneqa8ta33qraio@google.com\r\nCREATED:00001231T000000Z\r\nX-LIC-ERROR;X-LIC-ERRORTYPE=VALUE-PARSE-ERROR:No value for DESCRIPTION \r\n property. Removing entire property:\r\nLAST-MODIFIED:20150707T043912Z\r\nX-LIC-ERROR;X-LIC-ERRORTYPE=VALUE-PARSE-ERROR:No value for LOCATION \r\n property. Removing entire property:\r\nSEQUENCE:3\r\nSTATUS:CONFIRMED\r\nSUMMARY:Rodrigo Molinari birthday\r\nTRANSP:TRANSPARENT\r\nX-EVOLUTION-CALDAV-ETAG:63571927152\r\nBEGIN:VALARM\r\nACTION:EMAIL\r\nDESCRIPTION:This is an event reminder\r\nSUMMARY:Alarm notification\r\nATTENDEE:mailto:willian.molinari@gmail.com\r\nTRIGGER:-PT10M\r\nX-EVOLUTION-ALARM-UID:514879a96949176e4f1c14653089be6425d517b5\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT10M\r\nX-EVOLUTION-ALARM-UID:9e96d15b1dae7c8b55481f21daa501e11c46433f\r\nEND:VALARM\r\nEND:VEVENT\r\n']
+reminders-past=@as []
 
 [file-roller/listing]
 list-mode='as-folder'
@@ -446,6 +449,7 @@ name='Run wofi'
 
 [settings-daemon/plugins/power]
 power-button-action='suspend'
+sleep-inactive-ac-type='nothing'
 
 [shell]
 command-history=['r', 'restart', 'lt', 'lg']
@@ -520,7 +524,7 @@ locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747
 locations=[<(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Bristol', 'EGGD', true, [(0.89680834149865551, -0.047414783830276794)], [(0.89797190015108252, -0.045087666525422676)])>)>, <(uint32 2, <('Athens', 'LGAV', true, [(0.66206155710541803, 0.41771546182621205)], [(0.66293422173141536, 0.41422480332222328)])>)>, <(uint32 2, <('Dhaka', 'VGHS', false, [(0.41626102660064762, 1.5777776438028739)], [(0.41626102660064762, 1.5777776438028739)])>)>, <(uint32 2, <('Melbourne', 'YMML', true, [(-0.65740735740229495, 2.5278185274873568)], [(-0.6600253512802865, 2.5301456447922108)])>)>]
 
 [software]
-check-timestamp=int64 1672144592
+check-timestamp=int64 1673007195
 first-run=false
 
 [tweaks]
