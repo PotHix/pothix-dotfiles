@@ -1,16 +1,6 @@
-
-lvim is the global options object
-
-Linters should be
-filled in as strings with either
-a global executable or a path to
-an executable
-]]
--- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
-
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save.enabled = false
+lvim.format_on_save = true
 lvim.colorscheme = "onedarker"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -131,96 +121,96 @@ lvim.builtin.treesitter.highlight.enable = true
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-   { command = "black", filetypes = { "python" } },
-   { command = "isort", filetypes = { "python" } },
-   { command = "rubocop", filetypes = { "ruby" } },
---   {
---     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
---     command = "prettier",
---     ---@usage arguments to pass to the formatter
---     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
---     extra_args = { "--print-with", "100" },
---     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
---     filetypes = { "typescript", "typescriptreact" },
---   },
- }
+  { command = "black", filetypes = { "python" } },
+  { command = "isort", filetypes = { "python" } },
+  { command = "rubocop", filetypes = { "ruby" } },
+  --   {
+  --     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+  --     command = "prettier",
+  --     ---@usage arguments to pass to the formatter
+  --     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+  --     extra_args = { "--print-with", "100" },
+  --     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+  --     filetypes = { "typescript", "typescriptreact" },
+  --   },
+}
 
 -- -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-   { command = "flake8", filetypes = { "python" } },
-   { command = "pylint", filetypes = { "python" } },
-   { command = "rubocop", filetypes = { "ruby" } },
-   {
-     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
-     command = "shellcheck",
-     ---@usage arguments to pass to the formatter
-     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
-     extra_args = { "--severity", "warning" },
-   },
-   {
-     command = "codespell",
-     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-     filetypes = { "javascript", "python" },
-   },
+  { command = "flake8", filetypes = { "python" } },
+  { command = "pylint", filetypes = { "python" } },
+  { command = "rubocop", filetypes = { "ruby" } },
+  {
+    -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+    command = "shellcheck",
+    ---@usage arguments to pass to the formatter
+    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+    extra_args = { "--severity", "warning" },
+  },
+  {
+    command = "codespell",
+    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+    filetypes = { "javascript", "python" },
+  },
 }
 
 -- Additional Plugins
 lvim.plugins = {
-    {
-      "folke/trouble.nvim",
-      cmd = "TroubleToggle",
-    },
-    {"wakatime/vim-wakatime"},
-    {
-      "tpope/vim-surround",
-      keys = {
-        { 'n', 'ds' },
-        { 'n', 'cs' },
-        { 'n', 'cS' },
-        { 'n', 'ys' },
-        { 'n', 'yS' },
-        { 'n', 'yss' },
-        { 'n', 'ySs' },
-        { 'n', 'ySS' },
-        { 'x', 'S' },
-        { 'x', 'gS' },
-        { 'i', '<C-S>' },
-        { 'i', '<C-G>s' },
-        { 'i', '<C-G>S' }
-      }
-      -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
-      -- setup = function()
-      --  vim.o.timeoutlen = 500
-      -- end
-    },
-    -- -- I have to first enable this and then comment it out to use the other one
-    -- {
-    --   "github/copilot.vim",
-    --   config = function ()
-    --     -- copilot assume mapped
-    --     vim.g.copilot_assume_mapped = true
-    --     vim.g.copilot_no_tab_map = true
-    --   end
-    -- },
-    { -- implementation of copilot in lua
-      "zbirenbaum/copilot.lua",
-      event = { "VimEnter" },
-      config = function()
-        vim.defer_fn(function()
-          require("copilot").setup {
-            plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
-          }
-        end, 100)
-      end,
-    },
-    {
-      "zbirenbaum/copilot-cmp",
-      after = { "copilot.lua" },
-      config = function()
-        require("copilot_cmp").setup()
-      end,
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
+  { "wakatime/vim-wakatime" },
+  {
+    "tpope/vim-surround",
+    keys = {
+      { 'n', 'ds' },
+      { 'n', 'cs' },
+      { 'n', 'cS' },
+      { 'n', 'ys' },
+      { 'n', 'yS' },
+      { 'n', 'yss' },
+      { 'n', 'ySs' },
+      { 'n', 'ySS' },
+      { 'x', 'S' },
+      { 'x', 'gS' },
+      { 'i', '<C-S>' },
+      { 'i', '<C-G>s' },
+      { 'i', '<C-G>S' }
     }
+    -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
+    -- setup = function()
+    --  vim.o.timeoutlen = 500
+    -- end
+  },
+  -- -- I have to first enable this and then comment it out to use the other one
+  -- {
+  --   "github/copilot.vim",
+  --   config = function ()
+  --     -- copilot assume mapped
+  --     vim.g.copilot_assume_mapped = true
+  --     vim.g.copilot_no_tab_map = true
+  --   end
+  -- },
+  { -- implementation of copilot in lua
+    "zbirenbaum/copilot.lua",
+    event = { "VimEnter" },
+    config = function()
+      vim.defer_fn(function()
+        require("copilot").setup {
+          plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
+        }
+      end, 100)
+    end,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function()
+      require("copilot_cmp").setup()
+    end,
+  }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
