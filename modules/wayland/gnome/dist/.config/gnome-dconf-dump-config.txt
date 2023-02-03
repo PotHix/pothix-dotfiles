@@ -55,7 +55,7 @@ size=(992, 812)
 state=87168
 
 [control-center]
-last-panel='keyboard'
+last-panel='default-apps'
 window-state=(1067, 662, true)
 
 [desktop/a11y/magnifier]
@@ -109,7 +109,7 @@ show-battery-percentage=true
 text-scaling-factor=0.90000000000000002
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters', 'org-telegram-desktop', 'org-gnome-nautilus', 'firefoxdeveloperedition', 'org-gnome-eog']
+application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters', 'org-telegram-desktop', 'org-gnome-nautilus', 'firefoxdeveloperedition', 'org-gnome-eog', 'firefox']
 show-banners=true
 show-in-lock-screen=true
 
@@ -142,6 +142,9 @@ enable=true
 
 [desktop/notifications/application/firefox-developer-edition]
 application-id='firefox-developer-edition.desktop'
+
+[desktop/notifications/application/firefox]
+application-id='firefox.desktop'
 
 [desktop/notifications/application/firefoxdeveloperedition]
 application-id='firefoxdeveloperedition.desktop'
@@ -298,7 +301,7 @@ notify-window-paned-position=48
 notify-window-width=519
 notify-window-x=30
 notify-window-y=26
-reminders-past=@as []
+reminders-past=['81d8cd9bd6169e502e81a40a38ebaea66564746e\n166bbee499815edde56a1447ec984d0a5c35d1f7\t20230202T090000\n1675338600\n1675339200\n1675391400\nBEGIN:VEVENT\r\nDTSTART;TZID=America/Sao_Paulo:20100202T090000\r\nDTEND;TZID=America/Sao_Paulo:20100202T233000\r\nRRULE:FREQ=YEARLY;WKST=SU\r\nDTSTAMP:20150707T043912Z\r\nUID:p7buk8nb7vhvqeap0rkkidlapk@google.com\r\nCREATED:20100825T130054Z\r\nX-LIC-ERROR;X-LIC-ERRORTYPE=VALUE-PARSE-ERROR:No value for DESCRIPTION \r\n property. Removing entire property:\r\nLAST-MODIFIED:20150707T043912Z\r\nX-LIC-ERROR;X-LIC-ERRORTYPE=VALUE-PARSE-ERROR:No value for LOCATION \r\n property. Removing entire property:\r\nSEQUENCE:1\r\nSTATUS:CONFIRMED\r\nSUMMARY:Cassio birthday\r\nTRANSP:TRANSPARENT\r\nX-EVOLUTION-CALDAV-ETAG:63571927152\r\nBEGIN:VALARM\r\nACTION:EMAIL\r\nDESCRIPTION:This is an event reminder\r\nSUMMARY:Alarm notification\r\nATTENDEE:mailto:willian.molinari@gmail.com\r\nTRIGGER:-PT10M\r\nX-EVOLUTION-ALARM-UID:a7f617e397cca6cd2c00a5add0ac22077adc2bbb\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:This is an event reminder\r\nTRIGGER:-PT10M\r\nX-EVOLUTION-ALARM-UID:166bbee499815edde56a1447ec984d0a5c35d1f7\r\nEND:VALARM\r\nEND:VEVENT\r\n']
 
 [file-roller/listing]
 list-mode='as-folder'
@@ -367,7 +370,7 @@ search-view='list-view'
 
 [nautilus/window-state]
 initial-size=(890, 550)
-maximized=true
+maximized=false
 
 [nm-applet/eap/106d2ab9-9c33-3961-820e-7f667c04196a]
 ignore-ca-cert=false
@@ -524,8 +527,9 @@ locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747
 locations=[<(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Bristol', 'EGGD', true, [(0.89680834149865551, -0.047414783830276794)], [(0.89797190015108252, -0.045087666525422676)])>)>, <(uint32 2, <('Athens', 'LGAV', true, [(0.66206155710541803, 0.41771546182621205)], [(0.66293422173141536, 0.41422480332222328)])>)>, <(uint32 2, <('Dhaka', 'VGHS', false, [(0.41626102660064762, 1.5777776438028739)], [(0.41626102660064762, 1.5777776438028739)])>)>, <(uint32 2, <('Melbourne', 'YMML', true, [(-0.65740735740229495, 2.5278185274873568)], [(-0.6600253512802865, 2.5301456447922108)])>)>]
 
 [software]
-check-timestamp=int64 1673007195
+check-timestamp=int64 1675421901
 first-run=false
+online-updates-timestamp=int64 1675336767
 
 [tweaks]
 show-extensions-notice=false
