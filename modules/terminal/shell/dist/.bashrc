@@ -94,8 +94,9 @@ create_pr() {
 blogpost() {
     pushd "$CODES/pothix.github.com" || exit
     local post
-    post=$(hugo new posts/"$1".md| sed -r 's/^(.*) .*/\1/g')
-    vim "$post"
+    post=$(hugo new "$1".md |& sed -r "s@^.*($CODES.*.md).*@\1@g")
+    echo "$post"
+    lvim "$post"
 }
 
 base64-img() {
