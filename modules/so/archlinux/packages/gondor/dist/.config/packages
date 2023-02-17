@@ -76,6 +76,7 @@ AUR+=(shellcheck-bin)                  # shellscript checker (using -bin to avoi
 PAC+=(bpython)                         # better python shell
 PAC+=(docker)                          # docker
 PAC+=(docker-compose)                  # docker-compose
+PAC+=(docker-buildx)                   # docker CLI extension using BuildKit
 PAC+=(git-delta)                       # better git diff
 PAC+=(difftastic)                      # better diff / git diff
 PAC+=(github-cli)                      # github CLI
