@@ -22,9 +22,6 @@ export GPG_TTY=$(/usr/bin/tty)
 
 export LANG=en_US.UTF-8
 
-# when building kernels from AUR
-export MAKEFLAGS=-$(nproc)
-
 export ANDROID_HOME=$HOME/Android
 
 ########################################
