@@ -24,6 +24,9 @@ alias np='navi --print --best-match --query '
 # To fix allacrity problems with terminfo
 alias ssh='TERM=xterm-256color ssh'
 
+# manual pre-commit runs
+alias pre-commit-manual='pre-commit run --hook-stage manual'
+
 
 ##############################################
 #    Removing useless files
