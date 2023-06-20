@@ -210,7 +210,8 @@ lvim.plugins = {
     config = function()
       require("copilot_cmp").setup()
     end,
-  }
+  },
+  { "udalov/kotlin-vim" }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
