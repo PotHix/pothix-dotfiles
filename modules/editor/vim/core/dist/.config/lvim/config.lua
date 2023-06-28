@@ -183,15 +183,15 @@ lvim.plugins = {
     --  vim.o.timeoutlen = 500
     -- end
   },
-  -- -- I have to first enable this and then comment it out to use the other one
-  -- {
-  --   "github/copilot.vim",
-  --   config = function ()
-  --     -- copilot assume mapped
-  --     vim.g.copilot_assume_mapped = true
-  --     vim.g.copilot_no_tab_map = true
-  --   end
-  -- },
+  -- I have to first enable this and then comment it out to use the other one
+  {
+    "github/copilot.vim",
+    config = function ()
+      -- copilot assume mapped
+      vim.g.copilot_assume_mapped = true
+      vim.g.copilot_no_tab_map = true
+    end
+  },
   { -- implementation of copilot in lua
     "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
