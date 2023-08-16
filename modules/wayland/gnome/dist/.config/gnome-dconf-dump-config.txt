@@ -1,3 +1,6 @@
+[Console]
+last-window-size=(572, 433)
+
 [GWeather]
 temperature-unit='centigrade'
 
@@ -35,6 +38,7 @@ word-size=64
 
 [calendar]
 active-view='month'
+week-view-zoom-level=1.0
 window-maximized=true
 window-position=(0, 0)
 window-size=(2560, 1051)
@@ -55,7 +59,7 @@ size=(992, 812)
 state=87168
 
 [control-center]
-last-panel='default-apps'
+last-panel='display'
 window-state=(1067, 662, true)
 
 [desktop/a11y/magnifier]
@@ -109,7 +113,7 @@ show-battery-percentage=true
 text-scaling-factor=0.90000000000000002
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters', 'org-telegram-desktop', 'org-gnome-nautilus', 'firefoxdeveloperedition', 'org-gnome-eog', 'firefox']
+application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters', 'org-telegram-desktop', 'org-gnome-nautilus', 'firefoxdeveloperedition', 'org-gnome-eog', 'firefox', 'element-desktop']
 show-banners=true
 show-in-lock-screen=true
 
@@ -139,6 +143,12 @@ application-id='discord.desktop'
 
 [desktop/notifications/application/dropbox]
 enable=true
+
+[desktop/notifications/application/electron]
+application-id='electron.desktop'
+
+[desktop/notifications/application/element-desktop]
+application-id='element-desktop.desktop'
 
 [desktop/notifications/application/firefox-developer-edition]
 application-id='firefox-developer-edition.desktop'
@@ -203,8 +213,14 @@ application-id='piavpn.desktop'
 [desktop/notifications/application/rescuetime]
 application-id='RescueTime.desktop'
 
+[desktop/notifications/application/sidekick-browser]
+application-id='sidekick-browser.desktop'
+
 [desktop/notifications/application/telegramdesktop]
 application-id='telegramdesktop.desktop'
+
+[desktop/notifications/application/todoist]
+application-id='todoist.desktop'
 
 [desktop/notifications/application/vlc]
 application-id='vlc.desktop'
@@ -213,6 +229,7 @@ application-id='vlc.desktop'
 application-id='Zoom.desktop'
 
 [desktop/peripherals/mouse]
+accel-profile='default'
 natural-scroll=false
 speed=-0.19665271966527198
 
@@ -306,6 +323,24 @@ notify-window-x=30
 notify-window-y=26
 reminders-past=@as []
 
+[file-roller/dialogs/add]
+current-folder='file:///run/media/pothix/B3AC-80A3'
+exclude-files=''
+exclude-folders=''
+include-files='*'
+no-symlinks=true
+selected-files=@as []
+update=false
+
+[file-roller/dialogs/extract]
+recreate-folders=true
+skip-newer=false
+
+[file-roller/file-selector]
+show-hidden=false
+sidebar-size=156
+window-size=(780, 722)
+
 [file-roller/listing]
 list-mode='as-folder'
 name-column-width=74
@@ -359,12 +394,22 @@ width=870
 x=141
 y=94
 
+[maps]
+last-viewed-location=[0.0, 0.0]
+map-type='MapsStreetSource'
+transportation-type='pedestrian'
+window-maximized=true
+zoom-level=2
+
 [mutter]
 dynamic-workspaces=false
 workspaces-only-on-primary=false
 
 [nautilus/compression]
 default-compression-format='zip'
+
+[nautilus/list-view]
+default-zoom-level='medium'
 
 [nautilus/preferences]
 default-folder-viewer='list-view'
@@ -374,7 +419,7 @@ search-view='list-view'
 
 [nautilus/window-state]
 initial-size=(890, 550)
-maximized=false
+maximized=true
 
 [nm-applet/eap/106d2ab9-9c33-3961-820e-7f667c04196a]
 ignore-ca-cert=false
@@ -388,12 +433,20 @@ ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
+[nm-applet/eap/6add883a-049f-4a57-a976-fe199b4e994b]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [nm-applet/eap/a83a26ab-c74d-4c22-b493-5102bdc41ab2]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [nm-applet/eap/b3a0e333-93e0-42bf-8708-36485fd695d4]
 ignore-ca-cert=true
+ignore-phase2-ca-cert=false
+
+[nm-applet/eap/b7422200-9a34-4cc5-ba5f-54d050f0a2c5]
+ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [nm-applet/eap/bde4a89a-94f2-4c4f-aaac-71f42832b565]
@@ -411,9 +464,12 @@ ignore-phase2-ca-cert=false
 [photos]
 window-maximized=true
 
+[portal/filechooser/org.telegram.desktop]
+last-folder-path='/home/pothix/Downloads'
+
 [settings-daemon/plugins/color]
-night-light-enabled=true
-night-light-temperature=uint32 3200
+night-light-enabled=false
+night-light-temperature=uint32 4700
 
 [settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/']
@@ -457,6 +513,11 @@ name='Toggl'
 binding='<Super>r'
 command='wofi --show drun'
 name='Run wofi'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom8]
+binding='<Shift><Super>r'
+command='/usr/bin/roam-research'
+name='Roam'
 
 [settings-daemon/plugins/power]
 power-button-action='suspend'
@@ -536,8 +597,9 @@ locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747
 locations=[<(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Bristol', 'EGGD', true, [(0.89680834149865551, -0.047414783830276794)], [(0.89797190015108252, -0.045087666525422676)])>)>, <(uint32 2, <('Athens', 'LGAV', true, [(0.66206155710541803, 0.41771546182621205)], [(0.66293422173141536, 0.41422480332222328)])>)>, <(uint32 2, <('Dhaka', 'VGHS', false, [(0.41626102660064762, 1.5777776438028739)], [(0.41626102660064762, 1.5777776438028739)])>)>, <(uint32 2, <('Melbourne', 'YMML', true, [(-0.65740735740229495, 2.5278185274873568)], [(-0.6600253512802865, 2.5301456447922108)])>)>]
 
 [software]
-check-timestamp=int64 1677236448
+check-timestamp=int64 1692178965
 first-run=false
+flatpak-purge-timestamp=int64 1692146505
 online-updates-timestamp=int64 1675336767
 
 [tweaks]
