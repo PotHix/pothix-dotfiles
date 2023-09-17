@@ -264,8 +264,8 @@ asdf global ruby latest
 
 # rust is not installed via asdf because `rustup` is awesome
 rustup toolchain install stable                  # install rust stable
-rustup toolchain install nightly                 # install rust nightly
-rustup default nightly                           # set nightly as default
+# ustup toolchain install nightly                 # install rust nightly
+# rustup default nightly                           # set nightly as default
 rustup component add rust-src                    # source for rust analyzer (installed via pacman)
 rustup component add clippy                      # install clippy
 rustup component add rustfmt                     # install rust fmt
