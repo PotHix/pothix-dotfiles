@@ -233,24 +233,24 @@ sudo systemctl enable "${SVC[@]}"
 # xdg-mime default firefox-developer-edition.desktop x-scheme-handler/https x-scheme-handler/http text/html
 
 echo "-----> installing programming languages 💻"
-# install and/or update all programming languages
-asdf plugin add erlang
-asdf plugin add elixir
-asdf plugin add golang
+
+# asdf plugin add erlang
+# asdf plugin add elixir
+# asdf plugin add golang
 asdf plugin add nodejs
 asdf plugin add python
 asdf plugin add ruby
 
 asdf plugin update --all
 
-asdf install erlang latest
-asdf global erlang latest
+# asdf install erlang latest
+# asdf global erlang latest
 
-asdf install elixir latest
-asdf global elixir latest
+# asdf install elixir latest
+# asdf global elixir latest
 
-asdf install golang latest
-asdf global golang latest
+# asdf install golang latest
+# asdf global golang latest
 
 sh ~/.asdf/plugins/nodejs/bin/import-release-team-keyring 2>/dev/null
 asdf install nodejs latest
