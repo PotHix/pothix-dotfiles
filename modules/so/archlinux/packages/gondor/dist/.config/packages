@@ -82,6 +82,7 @@ PAC+=(difftastic)                      # better diff / git diff
 PAC+=(github-cli)                      # github CLI
 PAC+=(llvm)                            # required to compile Rust from source
 PAC+=(cmake)                           # dependency for some projects I have to compile
+PAC+=(alacritty)                       # my main terminal app
 
 # terminal enhancements
 PAC+=(bash-completion)                 # bash-completion
@@ -138,7 +139,7 @@ PAC+=(bottom)                          # alternative to top
 
 # languages and language managers
 PAC+=(python)                          # system version of python (dep for packages)
-PAC+=(nodejs-lts-gallium)              # system version of nodejs. gallium is currently needed by one of my dependencies
+PAC+=(nodejs)                          # system version of nodejs
 PAC+=(jdk-openjdk)                     # java stuff
 PAC+=(rustup)                          # rust installer system wide
 PAC+=(rust-analyzer)                   # language server protocol for Rust
@@ -152,6 +153,7 @@ PAC+=(neovim)                          # neovim
 PAC+=(aspell-pt)                       # pt dictionary
 PAC+=(aspell-en)                       # en dictionary
 PAC+=(languagetool)                    # language checker (to be used with Vim)
+PAC+=(codespell)                       # spelling in the editor
 
 # GTK Themes
 AUR+=(nordic-theme)                    # nordic theme (for gnome?)
@@ -229,28 +231,28 @@ SVC+=(docker.service)                  # docker should be enabled
 sudo systemctl enable "${SVC[@]}"
 
 # echo "-----> set the default browser"
-# xdg-settings set default-web-browser firefox-developer-edition.desktop
-# xdg-mime default firefox-developer-edition.desktop x-scheme-handler/https x-scheme-handler/http text/html
+xdg-settings set default-web-browser firefox-developer-edition.desktop
+xdg-mime default firefox-developer-edition.desktop x-scheme-handler/https x-scheme-handler/http text/html
 
 echo "-----> installing programming languages 💻"
 
-# asdf plugin add erlang
-# asdf plugin add elixir
-# asdf plugin add golang
+asdf plugin add erlang
+asdf plugin add elixir
+asdf plugin add golang
 asdf plugin add nodejs
 asdf plugin add python
 asdf plugin add ruby
 
 asdf plugin update --all
 
-# asdf install erlang latest
-# asdf global erlang latest
+asdf install erlang latest
+asdf global erlang latest
 
-# asdf install elixir latest
-# asdf global elixir latest
+asdf install elixir latest
+asdf global elixir latest
 
-# asdf install golang latest
-# asdf global golang latest
+asdf install golang latest
+asdf global golang latest
 
 sh ~/.asdf/plugins/nodejs/bin/import-release-team-keyring 2>/dev/null
 asdf install nodejs latest
@@ -264,8 +266,8 @@ asdf global ruby latest
 
 # rust is not installed via asdf because `rustup` is awesome
 rustup toolchain install stable                  # install rust stable
-# ustup toolchain install nightly                 # install rust nightly
-# rustup default nightly                           # set nightly as default
+rustup toolchain install nightly                 # install rust nightly
+rustup default nightly                           # set nightly as default
 rustup component add rust-src                    # source for rust analyzer (installed via pacman)
 rustup component add clippy                      # install clippy
 rustup component add rustfmt                     # install rust fmt
