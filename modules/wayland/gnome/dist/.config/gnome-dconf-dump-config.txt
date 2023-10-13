@@ -59,8 +59,11 @@ size=(992, 812)
 state=87168
 
 [control-center]
-last-panel='display'
+last-panel='universal-access'
 window-state=(1067, 662, true)
+
+[desktop/a11y]
+always-show-universal-access-status=true
 
 [desktop/a11y/magnifier]
 mag-factor=1.0
@@ -82,8 +85,8 @@ translate=true
 [desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/pothix/.local/share/backgrounds/2022-04-03-00-02-31-gandalf2.jpg'
-picture-uri-dark='file:///home/pothix/.local/share/backgrounds/2022-04-03-00-02-31-gandalf2.jpg'
+picture-uri='file:///home/pothix/.local/share/backgrounds/2023-09-26-23-14-08-wallpaper.jpg'
+picture-uri-dark='file:///home/pothix/.local/share/backgrounds/2023-09-26-23-14-08-wallpaper.jpg'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -100,6 +103,7 @@ xkb-options=['caps:ctrl_modifier']
 clock-show-date=true
 clock-show-weekday=false
 color-scheme='prefer-dark'
+cursor-size=24
 cursor-theme='Adwaita'
 enable-animations=true
 enable-hot-corners=false
@@ -110,10 +114,10 @@ gtk-im-module='gtk-im-context-simple'
 gtk-theme='Nordic'
 icon-theme='Tela-green-dark'
 show-battery-percentage=true
-text-scaling-factor=0.90000000000000002
+text-scaling-factor=1.25
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters', 'org-telegram-desktop', 'org-gnome-nautilus', 'firefoxdeveloperedition', 'org-gnome-eog', 'firefox', 'element-desktop']
+application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters', 'org-telegram-desktop', 'org-gnome-nautilus', 'firefoxdeveloperedition', 'org-gnome-eog', 'firefox', 'element-desktop', 'org-gnome-software']
 show-banners=true
 show-in-lock-screen=true
 
@@ -180,6 +184,9 @@ application-id='org.gnome.baobab.desktop'
 [desktop/notifications/application/org-gnome-characters]
 application-id='org.gnome.Characters.desktop'
 
+[desktop/notifications/application/org-gnome-console]
+application-id='org.gnome.Console.desktop'
+
 [desktop/notifications/application/org-gnome-eog]
 application-id='org.gnome.eog.desktop'
 
@@ -244,7 +251,7 @@ two-finger-scrolling-enabled=true
 [desktop/screensaver]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/pothix/.local/share/backgrounds/2022-04-03-00-02-31-gandalf2.jpg'
+picture-uri='file:///home/pothix/.local/share/backgrounds/2023-09-26-23-14-08-wallpaper.jpg'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -309,7 +316,7 @@ show-sidebar=true
 sidebar-page='thumbnails'
 sidebar-size=132
 sizing-mode='automatic'
-window-ratio=(1.8954248366013071, 0.85984848484848486)
+window-ratio=(1.8959259039885645, 0.85960228648034265)
 
 [evolution-data-server]
 migrated=true
@@ -419,7 +426,7 @@ search-view='list-view'
 
 [nautilus/window-state]
 initial-size=(890, 550)
-maximized=true
+maximized=false
 
 [nm-applet/eap/106d2ab9-9c33-3961-820e-7f667c04196a]
 ignore-ca-cert=false
@@ -525,7 +532,7 @@ sleep-inactive-ac-type='nothing'
 
 [shell]
 command-history=['r', 'restart', 'lt', 'lg']
-disable-user-extensions=false
+disable-user-extensions=true
 disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'wintile@nowsci.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'system-monitor@paradoxxx.zero.gmail.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=['org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'firefox-developer-edition.desktop']
@@ -597,10 +604,11 @@ locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747
 locations=[<(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Bristol', 'EGGD', true, [(0.89680834149865551, -0.047414783830276794)], [(0.89797190015108252, -0.045087666525422676)])>)>, <(uint32 2, <('Athens', 'LGAV', true, [(0.66206155710541803, 0.41771546182621205)], [(0.66293422173141536, 0.41422480332222328)])>)>, <(uint32 2, <('Dhaka', 'VGHS', false, [(0.41626102660064762, 1.5777776438028739)], [(0.41626102660064762, 1.5777776438028739)])>)>, <(uint32 2, <('Melbourne', 'YMML', true, [(-0.65740735740229495, 2.5278185274873568)], [(-0.6600253512802865, 2.5301456447922108)])>)>]
 
 [software]
-check-timestamp=int64 1692178965
+check-timestamp=int64 1697103597
 first-run=false
-flatpak-purge-timestamp=int64 1692146505
+flatpak-purge-timestamp=int64 1697155835
 online-updates-timestamp=int64 1675336767
+update-notification-timestamp=int64 1696852610
 
 [tweaks]
 show-extensions-notice=false
