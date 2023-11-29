@@ -33,7 +33,9 @@ source-currency=''
 source-units='degree'
 target-currency=''
 target-units='radian'
+window-maximized=false
 window-position=(30, 26)
+window-size=(360, 501)
 word-size=64
 
 [calendar]
@@ -59,7 +61,7 @@ size=(992, 812)
 state=87168
 
 [control-center]
-last-panel='universal-access'
+last-panel='multitasking'
 window-state=(1067, 662, true)
 
 [desktop/a11y]
@@ -316,7 +318,7 @@ show-sidebar=true
 sidebar-page='thumbnails'
 sidebar-size=132
 sizing-mode='automatic'
-window-ratio=(1.8959259039885645, 0.85960228648034265)
+window-ratio=(1.895798319327731, 0.85985748218527314)
 
 [evolution-data-server]
 migrated=true
@@ -410,7 +412,7 @@ zoom-level=2
 
 [mutter]
 dynamic-workspaces=false
-workspaces-only-on-primary=false
+workspaces-only-on-primary=true
 
 [nautilus/compression]
 default-compression-format='zip'
@@ -604,9 +606,10 @@ locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747
 locations=[<(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Bristol', 'EGGD', true, [(0.89680834149865551, -0.047414783830276794)], [(0.89797190015108252, -0.045087666525422676)])>)>, <(uint32 2, <('Athens', 'LGAV', true, [(0.66206155710541803, 0.41771546182621205)], [(0.66293422173141536, 0.41422480332222328)])>)>, <(uint32 2, <('Dhaka', 'VGHS', false, [(0.41626102660064762, 1.5777776438028739)], [(0.41626102660064762, 1.5777776438028739)])>)>, <(uint32 2, <('Melbourne', 'YMML', true, [(-0.65740735740229495, 2.5278185274873568)], [(-0.6600253512802865, 2.5301456447922108)])>)>]
 
 [software]
-check-timestamp=int64 1697103597
+check-timestamp=int64 1701259173
 first-run=false
-flatpak-purge-timestamp=int64 1697155835
+flatpak-purge-timestamp=int64 1701216594
+install-timestamp=int64 1698501662
 online-updates-timestamp=int64 1675336767
 update-notification-timestamp=int64 1696852610
 
