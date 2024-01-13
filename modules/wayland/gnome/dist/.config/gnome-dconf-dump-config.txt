@@ -9,6 +9,12 @@ window-maximized=true
 window-position=[0, 0]
 window-size=[2256, 1472]
 
+[Snapshot]
+capture-mode='video'
+is-maximized=false
+window-height=640
+window-width=800
+
 [Totem]
 active-plugins=['autoload-subtitles', 'apple-trailers', 'vimeo', 'skipto', 'rotation', 'screensaver', 'save-file', 'mpris', 'variable-rate', 'recent', 'movie-properties', 'open-directory', 'screenshot']
 subtitle-encoding='UTF-8'
@@ -61,7 +67,7 @@ size=(992, 812)
 state=87168
 
 [control-center]
-last-panel='multitasking'
+last-panel='default-apps'
 window-state=(1067, 662, true)
 
 [desktop/a11y]
@@ -117,6 +123,7 @@ gtk-theme='Nordic'
 icon-theme='Tela-green-dark'
 show-battery-percentage=true
 text-scaling-factor=1.25
+toolkit-accessibility=true
 
 [desktop/notifications]
 application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters', 'org-telegram-desktop', 'org-gnome-nautilus', 'firefoxdeveloperedition', 'org-gnome-eog', 'firefox', 'element-desktop', 'org-gnome-software']
@@ -228,6 +235,9 @@ application-id='sidekick-browser.desktop'
 [desktop/notifications/application/telegramdesktop]
 application-id='telegramdesktop.desktop'
 
+[desktop/notifications/application/texts]
+application-id='texts.desktop'
+
 [desktop/notifications/application/todoist]
 application-id='todoist.desktop'
 
@@ -261,7 +271,7 @@ secondary-color='#000000000000'
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
 
 [desktop/session]
-idle-delay=uint32 300
+idle-delay=uint32 0
 
 [desktop/sound]
 event-sounds=true
@@ -317,8 +327,9 @@ inverted-colors=false
 show-sidebar=true
 sidebar-page='thumbnails'
 sidebar-size=132
-sizing-mode='automatic'
-window-ratio=(1.895798319327731, 0.85985748218527314)
+sizing-mode='free'
+window-ratio=(1.8954248366013071, 0.85984848484848486)
+zoom=1.6817928552627563
 
 [evolution-data-server]
 migrated=true
@@ -477,7 +488,7 @@ window-maximized=true
 last-folder-path='/home/pothix/Downloads'
 
 [settings-daemon/plugins/color]
-night-light-enabled=false
+night-light-enabled=true
 night-light-temperature=uint32 4700
 
 [settings-daemon/plugins/media-keys]
@@ -529,6 +540,8 @@ command='/usr/bin/roam-research'
 name='Roam'
 
 [settings-daemon/plugins/power]
+ambient-enabled=false
+idle-dim=false
 power-button-action='suspend'
 sleep-inactive-ac-type='nothing'
 
@@ -606,9 +619,9 @@ locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747
 locations=[<(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Bristol', 'EGGD', true, [(0.89680834149865551, -0.047414783830276794)], [(0.89797190015108252, -0.045087666525422676)])>)>, <(uint32 2, <('Athens', 'LGAV', true, [(0.66206155710541803, 0.41771546182621205)], [(0.66293422173141536, 0.41422480332222328)])>)>, <(uint32 2, <('Dhaka', 'VGHS', false, [(0.41626102660064762, 1.5777776438028739)], [(0.41626102660064762, 1.5777776438028739)])>)>, <(uint32 2, <('Melbourne', 'YMML', true, [(-0.65740735740229495, 2.5278185274873568)], [(-0.6600253512802865, 2.5301456447922108)])>)>]
 
 [software]
-check-timestamp=int64 1701259173
+check-timestamp=int64 1705051090
 first-run=false
-flatpak-purge-timestamp=int64 1701216594
+flatpak-purge-timestamp=int64 1705105025
 install-timestamp=int64 1698501662
 online-updates-timestamp=int64 1675336767
 update-notification-timestamp=int64 1696852610
