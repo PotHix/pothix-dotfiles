@@ -231,8 +231,8 @@ SVC+=(docker.service)                  # docker should be enabled
 sudo systemctl enable "${SVC[@]}"
 
 # echo "-----> set the default browser"
-xdg-settings set default-web-browser firefox-developer-edition.desktop
-xdg-mime default firefox-developer-edition.desktop x-scheme-handler/https x-scheme-handler/http text/html
+xdg-settings set default-web-browser chromium.desktop
+xdg-mime default chromium.desktop x-scheme-handler/https x-scheme-handler/http text/html
 
 echo "-----> installing programming languages 💻"
 
