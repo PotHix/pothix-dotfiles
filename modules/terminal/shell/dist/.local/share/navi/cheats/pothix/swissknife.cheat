@@ -5,3 +5,6 @@ docker rm $(docker rmi <image> |& sed 's/.*stopped container //g')
 
 # wayland unsafe usage for when share screen doesn't work (should be ran on `alt+F2 lg`)
 echo "global.context.unsafe_mode = true"
+
+# run mypy on pre-commit for modified files in git
+pre-commit run mypy --files $(git diff --name-only HEAD)
