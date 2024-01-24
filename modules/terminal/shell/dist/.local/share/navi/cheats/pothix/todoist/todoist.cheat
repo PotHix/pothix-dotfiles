@@ -5,6 +5,3 @@ docker-compose run --rm todoist sh -c "python ./scripts/launch_server.py"
 
 # Install ide-tools
 pip install doist-ide --upgrade --extra-index https://doist-011833101604.d.codeartifact.us-east-1.amazonaws.com/pypi/doist/simple/
-
-# Run ngrok for todoist
-ngrok http --subdomain pothix --host-header=rewrite local.todoist.com:443
