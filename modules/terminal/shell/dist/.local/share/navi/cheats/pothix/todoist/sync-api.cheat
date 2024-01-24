@@ -1,52 +1,52 @@
 % todoist-sync-api
 
 # Sync all resources
-curl -s "<url>" -d token=$token -d sync_token='*' -d resource_types='["all"]'
+curl -s "<url>" -H "Authorization: Bearer $token" -d sync_token='*' -d resource_types='["all"]'
 
 # Sync only items
-curl -s "<url>" -d token=$token -d sync_token='*' -d resource_types='["items"]' | jq '.items'
+curl -s "<url>" -H "Authorization: Bearer $token" -d sync_token='*' -d resource_types='["items"]' | jq '.items'
 
 # Backups
-curl "<url>" -H 'Origin: http://doist.com' -d token=$token -d sync_token='*' -d resource_types='["items"]' 2>/dev/null | jq '.'
+curl "<url>" -H 'Origin: http://doist.com' -H "Authorization: Bearer $token" -d sync_token='*' -d resource_types='["items"]' 2>/dev/null | jq '.'
 
 # Item add
-curl "<url>" -d token=$token -d commands='[{"type": "item_add", "temp_id": "'"$(uuidgen)"'","uuid": "'"$(uuidgen)"'", "args": {"content": "Task1", "date_string": "8/11/2017"}}]'
+curl "<url>" -H "Authorization: Bearer $token" -d commands='[{"type": "item_add", "temp_id": "'"$(uuidgen)"'","uuid": "'"$(uuidgen)"'", "args": {"content": "Task1", "date_string": "8/11/2017"}}]'
 
 # Item add multiple
-curl "<url>"  -d token=$token -d resource_types='["items"]' -d commands='[{"type":  "item_add", "temp_id": "'"$(uuidgen)"'", "uuid": "'"$(uuidgen)"'",  "args": {"project_id": 2167101284, "content":  "'"$(uuidgen)"'"}},{"type": "item_add", "temp_id": "'"$(uuidgen)"'", "uuid": "'"$(uuidgen)"'", "args": {"project_id": 2167101284, "content":  "'"$(uuidgen)"'"}},{"type": "item_add", "temp_id": "'"$(uuidgen)"'",  "uuid": "'"$(uuidgen)"'", "args": {"project_id": 2167101284, "content":  "'"$(uuidgen)"'"}},{"type": "item_add", "temp_id": "'"$(uuidgen)"'",  "uuid": "'"$(uuidgen)"'", "args": {"project_id": 2167101284, "content":  "'"$(uuidgen)"'"}},{"type": "item_add", "temp_id": "'"$(uuidgen)"'",  "uuid": "'"$(uuidgen)"'", "args": {"project_id": 2167101284, "content":  "'"$(uuidgen)"'"}}]'
+curl "<url>"  -H "Authorization: Bearer $token" -d resource_types='["items"]' -d commands='[{"type":  "item_add", "temp_id": "'"$(uuidgen)"'", "uuid": "'"$(uuidgen)"'",  "args": {"project_id": 2167101284, "content":  "'"$(uuidgen)"'"}},{"type": "item_add", "temp_id": "'"$(uuidgen)"'", "uuid": "'"$(uuidgen)"'", "args": {"project_id": 2167101284, "content":  "'"$(uuidgen)"'"}},{"type": "item_add", "temp_id": "'"$(uuidgen)"'",  "uuid": "'"$(uuidgen)"'", "args": {"project_id": 2167101284, "content":  "'"$(uuidgen)"'"}},{"type": "item_add", "temp_id": "'"$(uuidgen)"'",  "uuid": "'"$(uuidgen)"'", "args": {"project_id": 2167101284, "content":  "'"$(uuidgen)"'"}},{"type": "item_add", "temp_id": "'"$(uuidgen)"'",  "uuid": "'"$(uuidgen)"'", "args": {"project_id": 2167101284, "content":  "'"$(uuidgen)"'"}}]'
 
 # Item update
-curl "<url>" -d token=$token -d commands='[{"type": "item_update", "uuid": "'"$(uuidgen)"'", "args": {"id": 2151311077, "priority": 1}}]'
+curl "<url>" -H "Authorization: Bearer $token" -d commands='[{"type": "item_update", "uuid": "'"$(uuidgen)"'", "args": {"id": 2151311077, "priority": 1}}]'
 
 # Item moving
-curl "<url>" -d token=$token -d commands='[{"type": "item_move", "uuid": "'"uuidgen"'", "args": {"project_items": {"148483789": [2618659717]}, "to_project": 2179745939}}]'
+curl "<url>" -H "Authorization: Bearer $token" -d commands='[{"type": "item_move", "uuid": "'"uuidgen"'", "args": {"project_items": {"148483789": [2618659717]}, "to_project": 2179745939}}]'
 
 # Sync projects
-curl "<url>" -d token=$token -d sync_token='*' -d resource_types='["projects"]' | jq
+curl "<url>" -H "Authorization: Bearer $token" -d sync_token='*' -d resource_types='["projects"]' | jq
 
 # Project add
-curl "<url>" -d token=$token -d resource_types='["projects"]' -d commands='[{"type": "project_add", "temp_id": "'"$(uuidgen)"'", "uuid":  "'"$(uuidgen)"'", "args": {"name": "SyncAPI test project"}}]'
+curl "<url>" -H "Authorization: Bearer $token" -d resource_types='["projects"]' -d commands='[{"type": "project_add", "temp_id": "'"$(uuidgen)"'", "uuid":  "'"$(uuidgen)"'", "args": {"name": "SyncAPI test project"}}]'
 
 # Project update
-curl "<url>" -d token=$token -d resource_types='["projects"]' -d commands='[{"type": "project_update", "temp_id": "'"$(uuidgen)"'", "uuid":  "'"$(uuidgen)"'", "args": {"id": 2242766443, "name": "SyncAPI test prj"}}]' | jq
+curl "<url>" -H "Authorization: Bearer $token" -d resource_types='["projects"]' -d commands='[{"type": "project_update", "temp_id": "'"$(uuidgen)"'", "uuid":  "'"$(uuidgen)"'", "args": {"id": 2242766443, "name": "SyncAPI test prj"}}]' | jq
 
 # Note add
-curl "<url>" -d token=$token -d commands='[{"type": "note_add", "temp_id": "'"$(uuidgen)"'", "uuid": "'"$(uuidgen)"'", "args": {"item_id": 2298927780, "content": "Note"}}]'
+curl "<url>" -H "Authorization: Bearer $token" -d commands='[{"type": "note_add", "temp_id": "'"$(uuidgen)"'", "uuid": "'"$(uuidgen)"'", "args": {"item_id": 2298927780, "content": "Note"}}]'
 
 # Note add with attachment
-curl "<url>" -d token=$token -d commands='[{"type": "note_add", "temp_id": "'"$(uuidgen)"'", "uuid": "'"$(uuidgen)"'", "args": {"item_id": 2298927780, "content": "Note1", "file_attachment": {"file_type":"image\/gif","file_name":"pothix.gif","image":"https:\/\/[d1x0mwiac2rqwt.cloudfront.net](http://d1x0mwiac2rqwt.cloudfront.net)\/fw2hZA5HiuzPz8Hy7sJhZIogiSyo6QyduOA2L5GeipOVqWuODqVV5KbKKTB8r6IX\/by\/5054443\/as\/pothix.gif","file_url":"https:\/\/[d1x0mwiac2rqwt.cloudfront.net](http://d1x0mwiac2rqwt.cloudfront.net)\/fw2hZA5HiuzPz8Hy7sJhZIogiSyo6QyduOA2L5GeipOVqWuODqVV5KbKKTB8r6IX\/by\/5054443\/as\/pothix.gif","image_width":90,"image_height":76,"file_size":7962,"upload_state":"completed","resource_type":"image"}}}]'
+curl "<url>" -H "Authorization: Bearer $token" -d commands='[{"type": "note_add", "temp_id": "'"$(uuidgen)"'", "uuid": "'"$(uuidgen)"'", "args": {"item_id": 2298927780, "content": "Note1", "file_attachment": {"file_type":"image\/gif","file_name":"pothix.gif","image":"https:\/\/[d1x0mwiac2rqwt.cloudfront.net](http://d1x0mwiac2rqwt.cloudfront.net)\/fw2hZA5HiuzPz8Hy7sJhZIogiSyo6QyduOA2L5GeipOVqWuODqVV5KbKKTB8r6IX\/by\/5054443\/as\/pothix.gif","file_url":"https:\/\/[d1x0mwiac2rqwt.cloudfront.net](http://d1x0mwiac2rqwt.cloudfront.net)\/fw2hZA5HiuzPz8Hy7sJhZIogiSyo6QyduOA2L5GeipOVqWuODqVV5KbKKTB8r6IX\/by\/5054443\/as\/pothix.gif","image_width":90,"image_height":76,"file_size":7962,"upload_state":"completed","resource_type":"image"}}}]'
 
 # Note add uploading the attachment
-curl "<url>" -d token=$token -d commands='[{"type": "note_add", "temp_id": "'"$(uuidgen)"'", "uuid": "'"$(uuidgen)"'", "args": {"item_id": 2298927780, "content": "Note1", "file_attachment": '"$(curl https://todoist.com/sync/v8/uploads/add -F token=$token -F file_name=pothix.gif -F file=@/home/pothix/Pictures/pothix.gif)"'}}]'
+curl "<url>" -H "Authorization: Bearer $token" -d commands='[{"type": "note_add", "temp_id": "'"$(uuidgen)"'", "uuid": "'"$(uuidgen)"'", "args": {"item_id": 2298927780, "content": "Note1", "file_attachment": '"$(curl https://todoist.com/sync/v9/uploads/add -F token=$token -F file_name=pothix.gif -F file=@/home/pothix/Pictures/pothix.gif)"'}}]'
 
 # Upload attachment
 curl "<url>" -F token=$token -F file_name=pothix.gif -F file=@/home/pothix/Pictures/pothix.gif)"
 
 # Label add
-curl "<url>" -d token=$token -d commands='[{"type": "label_add", "temp_id": "'"$(uuidgen)"'", "uuid": "'"$(uuidgen)"'", "args": {"name": "synclabel"}}]'
+curl "<url>" -H "Authorization: Bearer $token" -d commands='[{"type": "label_add", "temp_id": "'"$(uuidgen)"'", "uuid": "'"$(uuidgen)"'", "args": {"name": "synclabel"}}]'
 
 # Section add
-curl "<url>" -d token=$token -d commands='[{"type": "section_add", "temp_id": "'"$(uuidgen)"'","uuid": "'"$(uuidgen)"'", "args": {"name": "Section1", "project_id": 2147483653}}]'
+curl "<url>" -H "Authorization: Bearer $token" -d commands='[{"type": "section_add", "temp_id": "'"$(uuidgen)"'","uuid": "'"$(uuidgen)"'", "args": {"name": "Section1", "project_id": 2147483653}}]'
 
 
-$ url: echo "https://todoist.com/sync/v8/sync https://pothix.ngrok.io/sync/v8/sync" | tr ' ' '\n'
+$ url: echo "https://todoist.com/sync/v9/sync https://local.todoist.com/sync/v9/sync" | tr ' ' '\n'
