@@ -136,6 +136,8 @@ formatters.setup {
 -- -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
+  { command = "mypy", filetypes = { "python" } },
+  { command = "vulture", filetypes = { "python" } },
   { command = "rubocop", filetypes = { "ruby" } },
   {
     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
