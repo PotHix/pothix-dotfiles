@@ -35,7 +35,7 @@ then
     cp -R ~/.bash_aliases modules/terminal/shell/dist/
     cp -R ~/.gitconfig modules/development/git/dist/.gitconfig
     cp -R ~/.config/starship.toml modules/terminal/shell/dist/.config/
-    cp -R ~/.config/alacritty/alacritty.yml modules/terminal/shell/dist/.config/alacritty/
+    cp -R ~/.config/alacritty/alacritty.toml modules/terminal/shell/dist/.config/alacritty/
     cp -R ~/.config/rofi/* modules/X11/rofi/dist/.config/rofi/
     log_done
 elif [[ "$1" == "xfiles" ]]
