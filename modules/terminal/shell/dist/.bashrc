@@ -82,9 +82,9 @@ create_pr() {
 
     if [ "$reviewer" != "" ]
     then
-        gh pr create -f -a $GITHUB_USER -l "Review: ⛴ Ship PR" -r "$reviewer"
+        gh pr create -f -a $GITHUB_USER -r "$reviewer"
     else
-        gh pr create -f -a $GITHUB_USER -l "Review: ⛴ Ship PR" 
+        gh pr create -f -a $GITHUB_USER
     fi
 }
 
