@@ -224,12 +224,22 @@ end
 -- See: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ruff_lsp
 -- For the default config, along with instructions on how to customize the settings
 require('lspconfig').ruff_lsp.setup { }
-require('lspconfig').pyright.setup { }
---   on_attach = on_attach,
---   init_options = {
---     settings = {
---       -- Any extra CLI arguments for `ruff` go here.
---       args = {},
---     }
---   }
--- }
+require('lspconfig').pyright.setup {
+  init_options = {
+    settings = {
+      pyright = {
+        disableLanguageServices = false,
+        disableOrganizeImports = true
+      },
+      python = {
+        analysis = {
+          autoImportCompletions = true,
+          autoSearchPaths = true,
+          diagnosticMode = "workspace", -- openFilesOnly, workspace
+          typeCheckingMode = "off", -- off, basic, strict
+          useLibraryCodeForTypes = true
+        }
+      }
+    }
+  }
+}
