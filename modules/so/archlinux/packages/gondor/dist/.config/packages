@@ -140,7 +140,6 @@ PAC+=(bottom)                          # alternative to top
 # languages and language managers
 PAC+=(python)                          # system version of python (dep for packages)
 PAC+=(nodejs)                          # system version of nodejs
-PAC+=(jdk-openjdk)                     # java stuff
 PAC+=(rustup)                          # rust installer system wide
 PAC+=(rust-analyzer)                   # language server protocol for Rust
 PAC+=(sccache)                         # caches compilation (especially used for Rust via cargo)

@@ -67,11 +67,14 @@ size=(992, 812)
 state=87168
 
 [control-center]
-last-panel='default-apps'
+last-panel='display'
 window-state=(1067, 662, true)
 
 [desktop/a11y]
 always-show-universal-access-status=true
+
+[desktop/a11y/applications]
+screen-magnifier-enabled=false
 
 [desktop/a11y/magnifier]
 mag-factor=1.0
@@ -122,7 +125,6 @@ gtk-im-module='gtk-im-context-simple'
 gtk-theme='Nordic'
 icon-theme='Tela-green-dark'
 show-battery-percentage=true
-text-scaling-factor=1.25
 toolkit-accessibility=true
 
 [desktop/notifications]
@@ -150,6 +152,9 @@ application-id='chromium.desktop'
 
 [desktop/notifications/application/com-uploadedlobster-peek]
 application-id='com.uploadedlobster.peek.desktop'
+
+[desktop/notifications/application/dev-warp-warp]
+application-id='dev.warp.Warp.desktop'
 
 [desktop/notifications/application/discord]
 application-id='discord.desktop'
@@ -219,6 +224,9 @@ application-id='org.gnome.Settings.desktop'
 
 [desktop/notifications/application/org-gnome-software]
 application-id='org.gnome.Software.desktop'
+
+[desktop/notifications/application/org-gnome-texteditor]
+application-id='org.gnome.TextEditor.desktop'
 
 [desktop/notifications/application/org-gnome-tweaks]
 application-id='org.gnome.tweaks.desktop'
@@ -411,6 +419,10 @@ window-state=(700, 500, 30, 26)
 col-6-visible=true
 col-6-width=0
 
+[gnumeric/plugins]
+active=['GOffice_plot_barcol', 'GOffice_lasem', 'GOffice_reg_logfit', 'GOffice_reg_linear', 'GOffice_plot_radar', 'GOffice_plot_xy', 'GOffice_plot_distrib', 'GOffice_plot_pie', 'GOffice_plot_surface', 'GOffice_smoothing', 'GOffice_gnumeric', 'Gnumeric_fneng', 'Gnumeric_sc', 'Gnumeric_html', 'Gnumeric_psiconv', 'Gnumeric_fnstring', 'Gnumeric_OpenCalc', 'Gnumeric_fndatabase', 'Gnumeric_fncomplex', 'Gnumeric_lotus', 'Gnumeric_fnerlang', 'Gnumeric_dif', 'Gnumeric_oleo', 'Gnumeric_glpk', 'Gnumeric_fnlogical', 'Gnumeric_r', 'Gnumeric_QPro', 'Gnumeric_mps', 'Gnumeric_fnmath', 'Gnumeric_sylk', 'Gnumeric_numtheory', 'Gnumeric_applix', 'Gnumeric_fndate', 'Gnumeric_fninfo', 'Gnumeric_fnlookup', 'Gnumeric_lpsolve', 'Gnumeric_excelplugins', 'Gnumeric_derivatives', 'Gnumeric_plan_perfect', 'Gnumeric_fnstat', 'Gnumeric_fnfinancial', 'Gnumeric_nlsolve', 'Gnumeric_fnhebdate', 'Gnumeric_fnrandom', 'Gnumeric_xbase', 'Gnumeric_fnchristiandate', 'Gnumeric_Excel']
+file-states=['GOffice_gnumeric|65024:9211971:6705:1699039419|/usr/lib/goffice/0.10/plugins/gnumeric', 'GOffice_lasem|65024:9211435:6755:1699037622|/usr/lib/goffice/0.10.56/plugins/lasem', 'GOffice_plot_barcol|65024:9211439:28106:1699037622|/usr/lib/goffice/0.10.56/plugins/plot_barcol', 'GOffice_plot_distrib|65024:9211443:16106:1699037622|/usr/lib/goffice/0.10.56/plugins/plot_distrib', 'GOffice_plot_pie|65024:9211447:15028:1699037622|/usr/lib/goffice/0.10.56/plugins/plot_pie', 'GOffice_plot_radar|65024:9211450:20560:1699037622|/usr/lib/goffice/0.10.56/plugins/plot_radar', 'GOffice_plot_surface|65024:9211454:28855:1699037622|/usr/lib/goffice/0.10.56/plugins/plot_surface', 'GOffice_plot_xy|65024:9211458:25384:1699037622|/usr/lib/goffice/0.10.56/plugins/plot_xy', 'GOffice_reg_linear|65024:9211462:20886:1699037622|/usr/lib/goffice/0.10.56/plugins/reg_linear', 'GOffice_reg_logfit|65024:9211466:9606:1699037622|/usr/lib/goffice/0.10.56/plugins/reg_logfit', 'GOffice_smoothing|65024:9211469:11660:1699037622|/usr/lib/goffice/0.10.56/plugins/smoothing', 'Gnumeric_Excel|65024:9211839:33479:1699039419|/usr/lib/gnumeric/1.12.56/plugins/excel', 'Gnumeric_GnomeGlossary|65024:9211907:12590:1699039419|/usr/lib/gnumeric/1.12.56/plugins/gnome-glossary', 'Gnumeric_OpenCalc|65024:9211928:12933:1699039419|/usr/lib/gnumeric/1.12.56/plugins/openoffice', 'Gnumeric_PerlFunc|65024:9211931:9919:1699039419|/usr/lib/gnumeric/1.12.56/plugins/perl-func', 'Gnumeric_PerlLoader|65024:9211934:7232:1699039419|/usr/lib/gnumeric/1.12.56/plugins/perl-loader', 'Gnumeric_PyFunc|65024:9211942:11434:1699039419|/usr/lib/gnumeric/1.12.56/plugins/py-func', 'Gnumeric_PythonLoader|65024:9211945:10672:1699039419|/usr/lib/gnumeric/1.12.56/plugins/python-loader', 'Gnumeric_QPro|65024:9211949:10107:1699039419|/usr/lib/gnumeric/1.12.56/plugins/qpro', 'Gnumeric_UIHello|65024:9211963:6631:1699039419|/usr/lib/gnumeric/1.12.56/plugins/uihello', 'Gnumeric_applix|65024:9211833:10631:1699039419|/usr/lib/gnumeric/1.12.56/plugins/applix', 'Gnumeric_derivatives|65024:9211858:11767:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-derivatives', 'Gnumeric_dif|65024:9211836:20275:1699039419|/usr/lib/gnumeric/1.12.56/plugins/dif', 'Gnumeric_excelplugins|65024:9211842:9099:1699039419|/usr/lib/gnumeric/1.12.56/plugins/excelplugins', 'Gnumeric_fnTimeSeriesAnalysis|65024:9211900:7477:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-tsa', 'Gnumeric_fnchristiandate|65024:9211846:8826:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-christian-date', 'Gnumeric_fncomplex|65024:9211849:12600:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-complex', 'Gnumeric_fndatabase|65024:9211852:11662:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-database', 'Gnumeric_fndate|65024:9211855:12038:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-date', 'Gnumeric_fneng|65024:9211861:11873:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-eng', 'Gnumeric_fnerlang|65024:9211864:8702:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-erlang', 'Gnumeric_fnfinancial|65024:9211867:10743:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-financial', 'Gnumeric_fnhebdate|65024:9211870:8319:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-hebrew-date', 'Gnumeric_fninfo|65024:9211873:11739:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-info', 'Gnumeric_fnlogical|65024:9211876:9628:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-logical', 'Gnumeric_fnlookup|65024:9211879:10406:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-lookup', 'Gnumeric_fnmath|65024:9211882:12304:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-math', 'Gnumeric_fnrandom|65024:9211891:12353:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-random', 'Gnumeric_fnstat|65024:9211894:13501:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-stat', 'Gnumeric_fnstring|65024:9211897:11285:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-string', 'Gnumeric_glpk|65024:9211903:8572:1699039419|/usr/lib/gnumeric/1.12.56/plugins/glpk', 'Gnumeric_html|65024:9211910:41860:1699039419|/usr/lib/gnumeric/1.12.56/plugins/html', 'Gnumeric_lotus|65024:9211913:10324:1699039419|/usr/lib/gnumeric/1.12.56/plugins/lotus', 'Gnumeric_lpsolve|65024:9211916:9070:1699039419|/usr/lib/gnumeric/1.12.56/plugins/lpsolve', 'Gnumeric_mps|65024:9211919:14758:1699039419|/usr/lib/gnumeric/1.12.56/plugins/mps', 'Gnumeric_nlsolve|65024:9211922:5935:1699039419|/usr/lib/gnumeric/1.12.56/plugins/nlsolve', 'Gnumeric_numtheory|65024:9211885:16733:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-numtheory', 'Gnumeric_oleo|65024:9211925:10349:1699039419|/usr/lib/gnumeric/1.12.56/plugins/oleo', 'Gnumeric_plan_perfect|65024:9211937:11509:1699039419|/usr/lib/gnumeric/1.12.56/plugins/plan_perfect', 'Gnumeric_psiconv|65024:9211939:10178:1699039419|/usr/lib/gnumeric/1.12.56/plugins/psiconv', 'Gnumeric_r|65024:9211887:12059:1699039419|/usr/lib/gnumeric/1.12.56/plugins/fn-r', 'Gnumeric_sample_datasource|65024:9211952:8914:1699039419|/usr/lib/gnumeric/1.12.56/plugins/sample_datasource', 'Gnumeric_sc|65024:9211955:9417:1699039419|/usr/lib/gnumeric/1.12.56/plugins/sc', 'Gnumeric_sylk|65024:9211958:12789:1699039419|/usr/lib/gnumeric/1.12.56/plugins/sylk', 'Gnumeric_xbase|65024:9211965:10388:1699039419|/usr/lib/gnumeric/1.12.56/plugins/xbase']
+
 [libgnomekbd/preview]
 height=384
 width=870
@@ -488,7 +500,7 @@ ignore-phase2-ca-cert=false
 window-maximized=true
 
 [portal/filechooser/chromium]
-last-folder-path='/home/pothix/Dropbox/Aulë Software/2024/01'
+last-folder-path='/home/pothix/Downloads'
 
 [portal/filechooser/org.telegram.desktop]
 last-folder-path='/home/pothix/Downloads'
@@ -624,13 +636,18 @@ locations=[<(uint32 2, <('Diadema, São Paulo, Brazil', '', false, [(-0.41331747
 [shell/world-clocks]
 locations=[<(uint32 2, <('Porto', 'LPPR', true, [(0.7196574224212311, -0.15155275089707676)], [(0.71820298719566655, -0.15038920969794223)])>)>, <(uint32 2, <('Kraków', 'EPKK', true, [(0.87411906122272931, 0.34557519189487729)], [(0.87411906122272931, 0.34761141517330152)])>)>, <(uint32 2, <('Nice', 'LFMN', true, [(0.76183621849552485, 0.12566370614359174)], [(0.76270888312152207, 0.1265363707695889)])>)>, <(uint32 2, <('Bristol', 'EGGD', true, [(0.89680834149865551, -0.047414783830276794)], [(0.89797190015108252, -0.045087666525422676)])>)>, <(uint32 2, <('Athens', 'LGAV', true, [(0.66206155710541803, 0.41771546182621205)], [(0.66293422173141536, 0.41422480332222328)])>)>, <(uint32 2, <('Dhaka', 'VGHS', false, [(0.41626102660064762, 1.5777776438028739)], [(0.41626102660064762, 1.5777776438028739)])>)>, <(uint32 2, <('Melbourne', 'YMML', true, [(-0.65740735740229495, 2.5278185274873568)], [(-0.6600253512802865, 2.5301456447922108)])>)>]
 
+[shotwell/preferences/window]
+direct-height=1471
+direct-maximize=false
+direct-width=2256
+
 [software]
-check-timestamp=int64 1705573898
+check-timestamp=int64 1712059881
 first-run=false
-flatpak-purge-timestamp=int64 1705536031
-install-timestamp=int64 1698502227
+flatpak-purge-timestamp=int64 1712016789
+install-timestamp=int64 1710498528
 online-updates-timestamp=int64 1675336767
-update-notification-timestamp=int64 1705290632
+update-notification-timestamp=int64 1711972770
 
 [tweaks]
 show-extensions-notice=false
