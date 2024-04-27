@@ -74,7 +74,11 @@ window-state=(1067, 662, true)
 always-show-universal-access-status=true
 
 [desktop/a11y/applications]
+screen-keyboard-enabled=false
 screen-magnifier-enabled=false
+
+[desktop/a11y/interface]
+high-contrast=false
 
 [desktop/a11y/magnifier]
 mag-factor=1.0
@@ -102,7 +106,10 @@ primary-color='#000000000000'
 secondary-color='#000000000000'
 
 [desktop/calendar]
-show-weekdate=false
+show-weekdate=true
+
+[desktop/datetime]
+automatic-timezone=true
 
 [desktop/input-sources]
 mru-sources=[('xkb', 'us+colemak'), ('xkb', 'us')]
@@ -111,8 +118,10 @@ sources=[('xkb', 'us+colemak')]
 xkb-options=['caps:ctrl_modifier']
 
 [desktop/interface]
+clock-format='24h'
 clock-show-date=true
-clock-show-weekday=false
+clock-show-seconds=false
+clock-show-weekday=true
 color-scheme='prefer-dark'
 cursor-size=24
 cursor-theme='Adwaita'
@@ -185,6 +194,9 @@ application-id='gnome-network-panel.desktop'
 
 [desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
+
+[desktop/notifications/application/gnome-printers-panel]
+application-id='gnome-printers-panel.desktop'
 
 [desktop/notifications/application/io-element-element]
 application-id='io.element.Element.desktop'
@@ -339,8 +351,8 @@ show-sidebar=true
 sidebar-page='thumbnails'
 sidebar-size=132
 sizing-mode='free'
-window-ratio=(1.8958847462149002, 0.85978835978835977)
-zoom=0.46935752035251932
+window-ratio=(1.8966820663586728, 0.85995961515619435)
+zoom=0.39113126696043282
 
 [evolution-data-server]
 migrated=true
@@ -500,7 +512,7 @@ ignore-phase2-ca-cert=false
 window-maximized=true
 
 [portal/filechooser/chromium]
-last-folder-path='/home/pothix/Downloads'
+last-folder-path='/home/pothix/Dropbox/Aulë Software/2024/05'
 
 [portal/filechooser/org.telegram.desktop]
 last-folder-path='/home/pothix/Downloads'
@@ -642,9 +654,9 @@ direct-maximize=false
 direct-width=2256
 
 [software]
-check-timestamp=int64 1712059881
+check-timestamp=int64 1714143348
 first-run=false
-flatpak-purge-timestamp=int64 1712016789
+flatpak-purge-timestamp=int64 1714186510
 install-timestamp=int64 1710498528
 online-updates-timestamp=int64 1675336767
 update-notification-timestamp=int64 1711972770
