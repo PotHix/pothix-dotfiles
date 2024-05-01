@@ -67,7 +67,7 @@ size=(992, 812)
 state=87168
 
 [control-center]
-last-panel='display'
+last-panel='keyboard'
 window-state=(1067, 662, true)
 
 [desktop/a11y]
@@ -114,7 +114,7 @@ automatic-timezone=true
 [desktop/input-sources]
 mru-sources=[('xkb', 'us+colemak'), ('xkb', 'us')]
 per-window=false
-sources=[('xkb', 'us+colemak')]
+sources=[('xkb', 'us+colemak'), ('xkb', 'us+altgr-intl')]
 xkb-options=['caps:ctrl_modifier']
 
 [desktop/interface]
@@ -137,7 +137,7 @@ show-battery-percentage=true
 toolkit-accessibility=true
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters', 'org-telegram-desktop', 'org-gnome-nautilus', 'firefoxdeveloperedition', 'org-gnome-eog', 'firefox', 'element-desktop', 'org-gnome-software', 'org-gnome-diskutility']
+application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters', 'org-telegram-desktop', 'org-gnome-nautilus', 'firefoxdeveloperedition', 'org-gnome-eog', 'firefox', 'element-desktop', 'org-gnome-software', 'org-gnome-diskutility', 'org-gnome-settings']
 show-banners=true
 show-in-lock-screen=true
 
@@ -349,10 +349,10 @@ fullscreen=false
 inverted-colors=false
 show-sidebar=true
 sidebar-page='thumbnails'
-sidebar-size=132
+sidebar-size=148
 sizing-mode='free'
-window-ratio=(1.8966820663586728, 0.85995961515619435)
-zoom=0.39113126696043282
+window-ratio=(1.8954248366013071, 0.85984848484848486)
+zoom=0.46935752035251932
 
 [evolution-data-server]
 migrated=true
@@ -654,9 +654,9 @@ direct-maximize=false
 direct-width=2256
 
 [software]
-check-timestamp=int64 1714143348
+check-timestamp=int64 1714488479
 first-run=false
-flatpak-purge-timestamp=int64 1714186510
+flatpak-purge-timestamp=int64 1714528015
 install-timestamp=int64 1710498528
 online-updates-timestamp=int64 1675336767
 update-notification-timestamp=int64 1711972770
