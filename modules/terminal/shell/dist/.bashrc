@@ -49,12 +49,12 @@ fi
 v (){
     local editor="vi"
 
-    if [[ "$(command -v lvim)" != "" ]]
-    then
-        editor="lvim"
-    elif  [[ "$(command -v nvim)" != "" ]]
+    if [[ "$(command -v nvim)" != "" ]]
     then
         editor="nvim"
+    elif  [[ "$(command -v lvim)" != "" ]]
+    then
+        editor="lvim"
     elif  [[ "$(command -v vim)" != "" ]]
     then
         editor="vim"
