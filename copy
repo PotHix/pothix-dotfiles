@@ -1,59 +1,52 @@
 #!/bin/bash
 
-log_starting () {
-    printf "copying $1 files... "
+log_starting() {
+	printf "copying $1 files... "
 }
 
-log_done () {
-    echo "done"
+log_done() {
+	echo "done"
 }
 
-if [[ "$1" == "" ]]
-then
-    exit 0
+if [[ "$1" == "" ]]; then
+	exit 0
 fi
 
-if [[ "$1" == "xfce4" ]]
-then
-    log_starting $1
-    cp -R ~/.config/xfce4/* modules/X11/xfce4/dist/.config/xfce4/
-    cp -R ~/.config/autostart/* modules/X11/xfce4/dist/.config/autostart/
-    log_done
-elif [[ "$1" == "gnome" ]]
-then
-    dconf dump /org/gnome/ > /home/pothix/repos/pothix-dotfiles/modules/wayland/gnome/dist/.config/gnome-dconf-dump-config.txt
-elif [[ "$1" == "bin" ]]
-then
-    log_starting $1
-    rm -rf modules/terminal/shell/dist/bin/
-    cp -R ~/bin/ modules/terminal/shell/dist/bin/
-    log_done
-elif [[ "$1" == "dotfiles" ]]
-then
-    log_starting $1
-    cp -R ~/.bashrc modules/terminal/shell/dist/
-    cp -R ~/.bash_aliases modules/terminal/shell/dist/
-    cp -R ~/.gitconfig modules/development/git/dist/.gitconfig
-    cp -R ~/.config/starship.toml modules/terminal/shell/dist/.config/
-    cp -R ~/.config/alacritty/alacritty.toml modules/terminal/shell/dist/.config/alacritty/
-    cp -R ~/.config/rofi/* modules/X11/rofi/dist/.config/rofi/
-    log_done
-elif [[ "$1" == "xfiles" ]]
-then
-    log_starting $1
-    cp -R ~/{.dmrc,.xinitrc,.Xmodmap,.xprofile,.Xresources} modules/X11/x/dist/
-    log_done
-elif [[ "$1" == "editors" ]]
-then
-    log_starting $1
-    cp ~/.vimrc modules/editor/vim/core/dist/.vimrc
-    cp ~/.config/lvim/config.lua modules/editor/vim/core/dist/.config/lvim/
-    cp ~/.vim/coc-settings.json modules/editor/vim/core/dist/.vim/
-    cp -R ~/.emacs modules/editor/emacs/dist/
-    log_done
-elif [[ "$1" == "navi" ]]
-then
-    log_starting $1
-    cp -R ~/.local/share/navi/cheats/pothix/* modules/terminal/shell/dist/.local/share/navi/cheats/pothix/
-    log_done
+if [[ "$1" == "xfce4" ]]; then
+	log_starting $1
+	cp -R ~/.config/xfce4/* modules/X11/xfce4/dist/.config/xfce4/
+	cp -R ~/.config/autostart/* modules/X11/xfce4/dist/.config/autostart/
+	log_done
+elif [[ "$1" == "gnome" ]]; then
+	dconf dump /org/gnome/ >/home/pothix/repos/pothix-dotfiles/modules/wayland/gnome/dist/.config/gnome-dconf-dump-config.txt
+elif [[ "$1" == "bin" ]]; then
+	log_starting $1
+	rm -rf modules/terminal/shell/dist/bin/
+	cp -R ~/bin/ modules/terminal/shell/dist/bin/
+	log_done
+elif [[ "$1" == "dotfiles" ]]; then
+	log_starting $1
+	cp -R ~/.bashrc modules/terminal/shell/dist/
+	cp -R ~/.bash_aliases modules/terminal/shell/dist/
+	cp -R ~/.gitconfig modules/development/git/dist/.gitconfig
+	cp -R ~/.config/starship.toml modules/terminal/shell/dist/.config/
+	cp -R ~/.config/alacritty/alacritty.toml modules/terminal/shell/dist/.config/alacritty/
+	cp -R ~/.config/rofi/* modules/X11/rofi/dist/.config/rofi/
+	log_done
+elif [[ "$1" == "xfiles" ]]; then
+	log_starting $1
+	cp -R ~/{.dmrc,.xinitrc,.Xmodmap,.xprofile,.Xresources} modules/X11/x/dist/
+	log_done
+elif [[ "$1" == "editors" ]]; then
+	log_starting $1
+	cp ~/.vimrc modules/editor/vim/core/dist/.vimrc
+	cp ~/.config/lvim/config.lua modules/editor/vim/core/dist/.config/lvim/
+	cp -R ~/.config/nvim/* modules/editor/vim/core/dist/.config/nvim/
+	cp ~/.vim/coc-settings.json modules/editor/vim/core/dist/.vim/
+	cp -R ~/.emacs modules/editor/emacs/dist/
+	log_done
+elif [[ "$1" == "navi" ]]; then
+	log_starting $1
+	cp -R ~/.local/share/navi/cheats/pothix/* modules/terminal/shell/dist/.local/share/navi/cheats/pothix/
+	log_done
 fi
