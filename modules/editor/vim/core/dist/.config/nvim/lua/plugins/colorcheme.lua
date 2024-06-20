@@ -8,12 +8,16 @@ return {
     priority = 1000, -- make sure to load this before all the other start plugins
   },
 
+  {
+    "EdenEast/nightfox.nvim",
+  },
+
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      --colorscheme = "NeoSolarized",
-      colorscheme = "NeoSolarized",
+      --colorscheme = "nordfox",
+      colorscheme = "nightfox",
     },
   },
 }
