@@ -67,8 +67,8 @@ size=(992, 812)
 state=87168
 
 [control-center]
-last-panel='keyboard'
-window-state=(1067, 662, true)
+last-panel='applications'
+window-state=(1067, 662, false)
 
 [desktop/a11y]
 always-show-universal-access-status=true
@@ -100,8 +100,8 @@ translate=true
 [desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/pothix/.local/share/backgrounds/2023-09-26-23-14-08-wallpaper.jpg'
-picture-uri-dark='file:///home/pothix/.local/share/backgrounds/2023-09-26-23-14-08-wallpaper.jpg'
+picture-uri='file:///home/pothix/.local/share/backgrounds/2024-06-20-15-34-53-gwen-vibancos-neko7.jpg'
+picture-uri-dark='file:///home/pothix/.local/share/backgrounds/2024-06-20-15-34-53-gwen-vibancos-neko7.jpg'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -137,7 +137,7 @@ show-battery-percentage=true
 toolkit-accessibility=true
 
 [desktop/notifications]
-application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters', 'org-telegram-desktop', 'org-gnome-nautilus', 'firefoxdeveloperedition', 'org-gnome-eog', 'firefox', 'element-desktop', 'org-gnome-software', 'org-gnome-diskutility', 'org-gnome-settings']
+application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters', 'org-telegram-desktop', 'org-gnome-nautilus', 'firefoxdeveloperedition', 'org-gnome-eog', 'firefox', 'element-desktop', 'org-gnome-software', 'org-gnome-diskutility', 'org-gnome-settings', 'gnome-printers-panel']
 show-banners=true
 show-in-lock-screen=true
 
@@ -286,7 +286,7 @@ two-finger-scrolling-enabled=true
 [desktop/screensaver]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/pothix/.local/share/backgrounds/2023-09-26-23-14-08-wallpaper.jpg'
+picture-uri='file:///home/pothix/.local/share/backgrounds/2024-06-20-15-34-53-gwen-vibancos-neko7.jpg'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -343,7 +343,7 @@ document-directory=@ms 'file:///home/pothix/Dropbox/Aul%C3%AB%20Software/2022/07
 [evince/default]
 continuous=true
 dual-page=false
-dual-page-odd-left=false
+dual-page-odd-left=true
 enable-spellchecking=true
 fullscreen=false
 inverted-colors=false
@@ -351,7 +351,7 @@ show-sidebar=true
 sidebar-page='thumbnails'
 sidebar-size=148
 sizing-mode='free'
-window-ratio=(1.8954248366013071, 0.85984848484848486)
+window-ratio=(1.8964590153789727, 0.85993914576495889)
 zoom=0.46935752035251932
 
 [evolution-data-server]
@@ -429,7 +429,7 @@ window-state=(700, 500, 30, 26)
 
 [gnome-system-monitor/disktreenew]
 col-6-visible=true
-col-6-width=0
+col-6-width=290
 
 [gnumeric/plugins]
 active=['GOffice_plot_barcol', 'GOffice_lasem', 'GOffice_reg_logfit', 'GOffice_reg_linear', 'GOffice_plot_radar', 'GOffice_plot_xy', 'GOffice_plot_distrib', 'GOffice_plot_pie', 'GOffice_plot_surface', 'GOffice_smoothing', 'GOffice_gnumeric', 'Gnumeric_fneng', 'Gnumeric_sc', 'Gnumeric_html', 'Gnumeric_psiconv', 'Gnumeric_fnstring', 'Gnumeric_OpenCalc', 'Gnumeric_fndatabase', 'Gnumeric_fncomplex', 'Gnumeric_lotus', 'Gnumeric_fnerlang', 'Gnumeric_dif', 'Gnumeric_oleo', 'Gnumeric_glpk', 'Gnumeric_fnlogical', 'Gnumeric_r', 'Gnumeric_QPro', 'Gnumeric_mps', 'Gnumeric_fnmath', 'Gnumeric_sylk', 'Gnumeric_numtheory', 'Gnumeric_applix', 'Gnumeric_fndate', 'Gnumeric_fninfo', 'Gnumeric_fnlookup', 'Gnumeric_lpsolve', 'Gnumeric_excelplugins', 'Gnumeric_derivatives', 'Gnumeric_plan_perfect', 'Gnumeric_fnstat', 'Gnumeric_fnfinancial', 'Gnumeric_nlsolve', 'Gnumeric_fnhebdate', 'Gnumeric_fnrandom', 'Gnumeric_xbase', 'Gnumeric_fnchristiandate', 'Gnumeric_Excel']
@@ -454,6 +454,9 @@ workspaces-only-on-primary=true
 
 [nautilus/compression]
 default-compression-format='zip'
+
+[nautilus/icon-view]
+default-zoom-level='extra-large'
 
 [nautilus/list-view]
 default-zoom-level='medium'
@@ -512,7 +515,10 @@ ignore-phase2-ca-cert=false
 window-maximized=true
 
 [portal/filechooser/chromium]
-last-folder-path='/home/pothix/Dropbox/Aulë Software/2024/05'
+last-folder-path='/home/pothix/Downloads'
+
+[portal/filechooser/gnome-background-panel]
+last-folder-path='/home/pothix/Downloads'
 
 [portal/filechooser/org.telegram.desktop]
 last-folder-path='/home/pothix/Downloads'
@@ -577,9 +583,9 @@ sleep-inactive-ac-type='nothing'
 
 [shell]
 command-history=['r', 'restart', 'lt', 'lg']
-disable-user-extensions=true
-disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'wintile@nowsci.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'system-monitor@paradoxxx.zero.gmail.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com']
+disable-user-extensions=false
+disabled-extensions=['places-menu@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'wintile@nowsci.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['system-monitor@paradoxxx.zero.gmail.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'backslide@codeisland.org']
 favorite-apps=['org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'firefox-developer-edition.desktop']
 had-bluetooth-devices-setup=true
 looking-glass-history=['global.context.unsafe_mode = true', 'global.context.unsafe_mode = false']
@@ -595,6 +601,10 @@ tray-pos='right'
 
 [shell/extensions/auto-move-windows]
 application-list=['roam-research.desktop:5']
+
+[shell/extensions/backslide]
+elapsed-time=1
+random=false
 
 [shell/extensions/freon]
 hot-sensors=['__average__', '__max__']
@@ -654,9 +664,9 @@ direct-maximize=false
 direct-width=2256
 
 [software]
-check-timestamp=int64 1714488479
+check-timestamp=int64 1718895015
 first-run=false
-flatpak-purge-timestamp=int64 1714528015
+flatpak-purge-timestamp=int64 1718847514
 install-timestamp=int64 1710498528
 online-updates-timestamp=int64 1675336767
 update-notification-timestamp=int64 1711972770
