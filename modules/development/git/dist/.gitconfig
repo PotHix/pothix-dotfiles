@@ -23,6 +23,7 @@
 	today = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --since=$(date --rfc-3339=date --date=yesterday)
 	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue%an%Creset' --abbrev-commit --date=relative
 	unadd = reset HEAD --
+	undo = reset --soft HEAD^
 	set-upstream = !git branch --set-upstream-to=origin/$(git symbolic-ref --short HEAD)
 
 [apply]
