@@ -17,9 +17,9 @@
 	cc = commit --amend -m
 	co = checkout
 	master = checkout master
-	ra = rebase --abort'
+	ra = rebase --abort
 	rank = shortlog -sn --no-merges
-	rc = rebase --continue'
+	rc = rebase --continue
 	today = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --since=$(date --rfc-3339=date --date=yesterday)
 	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue%an%Creset' --abbrev-commit --date=relative
 	unadd = reset HEAD --
