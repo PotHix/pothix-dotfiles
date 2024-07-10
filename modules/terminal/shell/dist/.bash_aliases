@@ -62,7 +62,7 @@ alias glp='git log -p'
 
 alias ls="exa"
 alias cat="bat --paging=never --style=plain"
-alias z="zeditor"
+alias z="zeditor ."
 
 
 ##############################################
