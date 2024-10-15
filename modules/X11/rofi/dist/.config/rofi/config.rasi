@@ -1,10 +1,9 @@
 configuration {
 	combi-modi: "window,drun,ssh,emoji";
-	modi: "window,drun,ssh,combi,calc,emoji";
+	modi: "window,drun,ssh,combi,emoji";
 	font: "hack 10";
 	show-icons: true;
 	icon-theme: "Newaita-dark";
-	theme: "solarized";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
@@ -147,3 +146,4 @@ configuration {
       sorting-method:    "name";
   }
 }
+@theme "solarized"
