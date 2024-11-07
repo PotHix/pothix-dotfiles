@@ -170,7 +170,6 @@ AUR+=(unipicker)                       # unicode picker
 GIT+=(wofi-emoji-git)                  # emoji mode to wofi (commented out because fails on paru)
 
 # communication
-PAC+=(keybase)                         # keybase
 PAC+=(telegram-desktop)                # telegram-desktop
 PAC+=(discord)                         # linux client for Discord
 
