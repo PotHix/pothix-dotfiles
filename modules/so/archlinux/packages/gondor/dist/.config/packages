@@ -157,7 +157,7 @@ PAC+=(codespell)                       # spelling in the editor
 AUR+=(nordic-theme)                    # nordic theme (for gnome?)
 
 # Icon themes
-AUR+=(tela-icon-theme-green-git)
+AUR+=(tela-icon-theme)
 
 # Gnome
 PAC+=(dconf-editor)                    # edit gnome configuration
@@ -167,7 +167,7 @@ PAC+=(fprintd)                         # fingerprint reader
 PAC+=(xdg-desktop-portal-gnome)
 PAC+=(wofi)                            # rofi launcher
 AUR+=(unipicker)                       # unicode picker
-GIT+=(wofi-emoji-git)                  # emoji mode to wofi (commented out because fails on paru)
+GIT+=(wofi-emoji)                  # emoji mode to wofi (commented out because fails on paru)
 
 # communication
 PAC+=(telegram-desktop)                # telegram-desktop
