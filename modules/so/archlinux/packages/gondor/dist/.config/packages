@@ -167,7 +167,7 @@ PAC+=(fprintd)                         # fingerprint reader
 PAC+=(xdg-desktop-portal-gnome)
 PAC+=(wofi)                            # rofi launcher
 AUR+=(unipicker)                       # unicode picker
-GIT+=(wofi-emoji)                      # emoji mode to wofi (commented out because fails on paru)
+GIT+=(wofi-emoji-git)                  # emoji mode to wofi
 
 # communication
 PAC+=(telegram-desktop)                # telegram-desktop
