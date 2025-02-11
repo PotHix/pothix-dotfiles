@@ -129,6 +129,10 @@ cdf() {
 # Language specific paths
 ########################################
 
+# asdf-vm
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+. <(asdf completion bash)
+
 pathadd "$HOME/.local/bin"      # my personal scripts
 pathadd "$HOME/.cargo/bin"      # rust binaries
 pathadd "$HOME/go/bin"          # golang binaries
