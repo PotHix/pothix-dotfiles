@@ -129,13 +129,7 @@ cdf() {
 # Language specific paths
 ########################################
 
-# asdf-vm
-source /opt/asdf-vm/asdf.sh
-
-# z
-[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
-
-pathadd "$HOME/.local/bin"      # my personal scripts and lvim
+pathadd "$HOME/.local/bin"      # my personal scripts
 pathadd "$HOME/.cargo/bin"      # rust binaries
 pathadd "$HOME/go/bin"          # golang binaries
 pathadd "$HOME/.npm-global/bin" # javascript/npm binaries
