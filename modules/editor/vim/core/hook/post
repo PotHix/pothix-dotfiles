@@ -1,6 +1,9 @@
 #!/bin/sh
 
-vim +PlugInstall +qall
-vim -c 'CocInstall -sync coc-rls' -c 'qall'
-vim -c 'CocUpdateSync' -c 'qall'
-vim -c 'GoInstallBinaries' -c 'qall'
+# I don't really need these to keep updating these anymore
+# keeping them commented out for refference
+
+# vim +PlugInstall +qall
+# vim -c 'CocInstall -sync coc-rls' -c 'qall'
+# vim -c 'CocUpdateSync' -c 'qall'
+# vim -c 'GoInstallBinaries' -c 'qall'
