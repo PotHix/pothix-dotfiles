@@ -20,8 +20,8 @@
   "buffer_font_size": 16,
   "languages": {
     "Python": {
-      "language_servers": ["ruff"],
       "format_on_save": "on",
+      "language_servers": ["pyright", "ruff"],
       "formatter": [
         {
           "code_actions": {
@@ -32,6 +32,22 @@
           }
         }
       ]
+    }
+  },
+  "lsp": {
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "configuration": "pyproject.toml"
+        }
+      }
+    },
+    "pyright": {
+      "settings": {
+        "python": {
+          "pythonPath": ".venv/bin/python"
+        }
+      }
     }
   }
 }
