@@ -208,7 +208,7 @@ PAC+=(libva-utils)                     # Tools to check if VA (for GPU video pla
 # 3D printing
 AUR+=(bambustudio-bin)                   # a1 mini slicer
 PAC+=(openscad)                          # 3D CAD
-PAC+=(blender)                           # 3D modeling
+# PAC+=(blender)                           # 3D modeling
 
 
 echo "-----> checking AUR packages 👻"
@@ -242,7 +242,7 @@ echo "-----> installing programming languages 💻"
 
 # asdf plugin add erlang
 # asdf plugin add elixir
-asdf plugin add golang
+# asdf plugin add golang
 asdf plugin add nodejs
 asdf plugin add python
 asdf plugin add ruby
@@ -250,28 +250,28 @@ asdf plugin add ruby
 asdf plugin update --all
 
 # asdf install erlang latest
-# asdf global erlang latest
+# asdf set -u erlang latest
 
 # asdf install elixir latest
-# asdf global elixir latest
+# asdf set -u elixir latest
 
-asdf install golang latest
-asdf global golang latest
+# asdf install golang latest
+# asdf set -u golang latest
 
 sh ~/.asdf/plugins/nodejs/bin/import-release-team-keyring 2>/dev/null
 asdf install nodejs latest
-asdf global nodejs latest
+asdf set -u nodejs latest
 
 asdf install python latest
-asdf global python latest
+asdf set -u python latest
 
 asdf install ruby latest
-asdf global ruby latest
+asdf set -u ruby latest
 
 # rust is not installed via asdf because `rustup` is awesome
 rustup toolchain install stable                  # install rust stable
-rustup toolchain install nightly                 # install rust nightly
-rustup default nightly                           # set nightly as default
+# rustup toolchain install nightly                 # install rust nightly
+rustup default stable                           # set stable as default
 rustup component add rust-src                    # source for rust analyzer (installed via pacman)
 rustup component add clippy                      # install clippy
 rustup component add rustfmt                     # install rust fmt
