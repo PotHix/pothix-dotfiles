@@ -40,9 +40,9 @@ source-currency=''
 source-units='degree'
 target-currency=''
 target-units='radian'
-window-maximized=false
+window-maximized=true
 window-position=(30, 26)
-window-size=(360, 501)
+window-size=(360, 616)
 word-size=64
 
 [calendar]
@@ -71,7 +71,7 @@ size=(992, 812)
 state=87168
 
 [control-center]
-last-panel='keyboard'
+last-panel='applications'
 window-state=(1067, 662, false)
 
 [desktop/a11y]
@@ -541,6 +541,9 @@ ignore-phase2-ca-cert=false
 [photos]
 window-maximized=true
 
+[portal/filechooser/alacritty]
+last-folder-path='/home/pothix/repos/todoist-api-docs'
+
 [portal/filechooser/chromium]
 last-folder-path='/home/pothix/Dropbox/Aulë Software/2025/04'
 
@@ -705,12 +708,12 @@ direct-maximize=false
 direct-width=2256
 
 [software]
-check-timestamp=int64 1742997637
+check-timestamp=int64 1744630141
 first-run=false
 flatpak-purge-timestamp=int64 1743035164
 install-timestamp=int64 1710498528
 online-updates-timestamp=int64 1675336767
-update-notification-timestamp=int64 1742818748
+update-notification-timestamp=int64 1744630141
 
 [tweaks]
 show-extensions-notice=false
