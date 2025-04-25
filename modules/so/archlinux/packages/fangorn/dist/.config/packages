@@ -119,7 +119,6 @@ PAC+=(fd)                              # alternative to find
 PAC+=(sd)                              # alternative to sed
 PAC+=(dust)                            # alternative to dh
 PAC+=(duf)                             # auternative to df
-AUR+=(broot)                           # auternative to tree
 AUR+=(choose)                          # auternative to cut / awk
 PAC+=(tldr)                            # alternative to man
 PAC+=(procs)                           # alternative to ps
