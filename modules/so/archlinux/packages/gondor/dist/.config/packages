@@ -264,7 +264,7 @@ asdf set -u nodejs latest
 asdf install python latest
 asdf set -u python latest
 
-asdf install ruby latest
+asdf install ruby 3.4
 asdf set -u ruby latest
 
 # rust is not installed via asdf because `rustup` is awesome
