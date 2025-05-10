@@ -178,7 +178,7 @@ AUR+=(dropbox)                         # dropbox
 # PAC+=(steam)                           # steam (requires multilib)
 
 # browsers
-PAC+=(firefox-developer-edition)       # firefox
+PAC+=(firefox)                         # firefox
 PAC+=(chromium)                        # chromium
 
 # productivity related software
@@ -230,8 +230,8 @@ echo "-----> activating services and timers 💪"
 sudo systemctl enable "${SVC[@]}"
 
 echo "-----> set the default browser"
-xdg-settings set default-web-browser firefox-developer-edition.desktop
-xdg-mime default firefox-developer-edition.desktop x-scheme-handler/https x-scheme-handler/http text/html
+xdg-settings set default-web-browser firefox.desktop
+xdg-mime default firefox.desktop x-scheme-handler/https x-scheme-handler/http text/html
 
 echo "-----> installing programming languages 💻"
 # install and/or update all programming languages

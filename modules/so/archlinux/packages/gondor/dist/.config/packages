@@ -173,7 +173,7 @@ PAC+=(telegram-desktop)                # telegram-desktop
 PAC+=(discord)                         # linux client for Discord
 
 # browsers
-PAC+=(firefox-developer-edition)       # firefox
+PAC+=(firefox)                         # firefox
 PAC+=(chromium)                        # chromium
 
 # productivity related software
@@ -234,8 +234,8 @@ SVC+=(docker.service)                  # docker should be enabled
 sudo systemctl enable "${SVC[@]}"
 
 # echo "-----> set the default browser"
-xdg-settings set default-web-browser chromium.desktop
-xdg-mime default chromium.desktop x-scheme-handler/https x-scheme-handler/http text/html
+xdg-settings set default-web-browser firefox.desktop
+xdg-mime default firefox.desktop x-scheme-handler/https x-scheme-handler/http text/html
 
 echo "-----> installing programming languages 💻"
 
