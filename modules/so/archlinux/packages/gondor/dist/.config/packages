@@ -242,9 +242,9 @@ echo "-----> installing programming languages 💻"
 # asdf plugin add erlang
 # asdf plugin add elixir
 # asdf plugin add golang
-# asdf plugin add nodejs
+asdf plugin add nodejs
 asdf plugin add python
-# asdf plugin add ruby
+asdf plugin add ruby
 
 asdf plugin update --all
 
@@ -258,14 +258,14 @@ asdf plugin update --all
 # asdf set -u golang latest
 
 sh ~/.asdf/plugins/nodejs/bin/import-release-team-keyring 2>/dev/null
-# asdf install nodejs latest
-# asdf set -u nodejs latest
+asdf install nodejs latest
+asdf set -u nodejs latest
 
-# asdf install python latest
-# asdf set -u python latest
+asdf install python latest
+asdf set -u python latest
 
-# asdf install ruby 3.4
-# asdf set -u ruby latest
+asdf install ruby 3.4
+asdf set -u ruby latest
 
 # rust is not installed via asdf because `rustup` is awesome
 rustup toolchain install stable                  # install rust stable
