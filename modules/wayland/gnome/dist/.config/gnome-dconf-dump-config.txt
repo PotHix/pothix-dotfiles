@@ -2,6 +2,13 @@
 last-window-maximised=false
 last-window-size=(572, 433)
 
+[Contacts]
+did-initial-setup=true
+window-fullscreen=false
+window-height=600
+window-maximized=false
+window-width=800
+
 [GWeather]
 temperature-unit='centigrade'
 
@@ -71,7 +78,7 @@ size=(992, 812)
 state=87168
 
 [control-center]
-last-panel='applications'
+last-panel='online-accounts'
 window-state=(1067, 662, false)
 
 [desktop/a11y]
@@ -109,6 +116,14 @@ picture-uri-dark='file:///home/pothix/.local/share/backgrounds/2024-06-20-15-34-
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
+[desktop/break-reminders/eyesight]
+play-sound=true
+
+[desktop/break-reminders/movement]
+duration-seconds=uint32 300
+interval-seconds=uint32 1800
+play-sound=true
+
 [desktop/calendar]
 show-weekdate=true
 
@@ -139,7 +154,8 @@ gtk-im-module='gtk-im-context-simple'
 gtk-theme='Nordic'
 icon-theme='Tela-green-dark'
 show-battery-percentage=true
-toolkit-accessibility=true
+text-scaling-factor=1.25
+toolkit-accessibility=false
 
 [desktop/notifications]
 application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters', 'org-telegram-desktop', 'org-gnome-nautilus', 'firefoxdeveloperedition', 'org-gnome-eog', 'firefox', 'element-desktop', 'org-gnome-software', 'org-gnome-diskutility', 'org-gnome-settings', 'gnome-printers-panel', 'talon', 'dev-zed-zed']
@@ -180,6 +196,7 @@ application-id='dev.zed.Zed.desktop'
 application-id='discord.desktop'
 
 [desktop/notifications/application/dropbox]
+application-id='dropbox.desktop'
 enable=true
 
 [desktop/notifications/application/electron]
@@ -236,6 +253,9 @@ application-id='org.gnome.Evince.desktop'
 [desktop/notifications/application/org-gnome-evolution-alarm-notify]
 application-id='org.gnome.Evolution-alarm-notify.desktop'
 
+[desktop/notifications/application/org-gnome-extensions]
+application-id='org.gnome.Extensions.desktop'
+
 [desktop/notifications/application/org-gnome-fileroller]
 application-id='org.gnome.FileRoller.desktop'
 
@@ -278,6 +298,9 @@ application-id='texts.desktop'
 [desktop/notifications/application/todoist]
 application-id='todoist.desktop'
 
+[desktop/notifications/application/vibe]
+application-id='vibe.desktop'
+
 [desktop/notifications/application/vlc]
 application-id='vlc.desktop'
 
@@ -299,6 +322,7 @@ two-finger-scrolling-enabled=true
 
 [desktop/screensaver]
 color-shading-type='solid'
+lock-delay=uint32 0
 picture-options='zoom'
 picture-uri='file:///home/pothix/.local/share/backgrounds/2024-06-20-15-34-53-gwen-vibancos-neko7.jpg'
 primary-color='#000000000000'
@@ -379,6 +403,9 @@ notify-window-width=519
 notify-window-x=30
 notify-window-y=26
 reminders-past=@as []
+
+[evolution]
+default-address-book='system-address-book'
 
 [file-roller/dialogs/add]
 current-folder='file:///run/media/pothix/B3AC-80A3'
@@ -556,6 +583,9 @@ last-folder-path='/home/pothix/Dropbox/Aulë Software/2024/10/intervac-receipts'
 [portal/filechooser/gnome-background-panel]
 last-folder-path='/home/pothix/Downloads'
 
+[portal/filechooser/obsidian]
+last-folder-path='/home/pothix/repos/pothix-kb'
+
 [portal/filechooser/org.chromium.Chromium]
 last-folder-path='/home/pothix/Dropbox/Aulë Software/2025/02'
 
@@ -708,12 +738,12 @@ direct-maximize=false
 direct-width=2256
 
 [software]
-check-timestamp=int64 1744630141
+check-timestamp=int64 1748366351
 first-run=false
 flatpak-purge-timestamp=int64 1743035164
 install-timestamp=int64 1710498528
 online-updates-timestamp=int64 1675336767
-update-notification-timestamp=int64 1744630141
+update-notification-timestamp=int64 1748366352
 
 [tweaks]
 show-extensions-notice=false
