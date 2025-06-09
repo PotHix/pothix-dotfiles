@@ -47,7 +47,7 @@ source-currency=''
 source-units='degree'
 target-currency=''
 target-units='radian'
-window-maximized=true
+window-maximized=false
 window-position=(30, 26)
 window-size=(360, 616)
 word-size=64
@@ -78,7 +78,7 @@ size=(992, 812)
 state=87168
 
 [control-center]
-last-panel='online-accounts'
+last-panel='keyboard'
 window-state=(1067, 662, false)
 
 [desktop/a11y]
@@ -155,7 +155,7 @@ gtk-theme='Nordic'
 icon-theme='Tela-green-dark'
 show-battery-percentage=true
 text-scaling-factor=1.25
-toolkit-accessibility=false
+toolkit-accessibility=true
 
 [desktop/notifications]
 application-children=['gnome-network-panel', 'gnome-power-panel', 'alacritty', 'telegramdesktop', 'firefox-developer-edition', 'chromium', 'org-gnome-evince', 'bitwarden', 'discord', 'org-gnome-baobab', 'org-gnome-evolution-alarm-notify', 'authy', 'com-uploadedlobster-peek', 'io-element-element', 'org-gnome-characters', 'org-telegram-desktop', 'org-gnome-nautilus', 'firefoxdeveloperedition', 'org-gnome-eog', 'firefox', 'element-desktop', 'org-gnome-software', 'org-gnome-diskutility', 'org-gnome-settings', 'gnome-printers-panel', 'talon', 'dev-zed-zed']
@@ -610,7 +610,7 @@ name='Allacrity'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Super>t'
-command='/usr/bin/telegram-desktop'
+command='/usr/bin/Telegram'
 name='Telegram'
 
 [settings-daemon/plugins/media-keys/custom-keybindings/custom2]
@@ -738,12 +738,12 @@ direct-maximize=false
 direct-width=2256
 
 [software]
-check-timestamp=int64 1748366351
+check-timestamp=int64 1749471469
 first-run=false
-flatpak-purge-timestamp=int64 1743035164
+flatpak-purge-timestamp=int64 1749478639
 install-timestamp=int64 1710498528
 online-updates-timestamp=int64 1675336767
-update-notification-timestamp=int64 1748366352
+update-notification-timestamp=int64 1749471469
 
 [tweaks]
 show-extensions-notice=false
