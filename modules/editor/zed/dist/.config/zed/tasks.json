@@ -1,0 +1,32 @@
+// Project tasks configuration. See https://zed.dev/docs/tasks for documentation.
+[
+  {
+    "label": "ide todoist start",
+    "command": "ide todoist start",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  },
+  {
+    "label": "run todoist unit",
+    "command": "ide todoist exec",
+    "args": ["pytest", "tests/unit"],
+    "env": {
+      "DD_TRACE_ENABLED": "false"
+    },
+    "use_new_terminal": true,
+    "allow_concurrent_runs": true,
+    "reveal": "always"
+  },
+  {
+    "label": "run current test",
+    "command": "ide todoist exec",
+    "args": ["pytest", "$ZED_RELATIVE_FILE"],
+    "env": {
+      "DD_TRACE_ENABLED": "false"
+    },
+    "use_new_terminal": false,
+    "allow_concurrent_runs": true,
+    "reveal": "always"
+  }
+]
