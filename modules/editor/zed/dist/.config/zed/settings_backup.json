@@ -8,10 +8,9 @@
 // from the command palette or from `Zed` application menu.
 {
   "agent": {
-    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-latest"
+      "model": "claude-3-7-sonnet-latest"
     },
     "model_parameters": []
   },
@@ -27,8 +26,12 @@
       "format_on_save": "on",
       "language_servers": ["basedpyright", "ruff", "..."],
       "formatter": [
-        { "code_action": "source.fixAll.ruff" },
-        { "code_action": "source.organizeImports.ruff" },
+        {
+          "code_actions": {
+            "source.fixAll.ruff": true,
+            "source.organizeImports.ruff": true
+          }
+        },
         {
           "language_server": {
             "name": "ruff"
