@@ -41,6 +41,11 @@
     }
   },
   "lsp": {
+    "wakatime": {
+      "initialization_options": {
+        "api-key": "<redacted>"
+      }
+    },
     "basedpyright": {
       "settings": {
         "python": {

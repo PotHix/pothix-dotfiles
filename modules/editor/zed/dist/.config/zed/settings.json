@@ -7,11 +7,17 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "file_scan_exclusions": [".conductor/**"],
   "agent": {
+    "inline_assistant_model": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-5-latest"
+    },
+    "default_profile": "ask",
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-latest"
+      "model": "claude-sonnet-4-5-latest"
     },
     "model_parameters": []
   },
@@ -38,6 +44,11 @@
     }
   },
   "lsp": {
+    "wakatime": {
+      "initialization_options": {
+        "api-key": "<redacted>"
+      }
+    },
     "basedpyright": {
       "settings": {
         "python": {
