@@ -29,6 +29,15 @@
     "edit_prediction_provider": "zed"
   },
   "languages": {
+    "Ruby": {
+      "language_servers": [
+        "ruby-lsp",
+        "rubocop",
+        "!solargraph",
+        "!steep",
+        "..."
+      ]
+    },
     "Python": {
       "format_on_save": "on",
       "language_servers": ["basedpyright", "ruff", "..."],
