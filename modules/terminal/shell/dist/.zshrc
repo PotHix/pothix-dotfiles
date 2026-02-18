@@ -212,3 +212,6 @@ create_pr() {
 }
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 source $HOME/.cargo/env
+
+# Added by Antigravity
+export PATH="/Users/pothix/.antigravity/antigravity/bin:$PATH"
