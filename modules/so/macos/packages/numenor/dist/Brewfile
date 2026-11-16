@@ -1,0 +1,300 @@
+tap "alexsjones/llmfit", "https://github.com/AlexsJones/homebrew-llmfit"
+tap "bjarneo/cliamp"
+tap "doist/tap", "https://github.com/todoist/homebrew-tap.git"
+tap "flagsmith/tap", "https://github.com/Flagsmith/homebrew-tap"
+tap "jundot/omlx", "https://github.com/jundot/omlx"
+tap "openclaw/tap"
+tap "robzolkos/tap"
+tap "todoist/tap", "https://github.com/todoist/homebrew-tap.git"
+tap "xykong/tap"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Static checker for GitHub Actions workflow files
+brew "actionlint"
+# Code searching, linting, rewriting
+brew "ast-grep"
+# Automatic configure script builder
+brew "autoconf"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+# Official Amazon AWS command-line interface
+brew "awscli"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Secure and free password manager for all of your devices
+brew "bitwarden-cli"
+# Yet another cross-platform graphical process/system monitor
+brew "bottom"
+# Fancy interface to the Python interpreter
+brew "bpython"
+# Human-friendly and fast alternative to cut and (sometimes) awk
+brew "choose-rust"
+# Cross-platform make
+brew "cmake"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Diff that understands syntax
+brew "difftastic"
+# Modern, maintained replacement for ls
+brew "eza"
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
+# GitHub command-line tool
+brew "gh"
+# Interpreter for PostScript and PDF
+brew "ghostscript"
+# Distributed revision control system
+brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Git extension for versioning large files
+brew "git-lfs"
+# Open-source GitLab command-line tool
+brew "glab"
+# GNU Privacy Guard (OpenPGP)
+brew "gnupg"
+# Google Suite CLI
+brew "gogcli"
+# Agent multiplexer that lives in your terminal
+brew "herdr"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Self-improving AI agent that creates skills from experience
+brew "hermes-agent"
+# CLI for Heroku
+brew "heroku"
+# Tools and libraries to manipulate images in select formats
+brew "imagemagick"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Postgres C API library
+brew "libpq", link: true
+# YAML Parser
+brew "libyaml"
+# LLM inference in C/C++
+brew "llama.cpp"
+# Mac App Store command-line interface
+brew "mas"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
+# Array framework for Apple silicon
+brew "mlx"
+# Deep clean and optimize your Mac
+brew "mole"
+# Experimental optional static type checker for Python
+brew "mypy"
+# Open source relational database management system
+brew "mysql"
+# Open source relational database management system
+brew "mysql-client"
+# Interactive cheatsheet tool for the command-line
+brew "navi"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# AI coding agent, built for the terminal
+brew "opencode"
+# Vulnerability scanner which uses the OSV database
+brew "osv-scanner"
+# CLI for Postgres with auto-completion and syntax highlighting
+brew "pgcli"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
+# Your Gateway to Embedded Software Development Excellence
+brew "platformio"
+# Python package management tool
+brew "poetry"
+# Fast Git hook manager written in Rust, drop-in alternative to pre-commit
+brew "prek"
+# CLI companion with 200+ commands across 33+ Datadog products
+brew "pup"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
+# Extremely fast Python linter, written in Rust
+brew "ruff"
+# Rust toolchain installer
+brew "rustup"
+# Display and control your Android device
+brew "scrcpy"
+# Open agent skills ecosystem
+brew "skills"
+# Editor of encrypted files
+brew "sops"
+# Cross-shell prompt for astronauts
+brew "starship"
+# Command-line tool for Stripe
+brew "stripe-cli"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
+# Multi-modal AI tool to extract and summarize content
+brew "summarize"
+# Lightweight BitTorrent client
+brew "transmission-cli"
+# Code review TUI with vim keybindings
+brew "tuicr"
+# Extremely fast Python type checker, written in Rust
+brew "ty"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
+# Command-line interface to the WakaTime api
+brew "wakatime-cli"
+# Watch files and take action when they change
+brew "watchman"
+# CLI for Git worktree management, designed for parallel AI agent workflows
+brew "worktrunk"
+# Fast static site generator in a single binary with everything built-in
+brew "zola"
+# Terminal tool that right-sizes LLM models to your system hardware
+brew "alexsjones/llmfit/llmfit", trusted: true
+# A retro terminal music player inspired by Winamp 2.x
+brew "bjarneo/cliamp/cliamp", trusted: true
+# LLM inference server optimized for Apple Silicon
+brew "jundot/omlx/omlx"
+# WhatsApp CLI built on whatsmeow
+brew "openclaw/tap/wacli", trusted: true
+# CLI for reading and listing Rollbar items and occurrences
+brew "robzolkos/tap/rollbar-cli", trusted: true
+# Android SDK component
+cask "android-platform-tools"
+# Agent orchestration platform
+cask "antigravity"
+# Terminal interface for Antigravity agents
+cask "antigravity-cli"
+# Application uninstaller
+cask "appcleaner"
+# Integrated CAD, CAM, CAE, and PCB software
+cask "autodesk-fusion"
+# Tool to flash OS images to SD cards & USB drives
+cask "balenaetcher"
+# 3D model slicing software for 3D printers, maintained by Bambu Lab
+cask "bambu-studio"
+# Display management tool
+cask "betterdisplay"
+# Desktop password and login vault
+cask "bitwarden"
+# 3D creation suite
+cask "blender"
+# Anthropic's official Claude AI desktop app
+cask "claude"
+# Ghostty-based terminal with vertical tabs and notifications for AI coding agents
+cask "cmux"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
+# Voice and text chat software
+cask "discord"
+# Client for the Dropbox cloud storage service
+cask "dropbox"
+# Matrix collaboration client
+cask "element"
+# Cross-platform Text Expander written in Rust
+cask "espanso"
+# Web browser
+cask "firefox"
+# The Flagsmith command-line interface
+cask "flagsmith/tap/flagsmith", trusted: true
+# Markdown previews in Finder QuickLook with diagrams and math
+cask "xykong/tap/flux-markdown", trusted: true
+cask "font-awesome-terminal-fonts"
+cask "font-fira-code-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Web browser
+cask "google-chrome"
+# Grammarly for desktop
+cask "grammarly-desktop"
+# AI-powered notepad for meetings
+cask "granola"
+# Desktop app for terminals and coding agents
+cask "herdr-app"
+# Open-source desktop AI agent
+cask "hermes-desktop"
+# Vector graphics editor
+cask "inkscape"
+# Menu bar manager
+cask "jordanbaird-ice"
+# Discover, download, and run local LLMs
+cask "lm-studio"
+# Open-source cross-platform alternative to AirDrop
+cask "localsend"
+# File system integration
+cask "macfuse"
+# All-in-one calendars, tasks and scheduler
+cask "morgen"
+# Mouse control with the keyboard
+cask "mouseless"
+# VPN client
+cask "mullvad-vpn"
+# Visual tool to design, develop and administer MySQL servers
+cask "mysqlworkbench"
+# Reverse proxy, secure introspectable tunnels to localhost
+cask "ngrok"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Audiobook manager for Audible users
+cask "openaudible"
+# Programmable solid 3D CAD modeller
+cask "openscad@snapshot"
+# Replacement for Docker Desktop
+cask "orbstack"
+# Save articles to read, highlight key content, and organise notes for review
+cask "reader"
+# Time optimising application
+cask "rescuetime"
+# Command-line utility to interact with Sentry
+cask "sentry-cli"
+# Instant messaging application focusing on security
+cask "signal"
+# Manage, sync, and organise AI agent skills across coding tools
+cask "skills-manager"
+# Team communication and collaboration software
+cask "slack"
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
+# Messaging app with a focus on speed and security
+cask "telegram"
+# To-do list
+cask "todoist-app"
+# Open-source BitTorrent client
+cask "transmission"
+# Multimedia player
+cask "vlc"
+# Voice to text app
+cask "voiceink"
+# System tray app for automatic time tracking
+cask "wakatime"
+# Menu bar app for USB-C cable diagnostics
+cask "whatcable"
+# Native desktop client for WhatsApp
+cask "whatsapp"
+# Voice-to-text dictation with AI-powered auto-editing
+cask "wispr-flow"
+# Gecko based web browser
+cask "zen"
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Shareful", id: 1522267256
+mas "Web Scrobbler", id: 6449224218
+cargo "wasm-bindgen-cli"
+cargo "wasm-pack"
+uv "browser-use"
+uv "doist-ide"
+uv "nano-pdf"
+npm "@doist/automations-cli"
+npm "@doist/doistbot-cli"
+npm "@doist/kb-cli"
+npm "@doist/quick-cli"
+npm "@doist/twist-cli"
+npm "@earendil-works/pi-coding-agent"
+npm "@ollama/pi-web-search"
+npm "@stripe/cli"
+npm "@todoist/cli"
+npm "@todoist/comms-cli"
+npm "@todoist/outline-cli"
+npm "zendesk-cli"
