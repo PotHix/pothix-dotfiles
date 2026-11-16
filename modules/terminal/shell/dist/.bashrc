@@ -129,9 +129,9 @@ cdf() {
 # Language specific paths
 ########################################
 
-# asdf-vm
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-. <(asdf completion bash)
+# mise (shims resolve the version per directory on every call, including agent and IDE shells)
+export PATH="$HOME/.local/share/mise/shims:$PATH"
+. <(mise completion bash)
 
 pathadd "$HOME/.local/bin"      # my personal scripts
 pathadd "$HOME/.cargo/bin"      # rust binaries

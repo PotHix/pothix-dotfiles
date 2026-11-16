@@ -131,7 +131,7 @@ PAC+=(nodejs)                          # system version of nodejs (dep for packa
 PAC+=(jdk-openjdk)                     # java stuff
 PAC+=(rustup)                          # rust installer system wide
 PAC+=(sccache)                         # caches compilation (especially used for Rust via cargo)
-AUR+=(asdf-vm)                         # default way to install programming languages
+PAC+=(mise)                            # default way to install programming languages
 
 # editors
 PAC+=(emacs)                           # emacs
@@ -235,35 +235,14 @@ xdg-mime default firefox.desktop x-scheme-handler/https x-scheme-handler/http te
 
 echo "-----> installing programming languages 💻"
 # install and/or update all programming languages
-asdf plugin add erlang
-asdf plugin add elixir
-asdf plugin add golang
-asdf plugin add nodejs
-asdf plugin add python
-asdf plugin add ruby
+mise use -g erlang@latest
+mise use -g elixir@latest
+mise use -g go@latest
+mise use -g node@latest
+mise use -g python@latest
+mise use -g ruby@latest
 
-asdf plugin update --all
-
-asdf install erlang latest
-asdf global erlang latest
-
-asdf install elixir latest
-asdf global elixir latest
-
-asdf install golang latest
-asdf global golang latest
-
-sh ~/.asdf/plugins/nodejs/bin/import-release-team-keyring 2>/dev/null
-asdf install nodejs latest
-asdf global nodejs latest
-
-asdf install python latest
-asdf global python latest
-
-asdf install ruby latest
-asdf global ruby latest
-
-# rust is not installed via asdf because `rustup` is awesome
+# rust is not installed via mise because `rustup` is awesome
 rustup toolchain install stable                  # install rust stable
 rustup toolchain install nightly                 # install rust nightly
 rustup default nightly                           # set nightly as default

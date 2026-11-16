@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git asdf)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -154,9 +154,14 @@ alias bim='v'
 
 cdpath=(~/repos)
 
-# asdf-vm
+# Go
 export PATH="$HOME/go/bin:$PATH"
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+# mise (shims resolve the version per directory on every call, including agent and IDE shells)
+export PATH="$HOME/.local/share/mise/shims:$PATH"
+source <(mise completion zsh)
+# Keep uv from linking its Pythons into ~/.local/bin, where they would shadow the mise shims
+export UV_PYTHON_INSTALL_BIN=0
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/pothix/.lmstudio/bin"
